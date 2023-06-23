@@ -3,9 +3,30 @@
 
 .categories {
   &__row {
+
+    @include breakpoint(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-template-areas: 
+      "one one two two"
+      "three three three four"
+      "five five six six"
+      "seven seven seven eight";
+      column-gap: 1rem;
+      row-gap: 0.25rem;
+
+      .one {grid-area: one;}
+      .two {grid-area: two;}
+      .three {grid-area: three;}
+      .four {grid-area: four;}
+      .five {grid-area: five;}
+      .six {grid-area: six;}
+      .seven {grid-area: seven;}
+      .eight {grid-area: eight;}
+    }
+
     &__box {
       position: relative;
-      margin-bottom: 1rem;
 
       &__img {
         height: 12rem;

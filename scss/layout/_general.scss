@@ -1,6 +1,7 @@
 :root {
   --padding: 1rem;
-  --padding-nav: 1rem 1rem;
+  --upper-nav: 1rem;
+  --lower-nav: 0.5rem 1rem;
 }
 
 .cont {
@@ -8,4 +9,5 @@
   max-width: 90em;
   margin: 0 auto;
   padding: var(--padding);
+
 }
