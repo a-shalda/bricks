@@ -1,3 +1,7 @@
+@use '../globals/typography' as *;
+@use '../globals/colors' as *;
+
+
 :root {
   --padding: 1rem;
   --upper-nav: 1rem;
@@ -9,5 +13,19 @@
   max-width: 90em;
   margin: 0 auto;
   padding: var(--padding);
+}
 
+.divider {
+  &--background {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray-color);
+    height: 43px;
+  }
+
+  &__desc {
+    text-transform: uppercase;
+    font-size: $s-font-size;
+    font-weight: 400;
+  }
 }

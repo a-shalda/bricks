@@ -27,12 +27,14 @@
 
     &__box {
       position: relative;
+      margin-bottom: 1rem;
+      @include breakpoint(medium) {margin-bottom: 0;}
+
 
       &__img {
         height: 12rem;
         width: 100%;
         border-radius: 0.5rem;
-        outline: 1px solid var(--light-gray-color);
         object-fit: cover;
       }
 

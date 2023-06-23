@@ -43,6 +43,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: Roboto, sans-serif;
+  color: var(--gray-color);
 }
 
 img,
@@ -78,6 +79,12 @@ a:hover {
   color: firebrick;
 }
 
+.stock {
+  font-size: 1.5rem;
+  color: firebrick;
+  line-height: 1.7rem;
+}
+
 :root {
   --padding: 1rem;
   --upper-nav: 1rem;
@@ -89,6 +96,18 @@ a:hover {
   max-width: 90em;
   margin: 0 auto;
   padding: var(--padding);
+}
+
+.divider--background {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray-color);
+  height: 43px;
+}
+.divider__desc {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .header {
@@ -255,12 +274,17 @@ a:hover {
 }
 .categories__row__box {
   position: relative;
+  margin-bottom: 1rem;
+}
+@media (min-width: 43.75em) {
+  .categories__row__box {
+    margin-bottom: 0;
+  }
 }
 .categories__row__box__img {
   height: 12rem;
   width: 100%;
   border-radius: 0.5rem;
-  outline: 1px solid var(--light-gray-color);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -283,7 +307,60 @@ a:hover {
   text-align: center;
 }
 
-.divider__background {
-  background-color: var(----gray-color);
-  height: 10px;
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  height: 30rem;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 0.5rem;
+  max-width: 18rem;
+}
+.product__top {
+  padding: 0.5rem;
+}
+.product__top__img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.product__top__stock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.7rem;
+  padding-block: 0.3rem;
+  padding-inline: 1.5rem;
+  color: var(--strong-gray-color);
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--light-gray-color);
+}
+.product__middle {
+  display: flex;
+  justify-content: space-between;
+}
+.product__middle__price--m2 {
+  background-color: var(--gray-color);
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.product__middle__price--m2__p {
+  line-height: 2.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.product__middle__price--st {
+  padding-right: 2rem;
+}
+.product__middle__price--st__p {
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  color: var(--gray-color);
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */

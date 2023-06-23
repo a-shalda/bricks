@@ -1,0 +1,71 @@
+@use '../globals/typography' as *;
+@use '../globals/colors' as *;
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  height: 30rem;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 0.5rem;
+  max-width: 18rem;
+
+  &__top {
+    padding: 0.5rem;
+
+    &__img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    &__stock {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 0.7rem;
+
+      padding-block: 0.3rem;
+      padding-inline: 1.5rem;
+      color: var(--strong-gray-color);
+      font-size: $small-font-size;
+
+      border-bottom: 1px solid var(--light-gray-color);
+    }
+  }
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+
+    &__price {
+
+      &--m2 {
+        background-color: var(--gray-color);
+        padding-left: 2rem;
+        padding-right: 1.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        
+        &__p {
+          line-height: 2.5rem;
+          color: $white-color;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+      }
+      &--st {
+        padding-right: 2rem;
+
+        &__p {
+          line-height: 2.5rem;
+          font-size: 1.2rem;
+          color: var(--gray-color);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
