@@ -3,126 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bricks Landing page</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Bricks Home Page</title>
+  <link rel="stylesheet" href="scss/styles.css">
   <script src="https://kit.fontawesome.com/f2fb6ae114.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body">
 
-  <header id="header">
-    <div class="header-upper cont">
-      <div class="header-upper__left">
-        <div class="header-upper__left__logo">
-          <img class="header-img" id="header-img" src="img/logo.png" alt="logo klinker.vip">
+  <header id="header" class="header">
+    <div class="header__upper cont">
+
+      <div class="header__upper__left">
+        <div class="header__upper__left__logo">
+          <img class="header__upper__left__logo__img" id="header-img" src="img/logo.png" alt="logo klinker.vip">
         </div>
-      </div>
-      
-      <div class="header-upper__right">
-        <div class="header-upper__right__hamburger">
-          <button class="nav-toggle">
+        <div class="header__upper__left__hamburger">
+          <button class="header__upper__left__hamburger__nav-toggle">
             <i class="fa-solid fa-bars icon-style"></i>
           </button>
         </div>
-        <div class="header-upper__right__search">
-          <div class="header-upper__right__search__box">
-            <i class="fa-solid fa-magnifying-glass icon-style search"></i>
-            <input class="header-upper__search-form" type="text">
-          </div>
+      </div>
+
+      <div class="header__upper__right">
+
+        <div class="header__upper__right__search">
+          <i class="header__upper__right__search__icon fa-solid fa-magnifying-glass icon-style"></i>
+          <input class="header__upper__right__search__form" type="text">
         </div>
-        <div class="header-upper__right__liked">
+
+        <div class="header__upper__right__liked">
           <i class="fa-regular fa-heart icon-style"></i>
         </div>
-        <div class="header-upper__right__seen">
+
+        <div class="header__upper__right__seen">
           <i class="fa-regular fa-eye icon-style"></i>
         </div>
-        <div class="header-upper__right__basket">
+
+        <div class="header__upper__right__basket">
           <i class="fa-solid fa-basket-shopping icon-style"></i>
         </div>
+        
       </div>
     </div>
 
-    <div class="header-lower--background">
-      <div class="header-lower cont">
-        <div class="header-lower">
-          <nav id="nav-bar" class="header-lower__nav-bar">
-            <ul class="header-lower__nav-links">
-              <li><a class="header-lower__nav-bar__link nav-link" href="">Catalog</a></li>
-              <div class="divider"></div>
-              <li><a class="header-lower__nav-bar__link nav-link" href="">Services</a></li>
-              <div class="divider"></div>
-              <li><a class="header-lower__nav-bar__link nav-link" href="">About us</a></li>
-              <div class="divider"></div>
-              <li><a class="header-lower__nav-bar__link nav-link" href="">Contacts</a></li>
-              <div class="divider"></div>
-              <li><a href="tel:+1509783513" class="header-lower__nav-bar__link phone">+1 509 783 513</a></li>
+    <div class="header__lower--background">
+        <div class="header__lower cont">
+          <nav id="nav-bar" class="header__lower__nav">
+            <ul class="header__lower__nav__links">
+              <li class="header__lower__nav__links__link nav-link"><a href="">Catalog</a></li>
+              <div class="header__lower__nav__links__divider"></div>
+              <li class="header__lower__nav__links__link nav-link"><a href="">Services</a></li>
+              <div class="header__lower__nav__links__divider"></div>
+              <li class="header__lower__nav__links__link nav-link"><a href="">About us</a></li>
+              <div class="header__lower__nav__links__divider"></div>
+              <li class="header__lower__nav__links__link nav-link"><a href="">Contacts</a></li>
+              <div class="header__lower__nav__links__divider"></div>
+              <li class="header__lower__nav__links__link"><a href="tel:+1509783513">+1 509 783 513</a></li>
             </ul>
           </nav>
         </div>
-      </div>
     </div>
   </header>
 
   <main>
     <section class="categories cont">
-      <div class="categories__row-one">
-        <div class="categories__row-one__left box">
-          <img class="categories-img" src="img/img_fasade-one.png" alt="klinker brick slips" loading="lazy" width="575" height="260">
-          <div class="categories__row-one__left__title title-box">
-            <h2 class="categories__title">Fasade klinker brick slips</h2>
+      <div class="categories__row">
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_fasade-one.png" alt="klinker brick slips" loading="lazy" width="575" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Fasade klinker brick slips</h2>
           </div>
         </div>
-        <div class="categories__row-one__right box">
-          <img class="categories-img" src="img/img-fasade-two.png" alt="klinker bricks" loading="lazy" width="575" height="260">
-          <div class="categories__row-one__right__title title-box">
-            <h2 class="categories__title">Fasade klinker bricks</h2>
-          </div>
-        </div>
-      </div>
-      <div class="categories__row-two">
-        <div class="categories__row-two__left box">
-          <img class="categories-img" src="img/img_fasade-three.png" alt="klinker thermo panels" loading="lazy" width="710" height="260">
-          <div class="categories__row-two__left__title title-box">
-            <h2 class="categories__title">Fasade klinker brick slip thermo panels</h2>
-          </div>
-        </div>
-        <div class="categories__row-two__right box">
-          <img class="categories-img" src="img/img_cover_small.png" alt="klinker covers" loading="lazy" width="440" height="260">
-          <div class="categories__row-one__right__title title-box">
-            <h2 class="categories__title">Ceramic post covers</h2>
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img-fasade-two.png" alt="klinker bricks" loading="lazy" width="575" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Fasade klinker bricks</h2>
           </div>
         </div>
       </div>
-      <div class="categories__row-three">
-        <div class="categories__row-three__left box">
-          <img class="categories-img" src="img/img_mosaic.png" alt="klinker mosaic" loading="lazy" width="575" height="260">
-          <div class="categories__row-three__left__title title-box">
-            <h2 class="categories__title">Klinker mosaic bricks</h2>
+
+      <div class="categories__row">
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_fasade-three.png" alt="klinker thermo panels" loading="lazy" width="710" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Fasade klinker brick slip thermo panels</h2>
           </div>
         </div>
-        <div class="categories__row-three__right box">
-          <img class="categories-img" src="img/img_long-stairs.png" alt="long klinker stairs" loading="lazy" width="575" height="260">
-          <div class="categories__row-three__right__title title-box">
-            <h2 class="categories__title">Klinker stairs</h2>
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_cover_small.png" alt="klinker covers" loading="lazy" width="440" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Ceramic post covers</h2>
           </div>
         </div>
       </div>
-      <div class="categories__row-four">
-        <div class="categories__row-four__left box">
-          <img class="categories-img" src="img/img_cover.png" alt="long klinker covers" loading="lazy" width="710" height="260">
-          <div class="categories__row-four__left__title title-box">
-            <h2 class="categories__title">Ceramic fence covers</h2>
+
+      <div class="categories__row">
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_mosaic.png" alt="klinker mosaic" loading="lazy" width="575" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Klinker mosaic bricks</h2>
           </div>
         </div>
-        <div class="categories__row-four__right box">
-          <img class="categories-img" src="img/img_glue.png" alt="glue" loading="lazy" width="440" height="260">
-          <div class="categories__row-four__right__title title-box">
-            <h2 class="categories__title">Plasters</h2>
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_long-stairs.png" alt="long klinker stairs" loading="lazy" width="575" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Klinker stairs</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="categories__row">
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_cover.png" alt="long klinker covers" loading="lazy" width="710" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Ceramic fence covers</h2>
+          </div>
+        </div>
+        <div class="categories__row__box">
+          <img class="categories__row__box__img" src="img/img_glue.png" alt="glue" loading="lazy" width="440" height="260">
+          <div class="categories__row__box__title">
+            <h2 class="categories__row__box__title__h2">Plasters</h2>
           </div>
         </div>
       </div>
     </section>
+
   </main>
   <footer class="footer--background"></footer>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

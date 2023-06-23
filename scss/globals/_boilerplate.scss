@@ -1,0 +1,49 @@
+@use '../util/fonts' as *;
+@use 'colors' as *;
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"], ol[role="list"] {list-style: none;}
+
+a {
+  text-decoration: none;
+  color: $white-color;
+}
+
+li {list-style-type: none;}
+
+html:focus-within {scroll-behavior: smooth;}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: $gray-color;
+  font-family: $font;
+ }
+
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,122 @@
+@use '../util/breakpoints' as *;
+@use '../globals/typography' as *;
+
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__upper, &__lower {
+    padding: var(--padding-nav);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: var(--nav-white-color);
+    border-bottom: 1px solid var(--light-gray-color);
+
+    &__left, &__right {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__left {
+      &__logo {
+        display: none;
+
+        @include breakpoint(small) {
+          display: block;
+        }
+      }
+      &__hamburger {
+
+        &__nav-toggle {
+          display: block;
+          border: none;
+          background-color: inherit;
+          cursor: pointer;
+          transition: opacity 250ms ease;
+        }
+      }
+    }
+  
+    &__right {
+      display: flex;  
+      align-items: center;
+      justify-content: space-between;
+
+      &__search {
+        display: flex;
+        width: 40%;
+        font-weight: 300;
+        background-color: var(--search-white-color1);
+        border: 1px solid var(--light-gray-color);
+        padding: 0.5rem 0.8rem 0.5rem 1rem;
+        margin-left: 1rem;
+        border-radius: 1.5rem;
+
+        &__icon {
+          font-size: 1.2rem;
+          color: var(--medium-gray-color);
+          display: block;
+          margin: auto 0;
+        }
+
+        &__form {
+          border: none;
+          outline: none;
+          width: 100%;
+          padding-left: 0.5rem;
+          background-color: var(--search-white-color1);
+        }
+      }
+      &__search, &__liked, &__seen, &__basket {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__lower--background {
+    visibility: hidden;
+    position: absolute;
+    height: 0;
+    background-color: var(--gray-color);
+
+    &--visible {
+      visibility: visible;
+      height: 100vh; 
+      position: relative;
+    }
+  }
+
+  &__lower {
+    &__nav {
+      &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: $s-font-size;
+
+        &__link:last-child {
+          font-weight: 700;
+        }
+
+        &__divider {
+          height: 1px;
+          width: 30%;
+          border-bottom: 1px solid var(--light-gray-color);
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+}

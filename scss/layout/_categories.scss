@@ -1,0 +1,39 @@
+@use '../util/breakpoints' as *;
+@use '../globals/typography' as *;
+
+.categories {
+  &__row {
+    &__box {
+      position: relative;
+      margin-bottom: 1rem;
+
+      &__img {
+        height: 12rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        outline: 1px solid var(--light-gray-color);
+        object-fit: cover;
+      }
+
+      &__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--strong-gray-color-opacity);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        width: 100%;
+
+        &__h2 {
+          color: white;
+          font-size: $s-font-size;
+          padding: 1rem 1rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.02rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
