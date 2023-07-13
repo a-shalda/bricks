@@ -1,18 +1,30 @@
 @use '../globals/typography' as *;
 @use '../globals/colors' as *;
+@use '../util/breakpoints' as *;
 
 .products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include breakpoint(xlarge) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .product {
   height: auto;
   border: 1px solid var(--light-gray-color);
   border-radius: 0.5rem;
-  max-width: 18rem;
+  min-width: 18rem;
 
   &__top {
     padding: 0.5rem;

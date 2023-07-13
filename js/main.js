@@ -1,13 +1,8 @@
 let productsHTML = '';
 
-
-
 products.forEach((product) => {
-
-
 const priceM2 = ((product.priceCentsM2 / 100).toFixed(2));
 const pricePc = ((product.priceCentsM2 / 100) / Number(product.piecesPerM2)).toFixed(2);
-
 const indexOfDotM2 = ((product.priceCentsM2 / 100).toFixed(2)).toString().indexOf('.');
 const indexofDotPc = ((product.priceCentsM2 / 100) / Number(product.piecesPerM2)).toFixed(2).toString().indexOf('.');
   
