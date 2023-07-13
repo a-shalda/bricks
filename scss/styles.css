@@ -2,6 +2,7 @@
 :root {
   --gray-color: rgba(84, 84, 84, 0.99);
   --light-gray-color: rgb(224, 224, 224);
+  --light-light-gray-color: rgb(242, 242, 242);
   --medium-gray-color: rgb(174, 174, 174);
   --strong-gray-color: rgb(88, 88, 88);
   --strong-gray-color-opacity: rgb(88, 88, 88, 0.8);
@@ -80,7 +81,7 @@ a:hover {
 }
 
 .stock {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: firebrick;
   line-height: 1.7rem;
 }
@@ -108,6 +109,11 @@ a:hover {
   text-transform: uppercase;
   font-size: 1.125rem;
   font-weight: 400;
+}
+
+.price-small {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
 }
 
 .header {
@@ -315,7 +321,7 @@ a:hover {
 }
 
 .product {
-  height: 30rem;
+  height: auto;
   border: 1px solid var(--light-gray-color);
   border-radius: 0.5rem;
   max-width: 18rem;
@@ -333,10 +339,10 @@ a:hover {
   align-items: flex-end;
   gap: 0.7rem;
   padding-block: 0.3rem;
-  padding-inline: 1.5rem;
-  color: var(--strong-gray-color);
-  font-size: 0.875rem;
-  border-bottom: 1px solid var(--light-gray-color);
+  padding-inline: 1rem;
+  color: rgb(162, 162, 162);
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--light-light-gray-color);
 }
 .product__middle {
   display: flex;
@@ -353,7 +359,8 @@ a:hover {
   line-height: 2.5rem;
   color: #fff;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 .product__middle__price--st {
   padding-right: 2rem;
@@ -362,5 +369,21 @@ a:hover {
   line-height: 2.5rem;
   font-size: 1.2rem;
   color: var(--gray-color);
-  font-weight: 700;
+  font-weight: 400;
+}
+.product__bottom {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.product__bottom__title {
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--light-light-gray-color);
+  border-bottom: 1px solid var(--light-light-gray-color);
+}
+.product__bottom__desc {
+  padding: 0.8rem 0;
+}
+.product__bottom__desc__p {
+  font-size: 0.8rem;
+  color: rgb(109, 109, 109);
 }/*# sourceMappingURL=styles.css.map */
