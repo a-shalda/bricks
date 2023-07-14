@@ -24,7 +24,7 @@ productsHTML +=`
         </div>
     </div>
     <div class="product__bottom">
-        <p class="product__bottom__title">${product.name} ${product.format} mm</p>
+        <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.format} mm</span></p>
         <div class="product__bottom__desc">
             <p class="product__bottom__desc__p">Manufacturer: ${product.manufacturer}</p>
             <p class="product__bottom__desc__p">Country: ${product.country}</p>
@@ -34,17 +34,7 @@ productsHTML +=`
 </div>
 `
 });
-  
-  
-
 document.querySelector('.products').innerHTML = productsHTML;
-
-
-
-
-
-
-
 
 
 

@@ -7,24 +7,31 @@
   gap: 1rem;
   grid-template-columns: 1fr;
 
-  @include breakpoint(medium) {
+  @include breakpoint(small) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @include breakpoint(xlarge) {
+  @include breakpoint(large) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  @include breakpoint(xlarge) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+
+
+
 }
 
 .product {
   height: auto;
-  border: 1px solid var(--light-gray-color);
+  border: 1px solid var(--light-light-gray-color);
   border-radius: 0.5rem;
-  min-width: 18rem;
 
   &__top {
     padding: 0.5rem;
@@ -37,10 +44,10 @@
     &__stock {
       display: flex;
       justify-content: flex-start;
-      align-items: flex-end;
+      align-items: center;
       gap: 0.7rem;
 
-      padding-block: 0.3rem;
+      padding-block: 0.5rem;
       padding-inline: 1rem;
       color: rgb(162, 162, 162);
       font-size: 0.8rem;
@@ -53,15 +60,20 @@
     justify-content: space-between;
 
     &__price {
-      
       &--m2 {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        padding-left: 0.5rem;
+
         background-color: var(--gray-color);
-        padding-left: 2rem;
-        padding-right: 1.5rem;
+
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
 
         &__p {
+
+
           line-height: 2.5rem;
           color: $white-color;
           font-size: 1.2rem;
@@ -70,7 +82,9 @@
         }
       }
       &--st {
-        padding-right: 2rem;
+        display: flex;
+        width: 50%;
+        justify-content: center;
 
         &__p {
           line-height: 2.5rem;
