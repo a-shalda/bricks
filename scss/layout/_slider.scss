@@ -1,0 +1,60 @@
+@use '../util/breakpoints' as *;
+@use '../globals/typography' as *;
+@use '../globals/colors' as *;
+
+.slider {
+  
+  &__container {
+    background-image: url('/img/slider/csm_02.riegel50.7750.455.p_9c5f8e3ba4.jpg');
+    height: 30rem;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: 1.5rem;
+
+      padding: 3rem;
+      
+      background-color: hsla(0, 0%, 0%, 0.483);
+      height: 100%;
+      border-radius: 0.5rem;
+
+      &__title {
+        color: white;
+        font-size: clamp(1rem, 10vw + 0.01rem, 5rem);
+        line-height: clamp(1rem, 8vw + 1rem, 5rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        }
+
+      &__desc {
+        color: white;
+        font-size: clamp(1rem, 2vw + 0.01rem, 2rem);
+        line-height: clamp(1.5rem, 2vw + 0.01rem, 3rem);
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+      }
+
+      &__button {
+        align-self: flex-start;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
