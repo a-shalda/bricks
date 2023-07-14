@@ -291,7 +291,7 @@ a:hover {
   }
 }
 .categories__row__box__img {
-  height: 12rem;
+  height: 13rem;
   width: 100%;
   border-radius: 0.5rem;
   -o-object-fit: cover;
@@ -301,19 +301,19 @@ a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--strong-gray-color-opacity);
+  background-color: hsla(0, 0%, 33%, 0.79);
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   width: 100%;
 }
 .categories__row__box__title__h2 {
   color: white;
-  font-size: 1.125rem;
-  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.02rem;
-  text-align: center;
+  letter-spacing: 0.06rem;
+  text-align: start;
 }
 
 .products {

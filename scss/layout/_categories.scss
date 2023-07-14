@@ -32,7 +32,7 @@
 
 
       &__img {
-        height: 12rem;
+        height: 13rem;
         width: 100%;
         border-radius: 0.5rem;
         object-fit: cover;
@@ -42,19 +42,19 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color: var(--strong-gray-color-opacity);
+        background-color: hsla(0, 0%, 33%, 0.79);
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
         width: 100%;
 
         &__h2 {
           color: white;
-          font-size: $s-font-size;
-          padding: 1rem 1rem;
+          font-size: 1.2rem;
+          padding: 1rem 1.5rem;
           font-weight: 400;
           text-transform: uppercase;
-          letter-spacing: 0.02rem;
-          text-align: center;
+          letter-spacing: 0.06rem;
+          text-align: start;
         }
       }
     }
