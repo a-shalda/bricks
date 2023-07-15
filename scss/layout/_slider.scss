@@ -2,59 +2,136 @@
 @use '../globals/typography' as *;
 @use '../globals/colors' as *;
 
-.slider {
-  
-  &__container {
-    background-image: url('/img/slider/csm_02.riegel50.7750.455.p_9c5f8e3ba4.jpg');
-    height: 30rem;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.5rem;
+.slideshow {
+  position: relative;
 
-    &__box {
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      gap: 1.5rem;
+  &__slide {
+    display: none;
+    position: relative;
 
-      padding: 3rem;
-      
+
+    &__img {
+      width: 100%;
+      object-fit: cover;
+      height: clamp(30rem, 60vw, 45rem);
+      border-radius: 0.5rem;
+    }
+
+    &__abs {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
       background-color: hsla(0, 0%, 0%, 0.483);
-      height: 100%;
       border-radius: 0.5rem;
 
-      &__title {
-        color: white;
-        font-size: clamp(1rem, 10vw + 0.01rem, 5rem);
-        line-height: clamp(1rem, 8vw + 1rem, 5rem);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.3rem;
-        }
+      height: 100%;
 
-      &__desc {
-        color: white;
-        font-size: clamp(1rem, 2vw + 0.01rem, 2rem);
-        line-height: clamp(1.5rem, 2vw + 0.01rem, 3rem);
-        font-weight: 300;
-        letter-spacing: 0.2rem;
-      }
+      &__box {
 
-      &__button {
-        align-self: flex-start;
-        border: none;
-        border-radius: 0.5rem;
-        padding: 1rem 1.5rem;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 1.2rem;
-        letter-spacing: 0.1rem;
-
-        &:hover {
-          cursor: pointer;
+        &__cont {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+  
+          &__title {
+            color: white;
+            font-size: clamp(1rem, 10vw + 0.01rem, 5rem);
+            line-height: clamp(1rem, 8vw + 1rem, 5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            }
+    
+          &__desc {
+            color: white;
+            font-size: clamp(1rem, 2vw + 0.01rem, 2rem);
+            line-height: clamp(1.5rem, 2vw + 0.01rem, 3rem);
+            font-weight: 300;
+            letter-spacing: 0.2rem;
+          }
+    
+          &__button {
+            align-self: flex-start;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+    
+            &:hover {
+              cursor: pointer;
+            }
+          }
         }
       }
     }
   }
+
+  &__button {
+
+    &--prev, &--next {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      width: auto;
+      font-size: 3rem;
+      padding: 1rem;
+      color: white;
+      font-weight: bold;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.8);
+        border-radius: 0.5rem;
+      }
+    }
+
+    &--next {
+      right: 1rem;
+    }
+
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+
+    &__cont {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      &__dot {
+        cursor: pointer;
+        height: 1rem;
+        width: 2rem;
+        background-color: #bbb;
+        border-radius: 0.2rem;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+  
+        &:active, &:hover {
+          background-color: #717171;
+        }
+      }
+    }
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
 }
