@@ -5,7 +5,7 @@ const slider_items = [
     desc: 'More than 1,000 fasade materials in stock at affordable prices',
     id: 1
   }, {
-    img: '/img/slider/R750NF14-70q.jpg',
+    img: '/img/slider/R750NF14_70q.jpg',
     title: 'Embelish your home',
     desc: 'More than 1,000 fasade materials in stock at affordable prices',
     id: 2
