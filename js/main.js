@@ -99,6 +99,77 @@ bodyToggle.addEventListener('click', () => {
     body.classList.toggle('body-stop');
 })
 
+//Categories
+
+showCategories();
+
+function showCategories() {
+
+    let categoriesFirstHTML = '';
+    let categoriesSecondHTML = '';
+    let categoriesThirdHTML = '';
+    let categoriesFourthHTML = '';
+
+    for (let i = 0; i < categories.length; i++) {
+        
+        if(i < 2) {
+            categoriesFirstHTML += `
+
+            <div class="categories__row__box ${categories[i].id}">
+                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
+                <div class="categories__row__box__title">
+                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
+                </div>
+            </div>
+            `
+        }
+        else if(i < 4) {
+            categoriesSecondHTML += `
+
+            <div class="categories__row__box ${categories[i].id}">
+                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
+                <div class="categories__row__box__title">
+                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
+                </div>
+            </div>
+            `
+        }
+        else if(i < 6) {
+            categoriesThirdHTML += `
+
+            <div class="categories__row__box ${categories[i].id}">
+                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
+                <div class="categories__row__box__title">
+                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
+                </div>
+            </div>
+            `
+        }
+        else if(i < 8) {
+            categoriesFourthHTML += `
+
+            <div class="categories__row__box ${categories[i].id}">
+                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
+                <div class="categories__row__box__title">
+                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
+                </div>
+            </div>
+            `
+        }
+    }
+
+    document.querySelector('.first').innerHTML = categoriesFirstHTML;
+    document.querySelector('.second').innerHTML = categoriesSecondHTML;
+    document.querySelector('.third').innerHTML = categoriesThirdHTML;
+    document.querySelector('.fourth').innerHTML = categoriesFourthHTML;
+}
+
+
+
+
+
+
+
 
 //Products
 
