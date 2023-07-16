@@ -1,3 +1,125 @@
+//Slider
+
+let sliderHTML = "";
+const slides = slider_items.forEach((item) => {
+
+sliderHTML += `
+    <div class="slideshow__slide fade">
+        <img src="${item.img}" class="slideshow__slide__img" loading="lazy">
+        <div class="slideshow__slide__abs">
+            <div class="slideshow__slide__abs__box__cont">
+                <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
+                <p class="slideshow__slide__abs__box__cont__desc">${item.desc}</p>
+                <button class="slideshow__slide__abs__box__cont__button">Explore</button>
+            </div>
+        </div>
+    </div>
+`
+});
+
+// let lowerButtonsHTML = "";
+
+// const dotsHTML = document.querySelectorAll('.slideshow__dots__cont__dot').forEach((item) => {
+
+//     lowerButtonsHTML += `
+//     <span class="slideshow__dots__cont__dot" data-product-id="${item.id}"></span>
+//     `;
+
+//     let number = item.dataset.slider_items.id;
+//     console.log(number);
+
+//     document.querySelector('.dot-one').addEventListener('click', () => {currentSlide(1);});
+
+
+
+
+// });
+
+document.querySelectorAll('.slideshow__dots__cont__dot').forEach((item) => {});
+
+const lowerButtonsHTML = `
+    <span class="slideshow__dots__cont__dot dot-one"></span> 
+    <span class="slideshow__dots__cont__dot dot-two"></span> 
+    <span class="slideshow__dots__cont__dot dot-three"></span> 
+`;
+
+const buttonsHTML = `
+    <a class="slideshow__button--prev">❮</a>
+    <a class="slideshow__button--next">❯</a>
+
+    <div class="slideshow__dots">
+        <div class="slideshow__dots__cont"></div>
+    </div>
+`;
+
+document.querySelector('.slideshow').innerHTML = sliderHTML + buttonsHTML;
+document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
+
+
+
+
+
+
+document.querySelector('.slideshow__button--prev').addEventListener('click', () => {plusSlides(-1);});
+document.querySelector('.slideshow__button--next').addEventListener('click', () => {plusSlides(1);});
+
+document.querySelector('.dot-one').addEventListener('click', () => {currentSlide(1);});
+document.querySelector('.dot-two').addEventListener('click', () => {currentSlide(2);});
+document.querySelector('.dot-three').addEventListener('click', () => {currentSlide(3);});
+
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function showSlides(n) {
+  let slides = document.querySelectorAll(".slideshow__slide");
+  let dots = document.querySelectorAll(".slideshow__dots__cont__dot");
+
+  if (n > slides.length) {slideIndex = 1}    
+
+  if (n < 1) {slideIndex = slides.length}
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+
+
+const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
+const nav = document.querySelector('.header__lower--background');
+
+navToggle.addEventListener('click', () => {
+    nav.classList.toggle('header__lower--background--visible');
+})
+
+const bodyToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
+const body = document.querySelector('.body');
+
+bodyToggle.addEventListener('click', () => {
+    body.classList.toggle('body-stop');
+})
+
+
+//Products
+
 let productsHTML = '';
 
 products.forEach((product) => {
@@ -35,53 +157,3 @@ productsHTML +=`
 `
 });
 document.querySelector('.products').innerHTML = productsHTML;
-
-
-
-const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
-const nav = document.querySelector('.header__lower--background');
-
-navToggle.addEventListener('click', () => {
-    nav.classList.toggle('header__lower--background--visible');
-})
-
-const bodyToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
-const body = document.querySelector('.body');
-
-bodyToggle.addEventListener('click', () => {
-    body.classList.toggle('body-stop');
-})
-
-
-//Slider-js
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function showSlides(n) {
-  let slides = document.querySelectorAll(".slideshow__slide");
-  let dots = document.querySelectorAll(".dot");
-
-  if (n > slides.length) {slideIndex = 1}    
-
-  if (n < 1) {slideIndex = slides.length}
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
