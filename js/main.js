@@ -1,4 +1,4 @@
-//Slider
+//SLIDER
 
 let sliderHTML = "";
 const slides = slider_items.forEach((item) => {
@@ -24,7 +24,7 @@ const lowerButtons = slider_items.forEach((item) => {
     `
 });
 
-const buttonsHTML = `
+const sideButtonsHTML = `
     <a class="slideshow__button--prev">❮</a>
     <a class="slideshow__button--next">❯</a>
 
@@ -33,7 +33,7 @@ const buttonsHTML = `
     </div>
 `;
 
-document.querySelector('.slideshow').innerHTML = sliderHTML + buttonsHTML;
+document.querySelector('.slideshow').innerHTML = sliderHTML + sideButtonsHTML;
 document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 
 document.querySelectorAll('.slideshow__dots__cont__dot')
@@ -46,8 +46,6 @@ document.querySelectorAll('.slideshow__dots__cont__dot')
 
 document.querySelector('.slideshow__button--prev').addEventListener('click', () => {plusSlides(-1);});
 document.querySelector('.slideshow__button--next').addEventListener('click', () => {plusSlides(1);});
-
-
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -82,8 +80,7 @@ function currentSlide(n) {
   }
 
 
-//Hamburger menu
-
+//HAMBURGER MENU
 
 const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
 const nav = document.querySelector('.header__lower--background');
@@ -99,79 +96,31 @@ bodyToggle.addEventListener('click', () => {
     body.classList.toggle('body-stop');
 })
 
-//Categories
+
+//CATEGORIES
 
 showCategories();
 
 function showCategories() {
-
-    let categoriesFirstHTML = '';
-    let categoriesSecondHTML = '';
-    let categoriesThirdHTML = '';
-    let categoriesFourthHTML = '';
+    categoriesHTML = '';
 
     for (let i = 0; i < categories.length; i++) {
-        
-        if(i < 2) {
-            categoriesFirstHTML += `
 
-            <div class="categories__row__box ${categories[i].id}">
-                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
-                <div class="categories__row__box__title">
-                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
+        categoriesHTML += `
+            <div class="categories__box ${categories[i].id}">
+                <img class="categories__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
+                <div class="categories__box__title">
+                    <h2 class="categories__box__title__h2">${categories[i].title}</h2>
                 </div>
             </div>
-            `
-        }
-        else if(i < 4) {
-            categoriesSecondHTML += `
-
-            <div class="categories__row__box ${categories[i].id}">
-                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
-                <div class="categories__row__box__title">
-                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
-                </div>
-            </div>
-            `
-        }
-        else if(i < 6) {
-            categoriesThirdHTML += `
-
-            <div class="categories__row__box ${categories[i].id}">
-                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
-                <div class="categories__row__box__title">
-                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
-                </div>
-            </div>
-            `
-        }
-        else if(i < 8) {
-            categoriesFourthHTML += `
-
-            <div class="categories__row__box ${categories[i].id}">
-                <img class="categories__row__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
-                <div class="categories__row__box__title">
-                    <h2 class="categories__row__box__title__h2">${categories[i].title}</h2>
-                </div>
-            </div>
-            `
-        }
+        `;
     }
 
-    document.querySelector('.first').innerHTML = categoriesFirstHTML;
-    document.querySelector('.second').innerHTML = categoriesSecondHTML;
-    document.querySelector('.third').innerHTML = categoriesThirdHTML;
-    document.querySelector('.fourth').innerHTML = categoriesFourthHTML;
+    document.querySelector('.categories').innerHTML = categoriesHTML;
 }
 
 
-
-
-
-
-
-
-//Products
+//PRODUCTS
 
 let productsHTML = '';
 

@@ -42,12 +42,10 @@
       justify-content: flex-start;
       align-items: center;
       gap: 0.7rem;
-
       padding-block: 0.5rem;
       padding-inline: 1rem;
       color: rgb(162, 162, 162);
       font-size: 0.8rem;
-
       border-bottom: 1px solid var(--light-light-gray-color);
     }
   }
@@ -61,15 +59,11 @@
         width: 50%;
         justify-content: center;
         padding-left: 0.5rem;
-
         background-color: var(--gray-color);
-
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
 
         &__p {
-
-
           line-height: 2.5rem;
           color: $white-color;
           font-size: 1.2rem;

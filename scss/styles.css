@@ -245,56 +245,54 @@ a:hover {
 }
 
 @media (min-width: 40em) {
-  .categories__row {
+  .categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "one one two two" "three three three four" "five five six six" "seven seven seven eight";
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    row-gap: 0.25rem;
+    gap: 1rem;
   }
-  .categories__row .one {
+  .categories .one {
     grid-area: one;
   }
-  .categories__row .two {
+  .categories .two {
     grid-area: two;
   }
-  .categories__row .three {
+  .categories .three {
     grid-area: three;
   }
-  .categories__row .four {
+  .categories .four {
     grid-area: four;
   }
-  .categories__row .five {
+  .categories .five {
     grid-area: five;
   }
-  .categories__row .six {
+  .categories .six {
     grid-area: six;
   }
-  .categories__row .seven {
+  .categories .seven {
     grid-area: seven;
   }
-  .categories__row .eight {
+  .categories .eight {
     grid-area: eight;
   }
 }
-.categories__row__box {
+.categories__box {
   position: relative;
   margin-bottom: 1rem;
 }
 @media (min-width: 40em) {
-  .categories__row__box {
+  .categories__box {
     margin-bottom: 0;
   }
 }
-.categories__row__box__img {
+.categories__box__img {
   height: 13rem;
   width: 100%;
   border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.categories__row__box__title {
+.categories__box__title {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -304,7 +302,7 @@ a:hover {
   width: 100%;
   height: auto;
 }
-.categories__row__box__title__h2 {
+.categories__box__title__h2 {
   color: white;
   font-size: 1.5rem;
   padding: 1rem 1.5rem;
