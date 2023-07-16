@@ -17,31 +17,12 @@ sliderHTML += `
 `
 });
 
-// let lowerButtonsHTML = "";
-
-// const dotsHTML = document.querySelectorAll('.slideshow__dots__cont__dot').forEach((item) => {
-
-//     lowerButtonsHTML += `
-//     <span class="slideshow__dots__cont__dot" data-product-id="${item.id}"></span>
-//     `;
-
-//     let number = item.dataset.slider_items.id;
-//     console.log(number);
-
-//     document.querySelector('.dot-one').addEventListener('click', () => {currentSlide(1);});
-
-
-
-
-// });
-
-document.querySelectorAll('.slideshow__dots__cont__dot').forEach((item) => {});
-
-const lowerButtonsHTML = `
-    <span class="slideshow__dots__cont__dot dot-one"></span> 
-    <span class="slideshow__dots__cont__dot dot-two"></span> 
-    <span class="slideshow__dots__cont__dot dot-three"></span> 
-`;
+let lowerButtonsHTML = "";
+const lowerButtons = slider_items.forEach((item) => {
+    lowerButtonsHTML += `
+        <span class="slideshow__dots__cont__dot" data-product-id="${item.id}"></span>
+    `
+});
 
 const buttonsHTML = `
     <a class="slideshow__button--prev">❮</a>
@@ -55,17 +36,16 @@ const buttonsHTML = `
 document.querySelector('.slideshow').innerHTML = sliderHTML + buttonsHTML;
 document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 
+document.querySelectorAll('.slideshow__dots__cont__dot')
 
-
-
-
+    .forEach((button) => {
+        button.addEventListener('click', () => {
+            currentSlide(button.dataset.productId);
+        });
+});
 
 document.querySelector('.slideshow__button--prev').addEventListener('click', () => {plusSlides(-1);});
 document.querySelector('.slideshow__button--next').addEventListener('click', () => {plusSlides(1);});
-
-document.querySelector('.dot-one').addEventListener('click', () => {currentSlide(1);});
-document.querySelector('.dot-two').addEventListener('click', () => {currentSlide(2);});
-document.querySelector('.dot-three').addEventListener('click', () => {currentSlide(3);});
 
 
 
@@ -101,6 +81,8 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
   }
 
+
+//Hamburger menu
 
 
 const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
