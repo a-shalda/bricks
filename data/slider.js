@@ -4,21 +4,20 @@ const slider_items = [
     title: 'Embelish your home',
     desc: 'More than 1,000 fasade materials in stock at affordable prices',
     id: 1
+  }, {
+    img: 'img/slider/R750NF14_70q.jpg',
+    title: 'Embelish your home',
+    desc: 'More than 1,000 fasade materials in stock at affordable prices',
+    id: 2
+  }, {
+    img: 'img/slider/R685NF_slider.jpg',
+    title: 'Embelish your home',
+    desc: 'More than 1,000 fasade materials in stock at affordable prices',
+    id: 3
+  }, {
+    img: 'img/slider/R685NF_slider.jpg',
+    title: 'Embelish your home',
+    desc: 'More than 1,000 fasade materials in stock at affordable prices',
+    id: 4
   }
-  // , {
-  //   img: '/img/slider/R750NF14_70q.jpg',
-  //   title: 'Embelish your home',
-  //   desc: 'More than 1,000 fasade materials in stock at affordable prices',
-  //   id: 2
-  // }, {
-  //   img: '/img/slider/R685NF_slider.jpg',
-  //   title: 'Embelish your home',
-  //   desc: 'More than 1,000 fasade materials in stock at affordable prices',
-  //   id: 3
-  // }, {
-  //   img: '/img/slider/R685NF_slider.jpg',
-  //   title: 'Embelish your home',
-  //   desc: 'More than 1,000 fasade materials in stock at affordable prices',
-  //   id: 4
-  // }
 ];
