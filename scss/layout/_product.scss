@@ -29,12 +29,20 @@
   border: 1px solid var(--light-light-gray-color);
   border-radius: 0.5rem;
 
+  &:hover {
+    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.2);
+  }
+
   &__top {
     padding: 0.5rem;
 
     &__img {
       width: 100%;
       border-radius: 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &__stock {
@@ -93,6 +101,11 @@
       padding: 0.8rem 0;
       border-top: 1px solid var(--light-light-gray-color);
       border-bottom: 1px solid var(--light-light-gray-color);
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
 
     &__desc {

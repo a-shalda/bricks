@@ -27,12 +27,23 @@
     position: relative;
     margin-bottom: 1rem;
     @include breakpoint(medium) {margin-bottom: 0;}
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &__img {
       height: 13rem;
       width: 100%;
       border-radius: 0.5rem;
       object-fit: cover;
+      transition: transform 0.5s;
+
+      // &:hover {
+      //   transform: scale(1.025, 1.025);
+      // }
     }
 
     &__title {
@@ -55,5 +66,9 @@
         text-align: start;
       }
     }
+  }
+
+  .enlarge {
+    transform: scale(1.025, 1.025);
   }
 }

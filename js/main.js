@@ -1,12 +1,12 @@
 //SLIDER
-//Generating HTML
+//Generating slider on the page
 
 let sliderHTML = "";
 const slides = slider_items.forEach((item) => {
 
 sliderHTML += `
     <div class="slideshow__slide fade">
-        <img src="${item.img}" class="slideshow__slide__img" loading="lazy">
+        <img src="${item.img}" class="slideshow__slide__img" loading="lazy" data-product-id="${item.id}">
         <div class="slideshow__slide__abs">
             <div class="slideshow__slide__abs__box__cont">
                 <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
@@ -91,9 +91,9 @@ let sliderInterval = function() {
     plusSlides(1);
 }
 
-let start = setInterval(sliderInterval, 1000);
+let start = setInterval(sliderInterval, 3000);
 document.querySelector('.slideshow').addEventListener('mouseenter', () => {clearInterval(start)});
-document.querySelector('.slideshow').addEventListener('mouseleave', () => {start = setInterval(sliderInterval, 1000);});
+document.querySelector('.slideshow').addEventListener('mouseleave', () => {start = setInterval(sliderInterval, 3000);});
 
 
 //HAMBURGER MENU
@@ -114,6 +114,7 @@ bodyToggle.addEventListener('click', () => {
 
 
 //CATEGORIES
+//Generating categories on the page
 
 showCategories();
 
@@ -124,16 +125,32 @@ function showCategories() {
 
         categoriesHTML += `
             <div class="categories__box ${categories[i].id}">
-                <img class="categories__box__img" src=${categories[i].img} alt=${categories[i].title} loading="lazy" width="575" height="260">
+                <img class="categories__box__img img${[i]}" src=${categories[i].img} alt='${categories[i].title}' loading="lazy" width="575" height="260">
                 <div class="categories__box__title">
                     <h2 class="categories__box__title__h2">${categories[i].title}</h2>
                 </div>
             </div>
         `;
     }
-
     document.querySelector('.categories').innerHTML = categoriesHTML;
 }
+
+
+//Adding event listeners to enlarge on mouseenter
+
+let changeCategorySize = 'enlarge';
+document.querySelectorAll('.categories__box')
+
+    .forEach((category, index) => {
+        category.addEventListener('mouseenter', () => {
+            document.querySelector('.img' + index).classList.add(changeCategorySize);
+
+        category.addEventListener('mouseleave', () => {
+            document.querySelector('.img' + index).classList.remove(changeCategorySize);
+        });
+        
+    });
+});
 
 
 //PRODUCTS
@@ -175,3 +192,6 @@ productsHTML +=`
 `
 });
 document.querySelector('.products').innerHTML = productsHTML;
+
+//
+
