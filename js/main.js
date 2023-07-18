@@ -125,7 +125,7 @@ function showCategories() {
 
         categoriesHTML += `
             <div class="categories__box ${categories[i].id}">
-                <img class="categories__box__img img${[i]}" src=${categories[i].img} alt='${categories[i].title}' loading="lazy" width="575" height="260">
+                <img class="categories__box__img cat_img${[i]}" src=${categories[i].img} alt='${categories[i].title}' loading="lazy" width="575" height="260">
                 <div class="categories__box__title">
                     <h2 class="categories__box__title__h2">${categories[i].title}</h2>
                 </div>
@@ -143,10 +143,10 @@ document.querySelectorAll('.categories__box')
 
     .forEach((category, index) => {
         category.addEventListener('mouseenter', () => {
-            document.querySelector('.img' + index).classList.add(changeCategorySize);
+            document.querySelector('.cat_img' + index).classList.add(changeCategorySize);
 
         category.addEventListener('mouseleave', () => {
-            document.querySelector('.img' + index).classList.remove(changeCategorySize);
+            document.querySelector('.cat_img' + index).classList.remove(changeCategorySize);
         });
         
     });
@@ -154,10 +154,11 @@ document.querySelectorAll('.categories__box')
 
 
 //PRODUCTS
+//Generating products on the page
 
 let productsHTML = '';
 
-products.forEach((product) => {
+products.forEach((product, index) => {
 const priceM2 = ((product.priceCentsM2 / 100).toFixed(2));
 const pricePc = ((product.priceCentsM2 / 100) / Number(product.piecesPerM2)).toFixed(2);
 const indexOfDotM2 = ((product.priceCentsM2 / 100).toFixed(2)).toString().indexOf('.');
@@ -166,7 +167,8 @@ const indexofDotPc = ((product.priceCentsM2 / 100) / Number(product.piecesPerM2)
 productsHTML +=`
 <div class="product">
     <div class="product__top">
-        <img class="product__top__img" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+        <img class="product__top__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+        <img class="product__top__img product_img_${index} hidden" src="${product.image_1}" alt="${product.name}" width="264" height="195" loading="lazy">
         <div class="product__top__stock">
             <i class="fa-solid fa-check stock"></i>
             <p class="product__top__stock__desc">${product.availability}</p>
@@ -193,5 +195,22 @@ productsHTML +=`
 });
 document.querySelector('.products').innerHTML = productsHTML;
 
-//
+//Adding onmouse image animation
 
+document.querySelectorAll('.product')
+
+    .forEach((product, index) => {
+        product.addEventListener('mouseenter', () => {
+            document.querySelector('.product_img_' + index).classList.add('moveLeft');
+            document.querySelector('.product_img_' + index).classList.add('moveLeft');
+
+            document.querySelector('.hidden.product_img_' + index).classList.remove('hidden');
+
+
+            
+        product.addEventListener('mouseleave', () => {
+            // document.querySelector('.product_img_' + index).src = products[index].image;
+        });
+        
+    });
+});

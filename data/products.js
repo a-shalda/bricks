@@ -2,6 +2,7 @@ const products = [
   {
     id: 'R100NF9',
     image: 'img/thumbnails/r100nf.jpg',
+    image_1: 'img/thumbnails/r100nf-side.jpg',
     name: 'Brick slips Feldhaus Klinker R100NF9 perla liso',
     priceCentsM2: 5456,
     manufacturer: 'Feldhaus Klinker',

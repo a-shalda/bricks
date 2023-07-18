@@ -358,10 +358,13 @@ a:hover {
 }
 .product__top {
   padding: 0.5rem;
+  overflow: hidden;
+  position: relative;
 }
 .product__top__img {
   width: 100%;
   border-radius: 0.5rem;
+  transition: transform 0.5s;
 }
 .product__top__img:hover {
   cursor: pointer;
@@ -389,6 +392,7 @@ a:hover {
   background-color: var(--gray-color);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  margin-left: -1px;
 }
 .product__middle__price--m2__p {
   line-height: 2.5rem;
@@ -427,6 +431,12 @@ a:hover {
 .product__bottom__desc__p {
   font-size: 0.8rem;
   color: rgb(109, 109, 109);
+}
+.product .moveLeft {
+  transform: translate(-110%);
+}
+.product .hidden {
+  display: none;
 }
 
 .slideshow {

@@ -36,10 +36,13 @@
 
   &__top {
     padding: 0.5rem;
+    overflow: hidden;
+    position: relative;
 
     &__img {
       width: 100%;
       border-radius: 0.5rem;
+      transition: transform 0.5s;
 
       &:hover {
         cursor: pointer;
@@ -71,6 +74,8 @@
         background-color: var(--gray-color);
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
+        margin-left: -1px;
+
 
         &__p {
           line-height: 2.5rem;
@@ -118,4 +123,15 @@
       }
     }
   }
+
+  .moveLeft {
+    transform: translate(-110%);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+
 }
