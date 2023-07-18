@@ -1,4 +1,5 @@
 //SLIDER
+//Generating HTML
 
 let sliderHTML = "";
 const slides = slider_items.forEach((item) => {
@@ -36,6 +37,8 @@ const sideButtonsHTML = `
 document.querySelector('.slideshow').innerHTML = sliderHTML + sideButtonsHTML;
 document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 
+//Adding event listeners
+
 document.querySelectorAll('.slideshow__dots__cont__dot')
 
     .forEach((button) => {
@@ -44,8 +47,20 @@ document.querySelectorAll('.slideshow__dots__cont__dot')
         });
 });
 
+//Code for side buttons
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+  
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
 document.querySelector('.slideshow__button--prev').addEventListener('click', () => {plusSlides(-1);});
 document.querySelector('.slideshow__button--next').addEventListener('click', () => {plusSlides(1);});
+
+//Code for the slider
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -68,16 +83,17 @@ function showSlides(n) {
   
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-
 }
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+//Setting and clearing intervals for the slider
+
+let sliderInterval = function() {
+    plusSlides(1);
+}
+
+let start = setInterval(sliderInterval, 1000);
+document.querySelector('.slideshow').addEventListener('mouseenter', () => {clearInterval(start)});
+document.querySelector('.slideshow').addEventListener('mouseleave', () => {start = setInterval(sliderInterval, 1000);});
 
 
 //HAMBURGER MENU
