@@ -10,7 +10,8 @@ const products = [
     format: '240 x 71 x 9',
     piecesPerM2: 48,
     thickness: 9,
-    availability: 'In stock'
+    availability: 'In stock',
+    filepath: 'product_pages/R100NF9.html'
   }, {
     id: 'R303NF9',
     image: 'img/thumbnails/r303nf.jpg',

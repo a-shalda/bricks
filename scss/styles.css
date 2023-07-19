@@ -28,11 +28,12 @@ ul[role=list], ol[role=list] {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 
 li {
   list-style-type: none;
+  color: #fff;
 }
 
 html:focus-within {
@@ -67,10 +68,6 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-a:hover {
-  opacity: 75%;
-}
-
 .icon-style {
   color: var(--gray-color);
   font-size: 1.5rem;

@@ -167,10 +167,13 @@ const indexofDotPc = ((product.priceCentsM2 / 100) / Number(product.piecesPerM2)
 productsHTML +=`
 <div class="product">
     <div class="product__top">
-        <div class="product__top__cont">
-            <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
-            <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195" loading="lazy">
-        </div>
+
+        <a href="${product.filepath}">
+            <div class="product__top__cont">
+                <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195" loading="lazy">
+            </div>
+        </a>
         
         <div class="product__top__cont__stock">
             <i class="fa-solid fa-check stock"></i>
@@ -186,7 +189,9 @@ productsHTML +=`
         </div>
     </div>
     <div class="product__bottom">
-        <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.format} mm</span></p>
+        <a href="${product.filepath}">
+            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.format} mm</span></p>
+        </a>
         <div class="product__bottom__desc">
             <p class="product__bottom__desc__p">Manufacturer: ${product.manufacturer}</p>
             <p class="product__bottom__desc__p">Country: ${product.country}</p>

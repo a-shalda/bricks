@@ -12,10 +12,13 @@ ul[role="list"], ol[role="list"] {list-style: none;}
 
 a {
   text-decoration: none;
-  color: $white-color;
+  color: inherit;
 }
 
-li {list-style-type: none;}
+li {
+  list-style-type: none;
+  color: $white-color;
+}
 
 html:focus-within {scroll-behavior: smooth;}
 
