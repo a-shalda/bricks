@@ -205,23 +205,27 @@ document.querySelectorAll('.product')
     .forEach((product, index) => {
         product.addEventListener('mouseenter', () => {
 
-
             let first = document.querySelector('.product_img_' + index);
             let second = document.querySelector('.product_img_second_' + index);
 
-            function move() {
+            function moveLeft() {
                 first.classList.add('moveLeft');
                 second.classList.add('moveLeft');
             }
+
+            function moveRight() {
+                first.classList.add('moveRight');
+                second.classList.add('moveRight');
+            }
             
-            let timeOut = setTimeout(move, 1000);
+            let timeOut = setTimeout(moveLeft, 2000);
+            let timeOutBack = setTimeout(moveRight, 7000);
 
         product.addEventListener('mouseleave', () => {
 
             clearTimeout(timeOut);
-
-            first.classList.add('moveRight');
-            second.classList.add('moveRight');
+            clearTimeout(timeOutBack);
+            moveRight();
 
             first.classList.remove('moveLeft');
             second.classList.remove('moveLeft');
