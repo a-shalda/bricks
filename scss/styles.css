@@ -365,7 +365,7 @@ picture {
 .product__top__cont__img {
   width: 100%;
   border-radius: 0.5rem;
-  transition: transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
 }
 .product__top__cont__img:hover {
   cursor: pointer;
@@ -438,6 +438,9 @@ picture {
 }
 .product .moveRight {
   transform: translate(0);
+}
+.product .opacity {
+  opacity: 0.95;
 }
 .product img[class*=product_img_second_] {
   position: absolute;

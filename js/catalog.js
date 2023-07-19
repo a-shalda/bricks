@@ -75,6 +75,9 @@ document.querySelectorAll('.product')
             let first = document.querySelector('.product_img_' + index);
             let second = document.querySelector('.product_img_second_' + index);
 
+            first.classList.add('opacity');
+            second.classList.add('opacity');
+
             function moveLeft() {
                 first.classList.add('moveLeft');
                 second.classList.add('moveLeft');
@@ -94,11 +97,8 @@ document.querySelectorAll('.product')
             clearTimeout(timeOutBack);
             moveRight();
 
-            first.classList.remove('moveLeft');
-            second.classList.remove('moveLeft');
-
-            first.classList.remove('moveRight');
-            second.classList.remove('moveRight');
+            first.classList.remove('opacity','moveLeft','moveRight');
+            second.classList.remove('opacity','moveLeft','moveRight');
         });
     });
 });
