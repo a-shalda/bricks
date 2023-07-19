@@ -218,7 +218,7 @@ document.querySelectorAll('.product')
                 second.classList.add('moveRight');
             }
             
-            let timeOut = setTimeout(moveLeft, 2000);
+            let timeOut = setTimeout(moveLeft, 1000);
             let timeOutBack = setTimeout(moveRight, 7000);
 
         product.addEventListener('mouseleave', () => {
