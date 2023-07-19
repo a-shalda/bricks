@@ -167,11 +167,14 @@ const indexofDotPc = ((product.priceCentsM2 / 100) / Number(product.piecesPerM2)
 productsHTML +=`
 <div class="product">
     <div class="product__top">
-        <img class="product__top__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
-        <img class="product__top__img product_img_${index} hidden" src="${product.image_1}" alt="${product.name}" width="264" height="195" loading="lazy">
-        <div class="product__top__stock">
+        <div class="product__top__cont">
+            <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+            <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195" loading="lazy">
+        </div>
+        
+        <div class="product__top__cont__stock">
             <i class="fa-solid fa-check stock"></i>
-            <p class="product__top__stock__desc">${product.availability}</p>
+            <p class="product__top__cont__stock__desc">${product.availability}</p>
         </div>
     </div>
     <div class="product__middle">
@@ -201,16 +204,30 @@ document.querySelectorAll('.product')
 
     .forEach((product, index) => {
         product.addEventListener('mouseenter', () => {
-            document.querySelector('.product_img_' + index).classList.add('moveLeft');
-            document.querySelector('.product_img_' + index).classList.add('moveLeft');
-
-            document.querySelector('.hidden.product_img_' + index).classList.remove('hidden');
 
 
+            let first = document.querySelector('.product_img_' + index);
+            let second = document.querySelector('.product_img_second_' + index);
+
+            function move() {
+                first.classList.add('moveLeft');
+                second.classList.add('moveLeft');
+            }
             
+            let timeOut = setTimeout(move, 1000);
+
         product.addEventListener('mouseleave', () => {
-            // document.querySelector('.product_img_' + index).src = products[index].image;
+
+            clearTimeout(timeOut);
+
+            first.classList.add('moveRight');
+            second.classList.add('moveRight');
+
+            first.classList.remove('moveLeft');
+            second.classList.remove('moveLeft');
+
+            first.classList.remove('moveRight');
+            second.classList.remove('moveRight');
         });
-        
     });
 });
