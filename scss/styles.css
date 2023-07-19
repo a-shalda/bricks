@@ -571,4 +571,58 @@ picture {
   to {
     opacity: 1;
   }
+}
+
+.main__window {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
+}
+.main__window__top__left {
+  border-bottom: 1px solid var(--light-light-gray-color);
+}
+.main__window__top__left__cont {
+  padding: 2rem;
+}
+.main__window__top__left__cont__img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.main__window__bottom__left__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "one two three" "four five six" "seven eight nine";
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.main__window__bottom__left__grid .one {
+  grid-area: one;
+}
+.main__window__bottom__left__grid .two {
+  grid-area: two;
+}
+.main__window__bottom__left__grid .three {
+  grid-area: three;
+}
+.main__window__bottom__left__grid .four {
+  grid-area: four;
+}
+.main__window__bottom__left__grid .five {
+  grid-area: five;
+}
+.main__window__bottom__left__grid .six {
+  grid-area: six;
+}
+.main__window__bottom__left__grid .seven {
+  grid-area: seven;
+}
+.main__window__bottom__left__grid .eight {
+  grid-area: eight;
+}
+.main__window__bottom__left__grid .nine {
+  grid-area: nine;
+}
+.main__window__bottom__left__grid__cont__img {
+  border-radius: 0.2rem;
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */
