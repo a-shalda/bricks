@@ -625,4 +625,6 @@ picture {
 .main__window__bottom__left__grid__cont__img {
   border-radius: 0.2rem;
   margin: 0 auto;
+  height: 100%;
+  width: auto;
 }/*# sourceMappingURL=styles.css.map */
