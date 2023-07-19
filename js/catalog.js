@@ -33,7 +33,7 @@ productsHTML +=`
         <a href="${product.filepath}">
             <div class="product__top__cont">
                 <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
-                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195" loading="lazy">
+                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
             </div>
         </a>
         
