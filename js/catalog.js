@@ -89,7 +89,7 @@ document.querySelectorAll('.product')
             }
             
             let timeOut = setTimeout(moveLeft, 1000);
-            let timeOutBack = setTimeout(moveRight, 7000);
+            let timeOutBack = setTimeout(moveRight, 5000);
 
         product.addEventListener('mouseleave', () => {
 
