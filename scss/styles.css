@@ -635,14 +635,13 @@ picture {
 }
 .main__window__bottom__left__grid__cont {
   padding: 0.2rem;
+  display: flex;
 }
 .main__window__bottom__left__grid__cont__img {
   border-radius: 0.1rem;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 .main__window__bottom__left__grid__cont__img:hover {
   cursor: pointer;

@@ -62,14 +62,12 @@
 
           &__cont {
             padding: 0.2rem;
-
+            display: flex;
 
             &__img {
               border-radius: 0.1rem;
-              margin: 0 auto;
-              height: 100%;
-              width: auto;
               object-fit: cover;
+              width: 100%;
 
               &:hover {
                 cursor: pointer;
@@ -91,10 +89,6 @@
 
   .main_box {
     display: block;
-  }
-
-  .main_image {
-
   }
 
   .modal {

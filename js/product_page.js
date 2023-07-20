@@ -12,7 +12,7 @@ products.forEach((product) => {
     product.image_original.forEach((image, index) => {
       productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' id='original_${index}' class="main__window__top__left__cont__img" onclick="openModal();" alt='${product.name}' loading="lazy">
+          <img src='${image}' class="main__window__top__left__cont__img" onclick="openModal();" alt='${product.name}' loading="lazy">
         </div>
       `;
     });
@@ -33,7 +33,7 @@ products.forEach((product) => {
 
       productThumbnailslHTML += `
         <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
-          <img src="${image}" id='thumbnail_${index}' onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt='${product.name}' loading="lazy">
+          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt='${product.name}' loading="lazy">
         </div>
       `;
     });
@@ -86,21 +86,14 @@ function showImage(n) {
 
 function openModal () {
 
-  let modal = document.querySelector(".modal");
+  document.querySelector(".modal").style.display = "block";
+  document.querySelector(".modal__content").src = document.querySelector(".main_image").src;
 
-  // Get the image and insert it inside the modal
-  let img = document.querySelector(".main_image");
-
-  let modalImg = document.querySelector(".modal__content");
-
-  modal.style.display = "block";
-  modalImg.src = img.src;
-  
   // Get the <span> element that closes the modal
   let span = document.getElementsByClassName("close")[0];
   
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
-    modal.style.display = "none";
+    document.querySelector(".modal").style.display = "none";
   } 
 }
