@@ -11,7 +11,7 @@ products.forEach((product) => {
 
     product.image_original.forEach((image, index) => {
       productOriginalHTML += `
-        <div class="main__window__top__left__cont main_box">
+        <div class="main__window__top__left__cont main_box fade">
           <img src='${image}' class="main__window__top__left__cont__img" onclick="openModal();" alt='${product.name}' loading="lazy">
         </div>
       `;
@@ -73,13 +73,13 @@ function showImage(n) {
     images[i].classList.remove('main_box');
     thumbnails[i].classList.remove('active');
     main_image[i].classList.remove('main_image');
-    main_thumbnail[i].classList.remove('main_thumbnail');
+    main_thumbnail[i].classList.remove('main_thumbnail', 'clear');
   }
 
   images[imageIndex-1].classList.add('main_box');
   thumbnails[imageIndex-1].classList.add('active');
   main_image[imageIndex-1].classList.add('main_image');
-  main_thumbnail[imageIndex-1].classList.add('main_thumbnail');
+  main_thumbnail[imageIndex-1].classList.add('main_thumbnail', 'clear');
 } 
 
 //MODAL

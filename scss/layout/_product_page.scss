@@ -20,6 +20,7 @@
         &__cont {
           display: none;
           padding: 1rem;
+          aspect-ratio: 5/4;
 
           &__img {
             width: 100%;
@@ -63,22 +64,24 @@
           &__cont {
             padding: 0.2rem;
             display: flex;
+            aspect-ratio: 5/4;
+            transition: outline 0.1s;
 
             &__img {
               border-radius: 0.1rem;
               object-fit: cover;
               width: 100%;
+              opacity: 0.6;
+              transition: opacity 0.5s;
+              
 
               &:hover {
                 cursor: pointer;
+                opacity: 1;
               }
             }
-
-
           }
         }
-
-
       }
     }
   }
@@ -87,8 +90,12 @@
     border-radius: 0.1rem;
   }
 
+  .clear {
+    opacity: 1;
+  }
+
   .main_box {
-    display: block;
+    display: flex;
   }
 
   .modal {
@@ -130,6 +137,16 @@
     display: flex;
     align-items: center;
     height: 100%;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
   }
 }
 
