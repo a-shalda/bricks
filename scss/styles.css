@@ -578,6 +578,7 @@ picture {
   box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
 }
 .main__window__top__left {
+  position: relative;
   border-bottom: 1px solid var(--light-light-gray-color);
 }
 .main__window__top__left__cont {
@@ -586,13 +587,18 @@ picture {
 .main__window__top__left__cont__img {
   width: 100%;
   border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__window__top__left__cont__img:hover {
+  cursor: pointer;
 }
 .main__window__bottom__left__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
   grid-template-areas: "one two three" "four five six" "seven eight nine";
   gap: 0.5rem;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2rem;
 }
 .main__window__bottom__left__grid .one {
@@ -622,9 +628,27 @@ picture {
 .main__window__bottom__left__grid .nine {
   grid-area: nine;
 }
+.main__window__bottom__left__grid__cont {
+  padding: 0.2rem;
+}
 .main__window__bottom__left__grid__cont__img {
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
   margin: 0 auto;
   height: 100%;
   width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__window__bottom__left__grid__cont__img:hover {
+  cursor: pointer;
+}
+.main .active {
+  outline: 3px solid gray;
+  border-radius: 0.1rem;
+}
+.main .main_image {
+  display: block;
+}
+.main .hidden {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

@@ -10,13 +10,25 @@ const products = [
     thickness: 9,
     availability: 'In stock',
     filepath: 'R100NF9.html',
+
     image: 'img/thumbnails/r100nf.jpg',
     image_1: 'img/thumbnails/r100nf-side.jpg',
-    image_2: 'img/images/R100NF/R100NF_full.jpg',
-    image_3: 'img/images/R100NF/R100NF_full_side.jpg',
-    image_4: 'img/images/R100NF/R100NF_house_day.jpg',
-    image_5: 'img/images/R100NF/R100NF_house_night.jpg',
-    image_6: 'img/images/R100NF/R100NF_fasade.jpg'
+
+    image_thumbnail: [
+      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+    ],
+    image_original: [
+      'img/images/R100NF/original/R100NF_full.jpg', 
+      'img/images/R100NF/original/R100NF_full_side.jpg', 
+      'img/images/R100NF/original/R100NF_house_day.jpeg', 
+      'img/images/R100NF/original/R100NF_house_night.jpeg', 
+      'img/images/R100NF/original/R100NF_fasade.jpg', 
+    ]
+    
   }, {
     id: 'R303NF9',
     image: 'img/thumbnails/r303nf.jpg',

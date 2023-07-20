@@ -14,6 +14,7 @@
     &__top {
 
       &__left {
+        position: relative;
         border-bottom: 1px solid var(--light-light-gray-color);
 
         &__cont {
@@ -22,6 +23,11 @@
           &__img {
             width: 100%;
             border-radius: 0.5rem;
+            object-fit: cover;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -34,13 +40,13 @@
         &__grid {
 
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr; 
+          grid-template-columns: auto auto auto;
           grid-template-areas: 
           "one two three"
           "four five six"
           "seven eight nine";
           gap: 0.5rem;
-          justify-content: center;
+          justify-content: space-between;
 
           padding: 2rem;
           .one {grid-area: one;}
@@ -54,20 +60,40 @@
           .nine {grid-area: nine;}
 
           &__cont {
+            padding: 0.2rem;
 
 
             &__img {
-              border-radius: 0.2rem;
+              border-radius: 0.1rem;
               margin: 0 auto;
               height: 100%;
               width: auto;
+              object-fit: cover;
+
+              &:hover {
+                cursor: pointer;
+              }
             }
+
+
           }
         }
 
 
       }
     }
+  }
+  .active {
+    outline: 3px solid gray;
+    border-radius: 0.1rem;
+  }
+
+  .main_image {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
