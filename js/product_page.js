@@ -1,6 +1,6 @@
 //GENERATING HTML
 
-let root = document.URL.slice(22, -5);
+let root = document.URL.slice(-12, -5);
 
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
@@ -12,7 +12,7 @@ products.forEach((product) => {
     product.image_original.forEach((image, index) => {
       productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' id='original_${index}' class="main__window__top__left__cont__img" alt='${product.name}' loading="lazy">
+          <img src='${image}' id='original_${index}' class="main__window__top__left__cont__img" onclick="openModal();" alt='${product.name}' loading="lazy">
         </div>
       `;
     });
@@ -44,9 +44,6 @@ document.querySelector('.main__window__top__left').innerHTML = productOriginalHT
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 
 
-
-
-
 //IMAGE GALLERY
 
 let imageIndex = 1;
@@ -65,9 +62,9 @@ function currentImage(n) {
 function showImage(n) {
   let i;
   let images = document.getElementsByClassName("main__window__top__left__cont");
+  let main_image = document.getElementsByClassName("main__window__top__left__cont__img");
   let thumbnails = document.getElementsByClassName("main__window__bottom__left__grid__cont");
-  let main_image = document.getElementsByClassName("main__window__bottom__left__grid__cont__img");
-
+  let main_thumbnail = document.getElementsByClassName("main__window__bottom__left__grid__cont__img");
 
   if (n > images.length) {imageIndex = 1}
   else if (n < 1) {imageIndex = images.length}
@@ -76,31 +73,34 @@ function showImage(n) {
     images[i].classList.remove('main_box');
     thumbnails[i].classList.remove('active');
     main_image[i].classList.remove('main_image');
+    main_thumbnail[i].classList.remove('main_thumbnail');
   }
 
   images[imageIndex-1].classList.add('main_box');
   thumbnails[imageIndex-1].classList.add('active');
   main_image[imageIndex-1].classList.add('main_image');
+  main_thumbnail[imageIndex-1].classList.add('main_thumbnail');
 } 
 
 //MODAL
 
-let modal = document.querySelector(".modal");
+function openModal () {
 
-// Get the image and insert it inside the modal
-let img = document.getElementById("original_0");
+  let modal = document.querySelector(".modal");
 
-let modalImg = document.querySelector(".modal__content");
+  // Get the image and insert it inside the modal
+  let img = document.querySelector(".main_image");
 
-img.onclick = function(){
+  let modalImg = document.querySelector(".modal__content");
+
   modal.style.display = "block";
-  modalImg.src = this.src;
+  modalImg.src = img.src;
+  
+  // Get the <span> element that closes the modal
+  let span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  } 
 }
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-} 

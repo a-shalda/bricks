@@ -670,15 +670,22 @@ picture {
 .main .modal__content {
   display: block;
   width: 100%;
-  max-width: 50em;
+  max-width: 80em;
+  height: auto;
   border-radius: 0.5rem;
+  margin: auto;
 }
 .main .close {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+}
+.main .modal__box {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */
