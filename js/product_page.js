@@ -17,30 +17,35 @@ function showImage(n) {
   let i;
   let images = document.getElementsByClassName("main__window__top__left__cont");
   let thumbnails = document.getElementsByClassName("main__window__bottom__left__grid__cont");
+  let main_image = document.getElementsByClassName("main__window__bottom__left__grid__cont__img");
+
+
   if (n > images.length) {imageIndex = 1}
-  if (n < 1) {imageIndex = images.length}
+  else if (n < 1) {imageIndex = images.length}
+
   for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
+    images[i].classList.remove('main_box');
+    thumbnails[i].classList.remove('active');
+    main_image[i].classList.remove('main_image');
   }
-  for (i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-  }
-  images[imageIndex-1].style.display = "block";
-  thumbnails[imageIndex-1].className += " active";
+
+  images[imageIndex-1].classList.add('main_box');
+  thumbnails[imageIndex-1].classList.add('active');
+  main_image[imageIndex-1].classList.add('main_image');
 } 
 
 //MODAL
 
-let modal = document.querySelector("active");
+let modal = document.querySelector(".modal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
+// Get the image and insert it inside the modal
 let img = document.getElementById("myImg");
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
+
+let modalImg = document.querySelector(".modal__content");
+
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
 }
 
 // Get the <span> element that closes the modal
