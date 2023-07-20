@@ -1,3 +1,52 @@
+//GENERATING HTML
+
+let root = document.URL.slice(22, -5);
+
+let productOriginalHTML = '';
+let productThumbnailslHTML = '';
+
+products.forEach((product) => {
+
+  if (product.id === root) {
+
+    product.image_original.forEach((image, index) => {
+      productOriginalHTML += `
+        <div class="main__window__top__left__cont main_box">
+          <img src='${image}' id='original_${index}' class="main__window__top__left__cont__img" alt='${product.name}' loading="lazy">
+        </div>
+      `;
+    });
+
+    product.image_original.forEach((image, index) => {
+
+      let gridNumber;
+
+      if (index === 0) gridNumber = 'one';
+      else if (index === 1) gridNumber = 'two';
+      else if (index === 2) gridNumber = 'three';
+      else if (index === 3) gridNumber = 'four';
+      else if (index === 4) gridNumber = 'five';
+      else if (index === 5) gridNumber = 'six';
+      else if (index === 6) gridNumber = 'seven';
+      else if (index === 7) gridNumber = 'eight';
+      else if (index === 8) gridNumber = 'nine';
+
+      productThumbnailslHTML += `
+        <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
+          <img src="${image}" id='thumbnail_${index}' onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt='${product.name}' loading="lazy">
+        </div>
+      `;
+    });
+  }
+});
+
+document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
+document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
+
+
+
+
+
 //IMAGE GALLERY
 
 let imageIndex = 1;
@@ -39,7 +88,7 @@ function showImage(n) {
 let modal = document.querySelector(".modal");
 
 // Get the image and insert it inside the modal
-let img = document.getElementById("myImg");
+let img = document.getElementById("original_0");
 
 let modalImg = document.querySelector(".modal__content");
 
