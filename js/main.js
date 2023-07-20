@@ -5,8 +5,8 @@ let sliderHTML = "";
 const slides = slider_items.forEach((item) => {
 
 sliderHTML += `
-    <div class="slideshow__slide fade">
-        <img src="${item.img}" class="slideshow__slide__img" loading="lazy" data-product-id="${item.id}">
+    <div class="slideshow__slide">
+        <img src="${item.img}" class="slideshow__slide__img fade" loading="lazy" data-product-id="${item.id}">
         <div class="slideshow__slide__abs">
             <div class="slideshow__slide__abs__box__cont">
                 <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>

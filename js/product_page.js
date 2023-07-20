@@ -11,8 +11,8 @@ products.forEach((product) => {
 
     product.image_original.forEach((image, index) => {
       productOriginalHTML += `
-        <div class="main__window__top__left__cont main_box fade">
-          <img src='${image}' class="main__window__top__left__cont__img" onclick="openModal();" alt='${product.name}' loading="lazy">
+        <div class="main__window__top__left__cont main_box">
+          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt='${product.name}' loading="lazy">
         </div>
       `;
     });

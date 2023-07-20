@@ -699,7 +699,7 @@ picture {
 }
 .main .fade {
   animation-name: fade;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 @keyframes fade {
   from {
