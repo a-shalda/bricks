@@ -138,7 +138,7 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          padding-left: 2rem;
+          padding-left: 1rem;
 
   
           &__desc {
@@ -149,10 +149,89 @@
           }
         }
 
+        &__buy {
+          padding: 1rem;
+          padding-top: 0;
 
+          &__qty {
+            display: flex;
+
+            &__buttons {
+              width: 70%;
+              text-align: center;
+
+              &__left {
+                background-color: white;
+                border: 1px solid var(--light-gray-color);
+                border-top-left-radius: 0.4rem;
+                border-bottom-left-radius: 0.4rem;
+                font-size: 1rem;
+                padding-block: 0.3rem;
+                padding-inline: 1rem;
+                color: var(--gray-color);;
+              }
+
+              &__right {
+                background-color: white;
+                border: 1px solid var(--light-gray-color);
+                border-top-right-radius: 0.4rem;
+                border-bottom-right-radius: 0.4rem;
+                font-size: 1rem;
+                padding-block: 0.3rem;
+                padding-inline: 1rem;
+                color: var(--gray-color);
+                margin: -5px;
+              }
+            }
+
+            &__area {
+              text-align: center;
+
+              &__input {
+                width: 80%;
+                font-size: 1rem;
+                padding-block: 0.3rem;
+                padding-left: 1rem;
+                color: var(--gray-color);
+                border: 1px solid var(--light-gray-color);
+                border-radius: 0.4rem;
+
+              }
+            }
+          }
+
+          &__buttons {
+            display: flex;
+            justify-content:space-between;
+            gap: 0.5rem;
+            padding-top: 1rem;
+
+            &__buy_now {
+              background-color: #a43434;
+              border: none;
+              padding-block: 0.6rem;
+              padding-inline: 1rem;
+              font-size: 1.2rem;
+              border-radius: 0.4rem;
+              color: white;
+            }
+
+            &__add_to_cart {
+              background-color: var(--light-gray-color);
+              border: none;
+              color: var(--medium-gray-color);
+              padding-block: 0.3rem;
+              padding-inline: 1rem;
+              font-size: 1.2rem;
+              border-radius: 0.4rem;
+
+            }
+          }
+        }
       }
     }
   }
+
 
   .active {
     outline: 3px solid gray;
