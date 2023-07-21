@@ -4,10 +4,13 @@ let root = document.URL.slice(-12, -5);
 
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
+let productTitle = '';
 
 products.forEach((product) => {
 
   if (product.id === root) {
+
+    productTitle = product.name;
 
     product.image_original.forEach((image, index) => {
       productOriginalHTML += `
@@ -42,6 +45,7 @@ products.forEach((product) => {
 
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
+document.querySelector('.main__title').innerHTML = productTitle;
 
 
 //IMAGE GALLERY

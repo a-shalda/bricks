@@ -1,9 +1,18 @@
 @use '../util/breakpoints' as *;
 @use '../globals/typography' as *;
 @use '../util/fonts' as *;
+@use '../globals/colors' as *;
 
 
 .main {
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    padding-bottom: var(--padding);
+  }
 
   &__window {
     border-radius: 0.5rem;
@@ -12,7 +21,6 @@
     &__top {
 
       &__left {
-        position: relative;
         border-bottom: 1px solid var(--light-light-gray-color);
 
         &__cont {
@@ -37,6 +45,8 @@
 
       &__left {
 
+        border-bottom: 1px solid var(--light-light-gray-color);
+
         &__grid {
 
           display: grid;
@@ -47,6 +57,7 @@
           "seven eight nine";
           gap: 0.5rem;
           justify-content: space-between;
+          
 
           padding: 1rem;
           .one {grid-area: one;}
@@ -81,7 +92,68 @@
         }
       }
     }
+
+    &__middle {
+
+      &__top {
+        padding-top: 0.5rem;
+
+        &__price {
+          display: flex;
+
+          &__left {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            padding-left: 0.5rem;
+            background-color: var(--gray-color);
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            margin-left: -1px;
+
+            &__box {
+              line-height: 2.5rem;
+              color: $white-color;
+              font-size: 1.2rem;
+              font-weight: 400;
+              letter-spacing: 0.1rem;
+            }
+          }
+
+          &__right {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            
+            &__box {
+              line-height: 2.5rem;
+              font-size: 1.2rem;
+              color: var(--gray-color);
+              font-weight: 400;
+            }
+          }
+        }
+
+        &__stock {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 2rem;
+
+  
+          &__desc {
+            padding-block: 1rem;
+            padding-inline: 1rem;
+            color: rgb(162, 162, 162);
+            font-size: 0.8rem;  
+          }
+        }
+
+
+      }
+    }
   }
+
   .active {
     outline: 3px solid gray;
     border-radius: 0.1rem;
@@ -126,6 +198,10 @@
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .modal__box {
