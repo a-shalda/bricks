@@ -2,14 +2,16 @@ const products = [
   {
     id: 'R100NF9',
     name: 'Brick slips Feldhaus Klinker R100NF9 perla liso',
-    priceCentsM2: 5456,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
     format: '240 x 71 x 9',
-    piecesPerM2: 48,
     thickness: 9,
     availability: 'In stock',
     filepath: 'R100NF9.html',
+    priceCentsM2: 5456,
+    piecesPerM2: 48,
+    typeOfPrice: 'm2',
+    piecesInPack: 48,
 
     image: 'img/thumbnails/r100nf.jpg',
     image_1: 'img/thumbnails/r100nf-side.jpg',

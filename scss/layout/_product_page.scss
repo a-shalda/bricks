@@ -180,12 +180,29 @@
               }
             }
 
+            &__middle {
+              flex-grow: 1;
+
+              background-color: white;
+              border: 1px solid var(--light-gray-color);
+              // border-right: none;
+              // border-left: none;
+
+              font-size: 1rem;
+              padding-block: 0.3rem;
+              color: var(--gray-color);
+              transition: background-color 0.1s, color 0.1s, border 0.1s;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
             &__right {
               flex-grow: 1;
 
               background-color: white;
               border: 1px solid var(--light-gray-color);
-              border-left: none;
               border-top-right-radius: 0.4rem;
               border-bottom-right-radius: 0.4rem;
               font-size: 1rem;

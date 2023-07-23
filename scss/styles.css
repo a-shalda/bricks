@@ -731,11 +731,22 @@ picture {
 .main__window__middle__top__buy__select__left:hover {
   cursor: pointer;
 }
+.main__window__middle__top__buy__select__middle {
+  flex-grow: 1;
+  background-color: white;
+  border: 1px solid var(--light-gray-color);
+  font-size: 1rem;
+  padding-block: 0.3rem;
+  color: var(--gray-color);
+  transition: background-color 0.1s, color 0.1s, border 0.1s;
+}
+.main__window__middle__top__buy__select__middle:hover {
+  cursor: pointer;
+}
 .main__window__middle__top__buy__select__right {
   flex-grow: 1;
   background-color: white;
   border: 1px solid var(--light-gray-color);
-  border-left: none;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
   font-size: 1rem;

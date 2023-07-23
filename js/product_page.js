@@ -1,3 +1,9 @@
+cart = JSON.parse(localStorage.getItem('cart')) || [];
+console.log(cart);
+console.log(typeof(cart));
+
+// localStorage.removeItem('cart');
+
 //GENERATING HTML
 
 let root = document.URL.slice(-12, -5);
@@ -5,12 +11,14 @@ let root = document.URL.slice(-12, -5);
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
+let productNumberInProducts;
 
-products.forEach((product) => {
+products.forEach((product, index) => {
 
   if (product.id === root) {
 
     productTitle = product.name;
+    productNumberInProducts = index;
 
     product.image_original.forEach((image, index) => {
       productOriginalHTML += `
@@ -109,34 +117,93 @@ function openModal () {
 let select = 'm2'; //The type of quantity (m2 or pc) of the product
 
 let selectLeft = document.querySelector('.main__window__middle__top__buy__select__left');
+let selectMiddle = document.querySelector('.main__window__middle__top__buy__select__middle');
 let selectRight = document.querySelector('.main__window__middle__top__buy__select__right');
 
 selectLeft.classList.add('selected');
 
 selectLeft.addEventListener('click', () => {
 
-  if (select === 'pc') {
+  if (select === 'pc' || select === 'pack') {
     selectRight.classList.remove('selected');
+    selectMiddle.classList.remove('selected');
   }
   selectLeft.classList.add('selected');
   select = 'm2';
+  placeholder();
+})
+
+selectMiddle.addEventListener('click', () => {
+
+  if (select === 'm2' || select === 'pack') {
+    selectLeft.classList.remove('selected');
+    selectRight.classList.remove('selected');
+  }
+  selectMiddle.classList.add('selected');
+  select = 'pc';
+  placeholder();
 })
 
 selectRight.addEventListener('click', () => {
 
-  if (select === 'm2') {
+  if (select === 'm2' || select === 'pc') {
     selectLeft.classList.remove('selected');
+    selectMiddle.classList.remove('selected');
   }
   selectRight.classList.add('selected');
-  select = 'pc';
+  select = 'pack';
+  placeholder();
 })
 
 
+//SETTING PLACEHOLDER
+
+let piecesInPack = products[productNumberInProducts].piecesInPack;
+let piecesInM2 = products[productNumberInProducts].piecesPerM2;
+
+placeholder ();
+
+function placeholder () {
+
+  if (select === 'm2') {
+    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min ${(piecesInPack/piecesInM2).toFixed(1)} m2`;
+  }
+  else if (select === 'pc') {
+    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min ${piecesInPack.toFixed(0)} pieces`;
+  }
+  else if (select === 'pack') {
+    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min 1 piece`;
+  }
+
+  document.querySelector('.main__window__middle__top__buy__area__input').value = '';
+}
+
 //ADDING TO CART
+//Add to cart
 
 document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
 
-  const userQuantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
+  let userQuantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
+
+  if (!(typeof(userQuantity) === 'number' && userQuantity >= 1 && userQuantity < 100000)) {
+    document.querySelector('.main__window__middle__top__buy__area__input').value = '';
+    return;
+  }
+  //Making sure the quantity can be divided by the number of pieces in the pack
+  else if (select === 'pc' && userQuantity < piecesInPack) {
+    document.querySelector('.main__window__middle__top__buy__area__input').value = '';
+    return;
+  }
+  else if (select === 'pc' && !Number.isInteger(userQuantity / piecesInPack)) {
+    userQuantity = userQuantity - (userQuantity % piecesInPack);
+  }
+  else if (select === 'm2' && !Number.isInteger(userQuantity / piecesInM2)) {
+    userQuantity = userQuantity - (userQuantity % 1);
+  }
+  else if (select === 'pack' && !Number.isInteger(userQuantity / piecesInM2)) {
+    userQuantity = userQuantity - (userQuantity % 1);
+  }
+
 
   const order = {
     id: root,
@@ -159,38 +226,14 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
     cart[mathingIndex].quantity += userQuantity;
   }
 
+  document.querySelector('.main__window__middle__top__buy__area__input').value = '';
+  localStorage.setItem('cart', JSON.stringify(cart));
   console.log(cart);
+
 })
 
 
-document.querySelector('.main__window__middle__top__buy__button_buy').addEventListener('click', () => {
+//window.open('cart.html', '_parent');
 
-  const userQuantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
-
-  const order = {
-    id: root,
-    type: select,
-    quantity: userQuantity
-  };
-
-  let mathingIndex;
-
-  cart.forEach((item, index) => {
-    if (item.id === order.id && item.type === order.type) {
-      mathingIndex = index;
-    }
-  })
-
-  if (mathingIndex === undefined) {
-    cart.push(order);
-  }
-  else {
-    cart[mathingIndex].quantity += userQuantity;
-  }
-
-  console.log(cart);
-
-  window.open('cart.html', '_parent');
-})
 
 
