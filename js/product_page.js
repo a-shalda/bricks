@@ -134,64 +134,63 @@ selectRight.addEventListener('click', () => {
 
 //ADDING TO CART
 
-document.querySelector('.main__window__middle__top__buy__button_buy').addEventListener('click', () => {
+document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
 
-  const quantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
+  const userQuantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
 
   const order = {
     id: root,
     type: select,
-    quantity: quantity
+    quantity: userQuantity
   };
 
-  let indexInCart;
+  let mathingIndex;
 
   cart.forEach((item, index) => {
-    if (item.id === root && item.type === select) {
-      indexInCart = index;
-      console.log(indexInCart);
+    if (item.id === order.id && item.type === order.type) {
+      mathingIndex = index;
     }
-  });
+  })
 
-  if (indexInCart) {
-    cart[indexInCart].quantity += quantity;
-    console.log(cart[indexInCart].quantity);
-  }
-  else {
+  if (mathingIndex === undefined) {
     cart.push(order);
   }
-
+  else {
+    cart[mathingIndex].quantity += userQuantity;
+  }
 
   console.log(cart);
-
-
-
-
-
-  // if (indexInCart) {
-  //   cart.indexInCart.quantity += quantity;
-  // }
-  // else {
-  //   cart.push(order);
-  // }
-
-  // console.log(cart.indexInCart.quantity);
-
-
-
-  // if (item.id === root && item.type === 'm2') {
-  //   item.quantity = Number(item.quantity) + Number(quantity);
-  // }
-  // else {
-  //   cart.push(order);
-  // }
-
-
-
-
 })
 
 
+document.querySelector('.main__window__middle__top__buy__button_buy').addEventListener('click', () => {
 
+  const userQuantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
+
+  const order = {
+    id: root,
+    type: select,
+    quantity: userQuantity
+  };
+
+  let mathingIndex;
+
+  cart.forEach((item, index) => {
+    if (item.id === order.id && item.type === order.type) {
+      mathingIndex = index;
+    }
+  })
+
+  if (mathingIndex === undefined) {
+    cart.push(order);
+  }
+  else {
+    cart[mathingIndex].quantity += userQuantity;
+  }
+
+  console.log(cart);
+
+  window.open('cart.html', '_parent');
+})
 
 
