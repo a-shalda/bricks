@@ -55,7 +55,6 @@
           "one two three"
           "four five six"
           "seven eight nine";
-          gap: 0.5rem;
           justify-content: space-between;
           
 
@@ -71,17 +70,18 @@
           .nine {grid-area: nine;}
 
           &__cont {
-            padding: 0.2rem;
+            padding: 0.1rem;
+            margin: 0.3rem;
             display: flex;
             aspect-ratio: 5/4; //Not supported in Safari
-            transition: outline 0.1s;
+            transition: outline 0.3s;
 
             &__img {
               border-radius: 0.1rem;
               object-fit: cover;
               width: 100%;
               opacity: 0.6;
-              transition: opacity 0.5s;
+              transition: opacity 0.3s;
 
               &:hover {
                 cursor: pointer;
@@ -96,10 +96,13 @@
     &__middle {
 
       &__top {
-        padding-top: 0.5rem;
+        padding-top: 1rem;
 
         &__price {
           display: flex;
+          border-bottom: 1px solid var(--light-light-gray-color);
+          padding-bottom: 1rem;
+
 
           &__left {
             display: flex;
@@ -140,7 +143,6 @@
           align-items: center;
           padding-left: 1rem;
 
-  
           &__desc {
             padding-block: 1rem;
             padding-inline: 1rem;
@@ -152,79 +154,89 @@
         &__buy {
           padding: 1rem;
           padding-top: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          justify-content: space-around;
+          gap: 1rem;
 
-          &__qty {
+          &__select {
             display: flex;
 
-            &__buttons {
-              width: 70%;
-              text-align: center;
+            &__left {
+              flex-grow: 1;
 
-              &__left {
-                background-color: white;
-                border: 1px solid var(--light-gray-color);
-                border-top-left-radius: 0.4rem;
-                border-bottom-left-radius: 0.4rem;
-                font-size: 1rem;
-                padding-block: 0.3rem;
-                padding-inline: 1rem;
-                color: var(--gray-color);;
-              }
-
-              &__right {
-                background-color: white;
-                border: 1px solid var(--light-gray-color);
-                border-top-right-radius: 0.4rem;
-                border-bottom-right-radius: 0.4rem;
-                font-size: 1rem;
-                padding-block: 0.3rem;
-                padding-inline: 1rem;
-                color: var(--gray-color);
-                margin: -5px;
-              }
+              background-color: white;
+              border: 1px solid var(--light-gray-color);
+              border-top-left-radius: 0.4rem;
+              border-bottom-left-radius: 0.4rem;
+              font-size: 1rem;
+              padding-block: 0.3rem;
+              color: var(--gray-color);;
             }
 
-            &__area {
-              text-align: center;
+            &__right {
+              flex-grow: 1;
 
-              &__input {
-                width: 80%;
-                font-size: 1rem;
-                padding-block: 0.3rem;
-                padding-left: 1rem;
-                color: var(--gray-color);
-                border: 1px solid var(--light-gray-color);
-                border-radius: 0.4rem;
+              background-color: white;
+              border: 1px solid var(--light-gray-color);
+              border-top-right-radius: 0.4rem;
+              border-bottom-right-radius: 0.4rem;
+              font-size: 1rem;
+              padding-block: 0.3rem;
+              color: var(--gray-color);
+              margin-left: -1px;
+            }
+          }
 
+          &__area {
+
+            &__input {
+              width: 100%;
+              font-size: 1rem;
+              padding-block: 0.3rem;
+              padding-left: 1rem;
+              color: var(--gray-color);
+              border: 1px solid var(--light-gray-color);
+              border-radius: 0.4rem;
+              transition: border 0.3s;
+
+              &:focus {
+                border: 1px solid var(--gray-color);
+                outline: none;
               }
             }
           }
 
-          &__buttons {
-            display: flex;
-            justify-content:space-between;
-            gap: 0.5rem;
-            padding-top: 1rem;
+          &__button_buy {
+            background-color: #a43434;
+            border: none;
+            padding-block: 0.6rem;
+            padding-inline: 1rem;
+            font-size: 1.2rem;
+            border-radius: 0.4rem;
+            color: white;
+            transition: background-color 0.3s;
 
-            &__buy_now {
-              background-color: #a43434;
-              border: none;
-              padding-block: 0.6rem;
-              padding-inline: 1rem;
-              font-size: 1.2rem;
-              border-radius: 0.4rem;
-              color: white;
+            &:hover {
+              background-color: hsla(0, 68%, 42%, 0.885);
+              cursor: pointer;
             }
+          }
 
-            &__add_to_cart {
-              background-color: var(--light-gray-color);
-              border: none;
-              color: var(--medium-gray-color);
-              padding-block: 0.3rem;
-              padding-inline: 1rem;
-              font-size: 1.2rem;
-              border-radius: 0.4rem;
+          &__button_add {
+            background-color: var(--light-gray-color);
+            border: none;
+            color: var(--medium-gray-color);
+            padding-block: 0.3rem;
+            padding-inline: 1rem;
+            font-size: 1.2rem;
+            border-radius: 0.4rem;
+            transition: background-color 0.3s;
 
+            &:hover {
+              background-color: var(--medium-gray-color);
+              color: white;
+              cursor: pointer;
             }
           }
         }

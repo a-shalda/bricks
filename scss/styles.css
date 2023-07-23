@@ -608,7 +608,6 @@ picture {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-areas: "one two three" "four five six" "seven eight nine";
-  gap: 0.5rem;
   justify-content: space-between;
   padding: 1rem;
 }
@@ -640,10 +639,11 @@ picture {
   grid-area: nine;
 }
 .main__window__bottom__left__grid__cont {
-  padding: 0.2rem;
+  padding: 0.1rem;
+  margin: 0.3rem;
   display: flex;
   aspect-ratio: 5/4;
-  transition: outline 0.1s;
+  transition: outline 0.3s;
 }
 .main__window__bottom__left__grid__cont__img {
   border-radius: 0.1rem;
@@ -651,17 +651,19 @@ picture {
      object-fit: cover;
   width: 100%;
   opacity: 0.6;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 .main__window__bottom__left__grid__cont__img:hover {
   cursor: pointer;
   opacity: 1;
 }
 .main__window__middle__top {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 .main__window__middle__top__price {
   display: flex;
+  border-bottom: 1px solid var(--light-light-gray-color);
+  padding-bottom: 1rem;
 }
 .main__window__middle__top__price__left {
   display: flex;
@@ -706,54 +708,50 @@ picture {
 .main__window__middle__top__buy {
   padding: 1rem;
   padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  gap: 1rem;
 }
-.main__window__middle__top__buy__qty {
+.main__window__middle__top__buy__select {
   display: flex;
 }
-.main__window__middle__top__buy__qty__buttons {
-  width: 70%;
-  text-align: center;
-}
-.main__window__middle__top__buy__qty__buttons__left {
+.main__window__middle__top__buy__select__left {
+  flex-grow: 1;
   background-color: white;
   border: 1px solid var(--light-gray-color);
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
   font-size: 1rem;
   padding-block: 0.3rem;
-  padding-inline: 1rem;
   color: var(--gray-color);
 }
-.main__window__middle__top__buy__qty__buttons__right {
+.main__window__middle__top__buy__select__right {
+  flex-grow: 1;
   background-color: white;
   border: 1px solid var(--light-gray-color);
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
   font-size: 1rem;
   padding-block: 0.3rem;
-  padding-inline: 1rem;
   color: var(--gray-color);
-  margin: -5px;
+  margin-left: -1px;
 }
-.main__window__middle__top__buy__qty__area {
-  text-align: center;
-}
-.main__window__middle__top__buy__qty__area__input {
-  width: 80%;
+.main__window__middle__top__buy__area__input {
+  width: 100%;
   font-size: 1rem;
   padding-block: 0.3rem;
   padding-left: 1rem;
   color: var(--gray-color);
   border: 1px solid var(--light-gray-color);
   border-radius: 0.4rem;
+  transition: border 0.3s;
 }
-.main__window__middle__top__buy__buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding-top: 1rem;
+.main__window__middle__top__buy__area__input:focus {
+  border: 1px solid var(--gray-color);
+  outline: none;
 }
-.main__window__middle__top__buy__buttons__buy_now {
+.main__window__middle__top__buy__button_buy {
   background-color: #a43434;
   border: none;
   padding-block: 0.6rem;
@@ -761,8 +759,13 @@ picture {
   font-size: 1.2rem;
   border-radius: 0.4rem;
   color: white;
+  transition: background-color 0.3s;
 }
-.main__window__middle__top__buy__buttons__add_to_cart {
+.main__window__middle__top__buy__button_buy:hover {
+  background-color: hsla(0, 68%, 42%, 0.885);
+  cursor: pointer;
+}
+.main__window__middle__top__buy__button_add {
   background-color: var(--light-gray-color);
   border: none;
   color: var(--medium-gray-color);
@@ -770,6 +773,12 @@ picture {
   padding-inline: 1rem;
   font-size: 1.2rem;
   border-radius: 0.4rem;
+  transition: background-color 0.3s;
+}
+.main__window__middle__top__buy__button_add:hover {
+  background-color: var(--medium-gray-color);
+  color: white;
+  cursor: pointer;
 }
 .main .active {
   outline: 3px solid gray;
