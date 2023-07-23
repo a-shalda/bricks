@@ -86,6 +86,7 @@ function showImage(n) {
   main_thumbnail[imageIndex-1].classList.add('main_thumbnail', 'clear');
 } 
 
+
 //MODAL
 
 function openModal () {
@@ -101,3 +102,96 @@ function openModal () {
     document.querySelector(".modal").style.display = "none";
   } 
 }
+
+
+//PRICE SELECTOR
+
+let select = 'm2'; //The type of quantity (m2 or pc) of the product
+
+let selectLeft = document.querySelector('.main__window__middle__top__buy__select__left');
+let selectRight = document.querySelector('.main__window__middle__top__buy__select__right');
+
+selectLeft.classList.add('selected');
+
+selectLeft.addEventListener('click', () => {
+
+  if (select === 'pc') {
+    selectRight.classList.remove('selected');
+  }
+  selectLeft.classList.add('selected');
+  select = 'm2';
+})
+
+selectRight.addEventListener('click', () => {
+
+  if (select === 'm2') {
+    selectLeft.classList.remove('selected');
+  }
+  selectRight.classList.add('selected');
+  select = 'pc';
+})
+
+
+//ADDING TO CART
+
+document.querySelector('.main__window__middle__top__buy__button_buy').addEventListener('click', () => {
+
+  const quantity = Number(document.querySelector('.main__window__middle__top__buy__area__input').value);
+
+  const order = {
+    id: root,
+    type: select,
+    quantity: quantity
+  };
+
+  let indexInCart;
+
+  cart.forEach((item, index) => {
+    if (item.id === root && item.type === select) {
+      indexInCart = index;
+      console.log(indexInCart);
+    }
+  });
+
+  if (indexInCart) {
+    cart[indexInCart].quantity += quantity;
+    console.log(cart[indexInCart].quantity);
+  }
+  else {
+    cart.push(order);
+  }
+
+
+  console.log(cart);
+
+
+
+
+
+  // if (indexInCart) {
+  //   cart.indexInCart.quantity += quantity;
+  // }
+  // else {
+  //   cart.push(order);
+  // }
+
+  // console.log(cart.indexInCart.quantity);
+
+
+
+  // if (item.id === root && item.type === 'm2') {
+  //   item.quantity = Number(item.quantity) + Number(quantity);
+  // }
+  // else {
+  //   cart.push(order);
+  // }
+
+
+
+
+})
+
+
+
+
+
