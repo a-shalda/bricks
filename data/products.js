@@ -2,17 +2,11 @@ const products = [
   {
     id: 'R100NF9',
     name: 'Brick slips Feldhaus Klinker R100NF9 perla liso',
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240 x 71 x 9',
-    thickness: 9,
     availability: 'In stock',
     filepath: 'R100NF9.html',
     priceCentsM2: 5456,
     priceCentsPC: 155, //example
-    piecesPerM2: 48,
-    typeOfPrice: 'pc',
-    piecesInPack: 48,
+    typeOfPrice: 'm2',
 
     specs: {
       piecesInASquareMeter: 48,
@@ -55,9 +49,24 @@ const products = [
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
     format: '240 x 71 x 9',
+    typeOfPrice: 'm2',
     piecesPerM2: 48,
     thickness: 9,
-    availability: 'In stock'
+    availability: 'In stock',
+    specs: {
+      piecesInASquareMeter: 48,
+      piecesInAPack: 48,
+      recommendedJointSpacing: '10-12',
+      thickness: 9,
+      format: '240 x 71 x 9',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1Piece: 0.52,
+      weightOf1SquareMeter: 25,
+      weightOf1Pack: 25,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+    
   }, {
     id: 'R384NF14',
     image: 'img/thumbnails/r384nf.jpg',

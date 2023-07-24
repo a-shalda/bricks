@@ -15,7 +15,7 @@ bodyToggle.addEventListener('click', () => {
 })
 
 
-//PRODUCTS
+//PRODUCTS  ------- ADD NEW CODE
 //Generating products on the page
 
 let productsHTML = '';

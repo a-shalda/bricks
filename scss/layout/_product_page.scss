@@ -147,7 +147,7 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          padding-left: 1rem;
+          padding-left: 1.2rem;
 
           &__desc {
             padding-block: 1rem;
@@ -158,8 +158,8 @@
         }
 
         &__buy {
-          padding: 1rem;
-          padding-top: 0;
+          padding-inline: 1rem;
+          padding-block: 0;
           display: grid;
           grid-template-columns: 1fr 1fr;
           justify-content: space-around;
@@ -276,7 +276,7 @@
       }
 
       &__bottom {
-        padding: 1rem;
+        padding: 1.2rem;
 
         &__left {
           
@@ -303,11 +303,9 @@
             color: gray;
 
           }
-
         }
       }
     }
-
   }
 
   .pc_price_selected {

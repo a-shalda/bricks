@@ -130,8 +130,6 @@ document.querySelector('.main__window__middle__top__stock').innerHTML = stockInf
 let pricesM2 = '';
 let pricesPc = '';
 
-
-
 if (products[productNumberInProducts].typeOfPrice === 'm2') {
 
   let initialPrice = products[productNumberInProducts].priceCentsM2;
@@ -230,8 +228,8 @@ selectRight.addEventListener('click', () => {
 
 //SETTING PLACEHOLDER
 
-let piecesInPack = products[productNumberInProducts].piecesInPack;
-let piecesInM2 = products[productNumberInProducts].piecesPerM2;
+let piecesInPack = products[productNumberInProducts].specs?.piecesInAPack;
+let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
 
 placeholder ();
 
