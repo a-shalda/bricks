@@ -110,10 +110,20 @@ picture {
 .price-small {
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
+  font-weight: 400;
+}
+
+.price-desc {
+  letter-spacing: 0.05rem;
+  font-size: 1.05rem;
 }
 
 .format-nowrap {
   white-space: nowrap;
+}
+
+sup {
+  font-size: 0.7rem;
 }
 
 .header {
@@ -389,6 +399,7 @@ picture {
   display: flex;
   width: 50%;
   justify-content: center;
+  align-items: center;
   padding-left: 0.5rem;
   background-color: var(--gray-color);
   border-top-right-radius: 0.5rem;
@@ -406,6 +417,7 @@ picture {
   display: flex;
   width: 50%;
   justify-content: center;
+  align-items: center;
 }
 .product__middle__price--st__p {
   line-height: 2.5rem;
@@ -671,6 +683,7 @@ picture {
   display: flex;
   width: 50%;
   justify-content: center;
+  align-items: center;
   padding-left: 0.5rem;
   background-color: var(--gray-color);
   border-top-right-radius: 0.5rem;
@@ -688,6 +701,7 @@ picture {
   display: flex;
   width: 50%;
   justify-content: center;
+  align-items: center;
 }
 .main__window__middle__top__price__right__box {
   line-height: 2.5rem;
@@ -749,7 +763,6 @@ picture {
   flex-grow: 1;
   background-color: white;
   border: 1px solid var(--light-gray-color);
-  border-left: none;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
   font-size: 1rem;

@@ -113,8 +113,7 @@ function openModal () {
 
 //GENERATING PRICES
 
-let priceCentsM2 = '';
-let priceCentsPc = '';
+let pricesM2andPc = '';
 
 if (products[productNumberInProducts].typeOfPrice === 'm2') {
 
@@ -126,29 +125,17 @@ if (products[productNumberInProducts].typeOfPrice === 'm2') {
   const indexOfDotM2 = ((initialPrice / 100).toFixed(2)).toString().indexOf('.');
   const indexofDotPc = ((initialPrice / 100) / Number(piecesInM2)).toFixed(2).toString().indexOf('.');
   
-  priceCentsM2 += `
+  pricesM2andPc += `
     <div class="main__window__middle__top__price__left">
-      <p class="main__window__middle__top__price__left__box">${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)} $/m2</span></p>
+      <p class="main__window__middle__top__price__left__box"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
     </div>
     <div class="main__window__middle__top__price__right">
-      <p class="main__window__middle__top__price__right__box">${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)} $/pc</span></p>
+      <p class="main__window__middle__top__price__right__box"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
     </div>
   `;
   
-  document.querySelector('.main__window__middle__top__price').innerHTML = priceCentsM2;
+  document.querySelector('.main__window__middle__top__price').innerHTML = pricesM2andPc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 //PRICE SELECTOR
 
@@ -204,7 +191,7 @@ placeholder ();
 function placeholder () {
 
   if (select === 'm2') {
-    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min ${(piecesInPack/piecesInM2).toFixed(1)} m2`;
+    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min 1 square meter`;
   }
   else if (select === 'pc') {
     document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min ${piecesInPack.toFixed(0)} pieces`;

@@ -182,10 +182,10 @@ productsHTML +=`
     </div>
     <div class="product__middle">
         <div class="product__middle__price--m2">
-            <p class="product__middle__price--m2__p">${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)} $/m2</span></p>
+            <p class="product__middle__price--m2__p"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
         </div>
         <div class="product__middle__price--st">
-            <p class="product__middle__price--st__p">${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)} $/pc</span></p>
+            <p class="product__middle__price--st__p"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
         </div>
     </div>
     <div class="product__bottom">

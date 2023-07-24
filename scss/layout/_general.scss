@@ -33,8 +33,18 @@
 .price-small {
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
+  font-weight: 400;
+}
+
+.price-desc {
+  letter-spacing: 0.05rem;
+  font-size: 1.05rem;
 }
 
 .format-nowrap {
   white-space: nowrap;
+}
+
+sup {
+  font-size: 0.7rem;
 }

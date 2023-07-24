@@ -74,6 +74,7 @@
         display: flex;
         width: 50%;
         justify-content: center;
+        align-items: center;
         padding-left: 0.5rem;
         background-color: var(--gray-color);
         border-top-right-radius: 0.5rem;
@@ -93,6 +94,7 @@
         display: flex;
         width: 50%;
         justify-content: center;
+        align-items: center;
 
         &__p {
           line-height: 2.5rem;
