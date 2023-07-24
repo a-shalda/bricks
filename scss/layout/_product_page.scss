@@ -105,6 +105,7 @@
           display: flex;
           border-bottom: 1px solid var(--light-light-gray-color);
           padding-bottom: 1rem;
+          gap: 1rem;
 
 
           &__left {
@@ -307,6 +308,13 @@
       }
     }
 
+  }
+
+  .pc_price_selected {
+    background-color: var(--gray-color);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    margin-left: -1px;
   }
 
   .selected {

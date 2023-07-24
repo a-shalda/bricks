@@ -9,8 +9,9 @@ const products = [
     availability: 'In stock',
     filepath: 'R100NF9.html',
     priceCentsM2: 5456,
+    priceCentsPC: 155, //example
     piecesPerM2: 48,
-    typeOfPrice: 'm2',
+    typeOfPrice: 'pc',
     piecesInPack: 48,
 
     specs: {

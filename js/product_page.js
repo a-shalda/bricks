@@ -127,7 +127,10 @@ document.querySelector('.main__window__middle__top__stock').innerHTML = stockInf
 
 //GENERATING PRICES
 
-let pricesM2andPc = '';
+let pricesM2 = '';
+let pricesPc = '';
+
+
 
 if (products[productNumberInProducts].typeOfPrice === 'm2') {
 
@@ -139,7 +142,7 @@ if (products[productNumberInProducts].typeOfPrice === 'm2') {
   const indexOfDotM2 = ((initialPrice / 100).toFixed(2)).toString().indexOf('.');
   const indexofDotPc = ((initialPrice / 100) / Number(piecesInM2)).toFixed(2).toString().indexOf('.');
   
-  pricesM2andPc += `
+  pricesM2 += `
     <div class="main__window__middle__top__price__left">
       <p class="main__window__middle__top__price__left__box"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
     </div>
@@ -148,18 +151,48 @@ if (products[productNumberInProducts].typeOfPrice === 'm2') {
     </div>
   `;
   
-  document.querySelector('.main__window__middle__top__price').innerHTML = pricesM2andPc;
+  document.querySelector('.main__window__middle__top__price').innerHTML = pricesM2;
+}
+else if (products[productNumberInProducts].typeOfPrice === 'pc') {
+
+  let initialPrice = products[productNumberInProducts].priceCentsPC;
+
+  const pricePc = (initialPrice / 100).toFixed(2);
+  const indexofDotPc = (initialPrice / 100).toFixed(2).toString().indexOf('.');
+  
+  pricesPc += `
+    <div class="main__window__middle__top__price__left">
+      <p class="main__window__middle__top__price__left__box"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
+    </div>
+    <div class="main__window__middle__top__price__right">
+      <p class="main__window__middle__top__price__right__box">&nbsp;</p>
+    </div>
+  `;
+  
+  document.querySelector('.main__window__middle__top__price').innerHTML = pricesPc;
+
 }
 
 //PRICE SELECTOR
-
-let select = 'm2'; //The type of quantity (m2 or pc) of the product
+//The type of quantity (m2 or pc) of the product
 
 let selectLeft = document.querySelector('.main__window__middle__top__buy__select__left');
 let selectMiddle = document.querySelector('.main__window__middle__top__buy__select__middle');
 let selectRight = document.querySelector('.main__window__middle__top__buy__select__right');
 
-selectLeft.classList.add('selected');
+let select; 
+
+if (products[productNumberInProducts].typeOfPrice === 'm2') {
+  select = 'm2';
+  selectLeft.classList.add('selected');
+}
+else if (products[productNumberInProducts].typeOfPrice === 'pc') {
+  select = 'pc';
+  selectMiddle.classList.add('selected');
+  selectLeft.style.display = 'none';
+  selectMiddle.classList.add('main__window__middle__top__buy__select__left');
+
+}
 
 selectLeft.addEventListener('click', () => {
 

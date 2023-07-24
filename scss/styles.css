@@ -678,6 +678,7 @@ sup {
   display: flex;
   border-bottom: 1px solid var(--light-light-gray-color);
   padding-bottom: 1rem;
+  gap: 1rem;
 }
 .main__window__middle__top__price__left {
   display: flex;
@@ -839,6 +840,12 @@ sup {
   font-size: 0.8rem;
   padding-left: 0.5rem;
   color: gray;
+}
+.main .pc_price_selected {
+  background-color: var(--gray-color);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  margin-left: -1px;
 }
 .main .selected {
   background-color: var(--gray-color);
