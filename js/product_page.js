@@ -55,74 +55,6 @@ document.querySelector('.main__window__top__left').innerHTML = productOriginalHT
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.main__title').innerHTML = productTitle;
 
-//GENERATING SPECS
-
-let specs = products[productNumberInProducts].specs;
-let specsHTML = '';
-
-if (specs.piecesInASquareMeter) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInASquareMeter}</span></p>
-  `
-}
-if (specs.piecesInAPack) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInAPack}</span></p>
-  `
-}
-if (specs.recommendedJointSpacing) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended joint spacing (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedJointSpacing}</span></p>
-  `
-}
-if (specs.thickness) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Thickness (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.thickness}</span></p>
-  `
-}
-if (specs.format) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Format (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.format}</span></p>
-  `
-}
-if (specs.recommendedDryMortarVolume) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended dry mortar volume (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedDryMortarVolume}</span></p>
-  `
-}
-if (specs.weightOf1Piece) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Piece}</span></p>
-  `
-}
-if (specs.weightOf1SquareMeter) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 square meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1SquareMeter}</span></p>
-  `
-}
-if (specs.weightOf1Pack) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Pack}</span></p>
-  `
-}
-if (specs.manufacturer) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Manufacturer</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.manufacturer}</span></p>
-  `
-}
-if (specs.countryOfOrigin) {
-  specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.countryOfOrigin}</span></p>
-  `
-}
-
-
-
-document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
-
-
-
-
 
 //IMAGE GALLERY
 
@@ -178,6 +110,44 @@ function openModal () {
     document.querySelector(".modal").style.display = "none";
   } 
 }
+
+//GENERATING PRICES
+
+let priceCentsM2 = '';
+let priceCentsPc = '';
+
+if (products[productNumberInProducts].typeOfPrice === 'm2') {
+
+  let initialPrice = products[productNumberInProducts].priceCentsM2;
+  let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
+
+  const priceM2 = ((initialPrice / 100).toFixed(2));
+  const pricePc = ((initialPrice / 100) / Number(piecesInM2)).toFixed(2);
+  const indexOfDotM2 = ((initialPrice / 100).toFixed(2)).toString().indexOf('.');
+  const indexofDotPc = ((initialPrice / 100) / Number(piecesInM2)).toFixed(2).toString().indexOf('.');
+  
+  priceCentsM2 += `
+    <div class="main__window__middle__top__price__left">
+      <p class="main__window__middle__top__price__left__box">${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)} $/m2</span></p>
+    </div>
+    <div class="main__window__middle__top__price__right">
+      <p class="main__window__middle__top__price__right__box">${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)} $/pc</span></p>
+    </div>
+  `;
+  
+  document.querySelector('.main__window__middle__top__price').innerHTML = priceCentsM2;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 //PRICE SELECTOR
@@ -305,3 +275,64 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
 
 
 
+//GENERATING SPECS
+
+let specs = products[productNumberInProducts].specs;
+let specsHTML = '';
+
+if (specs.piecesInASquareMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInASquareMeter}</span></p>
+  `
+}
+if (specs.piecesInAPack) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInAPack}</span></p>
+  `
+}
+if (specs.recommendedJointSpacing) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended joint spacing (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedJointSpacing}</span></p>
+  `
+}
+if (specs.thickness) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Thickness (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.thickness}</span></p>
+  `
+}
+if (specs.format) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Format (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.format}</span></p>
+  `
+}
+if (specs.recommendedDryMortarVolume) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended dry mortar volume (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedDryMortarVolume}</span></p>
+  `
+}
+if (specs.weightOf1Piece) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Piece}</span></p>
+  `
+}
+if (specs.weightOf1SquareMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 square meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1SquareMeter}</span></p>
+  `
+}
+if (specs.weightOf1Pack) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Pack}</span></p>
+  `
+}
+if (specs.manufacturer) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Manufacturer</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.manufacturer}</span></p>
+  `
+}
+if (specs.countryOfOrigin) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.countryOfOrigin}</span></p>
+  `
+}
+document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
