@@ -183,6 +183,7 @@
 
               &:hover {
                 cursor: pointer;
+                background-color: var(--light-gray-color);
               }
             }
 
@@ -199,6 +200,8 @@
 
               &:hover {
                 cursor: pointer;
+                background-color: var(--light-gray-color);
+
               }
             }
 
@@ -217,6 +220,7 @@
 
               &:hover {
                 cursor: pointer;
+                background-color: var(--light-gray-color);
               }
             }
           }
@@ -237,6 +241,11 @@
                 border: 1px solid var(--gray-color);
                 outline: none;
               }
+
+              // &::placeholder {
+              //   color: black;
+              // }
+
             }
           }
 

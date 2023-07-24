@@ -747,6 +747,7 @@ sup {
 }
 .main__window__middle__top__buy__select__left:hover {
   cursor: pointer;
+  background-color: var(--light-gray-color);
 }
 .main__window__middle__top__buy__select__middle {
   flex-grow: 1;
@@ -759,6 +760,7 @@ sup {
 }
 .main__window__middle__top__buy__select__middle:hover {
   cursor: pointer;
+  background-color: var(--light-gray-color);
 }
 .main__window__middle__top__buy__select__right {
   flex-grow: 1;
@@ -774,6 +776,7 @@ sup {
 }
 .main__window__middle__top__buy__select__right:hover {
   cursor: pointer;
+  background-color: var(--light-gray-color);
 }
 .main__window__middle__top__buy__area__input {
   width: 100%;
