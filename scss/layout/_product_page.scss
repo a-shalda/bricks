@@ -203,6 +203,7 @@
 
               background-color: white;
               border: 1px solid var(--light-gray-color);
+              border-left: none;
               border-top-right-radius: 0.4rem;
               border-bottom-right-radius: 0.4rem;
               font-size: 1rem;
@@ -253,9 +254,9 @@
           }
 
           &__button_add {
-            background-color: var(--light-gray-color);
+            background-color: var(--medium-gray-color);
             border: none;
-            color: var(--medium-gray-color);
+            color: white;
             padding-block: 0.3rem;
             padding-inline: 1rem;
             font-size: 1.2rem;
@@ -263,14 +264,47 @@
             transition: background-color 0.3s;
 
             &:hover {
-              background-color: var(--medium-gray-color);
+              background-color: var(--light-gray-color);
               color: white;
               cursor: pointer;
             }
           }
         }
       }
+
+      &__bottom {
+        padding: 1rem;
+
+        &__left {
+          
+          display: flex;
+          justify-content: space-between;
+
+          &_left {
+            color: rgb(162, 162, 162);
+            font-size: 0.8rem;  
+            padding-right: 0.5rem;
+
+          }
+
+          &_middle {
+            display: inline-block;
+            border-bottom: 1px dotted var(--medium-gray-color);
+            flex-grow: 1;
+            margin-bottom: 5px;
+          }
+
+          &_right {
+            font-size: 0.8rem;  
+            padding-left: 0.5rem;
+            color: gray;
+
+          }
+
+        }
+      }
     }
+
   }
 
   .selected {

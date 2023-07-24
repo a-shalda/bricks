@@ -747,6 +747,7 @@ picture {
   flex-grow: 1;
   background-color: white;
   border: 1px solid var(--light-gray-color);
+  border-left: none;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
   font-size: 1rem;
@@ -787,9 +788,9 @@ picture {
   cursor: pointer;
 }
 .main__window__middle__top__buy__button_add {
-  background-color: var(--light-gray-color);
+  background-color: var(--medium-gray-color);
   border: none;
-  color: var(--medium-gray-color);
+  color: white;
   padding-block: 0.3rem;
   padding-inline: 1rem;
   font-size: 1.2rem;
@@ -797,9 +798,32 @@ picture {
   transition: background-color 0.3s;
 }
 .main__window__middle__top__buy__button_add:hover {
-  background-color: var(--medium-gray-color);
+  background-color: var(--light-gray-color);
   color: white;
   cursor: pointer;
+}
+.main__window__middle__bottom {
+  padding: 1rem;
+}
+.main__window__middle__bottom__left {
+  display: flex;
+  justify-content: space-between;
+}
+.main__window__middle__bottom__left_left {
+  color: rgb(162, 162, 162);
+  font-size: 0.8rem;
+  padding-right: 0.5rem;
+}
+.main__window__middle__bottom__left_middle {
+  display: inline-block;
+  border-bottom: 1px dotted var(--medium-gray-color);
+  flex-grow: 1;
+  margin-bottom: 5px;
+}
+.main__window__middle__bottom__left_right {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+  color: gray;
 }
 .main .selected {
   background-color: var(--gray-color);

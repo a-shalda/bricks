@@ -172,7 +172,7 @@ function placeholder () {
     document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min ${piecesInPack.toFixed(0)} pieces`;
   }
   else if (select === 'pack') {
-    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min 1 piece`;
+    document.querySelector('.main__window__middle__top__buy__area__input').placeholder = `min 1 pack`;
   }
 
   document.querySelector('.main__window__middle__top__buy__area__input').value = '';

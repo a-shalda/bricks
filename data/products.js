@@ -13,6 +13,20 @@ const products = [
     typeOfPrice: 'm2',
     piecesInPack: 48,
 
+    specs: {
+      piecesInASquareMeter: 48,
+      piecesInAPack: 48,
+      recommendedJointSpacing: '10-12',
+      thickness: 9,
+      format: '240 x 71 x 9',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1Piece: 0.52,
+      weightOf1SquareMeter: 25,
+      weightOf1Pack: 25,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+
     image: 'img/thumbnails/r100nf.jpg',
     image_1: 'img/thumbnails/r100nf-side.jpg',
 
