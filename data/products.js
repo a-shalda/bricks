@@ -46,12 +46,15 @@ const products = [
     image_1: 'img/thumbnails/r303nf-side.jpg',
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
     priceCentsM2: 5240,
+    priceCentsPC: 155, //example
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
     format: '240 x 71 x 9',
     typeOfPrice: 'm2',
     piecesPerM2: 48,
+    
     thickness: 9,
+    typeOfPrice: 'pc',
     availability: 'In stock',
     specs: {
       piecesInASquareMeter: 48,

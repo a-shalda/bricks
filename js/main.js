@@ -204,6 +204,51 @@ products.forEach((product, index) => {
         </div>
         `;
     }
+    else if (product.typeOfPrice === 'pc') {
+
+        const pricePc = (product.priceCentsPC / 100).toFixed(2);
+        const indexofDotPc = (product.priceCentsPC / 100).toFixed(2).toString().indexOf('.');
+
+
+        productsHTML +=`
+        <div class="product">
+            <div class="product__top">
+    
+                <a href="${product.filepath}">
+                    <div class="product__top__cont">
+                        <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+                        <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
+                    </div>
+                </a>
+                
+                <div class="product__top__cont__stock">
+                    <i class="fa-solid fa-check stock"></i>
+                    <p class="product__top__cont__stock__desc">${product.availability}</p>
+                </div>
+            </div>
+    
+            <div class="product__middle">
+                <div class="product__middle__price--m2">
+                    <p class="product__middle__price--m2__p"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
+                </div>
+                <div class="product__middle__price--st">
+                    <p class="product__middle__price--st__p">&nbsp;</p>
+                </div>
+            </div>
+        
+            <div class="product__bottom">
+                <a href="${product.filepath}">
+                    <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                </a>
+                <div class="product__bottom__desc">
+                    <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
+                    <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
+                    <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                </div>
+            </div>
+        </div>
+        `;
+    }
 
 });
 document.querySelector('.products').innerHTML = productsHTML;
