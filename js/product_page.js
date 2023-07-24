@@ -4,7 +4,7 @@ console.log(typeof(cart));
 
 // localStorage.removeItem('cart');
 
-//GENERATING HTML
+//GENERATING TITLE AND IMAGES
 
 let root = document.URL.slice(-12, -5);
 
@@ -54,6 +54,74 @@ products.forEach((product, index) => {
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.main__title').innerHTML = productTitle;
+
+//GENERATING SPECS
+
+let specs = products[productNumberInProducts].specs;
+let specsHTML = '';
+
+if (specs.piecesInASquareMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInASquareMeter}</span></p>
+  `
+}
+if (specs.piecesInAPack) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInAPack}</span></p>
+  `
+}
+if (specs.recommendedJointSpacing) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended joint spacing (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedJointSpacing}</span></p>
+  `
+}
+if (specs.thickness) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Thickness (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.thickness}</span></p>
+  `
+}
+if (specs.format) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Format (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.format}</span></p>
+  `
+}
+if (specs.recommendedDryMortarVolume) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended dry mortar volume (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedDryMortarVolume}</span></p>
+  `
+}
+if (specs.weightOf1Piece) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Piece}</span></p>
+  `
+}
+if (specs.weightOf1SquareMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 square meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1SquareMeter}</span></p>
+  `
+}
+if (specs.weightOf1Pack) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Pack}</span></p>
+  `
+}
+if (specs.manufacturer) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Manufacturer</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.manufacturer}</span></p>
+  `
+}
+if (specs.countryOfOrigin) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.countryOfOrigin}</span></p>
+  `
+}
+
+
+
+document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
+
+
+
 
 
 //IMAGE GALLERY
