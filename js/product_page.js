@@ -328,9 +328,13 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
   inputArea.value = '';
 
   inputArea.placeholder = sucessHTML;
-  // document.querySelector('.main__window__middle__top__buy__area__input::placeholder').style.color = 'red';
+  inputArea.style.color = 'red';
 
-  setTimeout(placeholder, 3000);
+  setTimeout(function () {
+    placeholder();
+    inputArea.style.color = 'black';
+  }, 5000);
+
 
 })
 
