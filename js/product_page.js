@@ -111,6 +111,20 @@ function openModal () {
   } 
 }
 
+
+//GENERATING STOCK INFO
+
+let stockInfo = '';
+
+if (products[productNumberInProducts].availability === 'In stock') {
+  stockInfo += `
+    <i class="fa-solid fa-check stock"></i>
+    <p class="main__window__middle__top__stock__desc">In stock (delivery 1-2 business days)</p>
+  `
+}
+document.querySelector('.main__window__middle__top__stock').innerHTML = stockInfo;
+
+
 //GENERATING PRICES
 
 let pricesM2andPc = '';
