@@ -331,11 +331,14 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
   inputArea.value = '';
 
   inputArea.placeholder = sucessHTML;
-  inputArea.style.color = 'red';
+  inputArea.style.border = '1px solid var(--gray-color)';
+  inputArea.style.color = 'black';
+
 
   setTimeout(function () {
     placeholder();
-    inputArea.style.color = 'black';
+    inputArea.style.border = '1px solid var(--light-gray-color)';
+    inputArea.style.color = 'var(--gray-color)';
   }, 5000);
 
 
