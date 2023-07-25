@@ -126,6 +126,7 @@ function openModal () {
 
   document.querySelector(".modal").style.display = "block";
   document.querySelector(".modal__content").src = document.querySelector(".main_image").src;
+  document.body.style.overflow = 'hidden';
 
   // Get the <span> element that closes the modal
   let span = document.getElementsByClassName("close")[0];
@@ -134,6 +135,13 @@ function openModal () {
   span.onclick = function() {
     document.querySelector(".modal").style.display = "none";
   } 
+
+  document.querySelector('.modal').addEventListener('click',  () => {
+    span.onclick();
+    document.body.style.overflow = 'visible';
+
+
+  });
 }
 
 

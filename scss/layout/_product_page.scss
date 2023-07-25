@@ -412,12 +412,16 @@
     height: auto;
     border-radius: 0.5rem;
     margin: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .close {
     position: fixed;
-    top: 15px;
-    right: 35px;
+    top: 1rem;
+    right: 3rem;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
