@@ -171,8 +171,7 @@ else if (products[productNumberInProducts].typeOfPrice === 'pc') {
 
 }
 
-//PRICE SELECTOR
-//The type of quantity (m2 or pc) of the product
+//QUANTITY TYPE SELECTOR (m2 or pc) of the product
 
 let selectLeft = document.querySelector('.main__window__middle__top__buy__select__left');
 let selectMiddle = document.querySelector('.main__window__middle__top__buy__select__middle');
@@ -189,14 +188,15 @@ else if (products[productNumberInProducts].typeOfPrice === 'pc') {
   selectMiddle.classList.add('selected');
   selectLeft.style.display = 'none';
   selectMiddle.classList.add('main__window__middle__top__buy__select__left');
-
 }
 
 selectLeft.addEventListener('click', () => {
 
-  if (select === 'pc' || select === 'pack') {
-    selectRight.classList.remove('selected');
+  if (select === 'pc') {
     selectMiddle.classList.remove('selected');
+  }
+  else if (select === 'pack') {
+    selectRight.classList.remove('selected');
   }
   selectLeft.classList.add('selected');
   select = 'm2';
@@ -205,8 +205,10 @@ selectLeft.addEventListener('click', () => {
 
 selectMiddle.addEventListener('click', () => {
 
-  if (select === 'm2' || select === 'pack') {
+  if (select === 'm2') {
     selectLeft.classList.remove('selected');
+  }
+  else if (select === 'pack') {
     selectRight.classList.remove('selected');
   }
   selectMiddle.classList.add('selected');
@@ -216,8 +218,10 @@ selectMiddle.addEventListener('click', () => {
 
 selectRight.addEventListener('click', () => {
 
-  if (select === 'm2' || select === 'pc') {
+  if (select === 'm2') {
     selectLeft.classList.remove('selected');
+  }
+  else if (select === 'pc') {
     selectMiddle.classList.remove('selected');
   }
   selectRight.classList.add('selected');

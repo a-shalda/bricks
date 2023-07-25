@@ -167,15 +167,17 @@
 
           &__select {
             display: flex;
+            height: 1.98rem;
 
             &__left {
               flex-grow: 1;
 
               background-color: white;
               border: 1px solid var(--light-gray-color);
-              border-right: none;
               border-top-left-radius: 0.4rem;
               border-bottom-left-radius: 0.4rem;
+              border-right: none;
+
               font-size: 1rem;
               padding-block: 0.3rem;
               color: var(--gray-color);
@@ -189,10 +191,8 @@
 
             &__middle {
               flex-grow: 1;
-
               background-color: white;
               border: 1px solid var(--light-gray-color);
-
               font-size: 1rem;
               padding-block: 0.3rem;
               color: var(--gray-color);
@@ -201,21 +201,20 @@
               &:hover {
                 cursor: pointer;
                 background-color: var(--light-gray-color);
-
               }
             }
 
             &__right {
               flex-grow: 1;
-
               background-color: white;
               border: 1px solid var(--light-gray-color);
               border-top-right-radius: 0.4rem;
               border-bottom-right-radius: 0.4rem;
+              border-left: none;
+
               font-size: 1rem;
               padding-block: 0.3rem;
               color: var(--gray-color);
-              margin-left: -1px;
               transition: background-color 0.1s, color 0.1s, border 0.1s;
 
               &:hover {
@@ -322,7 +321,7 @@
   .selected {
     background-color: var(--gray-color);
     color: white;
-    border: none;
+    border: var(--gray-color);
   }
 
   .active {
