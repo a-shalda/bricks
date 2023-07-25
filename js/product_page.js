@@ -65,7 +65,10 @@ products.forEach((product, index) => {
 
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
-document.querySelector('.main__title').innerHTML = productTitle;
+document.querySelector('.main__cont__title').innerHTML = productTitle;
+
+//LEFT and RIGHT buttons at the title
+
 
 //Image gallery
 
@@ -345,7 +348,7 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
   localStorage.setItem('cart', JSON.stringify(cart));
   console.log(cart);
 
-  let sucessHTML = `Added ${userQuantity + typeAdded} to cart`;
+  let sucessHTML = `Added ${userQuantity + typeAdded}`;
 
   console.log(sucessHTML);
 
