@@ -7,62 +7,8 @@
 .main {
 
   &__cont {
-    display: flex;
-    align-items:stretch;
-    justify-content: space-between;
-    padding-block: var(--padding);
-    padding-bottom: 1.5rem;
-
-    &__button {
-
-      &__left {
-        background-color: var(--medium-gray-color);
-        display: flex;
-        align-items: center;
-        border-top-right-radius: 0.4rem;
-        border-bottom-right-radius: 0.4rem;
-        color: white;
-
-        &__select {
-          margin-right: 0.5rem;
-          padding-left: 0.5rem;
-          font-size: 1rem;
-
-          @include breakpoint(small) {
-            font-size: 2rem;
-          }
-        }
-
-        &:hover {
-          background-color: var(--light-gray-color);
-          cursor: pointer;
-        }
-      }
-      
-      &__right {
-        background-color: var(--medium-gray-color);
-        display: flex;
-        align-items: center;
-        border-top-left-radius: 0.4rem;
-        border-bottom-left-radius: 0.4rem;
-        color: white;
-
-        &__select {
-          margin-left: 0.5rem;
-          padding-right: 0.5rem;
-          font-size: 1rem;
-
-          @include breakpoint(small) {
-            font-size: 2rem;
-          }
-        }
-
-        &:hover {
-          background-color: var(--light-gray-color);
-          cursor: pointer;
-        }
-      }
-    }
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
 
     &__title {
       text-transform: uppercase;
@@ -71,11 +17,14 @@
       font-size: 0.8rem;
       padding-inline: 0.5rem;
       letter-spacing: 0.05rem;
-      max-width: 30ch;
 
       @include breakpoint(small) {
-        font-size: clamp(1rem, 4vw + 0.01rem, 2.5rem);
+        font-size: clamp(0.5rem, 3vw + 0.01rem, 2rem);
         line-height: clamp(1rem, 1.5em + 0.01rem, 5rem);
+        white-space: nowrap;
+        letter-spacing: 0.08rem;
+      }
+      @include breakpoint(medium) {
         letter-spacing: 0.1rem;
       }
     }

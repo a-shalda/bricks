@@ -587,55 +587,8 @@ sup {
 }
 
 .main__cont {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  padding-block: var(--padding);
-  padding-bottom: 1.5rem;
-}
-.main__cont__button__left {
-  background-color: var(--medium-gray-color);
-  display: flex;
-  align-items: center;
-  border-top-right-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
-  color: white;
-}
-.main__cont__button__left__select {
-  margin-right: 0.5rem;
-  padding-left: 0.5rem;
-  font-size: 1rem;
-}
-@media (min-width: 26.875em) {
-  .main__cont__button__left__select {
-    font-size: 2rem;
-  }
-}
-.main__cont__button__left:hover {
-  background-color: var(--light-gray-color);
-  cursor: pointer;
-}
-.main__cont__button__right {
-  background-color: var(--medium-gray-color);
-  display: flex;
-  align-items: center;
-  border-top-left-radius: 0.4rem;
-  border-bottom-left-radius: 0.4rem;
-  color: white;
-}
-.main__cont__button__right__select {
-  margin-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 1rem;
-}
-@media (min-width: 26.875em) {
-  .main__cont__button__right__select {
-    font-size: 2rem;
-  }
-}
-.main__cont__button__right:hover {
-  background-color: var(--light-gray-color);
-  cursor: pointer;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 .main__cont__title {
   text-transform: uppercase;
@@ -644,12 +597,17 @@ sup {
   font-size: 0.8rem;
   padding-inline: 0.5rem;
   letter-spacing: 0.05rem;
-  max-width: 30ch;
 }
 @media (min-width: 26.875em) {
   .main__cont__title {
-    font-size: clamp(1rem, 4vw + 0.01rem, 2.5rem);
+    font-size: clamp(0.5rem, 3vw + 0.01rem, 2rem);
     line-height: clamp(1rem, 1.5em + 0.01rem, 5rem);
+    white-space: nowrap;
+    letter-spacing: 0.08rem;
+  }
+}
+@media (min-width: 40em) {
+  .main__cont__title {
     letter-spacing: 0.1rem;
   }
 }
