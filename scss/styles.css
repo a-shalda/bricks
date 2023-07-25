@@ -724,11 +724,12 @@ sup {
 }
 .main__window__middle__top__buy {
   padding-inline: 1rem;
-  padding-block: 0;
+  padding-bottom: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   gap: 1rem;
+  border-bottom: 1px solid var(--light-light-gray-color);
 }
 .main__window__middle__top__buy__select {
   display: flex;
@@ -808,7 +809,7 @@ sup {
   cursor: pointer;
 }
 .main__window__middle__top__buy__button_add {
-  background-color: var(--medium-gray-color);
+  background-color: var(--gray-color);
   border: none;
   color: white;
   padding-block: 0.3rem;
@@ -818,7 +819,7 @@ sup {
   transition: background-color 0.3s;
 }
 .main__window__middle__top__buy__button_add:hover {
-  background-color: var(--light-gray-color);
+  background-color: gray;
   color: white;
   cursor: pointer;
 }
@@ -828,6 +829,7 @@ sup {
 .main__window__middle__bottom__left {
   display: flex;
   justify-content: space-between;
+  color: gray;
 }
 .main__window__middle__bottom__left_left {
   color: rgb(162, 162, 162);

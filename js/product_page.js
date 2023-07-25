@@ -253,7 +253,6 @@ function placeholder () {
   }
 }
 
-
 //ADDING TO CART
 //Add to cart
 
