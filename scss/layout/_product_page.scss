@@ -25,6 +25,42 @@
 
       &__left {
         border-bottom: 1px solid var(--light-light-gray-color);
+        position: relative;
+
+        &__button--prev, &__button--next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          font-size: 1rem;
+          padding: 1rem;
+          color: white;
+          font-weight: bold;
+          user-select: none;
+          background-color: var(--gray-color);
+          z-index: 1;
+          transition: background-color 0.3s;
+
+          @include breakpoint(small) {
+            font-size: 2rem;
+          }
+
+          &:hover {
+            background-color: hsla(0, 0%, 25%, 0.713);
+          }
+        }
+
+        &__button--next {
+          right: 1rem;
+          border-top-left-radius: 0.4rem;
+          border-bottom-left-radius: 0.4rem;
+        }
+
+        &__button--prev {
+          left: 1rem;
+          border-top-right-radius: 0.4rem;
+          border-bottom-right-radius: 0.4rem;
+        }
 
         &__cont {
           display: none;
@@ -80,7 +116,7 @@
             transition: outline 0.3s;
 
             &__img {
-              border-radius: 0.1rem;
+              border-radius: 0.3rem;
               object-fit: cover;
               width: 100%;
               opacity: 0.6;
@@ -330,7 +366,7 @@
 
   .active {
     outline: 3px solid gray;
-    border-radius: 0.1rem;
+    border-radius: 0.3rem;
   }
 
   .clear {
