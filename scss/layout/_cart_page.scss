@@ -1,0 +1,19 @@
+@use '../util/breakpoints' as *;
+@use '../globals/typography' as *;
+@use '../util/fonts' as *;
+@use '../globals/colors' as *;
+
+.cart {
+
+  &__cont {
+
+    &__product {
+
+      &__image {
+        display: block;
+      }
+    }
+    
+
+  }
+}

@@ -1024,4 +1024,8 @@ sup {
   to {
     opacity: 1;
   }
+}
+
+.cart__cont__product__image {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

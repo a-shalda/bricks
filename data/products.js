@@ -9,7 +9,7 @@ const products = [
     typeOfPrice: 'm2',
 
     specs: {
-      piecesInASquareMeter: 24,
+      piecesInASquareMeter: 48,
       piecesInAPack: 48,
       recommendedJointSpacing: '10-12',
       thickness: 9,
