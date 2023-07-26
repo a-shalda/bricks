@@ -159,10 +159,14 @@ document.querySelectorAll('.categories__box')
 let productsHTML = '';
 
 products.forEach((product, index) => {
-    const priceM2 = ((product.priceCentsM2 / 100).toFixed(2));
-    const pricePc = ((product.priceCentsM2 / 100) / Number(product.specs?.piecesInASquareMeter)).toFixed(2);
-    const indexOfDotM2 = ((product.priceCentsM2 / 100).toFixed(2)).toString().indexOf('.');
-    const indexofDotPc = ((product.priceCentsM2 / 100) / Number(product.specs?.piecesInASquareMeter)).toFixed(2).toString().indexOf('.');
+
+    let initialPrice = product.priceCentsM2;
+    let piecesInM2 = product.specs?.piecesInASquareMeter;
+  
+    const priceM2 = ((initialPrice / 100).toFixed(2));
+    const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
+    const indexOfDotM2 = priceM2.toString().indexOf('.');
+    const indexofDotPc = pricePc.toString().indexOf('.');
 
     if (product.typeOfPrice === 'm2') {
         productsHTML +=`
@@ -207,7 +211,7 @@ products.forEach((product, index) => {
     else if (product.typeOfPrice === 'pc') {
 
         const pricePc = (product.priceCentsPC / 100).toFixed(2);
-        const indexofDotPc = (product.priceCentsPC / 100).toFixed(2).toString().indexOf('.');
+        const indexofDotPc = pricePc.toString().indexOf('.');
 
 
         productsHTML +=`

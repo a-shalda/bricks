@@ -166,9 +166,9 @@ if (products[productNumberInProducts].typeOfPrice === 'm2') {
   let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
 
   const priceM2 = ((initialPrice / 100).toFixed(2));
-  const pricePc = ((initialPrice / 100) / Number(piecesInM2)).toFixed(2);
-  const indexOfDotM2 = ((initialPrice / 100).toFixed(2)).toString().indexOf('.');
-  const indexofDotPc = ((initialPrice / 100) / Number(piecesInM2)).toFixed(2).toString().indexOf('.');
+  const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
+  const indexOfDotM2 = priceM2.toString().indexOf('.');
+  const indexofDotPc = pricePc.toString().indexOf('.');
   
   pricesM2 += `
     <div class="main__window__middle__top__price__left">
@@ -186,7 +186,7 @@ else if (products[productNumberInProducts].typeOfPrice === 'pc') {
   let initialPrice = products[productNumberInProducts].priceCentsPC;
 
   const pricePc = (initialPrice / 100).toFixed(2);
-  const indexofDotPc = (initialPrice / 100).toFixed(2).toString().indexOf('.');
+  const indexofDotPc = pricePc.toString().indexOf('.');
   
   pricesPc += `
     <div class="main__window__middle__top__price__left">
