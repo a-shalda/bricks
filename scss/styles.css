@@ -615,6 +615,31 @@ sup {
   border-radius: 0.5rem;
   box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
 }
+@media (min-width: 53.75em) {
+  .main__window {
+    display: grid;
+    grid-template-areas: "one three" "one four" "two two";
+  }
+  .main__window .main__window__top__left {
+    grid-area: one;
+  }
+  .main__window .main__window__bottom__left {
+    grid-area: two;
+  }
+  .main__window .main__window__middle__top {
+    grid-area: three;
+  }
+  .main__window .main__window__middle__bottom {
+    grid-area: four;
+  }
+  .main__window .main__window__top__left__cont {
+    min-width: 15rem;
+  }
+  .main__window .main__window__bottom__left__grid {
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-areas: "one two three four five" "six seven eight nine nine";
+  }
+}
 .main__window__top__left {
   border-bottom: 1px solid var(--light-light-gray-color);
   position: relative;

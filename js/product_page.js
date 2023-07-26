@@ -281,14 +281,16 @@ function placeholder () {
   }
 }
 
+
+
+//ADDING TO CART
+//Add to cart
+
 inputArea.addEventListener('keydown', (event) => {
   if (event.which === 13) {
     addToCart();
   }
 })
-
-//ADDING TO CART
-//Add to cart
 
 document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
   addToCart ();
