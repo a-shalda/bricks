@@ -67,9 +67,6 @@ document.querySelector('.main__window__top__left').innerHTML = productOriginalHT
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.main__cont__title').innerHTML = productTitle;
 
-//LEFT and RIGHT buttons at the title
-
-
 //Image gallery
 
 document.querySelector('.main__window__top__left__button--prev').addEventListener('click', () => {
@@ -129,7 +126,7 @@ function openModal () {
   document.body.style.overflow = 'hidden';
 
   // Get the <span> element that closes the modal
-  let span = document.getElementsByClassName("close")[0];
+  let span = document.querySelectorAll(".close")[0];
   
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
@@ -139,8 +136,6 @@ function openModal () {
   document.querySelector('.modal').addEventListener('click',  () => {
     span.onclick();
     document.body.style.overflow = 'visible';
-
-
   });
 }
 
@@ -286,10 +281,20 @@ function placeholder () {
   }
 }
 
+inputArea.addEventListener('keydown', (event) => {
+  if (event.which === 13) {
+    addToCart();
+  }
+})
+
 //ADDING TO CART
 //Add to cart
 
 document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
+  addToCart ();
+})
+
+function addToCart () {
 
   let userQuantity = Number(inputArea.value);
   let typeAdded;
@@ -371,7 +376,7 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
     inputArea.style.border = '1px solid var(--light-gray-color)';
     inputArea.style.color = 'var(--gray-color)';
   }, 5000);
-})
+}
 
 
 //window.open('cart.html', '_parent');
