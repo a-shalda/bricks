@@ -31,6 +31,7 @@ const products = [
       'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
       'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
       'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
     ],
     image_original: [
       'img/images/R100NF/original/R100NF_full.jpg', 
@@ -38,6 +39,7 @@ const products = [
       'img/images/R100NF/original/R100NF_house_day.jpeg', 
       'img/images/R100NF/original/R100NF_house_night.jpeg', 
       'img/images/R100NF/original/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
     ]
     
   }, {

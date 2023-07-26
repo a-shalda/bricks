@@ -53,6 +53,8 @@ products.forEach((product, index) => {
       else if (index === 6) gridNumber = 'seven';
       else if (index === 7) gridNumber = 'eight';
       else if (index === 8) gridNumber = 'nine';
+      else if (index === 9) gridNumber = 'ten';
+
 
       productThumbnailslHTML += `
         <div class="main__window__bottom__left__grid__cont active ${gridNumber}">

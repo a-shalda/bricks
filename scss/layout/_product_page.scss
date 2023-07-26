@@ -27,7 +27,6 @@
         font-size: clamp(0.5rem, 3vw + 0.01rem, 2rem);
         white-space: nowrap;
       }
-
     }
   }
 
@@ -41,30 +40,20 @@
       grid-template-areas: 
       "one three"
       "one four"
+      "one four"
+      "one four"
+      "one four"
       "two two";
       
       .main__window__top__left {grid-area: one;}
       .main__window__bottom__left {grid-area: two;}
       .main__window__middle__top {grid-area: three;}
       .main__window__middle__bottom {grid-area: four;}
-
-      .main__window__top__left__cont {
-        min-width: 15rem;
-      }
-
-      .main__window__bottom__left__grid {
-        grid-template-columns: auto auto auto auto auto;
-        grid-template-areas: 
-        "one two three four five"
-        "six seven eight nine nine";
-      }
-
     }
 
     &__top {
 
       &__left {
-        border-bottom: 1px solid var(--light-light-gray-color);
         position: relative;
 
         &__button--prev, &__button--next {
@@ -106,11 +95,17 @@
           display: none;
           padding: 1rem;
           aspect-ratio: 5/4; //Not supported in Safari
+          border-right: 1px solid var(--light-light-gray-color);
 
           &__img {
             width: 100%;
             border-radius: 0.5rem;
             object-fit: cover;
+
+            @include breakpoint(large) {
+              min-height: 29rem;
+              min-width: 20rem;
+            }
 
             &:hover {
               cursor: pointer;
@@ -121,23 +116,23 @@
     }
 
     &__bottom {
+      border-bottom: 1px solid var(--light-light-gray-color);
 
       &__left {
 
-        border-bottom: 1px solid var(--light-light-gray-color);
-
         &__grid {
+          border-top: 1px solid var(--light-light-gray-color);
 
           display: grid;
-          grid-template-columns: auto auto auto;
+          grid-template-columns: 1fr 1fr 1fr;
+
           grid-template-areas: 
           "one two three"
           "four five six"
           "seven eight nine";
           justify-content: space-between;
-          
-
           padding: 1rem;
+
           .one {grid-area: one;}
           .two {grid-area: two;}
           .three {grid-area: three;}
@@ -147,6 +142,29 @@
           .seven {grid-area: seven;}
           .eight {grid-area: eight;}
           .nine {grid-area: nine;}
+          .ten {grid-area: ten;}
+
+          @include breakpoint(small) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "one two three four"
+            "five six seven eight" 
+            "nine ten eleven twelve";
+          }
+
+          @include breakpoint(medium) {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "one two three four five"
+            "six seven eight nine ten";
+          }
+
+          @include breakpoint(xlarge) {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "one two three four five six"
+            "seven eight nine ten eleven twelve";
+          }
 
           &__cont {
             padding: 0.1rem;
@@ -255,7 +273,8 @@
               border: 1px solid var(--light-gray-color);
               border-top-left-radius: 0.4rem;
               border-bottom-left-radius: 0.4rem;
-              border-right: none;
+              margin-right: -1px;
+
 
               font-size: 1rem;
               padding-block: 0.3rem;
@@ -289,7 +308,7 @@
               border: 1px solid var(--light-gray-color);
               border-top-right-radius: 0.4rem;
               border-bottom-right-radius: 0.4rem;
-              border-left: none;
+              margin-left: -1px;
 
               font-size: 1rem;
               padding-block: 0.3rem;
@@ -309,6 +328,7 @@
               width: 100%;
               font-size: 1rem;
               padding-block: 0.3rem;
+              padding-left: 0.3rem;
               text-align: center;
               color: var(--gray-color);
               border: 1px solid var(--light-gray-color);
@@ -360,8 +380,11 @@
       &__bottom {
         padding: 1.2rem;
 
+        @include breakpoint(xlarge) {
+          padding-top: 0;
+        }
+
         &__left {
-          
           display: flex;
           justify-content: space-between;
           color: gray;
@@ -401,7 +424,7 @@
   .selected {
     background-color: var(--gray-color);
     color: white;
-    border: var(--gray-color);
+    border: 1px solid var(--gray-color);
   }
 
   .active {
