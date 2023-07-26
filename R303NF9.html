@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bricks eCommerce Shop - Cart</title>
+  <title>Bricks eCommerce Shop - R100NF9 Feldhaus Klinker</title>
   <link rel="stylesheet" href="scss/styles.css">
   <script src="https://kit.fontawesome.com/f2fb6ae114.js" crossorigin="anonymous"></script>
 </head>
@@ -62,30 +62,67 @@
     </div>
   </header>
   <!--HEADER--end-->
+
   <main>
+    <section class="main cont">
 
-    <div class="cart cont">
-      <div class="cart__main__product">
-        <div class="cart__main__product__image"></div>
-        <div class="cart__main__product__title"></div>
-        <div class="cart__main__product__quantity"></div>
-        <div class="cart__main__product__price"></div>
-        <div class="cart__main__product__save"></div>
-        <div class="cart__main__product__remove"></div>
+      <div class="main__cont">
+        <div class="main__cont__title"></div>
       </div>
-      <div class="subtotal"></div>
-    </div>
+
+      <div class="main__window">
+        <div class="main__window__top__left"></div>
+
+        <div class="main__window__bottom__left">
+          <div class="main__window__bottom__left__grid"></div>
+        </div>
+
+        <div class="main__window__middle__top">
+          <div class="main__window__middle__top__price"></div>
+
+          <div class="main__window__middle__top__stock"></div>
+
+          <div class="main__window__middle__top__buy">
+            <div class="main__window__middle__top__buy__select">
+              <button class="main__window__middle__top__buy__select__left">m<sup>2</sup></button>
+              <button class="main__window__middle__top__buy__select__middle">pc</button>
+              <button class="main__window__middle__top__buy__select__right">pack</button>
+            </div>
+            <div class="main__window__middle__top__buy__area">
+              <input type="number" class="main__window__middle__top__buy__area__input" min="1" max="100000" value="1" placeholder="1 - 100,000">
+            </div>
+            <button class="main__window__middle__top__buy__button_buy">Buy</button>
+            <button class="main__window__middle__top__buy__button_add">Add to cart</button>
+          </div>
+        </div>
+
+        <div class="main__window__middle__bottom"></div>
+
+        <div class="main__window__right__top"></div>
+        <div class="main__window__right__bottom"></div>
+
+        <div class="modal">
+          <div class="modal__box">
+            <span class="close">&times;</span>
+            <img class="modal__content">
+          </div>
+        </div>
+      </div>
+
+    </section>
 
 
+
+    <section class="additional"></section>
+    <section class="similar"></section>
+    <section class="recently_viewed"></section>
 
   </main>
   
 
-
-
-  <script src="data/products.js"></script>
   <script src="data/cart.js"></script>
-  <script src="js/cart_page.js"></script>
-
+  <script src="data/products.js"></script>
+  <script src="js/product_page.js"></script>
+  
 </body>
 </html>

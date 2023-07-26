@@ -9,7 +9,7 @@ const products = [
     typeOfPrice: 'm2',
 
     specs: {
-      piecesInASquareMeter: 48,
+      piecesInASquareMeter: 24,
       piecesInAPack: 48,
       recommendedJointSpacing: '10-12',
       thickness: 9,
@@ -48,7 +48,7 @@ const products = [
     image_1: 'img/thumbnails/r303nf-side.jpg',
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
     priceCentsM2: 5240,
-    priceCentsPC: 155, //example
+    priceCentsPC: 155,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
     format: '240 x 71 x 9',
@@ -71,6 +71,22 @@ const products = [
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
+    image_thumbnail: [
+      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+    ],
+    image_original: [
+      'img/images/R100NF/original/R100NF_full.jpg', 
+      'img/images/R100NF/original/R100NF_full_side.jpg', 
+      'img/images/R100NF/original/R100NF_house_day.jpeg', 
+      'img/images/R100NF/original/R100NF_house_night.jpeg', 
+      'img/images/R100NF/original/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+    ]
     
   }, {
     id: 'R384NF14',

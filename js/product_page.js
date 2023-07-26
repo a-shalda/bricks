@@ -1,8 +1,6 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
-console.log(cart);
-console.log(typeof(cart));
 
-// localStorage.removeItem('cart');
+localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
 
@@ -12,6 +10,7 @@ let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
 let productNumberInProducts;
+let originalTypeOfPrice = ''
 
 products.forEach((product, index) => {
 
@@ -19,6 +18,7 @@ products.forEach((product, index) => {
 
     productTitle = product.name;
     productNumberInProducts = index;
+    originalTypeOfPrice = product.typeOfPrice;
 
     product.image_original.forEach((image, index) => {
 
@@ -343,6 +343,7 @@ function addToCart () {
 
   const order = {
     id: root,
+    originalTypeOfPrice: originalTypeOfPrice,
     type: select,
     quantity: userQuantity
   };
@@ -363,11 +364,8 @@ function addToCart () {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  console.log(cart);
 
   let sucessHTML = `Added ${userQuantity + typeAdded}`;
-
-  console.log(sucessHTML);
 
   inputArea.value = '';
 
@@ -380,6 +378,8 @@ function addToCart () {
     inputArea.style.border = '1px solid var(--light-gray-color)';
     inputArea.style.color = 'var(--gray-color)';
   }, 5000);
+
+  console.log(cart);
 }
 
 
