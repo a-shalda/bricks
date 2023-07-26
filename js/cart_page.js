@@ -2,6 +2,12 @@ cart = JSON.parse(localStorage.getItem('cart')) || [];
 console.log(cart);
 console.log(typeof(cart));
 
+let jsonPurchase;
+
+for (const [key, value] of Object.entries(cart)) {
+  console.log(`${key}: ${value}`);
+}
+
 
 let productHTML = '';
 

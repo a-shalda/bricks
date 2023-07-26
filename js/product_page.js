@@ -1,6 +1,6 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-localStorage.removeItem('cart');
+// localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
 
@@ -300,6 +300,8 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
 
 function addToCart () {
 
+  cart = JSON.parse(localStorage.getItem('cart')) || [];
+
   let userQuantity = Number(inputArea.value);
   let typeAdded;
 
@@ -364,6 +366,7 @@ function addToCart () {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
+  
 
   let sucessHTML = `Added ${userQuantity + typeAdded}`;
 
