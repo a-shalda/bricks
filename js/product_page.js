@@ -1,6 +1,6 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-localStorage.removeItem('cart');
+// localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
 
@@ -293,6 +293,18 @@ inputArea.addEventListener('keydown', (event) => {
     addToCart();
   }
 })
+
+
+// //TODO
+
+// inputArea.addEventListener('keydown', (event) => {
+//   if (event.key.length === 3) return false;
+
+//   // if (inputArea.value === 1) {console.log(inputArea.length);}
+
+// })
+
+
 
 document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
   addToCart ();

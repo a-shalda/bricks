@@ -8,6 +8,8 @@
   &__cont {
 
     &__product {
+      display: flex;
+      gap: 1rem;
 
       &__image {
         display: block;

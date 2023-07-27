@@ -1026,6 +1026,10 @@ sup {
   }
 }
 
+.cart__cont__product {
+  display: flex;
+  gap: 1rem;
+}
 .cart__cont__product__image {
   display: block;
 }/*# sourceMappingURL=styles.css.map */

@@ -164,6 +164,7 @@
             grid-template-areas: 
             "one two three four five six"
             "seven eight nine ten eleven twelve";
+            // grid-auto-rows: min-content; //For Safari
           }
 
           &__cont {
