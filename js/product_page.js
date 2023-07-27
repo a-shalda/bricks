@@ -1,6 +1,5 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-
 // localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
@@ -11,7 +10,13 @@ let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
 let productNumberInProducts;
-let originalTypeOfPrice = ''
+let originalTypeOfPrice = '';
+
+//Limits 
+
+const m2Limit = 1000;
+const pcLimit = 10000;
+const packLimit = 2000;
 
 products.forEach((product, index) => {
 
@@ -302,9 +307,9 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
   addToCart ();
 })
 
-function error (type, quantity) {
+function error (arg, quantity, type) {
   inputArea.value = '';
-  inputArea.placeholder = `max ${quantity}${type}`;
+  inputArea.placeholder = `${arg}${quantity}${type}`;
   inputArea.style.border = '1px solid firebrick';
   inputArea.style.color = 'firebrick';
 
@@ -312,7 +317,7 @@ function error (type, quantity) {
     placeholder();
     inputArea.style.border = '1px solid var(--light-gray-color)';
     inputArea.style.color = 'var(--gray-color)';
-  }, 3000);
+  }, 5000);
 }
 
 function addToCart () {
@@ -329,72 +334,53 @@ function addToCart () {
 
   if (originalTypeOfPrice === 'm2') {
 
-    if (userQuantity === 1) {
-      typeAdded = ' square meter';
-    }
-    else {
-      typeAdded = ' square meters'; 
-    }
+    if (select === 'm2') {
+      if (userQuantity === 1) {typeAdded = ' square meter';}
+      else {typeAdded = ' square meters'; }
 
-    if (userQuantity > 1000) {
-      error(typeAdded, '1,000');
-      return;
+      if (userQuantity > m2Limit) {
+        return error('max ', m2Limit, typeAdded);
+      }
     }
-
+    else if (select === 'pc') {}
+    else if (select === 'pack') {}
 
   }
+
   else if (originalTypeOfPrice === 'pc') {
 
+    //TO DO ? multiple of??
+
+    if (select === 'pc') {
+      if (userQuantity === 1) {typeAdded = ' piece';}
+      else {typeAdded = ' pieces';}
+
+      if (userQuantity < piecesInPack) {
+        if (piecesInPack === 1) {typeAdded = ' piece';}
+        else {typeAdded = ' pieces';}
+
+        return error('min ', piecesInPack, typeAdded);
+      }
+      else if (userQuantity > pcLimit) {
+        return error('max ', pcLimit, typeAdded);
+      }
+    }
+
+    else if (select === 'pack') {
+      if (userQuantity === 1) {typeAdded = ' pack';}
+      else {typeAdded = ' packs'; }
+
+      if (userQuantity > packLimit) {
+        return error('max ', packLimit, typeAdded);
+      }
+    }
   }
 
 
 
-  else if (select === 'm2' && !Number.isInteger(userQuantity / piecesInM2)) {
-    userQuantity = userQuantity - (userQuantity % 1);
-    if (userQuantity === 1) {
-      typeAdded = ' square meter';
-    }
-    else {
-      typeAdded = ' square meters'; 
-    }
 
-    // if (userQuantity > 1000) {
-    //   inputArea.value = '';
-    //   inputArea.placeholder = 'max 1,000 square meters';
-    //   inputArea.style.border = '1px solid firebrick';
-    //   inputArea.style.color = 'firebrick';
 
-    //   timeOut = setTimeout(function () {
-    //     placeholder();
-    //     inputArea.style.border = '1px solid var(--light-gray-color)';
-    //     inputArea.style.color = 'var(--gray-color)';
-    //   }, 3000);
 
-    //   return;
-    // }
-  }
-  else if (select === 'pc' && userQuantity < piecesInPack) {
-    inputArea.value = '';
-
-    inputArea.value = '';
-    inputArea.style.border = '1px solid firebrick';
-    inputArea.style.color = 'firebrick';
-
-    if (piecesInPack === 1) {
-      inputArea.placeholder = `min ${piecesInPack.toFixed(0)} piece`;
-    }
-    else if (piecesInPack > 1) {
-      inputArea.placeholder = `min ${piecesInPack.toFixed(0)} pieces`;
-    }
-
-    timeOut = setTimeout(function () {
-      placeholder();
-      inputArea.style.border = '1px solid var(--light-gray-color)';
-      inputArea.style.color = 'var(--gray-color)';
-    }, 3000);
-
-    return;
-  }
   else if (select === 'pc' && !Number.isInteger(userQuantity / piecesInPack)) {
     userQuantity = userQuantity - (userQuantity % piecesInPack);
     if (userQuantity === 1) {
@@ -514,19 +500,35 @@ inputArea.addEventListener('blur', () => {
 
 inputArea.addEventListener('keydown', (event) => {
 
+  //Checking if the previous operation was adding to cart, stop animations
   if (timeOut >= 0) {
     clearTimeout(timeOut);
     placeholder();
     timeOut = undefined;
   }
 
+  //Adding to cart on Enter
   if (event.key === 'Enter') {
     addToCart();
     document.activeElement.blur();
   }
 
+  //First digit is not 0
+  if (inputArea.value.length === 0 && event.key === '0') {
+    event.preventDefault();
+  }
+
+  //Preventing characters other than numbers from typing
   if (event.key !== '0' &&  event.key !== '1' && event.key !== '2' &&  event.key !== '3' && event.key !== '4' &&  event.key !== '5' &&event.key !== '6' &&  event.key !== '7' &&event.key !== '8' &&  event.key !== '9' && event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
     event.preventDefault();
+  }
+
+  //Max length of the quantity
+  if (inputArea.value.length === 5) {
+
+    if (event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
+      event.preventDefault();
+    }
   }
 })
 
