@@ -156,7 +156,7 @@ let stockInfo = '';
 if (products[productNumberInProducts].availability === 'In stock') {
   stockInfo += `
     <i class="fa-solid fa-check stock"></i>
-    <p class="main__window__middle__top__stock__desc">In stock (delivery 1-2 business days)</p>
+    <p class="main__window__middle__top__stock__desc">In stock</p>
   `
 }
 document.querySelector('.main__window__middle__top__stock').innerHTML = stockInfo;
@@ -282,12 +282,7 @@ function placeholder () {
 
   inputArea.value = '';
 
-  if (window.innerWidth <= 350) {
-    if (select === 'm2' || select === 'pack') {inputArea.placeholder = `min 1`;}
-    else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
-    else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
-  }
-  else if (window.innerWidth >= 351 && window.innerWidth <= 549) {
+  if (window.innerWidth <= 549) {
     if (select === 'm2' || select === 'pack') {inputArea.placeholder = `1 - 1000`;}
     else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
     else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
