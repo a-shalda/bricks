@@ -324,6 +324,7 @@
           }
 
           &__area {
+            display: flex;
 
             &__input {
               width: 100%;
@@ -352,6 +353,7 @@
             border-radius: 0.4rem;
             color: white;
             transition: background-color 0.3s;
+            min-height: 2.875rem; //Height of the price box
 
             &:hover {
               background-color: hsla(0, 68%, 42%, 0.885);
@@ -368,6 +370,7 @@
             font-size: 1.2rem;
             border-radius: 0.4rem;
             transition: background-color 0.3s;
+            min-height: 2.875rem; //Height of the price box
 
             &:hover {
               background-color: gray;

@@ -878,6 +878,9 @@ sup {
   cursor: pointer;
   background-color: var(--light-gray-color);
 }
+.main__window__middle__top__buy__area {
+  display: flex;
+}
 .main__window__middle__top__buy__area__input {
   width: 100%;
   font-size: 1rem;
@@ -902,6 +905,7 @@ sup {
   border-radius: 0.4rem;
   color: white;
   transition: background-color 0.3s;
+  min-height: 2.875rem;
 }
 .main__window__middle__top__buy__button_buy:hover {
   background-color: hsla(0, 68%, 42%, 0.885);
@@ -916,6 +920,7 @@ sup {
   font-size: 1.2rem;
   border-radius: 0.4rem;
   transition: background-color 0.3s;
+  min-height: 2.875rem;
 }
 .main__window__middle__top__buy__button_add:hover {
   background-color: gray;

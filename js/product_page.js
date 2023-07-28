@@ -11,12 +11,13 @@ let productThumbnailslHTML = '';
 let productTitle = '';
 let productNumberInProducts;
 let originalTypeOfPrice = '';
+let userQuantity = 0;
 
 //Limits 
 
 const m2Limit = 1000;
 const pcLimit = 10000;
-const packLimit = 2000;
+const packLimit = 1000;
 
 products.forEach((product, index) => {
 
@@ -334,7 +335,7 @@ function addToCart () {
 
   cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  let userQuantity = Number(inputArea.value);
+  userQuantity = Number(inputArea.value);
   let typeAdded;
 
   if (!(typeof(userQuantity) === 'number' && userQuantity >= 1)) {
@@ -484,6 +485,39 @@ function limitInputAreaLength (event) {
     event.preventDefault();
   }
 }
+
+document.querySelector('.main__window__middle__top__buy__area__left').addEventListener('click', () => {
+  
+  userQuantity = Number(inputArea.value);
+
+  if (userQuantity >= 1) {
+    userQuantity--;
+
+    if (userQuantity === 0) {
+      inputArea.value = '';
+      return;
+    }
+    inputArea.value = userQuantity;
+  }
+
+
+
+})
+
+document.querySelector('.main__window__middle__top__buy__area__right').addEventListener('click', () => {
+  
+  userQuantity = Number(inputArea.value) || 0;
+
+  if (select === 'm2' && userQuantity === (m2Limit - 1)) {return;}
+  else if (select === 'pc' && userQuantity === (pcLimit - 1)) {return;}
+  else if (select === 'pack' && userQuantity === (packLimit - 1)) {return;}
+
+  if (inputArea.value === '') {
+    inputArea.value = 1;
+  }
+  userQuantity++;
+  inputArea.value = userQuantity;
+})
 
 
 
