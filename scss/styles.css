@@ -1025,6 +1025,14 @@ sup {
     opacity: 1;
   }
 }
+.main .inputAreaFocus {
+  border: 1px solid var(--gray-color);
+  color: black;
+}
+.main .inputAreaError {
+  border: 1px solid firebrick;
+  color: firebrick;
+}
 
 .cart__cont__product {
   display: flex;
