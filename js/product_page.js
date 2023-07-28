@@ -495,13 +495,16 @@ document.querySelector('.main__window__middle__top__buy__area__left').addEventLi
 
     if (userQuantity === 0) {
       inputArea.value = '';
+      inputArea.classList.remove('inputAreaFocus');
+      inputAreaFocus = false;
       return;
     }
     inputArea.value = userQuantity;
+    
+    //Add focus
+    inputArea.classList.add('inputAreaFocus');
+    inputAreaFocus = true;
   }
-
-
-
 })
 
 document.querySelector('.main__window__middle__top__buy__area__right').addEventListener('click', () => {
@@ -517,6 +520,10 @@ document.querySelector('.main__window__middle__top__buy__area__right').addEventL
   }
   userQuantity++;
   inputArea.value = userQuantity;
+
+  //Add focus
+  inputArea.classList.add('inputAreaFocus');
+  inputAreaFocus = true;
 })
 
 

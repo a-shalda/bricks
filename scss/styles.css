@@ -831,7 +831,7 @@ sup {
 }
 .main__window__middle__top__buy__select {
   display: flex;
-  height: 1.98rem;
+  height: 2rem;
 }
 .main__window__middle__top__buy__select__left {
   flex-grow: 1;
@@ -842,12 +842,13 @@ sup {
   margin-right: -1px;
   font-size: 1rem;
   padding-block: 0.3rem;
-  color: var(--gray-color);
+  color: gray;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
 }
 .main__window__middle__top__buy__select__left:hover {
   cursor: pointer;
   background-color: var(--light-gray-color);
+  color: var(--gray-color);
 }
 .main__window__middle__top__buy__select__middle {
   flex-grow: 1;
@@ -855,12 +856,13 @@ sup {
   border: 1px solid var(--light-gray-color);
   font-size: 1rem;
   padding-block: 0.3rem;
-  color: var(--gray-color);
+  color: gray;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
 }
 .main__window__middle__top__buy__select__middle:hover {
   cursor: pointer;
   background-color: var(--light-gray-color);
+  color: var(--gray-color);
 }
 .main__window__middle__top__buy__select__right {
   flex-grow: 1;
@@ -871,15 +873,38 @@ sup {
   margin-left: -1px;
   font-size: 1rem;
   padding-block: 0.3rem;
-  color: var(--gray-color);
+  color: gray;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
 }
 .main__window__middle__top__buy__select__right:hover {
   cursor: pointer;
   background-color: var(--light-gray-color);
+  color: var(--gray-color);
 }
 .main__window__middle__top__buy__area {
   display: flex;
+  height: 2rem;
+}
+.main__window__middle__top__buy__area__left {
+  width: 2rem;
+  background-color: white;
+  border: 1px solid var(--light-gray-color);
+  color: gray;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  font-size: 1rem;
+  transition: background-color 0.1s, color 0.1s, border 0.1s;
+}
+.main__window__middle__top__buy__area__left:hover {
+  cursor: pointer;
+  background-color: var(--light-gray-color);
+  border: var(--light-gray-color);
+  color: var(--gray-color);
+}
+.main__window__middle__top__buy__area__left:active {
+  background-color: var(--gray-color);
+  color: white;
+  border: 1px solid var(--gray-color);
 }
 .main__window__middle__top__buy__area__input {
   width: 100%;
@@ -889,12 +914,44 @@ sup {
   text-align: center;
   color: var(--gray-color);
   border: 1px solid var(--light-gray-color);
-  border-radius: 0.4rem;
-  transition: border 0.3s;
+  border-left: none;
+  transition: background-color 0.1s, color 0.1s, border 0.1s;
+  margin-right: -2px;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 .main__window__middle__top__buy__area__input:focus {
-  border: 1px solid var(--gray-color);
+  background-color: var(--light-light-gray-color);
+  border-left: none;
   outline: none;
+}
+.main__window__middle__top__buy__area__input::-webkit-outer-spin-button, .main__window__middle__top__buy__area__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.main__window__middle__top__buy__area__input {
+  -moz-appearance: textfield;
+}
+.main__window__middle__top__buy__area__right {
+  width: 2rem;
+  background-color: white;
+  border: 1px solid var(--light-gray-color);
+  color: gray;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  font-size: 1rem;
+  transition: background-color 0.1s, color 0.1s, border 0.1s;
+}
+.main__window__middle__top__buy__area__right:hover {
+  cursor: pointer;
+  background-color: var(--light-gray-color);
+  border: var(--light-gray-color);
+  color: var(--gray-color);
+}
+.main__window__middle__top__buy__area__right:active {
+  background-color: var(--gray-color);
+  color: white;
+  border: 1px solid var(--gray-color);
 }
 .main__window__middle__top__buy__button_buy {
   background-color: #a43434;
@@ -1031,12 +1088,14 @@ sup {
   }
 }
 .main .inputAreaFocus {
-  border: 1px solid var(--gray-color);
-  color: black;
+  color: var(--gray-color);
+  border-left: none;
+  background-color: var(--light-light-gray-color);
 }
 .main .inputAreaError {
   border: 1px solid firebrick;
   color: firebrick;
+  border-left: none;
 }
 
 .cart__cont__product {

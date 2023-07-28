@@ -265,7 +265,7 @@
 
           &__select {
             display: flex;
-            height: 1.98rem;
+            height: 2rem;
 
             &__left {
               flex-grow: 1;
@@ -279,12 +279,13 @@
 
               font-size: 1rem;
               padding-block: 0.3rem;
-              color: var(--gray-color);
+              color: gray;
               transition: background-color 0.1s, color 0.1s, border 0.1s;
 
               &:hover {
                 cursor: pointer;
                 background-color: var(--light-gray-color);
+                color: var(--gray-color);
               }
             }
 
@@ -294,12 +295,13 @@
               border: 1px solid var(--light-gray-color);
               font-size: 1rem;
               padding-block: 0.3rem;
-              color: var(--gray-color);
+              color: gray;
               transition: background-color 0.1s, color 0.1s, border 0.1s;
 
               &:hover {
                 cursor: pointer;
                 background-color: var(--light-gray-color);
+                color: var(--gray-color);
               }
             }
 
@@ -313,18 +315,44 @@
 
               font-size: 1rem;
               padding-block: 0.3rem;
-              color: var(--gray-color);
+              color: gray;
               transition: background-color 0.1s, color 0.1s, border 0.1s;
 
               &:hover {
                 cursor: pointer;
                 background-color: var(--light-gray-color);
+                color: var(--gray-color);
               }
             }
           }
 
           &__area {
             display: flex;
+            height: 2rem;
+
+            &__left {
+              width: 2rem;
+              background-color: white;
+              border: 1px solid var(--light-gray-color);
+              color: gray;
+
+              border-top-left-radius: 0.4rem;
+              border-bottom-left-radius: 0.4rem;
+              font-size: 1rem;
+              transition: background-color 0.1s, color 0.1s, border 0.1s;
+
+              &:hover {
+                cursor: pointer;
+                background-color: var(--light-gray-color);
+                border: var(--light-gray-color);
+                color: var(--gray-color);
+              }
+              &:active {
+                background-color: var(--gray-color);
+                color: white;
+                border: 1px solid var(--gray-color);
+              }
+            }
 
             &__input {
               width: 100%;
@@ -334,12 +362,50 @@
               text-align: center;
               color: var(--gray-color);
               border: 1px solid var(--light-gray-color);
-              border-radius: 0.4rem;
-              transition: border 0.3s;
+              border-left: none;
+              transition: background-color 0.1s, color 0.1s, border 0.1s;
+              margin-right: -2px;
 
               &:focus {
-                border: 1px solid var(--gray-color);
+                // border: 1px solid var(--gray-color);
+                background-color: var(--light-light-gray-color);
+                border-left: none;
                 outline: none;
+              }
+
+              //Hiding arrows 
+              /* Chrome, Safari, Edge, Opera */
+              &::-webkit-outer-spin-button,
+              &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              /* Firefox */
+              & {
+                -moz-appearance: textfield;
+              }
+            }
+
+            &__right {
+              width: 2rem;
+              background-color: white;
+              border: 1px solid var(--light-gray-color);
+              color: gray;
+              border-top-right-radius: 0.4rem;
+              border-bottom-right-radius: 0.4rem;
+              font-size: 1rem;
+              transition: background-color 0.1s, color 0.1s, border 0.1s;
+
+              &:hover {
+                cursor: pointer;
+                background-color: var(--light-gray-color);
+                border: var(--light-gray-color);
+                color: var(--gray-color);
+              }
+              &:active {
+                background-color: var(--gray-color);
+                color: white;
+                border: 1px solid var(--gray-color);
               }
             }
           }
@@ -502,13 +568,17 @@
   }
 
   .inputAreaFocus {
-    border: 1px solid var(--gray-color);
-    color: black;
+    // border: 1px solid var(--gray-color);
+    color: var(--gray-color);
+    border-left: none;
+    background-color: var(--light-light-gray-color);
+
   }
 
   .inputAreaError {
     border: 1px solid firebrick;
     color: firebrick;
+    border-left: none;
   }
 }
 
