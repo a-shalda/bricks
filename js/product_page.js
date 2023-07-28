@@ -282,17 +282,21 @@ function placeholder () {
 
   inputArea.value = '';
 
-  if (select === 'm2') {
-    inputArea.placeholder = `min 1 square meter`;
+  if (window.innerWidth <= 350) {
+    if (select === 'm2' || select === 'pack') {inputArea.placeholder = `min 1`;}
+    else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
+    else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
   }
-  else if (select === 'pc' && piecesInPack === 1) {
-    inputArea.placeholder = `multiple of ${piecesInPack.toFixed(0)} piece`;
+  else if (window.innerWidth >= 351 && window.innerWidth <= 549) {
+    if (select === 'm2' || select === 'pack') {inputArea.placeholder = `1 - 1000`;}
+    else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
+    else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
   }
-  else if (select === 'pc' && piecesInPack > 1) {
-    inputArea.placeholder = `multiple of ${piecesInPack.toFixed(0)} pieces`;
-  }
-  else if (select === 'pack') {
-    inputArea.placeholder = `min 1 pack`;
+  else if (window.innerWidth >= 550) {
+    if (select === 'm2') {inputArea.placeholder = `min 1 square meter`;}
+    else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `multiple of ${piecesInPack.toFixed(0)} piece`;}
+    else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `multiple of ${piecesInPack.toFixed(0)} pieces`;}
+    else if (select === 'pack') {inputArea.placeholder = `min 1 pack`;}
   }
 
   if (inputAreaFocus) {
@@ -524,6 +528,7 @@ document.querySelector('.main__window__middle__top__buy__area__right').addEventL
   //Add focus
   inputArea.classList.add('inputAreaFocus');
   inputAreaFocus = true;
+  inputArea.classList.remove('inputAreaError');
 })
 
 

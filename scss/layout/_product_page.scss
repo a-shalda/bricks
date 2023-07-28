@@ -331,7 +331,7 @@
             height: 2rem;
 
             &__left {
-              width: 2rem;
+              width: 3rem;
               background-color: white;
               border: 1px solid var(--light-gray-color);
               color: gray;
@@ -344,7 +344,7 @@
               &:hover {
                 cursor: pointer;
                 background-color: var(--light-gray-color);
-                border: var(--light-gray-color);
+                border: 1px solid var(--light-gray-color);
                 color: var(--gray-color);
               }
               &:active {
@@ -358,16 +358,15 @@
               width: 100%;
               font-size: 1rem;
               padding-block: 0.3rem;
-              padding-left: 0.3rem;
+              padding-left: 0.1rem;
               text-align: center;
               color: var(--gray-color);
               border: 1px solid var(--light-gray-color);
               border-left: none;
-              transition: background-color 0.1s, color 0.1s, border 0.1s;
+              transition: background-color 0.3s, color 0.3s, border 0.3s;
               margin-right: -2px;
 
               &:focus {
-                // border: 1px solid var(--gray-color);
                 background-color: var(--light-light-gray-color);
                 border-left: none;
                 outline: none;
@@ -387,7 +386,7 @@
             }
 
             &__right {
-              width: 2rem;
+              width: 3rem;
               background-color: white;
               border: 1px solid var(--light-gray-color);
               color: gray;
@@ -399,7 +398,7 @@
               &:hover {
                 cursor: pointer;
                 background-color: var(--light-gray-color);
-                border: var(--light-gray-color);
+                border: 1px solid var(--light-gray-color);
                 color: var(--gray-color);
               }
               &:active {
@@ -568,7 +567,6 @@
   }
 
   .inputAreaFocus {
-    // border: 1px solid var(--gray-color);
     color: var(--gray-color);
     border-left: none;
     background-color: var(--light-light-gray-color);
@@ -576,7 +574,6 @@
   }
 
   .inputAreaError {
-    border: 1px solid firebrick;
     color: firebrick;
     border-left: none;
   }
