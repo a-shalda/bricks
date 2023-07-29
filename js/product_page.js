@@ -12,6 +12,7 @@ let productTitle = '';
 let productNumberInProducts;
 let originalTypeOfPrice = '';
 let userQuantity = 0;
+let subTotal = 0;
 
 //Limits 
 
@@ -156,10 +157,10 @@ let stockInfo = '';
 if (products[productNumberInProducts].availability === 'In stock') {
   stockInfo += `
     <i class="fa-solid fa-check stock"></i>
-    <p class="main__window__middle__top__stock__desc">In stock</p>
+    <p class="main__window__middle__top__stock__info__desc">In stock</p>
   `
 }
-document.querySelector('.main__window__middle__top__stock').innerHTML = stockInfo;
+document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
 
 
 //GENERATING PRICES
@@ -477,6 +478,48 @@ inputArea.addEventListener('keydown', (event) => {
   else if (select === 'pack' && inputArea.value.length >= 3) {
     limitInputAreaLength(event);
   }
+
+  //Calculating subtotal
+  let subTotalHTML = '';
+
+  if (originalTypeOfPrice === 'm2') {
+
+    let initialPrice = products[productNumberInProducts].priceCentsM2;
+    let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
+  
+    const priceM2 = ((initialPrice / 100).toFixed(2));
+    const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
+    const indexOfDotM2 = priceM2.toString().indexOf('.');
+    const indexofDotPc = pricePc.toString().indexOf('.');
+    
+    pricesM2 += `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
+      </div>
+      <div class="main__window__middle__top__price__right">
+        <p class="main__window__middle__top__price__right__box"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
+      </div>
+    `;
+    
+    // document.querySelector('.main__window__middle__top__price').innerHTML = pricesM2;
+
+    //TODO
+
+    if (select == 'm2') {
+      subTotal = priceM2 * inputArea.value;
+      console.log(subTotal);
+      subTotalHTML = `Subtotal: $${subTotal}`;
+      
+    }
+    else if (select == 'pc') {}
+    else if (select == 'pack') {}
+  }
+  else if (originalTypeOfPrice === 'pc') {
+    if (select == 'pc') {}
+    else if (select == 'pack') {}
+  }
+
+  document.querySelector('.main__window__middle__top__stock__subtotal__value').innerHTML = subTotalHTML;
 })
 
 function limitInputAreaLength (event) {

@@ -202,7 +202,6 @@
           padding-bottom: 1rem;
           gap: 1rem;
 
-
           &__left {
             display: flex;
             width: 50%;
@@ -239,16 +238,34 @@
         }
 
         &__stock {
-          display: flex;
-          justify-content: flex-start;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           align-items: center;
-          padding-left: 1.2rem;
+          gap: 1rem;
 
-          &__desc {
-            padding-block: 1rem;
-            padding-inline: 1rem;
-            color: rgb(162, 162, 162);
-            font-size: 0.8rem;  
+          &__info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 1.3rem;
+  
+            &__desc {
+              padding-block: 1rem;
+              padding-left: 0.8rem;
+              color: rgb(162, 162, 162);
+              font-size: 0.8rem;  
+              letter-spacing: 0.02rem;
+            }
+          }
+
+          &__subtotal {
+            
+            &__value {
+              color: rgb(162, 162, 162);
+              font-size: 0.8rem;  
+              letter-spacing: 0.05rem;
+              padding-left: 0.15rem;
+            }
           }
         }
 
@@ -462,6 +479,8 @@
             color: rgb(162, 162, 162);
             font-size: 0.8rem;  
             padding-right: 0.5rem;
+            letter-spacing: 0.01rem;
+
 
           }
 
