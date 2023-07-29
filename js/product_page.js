@@ -4,13 +4,13 @@ cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 //GENERATING TITLE AND IMAGES
 
-let root = document.URL.slice(-12, -5);
+const root = document.URL.slice(-12, -5);
 
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
 let productNumberInProducts;
-let originalTypeOfPrice = '';
+let supplierPriceType = '';
 let userQuantity = 0;
 let subTotal = 0;
 
@@ -26,7 +26,7 @@ products.forEach((product, index) => {
 
     productTitle = product.name;
     productNumberInProducts = index;
-    originalTypeOfPrice = product.typeOfPrice;
+    supplierPriceType = product.supplierPriceType;
 
     product.image_original.forEach((image, index) => {
 
@@ -164,21 +164,22 @@ document.querySelector('.main__window__middle__top__stock__info').innerHTML = st
 
 
 //GENERATING PRICES
+let pricesHTML = '';
+let priceCentsM2 = products[productNumberInProducts].priceCentsM2;
+let priceCentsPc = products[productNumberInProducts].priceCentsPc;
+const piecesInSquareMeter = products[productNumberInProducts].specs.piecesInSquareMeter;
+const piecesInLinearMeter = products[productNumberInProducts].specs.piecesInLinearMeter;
+const isM2 = products[productNumberInProducts].isM2;
+const isLinearMeter = products[productNumberInProducts].isLinearMeter;
 
-let pricesM2 = '';
-let pricesPc = '';
+if (supplierPriceType === 'm2') {
 
-if (products[productNumberInProducts].typeOfPrice === 'm2') {
-
-  let initialPrice = products[productNumberInProducts].priceCentsM2;
-  let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
-
-  const priceM2 = ((initialPrice / 100).toFixed(2));
-  const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
+  const priceM2 = ((priceCentsM2 / 100).toFixed(2));
+  const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
   const indexOfDotM2 = priceM2.toString().indexOf('.');
   const indexofDotPc = pricePc.toString().indexOf('.');
   
-  pricesM2 += `
+  pricesHTML += `
     <div class="main__window__middle__top__price__left">
       <p class="main__window__middle__top__price__left__box"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
     </div>
@@ -186,28 +187,53 @@ if (products[productNumberInProducts].typeOfPrice === 'm2') {
       <p class="main__window__middle__top__price__right__box"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
     </div>
   `;
-  
-  document.querySelector('.main__window__middle__top__price').innerHTML = pricesM2;
 }
-else if (products[productNumberInProducts].typeOfPrice === 'pc') {
+else if (supplierPriceType === 'pc') {
 
-  let initialPrice = products[productNumberInProducts].priceCentsPC;
+  if (isM2 === true) {
 
-  const pricePc = (initialPrice / 100).toFixed(2);
-  const indexofDotPc = pricePc.toString().indexOf('.');
-  
-  pricesPc += `
-    <div class="main__window__middle__top__price__left">
-      <p class="main__window__middle__top__price__left__box"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
-    </div>
-    <div class="main__window__middle__top__price__right">
-      <p class="main__window__middle__top__price__right__box">&nbsp;</p>
-    </div>
-  `;
-  
-  document.querySelector('.main__window__middle__top__price').innerHTML = pricesPc;
+    const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+    priceCentsPc = (priceCentsPc / 100).toFixed(2).toString();
+    const indexOfDotM2 = priceM2.toString().indexOf('.');
+    const indexofDotPc = priceCentsPc.toString().indexOf('.');
 
+    let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+    let pricePcHTML = `<sup>$</sup>${priceCentsPc.slice(0, indexofDotPc)}<span class="price-small">${priceCentsPc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
+    pricesHTML += `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
+      </div>
+      <div class="main__window__middle__top__price__right">
+        <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+      </div>
+    `;
+  }
+  // else if (1) {
+  //   //TODO check possible combinations
+  // }
+  else if (isLinearMeter) {
+
+    const priceLinearMeter = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
+    priceCentsPc = (priceCentsPc / 100).toFixed(2).toString();
+    const indexOfDotM2 = priceLinearMeter.toString().indexOf('.');
+    const indexofDotPc = priceCentsPc.toString().indexOf('.');
+
+    let priceM2HTML = `<sup>$</sup>${priceLinearMeter.slice(0, indexOfDotM2)}<span class="price-small">${priceLinearMeter.slice(indexOfDotM2)}</span> <span class="price-desc">m</span>`;
+    let pricePcHTML = `<sup>$</sup>${priceCentsPc.slice(0, indexofDotPc)}<span class="price-small">${priceCentsPc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
+    pricesHTML += `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
+      </div>
+      <div class="main__window__middle__top__price__right">
+        <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+      </div>
+    `;
+  }
 }
+document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
+
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
 
@@ -217,11 +243,11 @@ let selectRight = document.querySelector('.main__window__middle__top__buy__selec
 
 let select; 
 
-if (products[productNumberInProducts].typeOfPrice === 'm2') {
+if (products[productNumberInProducts].supplierPriceType === 'm2') {
   select = 'm2';
   selectLeft.classList.add('selected');
 }
-else if (products[productNumberInProducts].typeOfPrice === 'pc') {
+else if (products[productNumberInProducts].supplierPriceType === 'pc') {
   select = 'pc';
   selectMiddle.classList.add('selected');
   selectLeft.style.display = 'none';
@@ -270,8 +296,8 @@ selectRight.addEventListener('click', () => {
 
 //SETTING PLACEHOLDER
 
-let piecesInPack = products[productNumberInProducts].specs?.piecesInAPack;
-let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
+let piecesInPack = products[productNumberInProducts].specs?.piecesInPack;
+let piecesInM2 = products[productNumberInProducts].specs.piecesInSquareMeter;
 let inputArea = document.querySelector('.main__window__middle__top__buy__area__input');
 let timeOutSuccess;
 let timeOutError;
@@ -387,7 +413,7 @@ function addToCart () {
 
   const order = {
     id: root,
-    originalTypeOfPrice: originalTypeOfPrice,
+    supplierPriceType: supplierPriceType,
     type: select,
     quantity: userQuantity
   };
@@ -482,17 +508,17 @@ inputArea.addEventListener('keydown', (event) => {
   //Calculating subtotal
   let subTotalHTML = '';
 
-  if (originalTypeOfPrice === 'm2') {
+  if (supplierPriceType === 'm2') {
 
     let initialPrice = products[productNumberInProducts].priceCentsM2;
-    let piecesInM2 = products[productNumberInProducts].specs.piecesInASquareMeter;
+    let piecesInM2 = products[productNumberInProducts].specs.piecesInSquareMeter;
   
     const priceM2 = ((initialPrice / 100).toFixed(2));
     const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
     const indexOfDotM2 = priceM2.toString().indexOf('.');
     const indexofDotPc = pricePc.toString().indexOf('.');
     
-    pricesM2 += `
+    pricesHTML += `
       <div class="main__window__middle__top__price__left">
         <p class="main__window__middle__top__price__left__box"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
       </div>
@@ -501,7 +527,7 @@ inputArea.addEventListener('keydown', (event) => {
       </div>
     `;
     
-    // document.querySelector('.main__window__middle__top__price').innerHTML = pricesM2;
+    // document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
 
     //TODO
 
@@ -514,7 +540,7 @@ inputArea.addEventListener('keydown', (event) => {
     else if (select == 'pc') {}
     else if (select == 'pack') {}
   }
-  else if (originalTypeOfPrice === 'pc') {
+  else if (supplierPriceType === 'pc') {
     if (select == 'pc') {}
     else if (select == 'pack') {}
   }
@@ -580,14 +606,14 @@ document.querySelector('.main__window__middle__top__buy__area__right').addEventL
 let specs = products[productNumberInProducts].specs;
 let specsHTML = '';
 
-if (specs.piecesInAPack) {
+if (specs.piecesInPack) {
   specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInAPack}</span></p>
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPack}</span></p>
   `
 }
-if (specs.piecesInASquareMeter) {
+if (specs.piecesInSquareMeter) {
   specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInASquareMeter}</span></p>
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInSquareMeter}</span></p>
   `
 }
 if (specs.recommendedJointSpacing) {

@@ -5,12 +5,14 @@ const products = [
     availability: 'In stock',
     filepath: 'R100NF9.html',
     priceCentsM2: 5456,
-    priceCentsPC: 155, //example
-    typeOfPrice: 'm2',
+    priceCentsPc: 155, //example
+    supplierPriceType: 'm2',
+    isM2: true,
+    isLinearMeter: false,
 
     specs: {
-      piecesInASquareMeter: 48,
-      piecesInAPack: 48,
+      piecesInSquareMeter: 48,
+      piecesInPack: 48,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
@@ -44,23 +46,18 @@ const products = [
     
   }, {
     id: 'R303NF9',
-    image: 'img/thumbnails/r303nf.jpg',
-    image_1: 'img/thumbnails/r303nf-side.jpg',
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
-    priceCentsM2: 5240,
-    priceCentsPC: 155,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240 x 71 x 9',
-    typeOfPrice: 'm2',
-    piecesPerM2: 48,
-    
-    thickness: 9,
-    typeOfPrice: 'pc',
     availability: 'In stock',
+    filepath: 'R303NF9.html',
+    priceCentsM2: 5456,
+    priceCentsPc: 155, //example
+    supplierPriceType: 'pc',
+    isM2: true,
+    isLinearMeter: false,
+
     specs: {
-      piecesInASquareMeter: 48,
-      piecesInAPack: 48,
+      piecesInSquareMeter: 48,
+      piecesInPack: 48,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
@@ -71,6 +68,10 @@ const products = [
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
+
+    image: 'img/thumbnails/r303nf.jpg',
+    image_1: 'img/thumbnails/r303nf-side.jpg',
+
     image_thumbnail: [
       'img/images/R100NF/thumbnails/R100NF_full.jpg', 
       'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
@@ -89,17 +90,49 @@ const products = [
     ]
     
   }, {
-    id: 'R384NF14',
-    image: 'img/thumbnails/r384nf.jpg',
-    image_1: 'img/thumbnails/r384nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R384NF14 ferrum liso',
-    priceCentsM2: 8080,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240 x 71 x 14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In stock'
+    id: 'R404NF5',
+    name: '404',
+    availability: 'In stock',
+    filepath: 'R303NF9.html',
+    priceCentsPc: 1001, //example
+    supplierPriceType: 'pc',
+    isM2: false,
+    isLinearMeter: true,
+
+    specs: {
+      piecesInLinearMeter: 3.3,
+      piecesInPack: 48,
+      recommendedJointSpacing: '10-12',
+      thickness: 9,
+      format: '240 x 71 x 9',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1Piece: 0.52,
+      weightOf1SquareMeter: 25,
+      weightOf1Pack: 25,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+
+    image: 'img/thumbnails/r303nf.jpg',
+    image_1: 'img/thumbnails/r303nf-side.jpg',
+
+    image_thumbnail: [
+      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+    ],
+    image_original: [
+      'img/images/R100NF/original/R100NF_full.jpg', 
+      'img/images/R100NF/original/R100NF_full_side.jpg', 
+      'img/images/R100NF/original/R100NF_house_day.jpeg', 
+      'img/images/R100NF/original/R100NF_house_night.jpeg', 
+      'img/images/R100NF/original/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+    ]
+    
   }, {
     id: 'R385NF14',
     image: 'img/thumbnails/r385nf.jpg',

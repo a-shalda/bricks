@@ -161,14 +161,14 @@ let productsHTML = '';
 products.forEach((product, index) => {
 
     let initialPrice = product.priceCentsM2;
-    let piecesInM2 = product.specs?.piecesInASquareMeter;
+    let piecesInM2 = product.specs?.piecesInSquareMeter;
   
     const priceM2 = ((initialPrice / 100).toFixed(2));
     const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
     const indexOfDotM2 = priceM2.toString().indexOf('.');
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    if (product.typeOfPrice === 'm2') {
+    if (product.supplierPriceType === 'm2') {
         productsHTML +=`
         <div class="product">
             <div class="product__top">
@@ -208,9 +208,9 @@ products.forEach((product, index) => {
         </div>
         `;
     }
-    else if (product.typeOfPrice === 'pc') {
+    else if (product.supplierPriceType === 'pc') {
 
-        const pricePc = (product.priceCentsPC / 100).toFixed(2);
+        const pricePc = (product.priceCentsPc / 100).toFixed(2);
         const indexofDotPc = pricePc.toString().indexOf('.');
 
 
