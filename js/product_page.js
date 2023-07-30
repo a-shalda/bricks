@@ -168,10 +168,12 @@ const product = products[productNumberInProducts];
 let priceCentsM2 = product.priceCentsM2;
 let priceCentsPc = product.priceCentsPc;
 const piecesInSquareMeter = product.specs.piecesInSquareMeter;
+const piecesInPack = product.specs.piecesInPack;
 const piecesInLinearMeter = product.specs.piecesInLinearMeter;
 const isM2 = product.isM2;
 const isLinearMeter = product.isLinearMeter;
 let pricesHTML = '';
+
 
 if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
@@ -191,6 +193,58 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
     </div>
   `;
+
+  let optionsHTML = '';
+
+  let baseVolume;
+  let volume = 0;
+  let price;
+  let basePieces = piecesInPack;
+  let pieces = 0;
+
+
+  if ((piecesInSquareMeter % piecesInPack) === 0) {
+    baseVolume = (piecesInPack / piecesInSquareMeter);
+  }
+  else {
+    baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));
+  }
+
+  for (let i = 0; i < 400; i++) {
+
+    volume = volume + baseVolume;
+    price = (volume * priceM2).toFixed(2);
+    pieces = pieces + basePieces;
+    let piecesLength = String(pieces.toFixed(2)).length;
+
+    if (piecesLength > 3) {
+
+    }
+
+    let spaceNumber;
+    let whiteSpace = '';
+    let volumeLength = String(volume.toFixed(2)).length;
+
+    if (volumeLength < 6) {
+      spaceNumber = 6 - volumeLength;
+      if (spaceNumber === 1) {
+        whiteSpace = '&nbsp;'
+      }
+      else if (spaceNumber === 2) {
+        whiteSpace = '&nbsp;&nbsp;'
+      }
+      else if (spaceNumber === 3) {
+        whiteSpace = '&nbsp;&nbsp;&nbsp;'
+      }
+    }
+    
+    optionsHTML += `
+      <option>${volume.toFixed(2)} m&sup2; ${whiteSpace}=&nbsp; $${price} &nbsp;(pieces: ${pieces})</option>
+    `;
+  }
+  document.querySelector('.select_select').innerHTML = optionsHTML;
+  console.log(optionsHTML);
+
 }
 else if (supplierPriceType === 'pc') {
 
@@ -310,8 +364,7 @@ selectRight.addEventListener('click', () => {
 
 //SETTING PLACEHOLDER
 
-let piecesInPack = products[productNumberInProducts].specs?.piecesInPack;
-let piecesInM2 = products[productNumberInProducts].specs.piecesInSquareMeter;
+let piecesInM2 = product.specs.piecesInSquareMeter;
 let inputArea = document.querySelector('.main__window__middle__top__buy__area__input');
 let timeOutSuccess;
 let timeOutError;
