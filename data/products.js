@@ -49,7 +49,7 @@ const products = [
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
     availability: 'In stock',
     filepath: 'R303NF9.html',
-    priceCentsM2: 5456,
+    priceCentsM2: 4321,
     priceCentsPc: 155, //example
     supplierPriceType: 'pc',
     isM2: true,

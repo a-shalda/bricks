@@ -160,100 +160,214 @@ let productsHTML = '';
 
 products.forEach((product, index) => {
 
-    let initialPrice = product.priceCentsM2;
-    let piecesInM2 = product.specs?.piecesInSquareMeter;
-  
-    const priceM2 = ((initialPrice / 100).toFixed(2));
-    const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
-    const indexOfDotM2 = priceM2.toString().indexOf('.');
-    const indexofDotPc = pricePc.toString().indexOf('.');
+    let priceCentsM2 = product.priceCentsM2;
+    let priceCentsPc = product.priceCentsPc;
+    let supplierPriceType = product.supplierPriceType;
+    const piecesInSquareMeter = product.specs?.piecesInSquareMeter;
+    const piecesInLinearMeter = product.specs?.piecesInLinearMeter;
+    const isM2 = product.isM2;
+    const isLinearMeter = product.isLinearMeter;
+    let pricesHTML = '';
 
-    if (product.supplierPriceType === 'm2') {
+    if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
+
+        const priceM2 = ((priceCentsM2 / 100).toFixed(2));
+        const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+        const indexOfDotM2 = priceM2.toString().indexOf('.');
+        const indexofDotPc = pricePc.toString().indexOf('.');
+
+        let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+        let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
         productsHTML +=`
-        <div class="product">
-            <div class="product__top">
-    
-                <a href="${product.filepath}">
-                    <div class="product__top__cont">
-                        <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
-                        <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
-                    </div>
-                </a>
-                
-                <div class="product__top__cont__stock">
-                    <i class="fa-solid fa-check stock"></i>
-                    <p class="product__top__cont__stock__desc">${product.availability}</p>
-                </div>
-            </div>
-    
-            <div class="product__middle">
-                <div class="product__middle__price--m2">
-                    <p class="product__middle__price--m2__p"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
-                </div>
-                <div class="product__middle__price--st">
-                    <p class="product__middle__price--st__p"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
-                </div>
-            </div>
+            <div class="product">
+                <div class="product__top">
         
-            <div class="product__bottom">
-                <a href="${product.filepath}">
-                    <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
-                </a>
-                <div class="product__bottom__desc">
-                    <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
-                    <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                    <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                    <a href="${product.filepath}">
+                        <div class="product__top__cont">
+                            <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+                            <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
+                        </div>
+                    </a>
+                    
+                    <div class="product__top__cont__stock">
+                        <i class="fa-solid fa-check stock"></i>
+                        <p class="product__top__cont__stock__desc">${product.availability}</p>
+                    </div>
+                </div>
+        
+                <div class="product__middle">
+                    <div class="product__middle__price--m2">
+                        <p class="product__middle__price--m2__p">${priceM2HTML}</p>
+                    </div>
+                    <div class="product__middle__price--st">
+                        <p class="product__middle__price--st__p">${pricePcHTML}</p>
+                    </div>
+                </div>
+            
+                <div class="product__bottom">
+                    <a href="${product.filepath}">
+                        <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                    </a>
+                    <div class="product__bottom__desc">
+                        <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
+                        <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
+                        <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         `;
     }
     else if (product.supplierPriceType === 'pc') {
 
-        const pricePc = (product.priceCentsPc / 100).toFixed(2);
-        const indexofDotPc = pricePc.toString().indexOf('.');
+        if (isM2 === true && isLinearMeter === false) {
 
+            const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+            const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            const indexOfDotM2 = priceM2.toString().indexOf('.');
+            const indexofDotPc = pricePc.toString().indexOf('.');
 
-        productsHTML +=`
-        <div class="product">
-            <div class="product__top">
-    
-                <a href="${product.filepath}">
-                    <div class="product__top__cont">
-                        <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
-                        <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
+            let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+            let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
+            productsHTML +=`
+                <div class="product">
+                    <div class="product__top">
+            
+                        <a href="${product.filepath}">
+                            <div class="product__top__cont">
+                                <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+                                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
+                            </div>
+                        </a>
+                        
+                        <div class="product__top__cont__stock">
+                            <i class="fa-solid fa-check stock"></i>
+                            <p class="product__top__cont__stock__desc">${product.availability}</p>
+                        </div>
                     </div>
-                </a>
+            
+                    <div class="product__middle">
+                        <div class="product__middle__price--m2">
+                            <p class="product__middle__price--m2__p">${priceM2HTML}</p>
+                        </div>
+                        <div class="product__middle__price--st">
+                            <p class="product__middle__price--st__p">${pricePcHTML}</p>
+                        </div>
+                    </div>
                 
-                <div class="product__top__cont__stock">
-                    <i class="fa-solid fa-check stock"></i>
-                    <p class="product__top__cont__stock__desc">${product.availability}</p>
+                    <div class="product__bottom">
+                        <a href="${product.filepath}">
+                            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                        </a>
+                        <div class="product__bottom__desc">
+                            <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
+                            <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
+                            <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="product__middle">
-                <div class="product__middle__price--m2">
-                    <p class="product__middle__price--m2__p"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
-                </div>
-                <div class="product__middle__price--st">
-                    <p class="product__middle__price--st__p">&nbsp;</p>
-                </div>
-            </div>
-        
-            <div class="product__bottom">
-                <a href="${product.filepath}">
-                    <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
-                </a>
-                <div class="product__bottom__desc">
-                    <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
-                    <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                    <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
-                </div>
-            </div>
-        </div>
-        `;
-    }
+            `;
 
+
+        }
+        else if (isM2 === false && isLinearMeter === true) {
+
+            const priceLM = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
+            const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            const indexOfDotLM = priceLM.toString().indexOf('.');
+            const indexofDotPc = pricePc.toString().indexOf('.');
+
+            let priceLMHTML = `<sup>$</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
+            let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
+            productsHTML +=`
+                <div class="product">
+                    <div class="product__top">
+            
+                        <a href="${product.filepath}">
+                            <div class="product__top__cont">
+                                <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+                                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
+                            </div>
+                        </a>
+                        
+                        <div class="product__top__cont__stock">
+                            <i class="fa-solid fa-check stock"></i>
+                            <p class="product__top__cont__stock__desc">${product.availability}</p>
+                        </div>
+                    </div>
+            
+                    <div class="product__middle">
+                        <div class="product__middle__price--m2">
+                            <p class="product__middle__price--m2__p">${priceLMHTML}</p>
+                        </div>
+                        <div class="product__middle__price--st">
+                            <p class="product__middle__price--st__p">${pricePcHTML}</p>
+                        </div>
+                    </div>
+                
+                    <div class="product__bottom">
+                        <a href="${product.filepath}">
+                            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                        </a>
+                        <div class="product__bottom__desc">
+                            <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
+                            <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
+                            <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        else if (isM2 === false && isLinearMeter === false) {
+
+            const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            const indexofDotPc = pricePc.toString().indexOf('.');
+
+            let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
+            productsHTML +=`
+                <div class="product">
+                    <div class="product__top">
+            
+                        <a href="${product.filepath}">
+                            <div class="product__top__cont">
+                                <img class="product__top__cont__img product_img_${index}" src="${product.image}" alt="${product.name}" width="264" height="195" loading="lazy">
+                                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_1}" alt="${product.name}" width="264" height="195">
+                            </div>
+                        </a>
+                        
+                        <div class="product__top__cont__stock">
+                            <i class="fa-solid fa-check stock"></i>
+                            <p class="product__top__cont__stock__desc">${product.availability}</p>
+                        </div>
+                    </div>
+            
+                    <div class="product__middle">
+                        <div class="product__middle__price--m2">
+                            <p class="product__middle__price--m2__p">${pricePcHTML}</p>
+                        </div>
+                        <div class="product__middle__price--st">
+                            <p class="product__middle__price--st__p"></p>
+                        </div>
+                    </div>
+                
+                    <div class="product__bottom">
+                        <a href="${product.filepath}">
+                            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                        </a>
+                        <div class="product__bottom__desc">
+                            <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
+                            <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
+                            <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }
 });
 document.querySelector('.products').innerHTML = productsHTML;
 
