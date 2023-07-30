@@ -94,7 +94,7 @@
         &__cont {
           display: none;
           padding: 1rem;
-          aspect-ratio: 5/4; //Not supported in Safari
+          aspect-ratio: 5/4; // REMOVE
           border-right: 1px solid var(--light-light-gray-color);
 
           &__img {
@@ -171,7 +171,7 @@
             padding: 0.1rem;
             margin: 0.3rem;
             display: flex;
-            aspect-ratio: 5/4; //Not supported in Safari
+            aspect-ratio: 5/4; //REMOVE
             transition: outline 0.3s;
 
             &__img {

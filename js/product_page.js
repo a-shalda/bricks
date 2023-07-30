@@ -172,7 +172,7 @@ const piecesInLinearMeter = products[productNumberInProducts].specs.piecesInLine
 const isM2 = products[productNumberInProducts].isM2;
 const isLinearMeter = products[productNumberInProducts].isLinearMeter;
 
-if (supplierPriceType === 'm2') {
+if (isM2 === true && supplierPriceType === 'm2') {
 
   const priceM2 = ((priceCentsM2 / 100).toFixed(2));
   const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
@@ -190,7 +190,7 @@ if (supplierPriceType === 'm2') {
 }
 else if (supplierPriceType === 'pc') {
 
-  if (isM2 === true) {
+  if (isM2 === true && isLinearMeter === false) {
 
     const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
     priceCentsPc = (priceCentsPc / 100).toFixed(2).toString();
@@ -209,17 +209,14 @@ else if (supplierPriceType === 'pc') {
       </div>
     `;
   }
-  // else if (1) {
-  //   //TODO check possible combinations
-  // }
-  else if (isLinearMeter) {
+  else if (isM2 === false && isLinearMeter === true) {
 
     const priceLinearMeter = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
     priceCentsPc = (priceCentsPc / 100).toFixed(2).toString();
     const indexOfDotM2 = priceLinearMeter.toString().indexOf('.');
     const indexofDotPc = priceCentsPc.toString().indexOf('.');
 
-    let priceM2HTML = `<sup>$</sup>${priceLinearMeter.slice(0, indexOfDotM2)}<span class="price-small">${priceLinearMeter.slice(indexOfDotM2)}</span> <span class="price-desc">m</span>`;
+    let priceM2HTML = `<sup>$</sup>${priceLinearMeter.slice(0, indexOfDotM2)}<span class="price-small">${priceLinearMeter.slice(indexOfDotM2)}</span> <span class="price-desc">lin.m</span>`;
     let pricePcHTML = `<sup>$</sup>${priceCentsPc.slice(0, indexofDotPc)}<span class="price-small">${priceCentsPc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML += `
@@ -228,6 +225,19 @@ else if (supplierPriceType === 'pc') {
       </div>
       <div class="main__window__middle__top__price__right">
         <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+      </div>
+    `;
+  }
+  else if (isM2 === false && isLinearMeter === false) {
+
+    priceCentsPc = (priceCentsPc / 100).toFixed(2).toString();
+    const indexofDotPc = priceCentsPc.toString().indexOf('.');
+
+    let pricePcHTML = `<sup>$</sup>${priceCentsPc.slice(0, indexofDotPc)}<span class="price-small">${priceCentsPc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+
+    pricesHTML += `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box">${pricePcHTML}</p>
       </div>
     `;
   }

@@ -91,7 +91,7 @@ const products = [
     
   }, {
     id: 'R404NF5',
-    name: '404',
+    name: 'Linear meter R404',
     availability: 'In stock',
     filepath: 'R303NF9.html',
     priceCentsPc: 1001, //example
@@ -134,29 +134,48 @@ const products = [
     ]
     
   }, {
-    id: 'R385NF14',
-    image: 'img/thumbnails/r385nf.jpg',
-    image_1: 'img/thumbnails/r385nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R385NF14 cerasi maritim',
-    priceCentsM2: 8080,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240 x 71 x 14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In stock'
-  }, {
-    id: 'R665NF14',
-    image: 'img/thumbnails/r665nf.jpg',
-    image_1: 'img/thumbnails/r665nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R665NF14 sintra sabioso binaro',
-    priceCentsM2: 8021,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240 x 71 x 14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In stock'
+    id: 'R406NF1',
+    name: 'R406NF1',
+    availability: 'In stock',
+    filepath: 'R406NF1.html',
+    priceCentsPc: 1001, //example
+    supplierPriceType: 'pc',
+    isM2: false,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInPack: 48,
+      recommendedJointSpacing: '10-12',
+      thickness: 9,
+      format: '240 x 71 x 9',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1Piece: 0.52,
+      weightOf1SquareMeter: 25,
+      weightOf1Pack: 25,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+
+    image: 'img/thumbnails/r303nf.jpg',
+    image_1: 'img/thumbnails/r303nf-side.jpg',
+
+    image_thumbnail: [
+      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+    ],
+    image_original: [
+      'img/images/R100NF/original/R100NF_full.jpg', 
+      'img/images/R100NF/original/R100NF_full_side.jpg', 
+      'img/images/R100NF/original/R100NF_house_day.jpeg', 
+      'img/images/R100NF/original/R100NF_house_night.jpeg', 
+      'img/images/R100NF/original/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+    ]
+    
   }, {
     id: 'R682NF14',
     image: 'img/thumbnails/r682nf.jpg',
