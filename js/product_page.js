@@ -197,54 +197,104 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
   let optionsHTML = '';
 
   let baseVolume;
-  let volume = 0;
+  let totalVolume = 0;
   let price;
   let basePieces = piecesInPack;
   let pieces = 0;
 
 
-  if ((piecesInSquareMeter % piecesInPack) === 0) {
+  //Checking if baseVolume needs rounding
+  if ((piecesInPack % piecesInSquareMeter) === 0) {
     baseVolume = (piecesInPack / piecesInSquareMeter);
+
+    for (let i = 0; i < 300; i++) {
+
+      if (totalVolume >= 300) {
+        break;
+      }
+
+      totalVolume = totalVolume + baseVolume;
+      price = (totalVolume * priceM2).toFixed(2);
+      pieces = pieces + basePieces;
+      let piecesLength = String(pieces.toFixed(2)).length;
+  
+      let spaceQuantity;
+      let whiteSpaceHTML = '';
+      let volumeLength = String(totalVolume).length;
+  
+      if (volumeLength < 4) {
+        spaceQuantity = 3 - volumeLength;
+        if (spaceQuantity === 0) {
+          whiteSpaceHTML = '&nbsp;'
+        }
+        else if (spaceQuantity === 1) {
+          whiteSpaceHTML = '&nbsp;&nbsp;'
+        }
+        else if (spaceQuantity === 2) {
+          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;'
+        }
+      }
+      
+      optionsHTML += `
+        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${price} &nbsp;&nbsp;(pieces: ${pieces})</option>
+      `;
+    }
+    optionsHTML += `<option>>${totalVolume} m&sup2; I need more (specify in the cart)</option>`;
   }
   else {
     baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));
+
+    for (let i = 0; i < 600; i++) {
+
+      if (totalVolume >= 300) {
+        break;
+      }
+
+      totalVolume = totalVolume + baseVolume;
+
+      price = (totalVolume * priceM2).toFixed(2);
+
+      totalVolume = Number(totalVolume.toFixed(2));
+
+      pieces = pieces + basePieces;
+      let piecesLength = String(pieces.toFixed(2)).length;
+  
+      let spaceQuantity;
+      let whiteSpaceHTML = '';
+      let volumeLength = String(totalVolume).length;
+  
+      if (volumeLength <= 6) {
+        spaceQuantity = 6 - volumeLength;
+        if (spaceQuantity === 0) {
+          whiteSpaceHTML = '&nbsp;'
+        }
+        else if (spaceQuantity === 1) {
+          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;'
+        }
+        else if (spaceQuantity === 2) {
+          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'
+        }
+        else if (spaceQuantity === 3) {
+          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+        }
+        else if (spaceQuantity === 4) {
+          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+        }
+        else if (spaceQuantity === 5) {
+          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+        }
+      }
+      
+      optionsHTML += `
+        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${price} &nbsp;&nbsp;(pieces: ${pieces})</option>
+      `;
+    }
+    optionsHTML += `<option>>${totalVolume} m&sup2; I need more (specify in the cart)</option>`;
   }
 
-  for (let i = 0; i < 400; i++) {
 
-    volume = volume + baseVolume;
-    price = (volume * priceM2).toFixed(2);
-    pieces = pieces + basePieces;
-    let piecesLength = String(pieces.toFixed(2)).length;
-
-    if (piecesLength > 3) {
-
-    }
-
-    let spaceNumber;
-    let whiteSpace = '';
-    let volumeLength = String(volume.toFixed(2)).length;
-
-    if (volumeLength < 6) {
-      spaceNumber = 6 - volumeLength;
-      if (spaceNumber === 1) {
-        whiteSpace = '&nbsp;'
-      }
-      else if (spaceNumber === 2) {
-        whiteSpace = '&nbsp;&nbsp;'
-      }
-      else if (spaceNumber === 3) {
-        whiteSpace = '&nbsp;&nbsp;&nbsp;'
-      }
-    }
-    
-    optionsHTML += `
-      <option>${volume.toFixed(2)} m&sup2; ${whiteSpace}=&nbsp; $${price} &nbsp;(pieces: ${pieces})</option>
-    `;
-  }
   document.querySelector('.select_select').innerHTML = optionsHTML;
-  console.log(optionsHTML);
-
+  // console.log(optionsHTML);
 }
 else if (supplierPriceType === 'pc') {
 
