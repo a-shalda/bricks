@@ -12,7 +12,7 @@ const products = [
 
     specs: {
       piecesInSquareMeter: 48,
-      piecesInPack: 48,
+      piecesInPack: 39,
       piecesInPallet: 1200, //Example
       recommendedJointSpacing: '10-12',
       thickness: 9,

@@ -211,16 +211,11 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
   if ((piecesInPack % piecesInSquareMeter) === 0) {
     baseVolume = (piecesInPack / piecesInSquareMeter);
 
-    optionsHTML += `<option>
-      specify quantity...
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      </option>
-    `;
+    optionsHTML += `<option>select quantity...</option>`;
 
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 200; i++) {
 
-      if (totalVolume >= 300) {
+      if (totalVolume >= 200) {
         break;
       }
 
@@ -232,36 +227,31 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
       pieces = pieces + basePieces;
 
-      let piecesLength = String(pieces).length;
-      let piecesModified = String(pieces);
-
-      if (piecesLength > 3) {
-        piecesModified = piecesModified.replace(piecesModified.slice(-3), ',' + piecesModified.slice(-3));
-      }
-
       let priceLength = String(price).length;
       let priceModified = String(price);
-
       if (priceLength > 6) {
         priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));
       }
 
-      let totalWeightLength = String(totalWeight).length;
-      let totalWeightModified = String(totalWeight);
-      if (totalWeightLength > 3) {
-        totalWeightModified = totalWeightModified.replace(totalWeightModified.slice(-3), ',' + totalWeightModified.slice(-3));
-      }
-
       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-
-      if (totalPallets >= 0.5) {
-        totalPallets = Math.ceil(totalPallets);
+      if (totalPallets < 2) {
+        totalPallets = totalPallets + ` pallet`;
       }
+      else {
+        totalPallets = totalPallets + ` pallets`;
+      }
+
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
+    
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
   
       let spaceQuantity;
       let whiteSpaceHTML = '';
       let volumeLength = String(totalVolume).length;
-  
       if (volumeLength < 4) {
         spaceQuantity = 3 - volumeLength;
         if (spaceQuantity === 0) {
@@ -276,7 +266,7 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       }
       
       optionsHTML += `
-        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${priceModified} &nbsp;&nbsp;pieces: ${piecesModified} packs: ${totalPacks} weight: ${totalWeightModified} kg pallets: ${totalPallets}</option>
+        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${priceModified} &nbsp;&nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
       `;
     }
     optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;
@@ -284,16 +274,11 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
   else {
     baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));
 
-    optionsHTML += `<option>
-      specify quantity...
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      </option>
-    `;
+    optionsHTML += `<option>select quantity...</option>`;
 
-    for (let i = 0; i < 600; i++) {
+    for (let i = 0; i < 200; i++) {
 
-      if (totalVolume >= 300) {
+      if (totalVolume >= 200) {
         break;
       }
 
@@ -305,13 +290,6 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
       pieces = pieces + basePieces;
 
-      let piecesLength = String(pieces).length;
-      let piecesModified = String(pieces);
-
-      if (piecesLength > 3) {
-        piecesModified = piecesModified.replace(piecesModified.slice(-3), ',' + piecesModified.slice(-3));
-      }
-
       let priceLength = String(price).length;
       let priceModified = String(price);
 
@@ -319,17 +297,22 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
         priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));
       }
 
-      let totalWeightLength = String(totalWeight).length;
-      let totalWeightModified = String(totalWeight);
-      if (totalWeightLength > 3) {
-        totalWeightModified = totalWeightModified.replace(totalWeightModified.slice(-3), ',' + totalWeightModified.slice(-3));
-      }
-
       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
 
-      if (totalPallets >= 0.5) {
-        totalPallets = Math.ceil(totalPallets);
+      if (totalPallets < 2) {
+        totalPallets = totalPallets + ` pallet`;
       }
+      else {
+        totalPallets = totalPallets + ` pallets`;
+      }
+
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
+
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
 
       let spaceQuantity;
       let whiteSpaceHTML = '';
@@ -358,7 +341,7 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       }
 
       optionsHTML += `
-        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${priceModified} &nbsp;&nbsp;pieces: ${piecesModified} packs: ${totalPacks} weight: ${totalWeightModified} kg pallets: ${totalPallets}</option>
+        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${priceModified} &nbsp;&nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
       `;
     }
     optionsHTML += `<option>>${totalVolume} m&sup2;&nbsp; specify in the cart</option>`;
