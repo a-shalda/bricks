@@ -4,8 +4,8 @@ const products = [
     name: 'Brick slips Feldhaus Klinker R100NF9 perla liso',
     availability: 'In stock',
     filepath: 'R100NF9.html',
-    priceCentsM2: 5456,
-    priceCentsPc: 155, //example
+    priceCentsM2: 5240,
+    priceCentsPc: 219, //example
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -13,6 +13,7 @@ const products = [
     specs: {
       piecesInSquareMeter: 48,
       piecesInPack: 48,
+      piecesInPallet: 1200, //Example
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
