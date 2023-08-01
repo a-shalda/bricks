@@ -174,6 +174,19 @@ const isM2 = product.isM2;
 const isLinearMeter = product.isLinearMeter;
 let pricesHTML = '';
 
+//Calculating the options
+let optionsHTML = '';
+let baseVolume;
+let totalVolume = 0;
+let price;
+let basePieces = piecesInPack;
+let pieces = 0;
+let totalPacks = 0;
+let weight = product.specs.weightOf1Pack;
+let totalWeight = 0;
+let piecesInPallet = product.specs.piecesInPallet;
+let squareMetersInPallet = product.specs.squareMetersInPallet;
+let totalPallets = 0;
 
 if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
@@ -194,130 +207,55 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
     </div>
   `;
 
-  let optionsHTML = '';
+  if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+  else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
 
-  let baseVolume;
-  let totalVolume = 0;
-  let price;
-  let basePieces = piecesInPack;
-  let pieces = 0;
-  let totalPacks = 0;
-  let weight = product.specs.weightOf1Pack;
-  let totalWeight = 0;
-  let piecesInPallet = product.specs.piecesInPallet;
-  let totalPallets = 0;
+  optionsHTML += `<option>select quantity...</option>`;
 
-  //Checking if baseVolume needs rounding
-  if ((piecesInPack % piecesInSquareMeter) === 0) {
-    baseVolume = (piecesInPack / piecesInSquareMeter);
+  for (let i = 0; i < 99; i++) {
 
-    optionsHTML += `<option>select quantity...</option>`;
+    if (totalVolume >= 99) {break;}
+    totalVolume = totalVolume + baseVolume;
 
-    for (let i = 0; i < 99; i++) {
+    if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
 
-      if (totalVolume >= 99) {
-        break;
-      }
+    pieces = pieces + basePieces;
+    price = (totalVolume * priceM2).toFixed(2);
 
-      totalVolume = totalVolume + baseVolume;
-      price = (totalVolume * priceM2).toFixed(2);
+    totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
+    if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+    else {totalPallets = totalPallets + ` pallets`;}
 
-      totalPacks++;
-      totalWeight = totalWeight + weight;
+    totalPacks++;
+    totalWeight = totalWeight + weight;
 
-      pieces = pieces + basePieces;
+    let priceLength = String(price).length;
+    let priceModified = String(price);
+    if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
 
-      let priceLength = String(price).length;
-      let priceModified = String(price);
-      if (priceLength > 6) {
-        priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));
-      }
+    let piecesModified = '';
+    if (pieces === 1) {piecesModified = pieces + ` pc`;}
+    else {piecesModified = pieces + ` pcs`;}
+  
+    let totalPacksModified = '';
+    if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+    else {totalPacksModified = totalPacks + ` packs`}
 
-      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-      if (totalPallets < 2) {
-        totalPallets = totalPallets + ` pallet`;
-      }
-      else {
-        totalPallets = totalPallets + ` pallets`;
-      }
-
-      let piecesModified = '';
-      if (pieces === 1) {piecesModified = pieces + ` pc`;}
-      else {piecesModified = pieces + ` pcs`;}
-    
-      let totalPacksModified = '';
-      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
-      else {totalPacksModified = totalPacks + ` packs`}
-
-      if (window.innerWidth <= 600) {
-        optionsHTML += `
-        <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
-      `;
-      }
-      else {
-        optionsHTML += `
-        <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
-      `;
-      }
+    if (window.innerWidth <= 600) {
+      optionsHTML += `
+      <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
+    `;
     }
-    optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;
-  }
-  else {
-    baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));
-
-    optionsHTML += `<option>select quantity...</option>`;
-
-    for (let i = 0; i < 99; i++) {
-
-      if (totalVolume >= 99) {
-        break;
-      }
-
-      totalVolume = totalVolume + baseVolume;
-      price = (totalVolume * priceM2).toFixed(2);
-      totalVolume = Number(totalVolume.toFixed(2));
-      totalPacks++;
-      totalWeight = totalWeight + weight;
-
-      pieces = pieces + basePieces;
-
-      let priceLength = String(price).length;
-      let priceModified = String(price);
-
-      if (priceLength > 6) {
-        priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));
-      }
-
-      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-
-      if (totalPallets < 2) {
-        totalPallets = totalPallets + ` pallet`;
-      }
-      else {
-        totalPallets = totalPallets + ` pallets`;
-      }
-
-      let piecesModified = '';
-      if (pieces === 1) {piecesModified = pieces + ` pc`;}
-      else {piecesModified = pieces + ` pcs`;}
-
-      let totalPacksModified = '';
-      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
-      else {totalPacksModified = totalPacks + ` packs`}
-
-      if (window.innerWidth <= 600) {
-        optionsHTML += `
-        <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
-      `;
-      }
-      else {
-        optionsHTML += `
-        <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
-      `;
-      }
+    else {
+      optionsHTML += `
+      <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+    `;
     }
-    optionsHTML += `<option>>${totalVolume} m&sup2;&nbsp; specify in the cart</option>`;
   }
+
+  if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
+  else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+
   document.querySelector('.select_select').innerHTML = optionsHTML;
 }
 else if (supplierPriceType === 'pc') {
@@ -340,6 +278,57 @@ else if (supplierPriceType === 'pc') {
         <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
       </div>
     `;
+  
+    if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+    else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
+  
+    optionsHTML += `<option>select quantity...</option>`;
+  
+    for (let i = 0; i < 99; i++) {
+  
+      if (totalVolume >= 99) {break;}
+      totalVolume = totalVolume + baseVolume;
+  
+      if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+  
+      pieces = pieces + basePieces;
+      price = (pieces * pricePc).toFixed(2);
+
+      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+      if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+      else {totalPallets = totalPallets + ` pallets`;}
+
+      totalPacks++;
+      totalWeight = totalWeight + weight;
+  
+      let priceLength = String(price).length;
+      let priceModified = String(price);
+      if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+  
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
+    
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
+  
+      if (window.innerWidth <= 600) {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
+      `;
+      }
+      else {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
+    }
+  
+    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
+    else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+  
+    document.querySelector('.select_select').innerHTML = optionsHTML;
   }
   else if (isM2 === false && isLinearMeter === true) {
 
@@ -359,6 +348,13 @@ else if (supplierPriceType === 'pc') {
         <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
       </div>
     `;
+
+
+    //TODO
+
+
+
+
   }
   else if (isM2 === false && isLinearMeter === false) {
 
@@ -755,6 +751,16 @@ if (specs.piecesInPack) {
 if (specs.piecesInSquareMeter) {
   specsHTML += `
     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInSquareMeter}</span></p>
+  `
+}
+if (specs.squareMetersInPallet) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Square meters in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.squareMetersInPallet}</span></p>
+  `
+}
+if (specs.piecesInPallet) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPallet}</span></p>
   `
 }
 if (specs.recommendedJointSpacing) {

@@ -12,15 +12,16 @@ const products = [
 
     specs: {
       piecesInSquareMeter: 48,
-      piecesInPack: 48,
-      piecesInPallet: 1200, //Example
+      piecesInPack: 39,
+      squareMetersInPallet: 60, 
+      piecesInPallet: 3159, //Example
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
       weightOf1Piece: 0.52,
-      weightOf1SquareMeter: 25,
-      weightOf1Pack: 25,
+      weightOf1SquareMeter: 17.5,
+      weightOf1Pack: 17.5,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
@@ -50,15 +51,16 @@ const products = [
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
     availability: 'In stock',
     filepath: 'R303NF9.html',
-    priceCentsM2: 4321,
-    priceCentsPc: 155, //example
+    // priceCentsM2: 4321,
+    priceCentsPc: 219, //example
     supplierPriceType: 'pc',
     isM2: true,
     isLinearMeter: false,
 
     specs: {
       piecesInSquareMeter: 48,
-      piecesInPack: 48,
+      piecesInPack: 39,
+      piecesInPallet: 1200, //Example
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
@@ -136,23 +138,23 @@ const products = [
     
   }, {
     id: 'R406NF1',
-    name: 'R406NF1',
+    name: 'EURAMIC CAVAR 4832 294х115х52х8',
     availability: 'In stock',
     filepath: 'R406NF1.html',
-    priceCentsPc: 1001, //example
+    priceCentsPc: 2222, //example
     supplierPriceType: 'pc',
     isM2: false,
-    isLinearMeter: false,
+    isLinearMeter: true,
 
     specs: {
-      piecesInPack: 48,
+      piecesInLinearMeter: 3.3, //TODO
+      piecesInPack: 6,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
-      weightOf1Piece: 0.52,
-      weightOf1SquareMeter: 25,
-      weightOf1Pack: 25,
+      weightOf1Piece: 0.85,
+      weightOf1Pack: 5.11,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
