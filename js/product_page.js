@@ -167,9 +167,9 @@ document.querySelector('.main__window__middle__top__stock__info').innerHTML = st
 const product = products[productNumberInProducts];
 let priceCentsM2 = product.priceCentsM2;
 let priceCentsPc = product.priceCentsPc;
-const piecesInSquareMeter = product.specs.piecesInSquareMeter;
+const piecesInSquareMeter = Number(product.specs.piecesInSquareMeterCm / 100);
 const piecesInPack = product.specs.piecesInPack;
-const piecesInLinearMeter = product.specs.piecesInLinearMeter;
+const piecesInLinearMeter = Number(product.specs.piecesInLinearMeterCm / 100);
 const isM2 = product.isM2;
 const isLinearMeter = product.isLinearMeter;
 let pricesHTML = '';
@@ -182,7 +182,8 @@ let price;
 let basePieces = piecesInPack;
 let pieces = 0;
 let totalPacks = 0;
-let weight = product.specs.weightOf1Pack;
+let weight = Number(product.specs.weightOf1PackGramm / 100);
+let weightOf1Piece = Number(product.specs.weightOf1PieceGramm / 100) //For bricks and mortars
 let totalWeight = 0;
 let piecesInPallet = product.specs.piecesInPallet;
 let squareMetersInPallet = product.specs.squareMetersInPallet;
@@ -206,6 +207,8 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
     </div>
   `;
+
+  //Calculating the options
 
   if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
   else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
@@ -279,6 +282,8 @@ else if (supplierPriceType === 'pc') {
       </div>
     `;
   
+    //Calculating the options
+
     if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
     else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
   
@@ -753,6 +758,11 @@ if (specs.piecesInSquareMeter) {
     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInSquareMeter}</span></p>
   `
 }
+if (piecesInLinearMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a linear meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${piecesInLinearMeter}</span></p>
+  `
+}
 if (specs.squareMetersInPallet) {
   specsHTML += `
     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Square meters in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.squareMetersInPallet}</span></p>
@@ -783,9 +793,9 @@ if (specs.recommendedDryMortarVolume) {
     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended dry mortar volume (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedDryMortarVolume}</span></p>
   `
 }
-if (specs.weightOf1Piece) {
+if (weightOf1Piece) {
   specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Piece}</span></p>
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${weightOf1Piece}</span></p>
   `
 }
 if (specs.weightOf1SquareMeter) {
@@ -793,9 +803,14 @@ if (specs.weightOf1SquareMeter) {
     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 square meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1SquareMeter}</span></p>
   `
 }
-if (specs.weightOf1Pack) {
+if (isLinearMeter) {
   specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1Pack}</span></p>
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 linear meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${Number(weightOf1Piece * piecesInLinearMeter).toFixed(2)}</span></p>
+  `
+}
+if (weight) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${weight}</span></p>
   `
 }
 if (specs.manufacturer) {

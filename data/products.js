@@ -4,24 +4,23 @@ const products = [
     name: 'Brick slips Feldhaus Klinker R100NF9 perla liso',
     availability: 'In Stock',
     filepath: 'R100NF9.html',
-    priceCentsM2: 5240,
-    priceCentsPc: 219, //example
+    priceCentsM2: 5240, //In cents
+    priceCentsPc: 219, //In cents
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
 
     specs: {
-      piecesInSquareMeter: 48,
-      piecesInPack: 39,
-      squareMetersInPallet: 60, 
-      piecesInPallet: 3159, //Example
+      piecesInSquareMeterCm: 4800,
+      piecesInPack: 48, //Whole number
+      squareMetersInPallet: 60, //Whole number
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
-      weightOf1Piece: 0.52,
-      weightOf1SquareMeter: 17.5,
-      weightOf1Pack: 17.5,
+      weightOf1PieceGramm: 52,
+      weightOf1SquareMeter: 17.5, //Is not used in calculations
+      weightOf1PackGramm: 1750, //In gramms
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
@@ -58,16 +57,16 @@ const products = [
     isLinearMeter: false,
 
     specs: {
-      piecesInSquareMeter: 48,
+      piecesInSquareMeterCm: 4800,
       piecesInPack: 39,
       piecesInPallet: 1200, //Example
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
-      weightOf1Piece: 0.52,
+      weightOf1PieceGramm: 52,
       weightOf1SquareMeter: 25,
-      weightOf1Pack: 25,
+      weightOf1PackGramm: 2500,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
@@ -96,22 +95,22 @@ const products = [
     id: 'R404NF5',
     name: 'Linear meter R404',
     availability: 'In stock',
-    filepath: 'R303NF9.html',
+    filepath: 'R404NF5.html',
     priceCentsPc: 1001, //example
     supplierPriceType: 'pc',
     isM2: false,
-    isLinearMeter: true,
+    isLinearMeter: false,
 
     specs: {
-      piecesInLinearMeter: 3.3,
+      piecesInLinearMeter: 330,
       piecesInPack: 48,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
-      weightOf1Piece: 0.52,
+      weightOf1PieceGramm: 52,
       weightOf1SquareMeter: 25,
-      weightOf1Pack: 25,
+      weightOf1PackGramm: 25,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
@@ -141,20 +140,21 @@ const products = [
     name: 'EURAMIC CAVAR 4832 294х115х52х8',
     availability: 'In stock',
     filepath: 'R406NF1.html',
-    priceCentsPc: 2222, //example
+    priceCentsPc: 2222,
     supplierPriceType: 'pc',
     isM2: false,
     isLinearMeter: true,
 
     specs: {
-      piecesInLinearMeter: 3.3, //TODO
+      piecesInLinearMeterCm: 330,
       piecesInPack: 6,
+      piecesInPallet: 192, //Example
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
-      weightOf1Piece: 0.85,
-      weightOf1Pack: 5.11,
+      weightOf1PieceGramm: 153,
+      weightOf1PackGramm: 916,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },

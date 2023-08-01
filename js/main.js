@@ -163,11 +163,10 @@ products.forEach((product, index) => {
     let priceCentsM2 = product.priceCentsM2;
     let priceCentsPc = product.priceCentsPc;
     let supplierPriceType = product.supplierPriceType;
-    const piecesInSquareMeter = product.specs?.piecesInSquareMeter;
-    const piecesInLinearMeter = product.specs?.piecesInLinearMeter;
+    const piecesInSquareMeter = Number(product.specs?.piecesInSquareMeterCm / 100);
+    const piecesInLinearMeter = Number(product.specs?.piecesInLinearMeterCm / 100);
     const isM2 = product.isM2;
     const isLinearMeter = product.isLinearMeter;
-    let pricesHTML = '';
 
     if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
