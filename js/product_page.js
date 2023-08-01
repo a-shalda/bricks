@@ -154,10 +154,10 @@ function openModal () {
 
 let stockInfo = '';
 
-if (products[productNumberInProducts].availability === 'In stock') {
+if (products[productNumberInProducts].availability) {
   stockInfo += `
     <i class="fa-solid fa-check stock"></i>
-    <p class="main__window__middle__top__stock__info__desc">In stock</p>
+    <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
   `
 }
 document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
@@ -213,9 +213,9 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
     optionsHTML += `<option>select quantity...</option>`;
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 99; i++) {
 
-      if (totalVolume >= 200) {
+      if (totalVolume >= 99) {
         break;
       }
 
@@ -248,26 +248,17 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       let totalPacksModified = '';
       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
       else {totalPacksModified = totalPacks + ` packs`}
-  
-      let spaceQuantity;
-      let whiteSpaceHTML = '';
-      let volumeLength = String(totalVolume).length;
-      if (volumeLength < 4) {
-        spaceQuantity = 3 - volumeLength;
-        if (spaceQuantity === 0) {
-          whiteSpaceHTML = '&nbsp;'
-        }
-        else if (spaceQuantity === 1) {
-          whiteSpaceHTML = '&nbsp;&nbsp;'
-        }
-        else if (spaceQuantity === 2) {
-          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;'
-        }
-      }
-      
-      optionsHTML += `
-        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${priceModified} &nbsp;&nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+
+      if (window.innerWidth <= 600) {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
       `;
+      }
+      else {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
     }
     optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;
   }
@@ -276,9 +267,9 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
     optionsHTML += `<option>select quantity...</option>`;
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 99; i++) {
 
-      if (totalVolume >= 200) {
+      if (totalVolume >= 99) {
         break;
       }
 
@@ -314,35 +305,16 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
       else {totalPacksModified = totalPacks + ` packs`}
 
-      let spaceQuantity;
-      let whiteSpaceHTML = '';
-      let volumeLength = String(totalVolume).length;
-
-      if (volumeLength <= 6) {
-        spaceQuantity = 6 - volumeLength;
-        if (spaceQuantity === 0) {
-          whiteSpaceHTML = '&nbsp;'
-        }
-        else if (spaceQuantity === 1) {
-          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;'
-        }
-        else if (spaceQuantity === 2) {
-          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'
-        }
-        else if (spaceQuantity === 3) {
-          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-        }
-        else if (spaceQuantity === 4) {
-          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-        }
-        else if (spaceQuantity === 5) {
-          whiteSpaceHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-        }
-      }
-
-      optionsHTML += `
-        <option>${totalVolume} m&sup2; ${whiteSpaceHTML}=&nbsp; $${priceModified} &nbsp;&nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      if (window.innerWidth <= 600) {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
       `;
+      }
+      else {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
     }
     optionsHTML += `<option>>${totalVolume} m&sup2;&nbsp; specify in the cart</option>`;
   }
