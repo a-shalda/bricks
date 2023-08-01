@@ -93,7 +93,7 @@ const products = [
     
   }, {
     id: 'R404NF5',
-    name: 'Linear meter R404',
+    name: 'Mortar',
     availability: 'In stock',
     filepath: 'R404NF5.html',
     priceCentsPc: 1001, //example
@@ -180,17 +180,47 @@ const products = [
     ]
     
   }, {
-    id: 'R682NF14',
-    image: 'img/thumbnails/r682nf.jpg',
-    image_1: 'img/thumbnails/r682nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R682NF14 sintra argo blanco',
-    priceCentsM2: 8158,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240 x 71 x 14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In stock'
+    id: 'notm2lm',
+    name: 'Not m2 or linear',
+    availability: 'In stock',
+    filepath: 'notm2lm.html',
+    priceCentsPc: 2698,
+    supplierPriceType: 'pc',
+    isM2: false,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInPack: 6,
+      piecesInPallet: 192,
+      recommendedJointSpacing: '10-12',
+      thickness: 9,
+      format: '240 x 71 x 9',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1PieceGramm: 153,
+      weightOf1PackGramm: 916,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+
+    image: 'img/thumbnails/r303nf.jpg',
+    image_1: 'img/thumbnails/r303nf-side.jpg',
+
+    image_thumbnail: [
+      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+    ],
+    image_original: [
+      'img/images/R100NF/original/R100NF_full.jpg', 
+      'img/images/R100NF/original/R100NF_full_side.jpg', 
+      'img/images/R100NF/original/R100NF_house_day.jpeg', 
+      'img/images/R100NF/original/R100NF_house_night.jpeg', 
+      'img/images/R100NF/original/R100NF_fasade.jpg', 
+      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+    ]
   }, {
     id: 'R690NF14',
     image: 'img/thumbnails/r690nf.jpg',

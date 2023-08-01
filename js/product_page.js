@@ -354,8 +354,6 @@ else if (supplierPriceType === 'pc') {
       </div>
     `;
 
-    //TODO
-
     //Calculating the options
 
     if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
@@ -411,6 +409,8 @@ else if (supplierPriceType === 'pc') {
   }
   else if (isM2 === false && isLinearMeter === false) {
 
+    //This type of product is sold by 1 piece
+
     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
     const indexofDotPc = pricePc.toString().indexOf('.');
 
@@ -421,6 +421,61 @@ else if (supplierPriceType === 'pc') {
         <p class="main__window__middle__top__price__left__box">${pricePcHTML}</p>
       </div>
     `;
+  
+    //Calculating the options
+
+    //TODO
+
+    baseVolume = 1;
+    basePieces = 1;
+  
+    optionsHTML += `<option>select quantity...</option>`;
+  
+    for (let i = 0; i < 99; i++) {
+  
+      if (totalVolume >= 99) {break;}
+      totalVolume = totalVolume + baseVolume;
+  
+      if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+  
+      pieces = pieces + basePieces;
+      price = (pieces * pricePc).toFixed(2);
+
+      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+      if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+      else {totalPallets = totalPallets + ` pallets`;}
+
+      totalPacks++;
+      totalWeight = totalWeight + weight;
+  
+      let priceLength = String(price).length;
+      let priceModified = String(price);
+      if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+  
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
+    
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
+  
+      if (window.innerWidth <= 600) {
+        optionsHTML += `
+        <option>${piecesModified} &nbsp;= $${priceModified} (${totalPacksModified})</option>
+      `;
+      }
+      else {
+        optionsHTML += `
+        <option>${piecesModified} &nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
+    }
+  
+    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
+    else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+  
+    document.querySelector('.select_select').innerHTML = optionsHTML;
   }
 }
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
