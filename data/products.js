@@ -137,10 +137,10 @@ const products = [
     
   }, {
     id: 'R406NF1',
-    name: 'EURAMIC CAVAR 4832 294х115х52х8',
+    name: 'EURAMIC CAVAR 4817 294 x 175 x 52 x 10',
     availability: 'In stock',
     filepath: 'R406NF1.html',
-    priceCentsPc: 2222,
+    priceCentsPc: 2698,
     supplierPriceType: 'pc',
     isM2: false,
     isLinearMeter: true,
@@ -148,7 +148,7 @@ const products = [
     specs: {
       piecesInLinearMeterCm: 330,
       piecesInPack: 6,
-      piecesInPallet: 192, //Example
+      piecesInPallet: 192,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',

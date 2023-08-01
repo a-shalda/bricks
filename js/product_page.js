@@ -354,12 +354,60 @@ else if (supplierPriceType === 'pc') {
       </div>
     `;
 
-
     //TODO
 
+    //Calculating the options
 
+    if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
+    else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
+  
+    optionsHTML += `<option>select quantity...</option>`;
+  
+    for (let i = 0; i < 99; i++) {
+  
+      if (totalVolume >= 99) {break;}
+      totalVolume = totalVolume + baseVolume;
+  
+      if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+  
+      pieces = pieces + basePieces;
+      price = (pieces * pricePc).toFixed(2);
 
+      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+      if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+      else {totalPallets = totalPallets + ` pallets`;}
 
+      totalPacks++;
+      totalWeight = Number((totalWeight + weight).toFixed(2));
+  
+      let priceLength = String(price).length;
+      let priceModified = String(price);
+      if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+  
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
+    
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
+  
+      if (window.innerWidth <= 600) {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
+      `;
+      }
+      else {
+        optionsHTML += `
+        <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
+    }
+  
+    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
+    else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+  
+    document.querySelector('.select_select').innerHTML = optionsHTML;
   }
   else if (isM2 === false && isLinearMeter === false) {
 
