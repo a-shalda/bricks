@@ -21,7 +21,7 @@ let productsHTML = '';
 
 products.forEach((product, index) => {
 
-    if (product.type === 'brick slip') {
+    if (product.type === 'brick slip' || product.type === 'corner brick slip') {
         let priceCentsM2 = product.priceCentsM2;
         let priceCentsPc = product.priceCentsPc;
         let supplierPriceType = product.supplierPriceType;
