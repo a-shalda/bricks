@@ -3,10 +3,12 @@ const categories = [
     id: 'one',
     img: 'img/categories/img_fasade-one.png',
     title: 'Fasade klinker brick slips',
+    path: 'brick_slips.html'
   }, {
     id: 'two',
     img: 'img/categories/img-fasade-two.png',
     title: 'Fasade klinker bricks',
+    path: 'bricks.html'
   }, {
     id: 'three',
     img: 'img/categories/img_fasade-three.png',

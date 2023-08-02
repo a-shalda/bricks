@@ -1,26 +1,26 @@
 const products = [
   {
     id: 'R100NF9',
+    type: 'brick slip',
     name: 'Brick slips Feldhaus Klinker R100NF9 perla liso',
     availability: 'In Stock',
     filepath: 'R100NF9.html',
-    priceCentsM2: 5240, //In cents
-    priceCentsPc: 219, //In cents
+    priceCentsM2: 5240, 
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
 
     specs: {
       piecesInSquareMeterCm: 4800,
-      piecesInPack: 48, //Whole number
-      squareMetersInPallet: 60, //Whole number
+      piecesInPack: 48,
+      squareMetersInPallet: 60,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 52,
-      weightOf1SquareMeter: 17.5, //Is not used in calculations
-      weightOf1PackGramm: 1750, //In gramms
+      weightOf1SquareMeter: 17.5, 
+      weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
@@ -28,45 +28,43 @@ const products = [
     image: 'img/thumbnails/r100nf.jpg',
     image_1: 'img/thumbnails/r100nf-side.jpg',
 
-    image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-    ],
     image_original: [
       'img/images/R100NF/original/R100NF_full.jpg', 
       'img/images/R100NF/original/R100NF_full_side.jpg', 
       'img/images/R100NF/original/R100NF_house_day.jpeg', 
       'img/images/R100NF/original/R100NF_house_night.jpeg', 
       'img/images/R100NF/original/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+    ],
+
+    image_thumbnail: [
+      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
+      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
     ]
-    
   }, {
     id: 'R303NF9',
+    type: 'brick slip',
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
     availability: 'In stock',
     filepath: 'R303NF9.html',
-    // priceCentsM2: 4321,
-    priceCentsPc: 219, //example
-    supplierPriceType: 'pc',
+    priceCentsM2: 5240,
+    supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
 
     specs: {
       piecesInSquareMeterCm: 4800,
       piecesInPack: 39,
-      piecesInPallet: 1200, //Example
+      squareMetersInPallet: 60,
       recommendedJointSpacing: '10-12',
       thickness: 9,
       format: '240 x 71 x 9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 52,
-      weightOf1SquareMeter: 25,
-      weightOf1PackGramm: 2500,
+      weightOf1SquareMeter: 17.5,
+      weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
@@ -74,72 +72,51 @@ const products = [
     image: 'img/thumbnails/r303nf.jpg',
     image_1: 'img/thumbnails/r303nf-side.jpg',
 
-    image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-    ],
     image_original: [
-      'img/images/R100NF/original/R100NF_full.jpg', 
-      'img/images/R100NF/original/R100NF_full_side.jpg', 
-      'img/images/R100NF/original/R100NF_house_day.jpeg', 
-      'img/images/R100NF/original/R100NF_house_night.jpeg', 
-      'img/images/R100NF/original/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+      'img/images/R303NF/original/r303nf.jpg', 
+    ],
+    image_thumbnail: [
+      'img/images/R303NF/thumbnails/r303nf.jpg', 
     ]
-    
   }, {
-    id: 'R404NF5',
-    name: 'Mortar',
+    id: 'K658WDF',
+    type: 'brick',
+    name: 'Brick Feldhaus Klinker K658WDF sintra ardor belino',
     availability: 'In stock',
-    filepath: 'R404NF5.html',
-    priceCentsPc: 1001, //example
+    filepath: 'K658WDF.html',
+    priceCentsPc: 264,
     supplierPriceType: 'pc',
-    isM2: false,
+    isM2: true,
     isLinearMeter: false,
 
     specs: {
-      piecesInLinearMeter: 330,
-      piecesInPack: 48,
+      piecesInSquareMeterCm: 5700,
+      piecesInPallet: 468,
       recommendedJointSpacing: '10-12',
-      thickness: 9,
-      format: '240 x 71 x 9',
+      thickness: 65,
+      format: '215 х 102 х 65',
       recommendedDryMortarVolume: '4-6',
-      weightOf1PieceGramm: 52,
-      weightOf1SquareMeter: 25,
-      weightOf1PackGramm: 25,
+      weightOf1PieceGramm: 225,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/r303nf.jpg',
-    image_1: 'img/thumbnails/r303nf-side.jpg',
+    image: 'img/thumbnails/K658WDF.jpg',
+    image_1: 'img/thumbnails/K658WDF-side.jpg',
 
-    image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-    ],
     image_original: [
-      'img/images/R100NF/original/R100NF_full.jpg', 
-      'img/images/R100NF/original/R100NF_full_side.jpg', 
-      'img/images/R100NF/original/R100NF_house_day.jpeg', 
-      'img/images/R100NF/original/R100NF_house_night.jpeg', 
-      'img/images/R100NF/original/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+      'img/images/K658WDF/original/K658WDF.jpg', 
+    ],
+    image_thumbnail: [
+      'img/images/K658WDF/thumbnails/K658WDF.jpg', 
     ]
     
   }, {
-    id: 'R406NF1',
-    name: 'EURAMIC CAVAR 4817 294 x 175 x 52 x 10',
+    id: 'SST4817',
+    type: 'stair tile',
+    name: 'AERA 710 crio 4817 294 x 175 x 52 x 10 ',
     availability: 'In stock',
-    filepath: 'R406NF1.html',
+    filepath: 'SST4817.html',
     priceCentsPc: 2698,
     supplierPriceType: 'pc',
     isM2: false,
@@ -149,36 +126,25 @@ const products = [
       piecesInLinearMeterCm: 330,
       piecesInPack: 6,
       piecesInPallet: 192,
-      recommendedJointSpacing: '10-12',
+      recommendedJointSpacing: '6',
       thickness: 9,
-      format: '240 x 71 x 9',
-      recommendedDryMortarVolume: '4-6',
+      format: '294 x 175 x 52 x 10',
+      recommendedDryMortarVolume: '3-4',
       weightOf1PieceGramm: 153,
       weightOf1PackGramm: 916,
-      manufacturer: 'Feldhaus Klinker',
+      manufacturer: 'Ströher',
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/r303nf.jpg',
-    image_1: 'img/thumbnails/r303nf-side.jpg',
+    image: 'img/thumbnails/SST4817.jpg',
+    image_1: 'img/thumbnails/SST4817.jpg',
 
-    image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-    ],
     image_original: [
-      'img/images/R100NF/original/R100NF_full.jpg', 
-      'img/images/R100NF/original/R100NF_full_side.jpg', 
-      'img/images/R100NF/original/R100NF_house_day.jpeg', 
-      'img/images/R100NF/original/R100NF_house_night.jpeg', 
-      'img/images/R100NF/original/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+      'img/images/SST4817/original/SST4817.jpg', 
+    ],
+    image_thumbnail: [
+      'img/images/SST4817/thumbnails/SST4817.jpg', 
     ]
-    
   }, {
     id: 'notm2lm',
     name: 'Not m2 or linear',
