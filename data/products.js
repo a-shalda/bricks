@@ -12,7 +12,7 @@ const products = [
 
     specs: {
       piecesInSquareMeterCm: 4800,
-      piecesInPack: 48,
+      piecesInPack: 39,
       squareMetersInPallet: 60,
       recommendedJointSpacing: '10-12',
       thickness: 9,
@@ -102,7 +102,7 @@ const products = [
     },
 
     image: 'img/thumbnails/K658WDF.jpg',
-    image_1: 'img/thumbnails/K658WDF-side.jpg',
+    image_1: 'img/thumbnails/K658WDF.jpg',
 
     image_original: [
       'img/images/K658WDF/original/K658WDF.jpg', 

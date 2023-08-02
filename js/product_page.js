@@ -13,6 +13,7 @@ let productNumberInProducts;
 let supplierPriceType = '';
 let userQuantity = 0;
 let subTotal = 0;
+const priceTotalLimit = 9000;
 
 //Limits 
 
@@ -152,15 +153,15 @@ function openModal () {
 
 //GENERATING STOCK INFO
 
-let stockInfo = '';
+// let stockInfo = '';
 
-if (products[productNumberInProducts].availability) {
-  stockInfo += `
-    <i class="fa-solid fa-check stock"></i>
-    <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
-  `
-}
-document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
+// if (products[productNumberInProducts].availability) {
+//   stockInfo += `
+//     <i class="fa-solid fa-check stock"></i>
+//     <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
+//   `
+// }
+// document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
 
 
 //GENERATING PRICES
@@ -225,6 +226,8 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
     pieces = pieces + basePieces;
     price = (totalVolume * priceM2).toFixed(2);
+
+    if (price >= priceTotalLimit) {break;}
 
     totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
     if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
@@ -300,6 +303,8 @@ else if (supplierPriceType === 'pc') {
     
         pieces = pieces + basePieces;
         price = (pieces * pricePc).toFixed(2);
+
+        if (price >= priceTotalLimit) {break;}
   
         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
@@ -349,8 +354,11 @@ else if (supplierPriceType === 'pc') {
         
         pieces = pieces + basePieces;
         price = (pieces * pricePc).toFixed(2);
+
+        if (price >= priceTotalLimit) {break;}
     
         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+        let totalPalletsNumber = totalPallets;
         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
         else {totalPallets = totalPallets + ` pallets`;}
     
@@ -364,7 +372,7 @@ else if (supplierPriceType === 'pc') {
     
         if (window.innerWidth <= 600) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPallets})</option>
+          <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPalletsNumber} pal)</option>
         `;
         }
         else {
@@ -416,6 +424,8 @@ else if (supplierPriceType === 'pc') {
   
       pieces = pieces + basePieces;
       price = (pieces * pricePc).toFixed(2);
+
+      if (price >= priceTotalLimit) {break;}
 
       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
       if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
@@ -486,6 +496,8 @@ else if (supplierPriceType === 'pc') {
   
       pieces = pieces + basePieces;
       price = (pieces * pricePc).toFixed(2);
+
+      if (price >= priceTotalLimit) {break;}
 
       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
       if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
