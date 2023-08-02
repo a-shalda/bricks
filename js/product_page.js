@@ -446,7 +446,7 @@ else if (supplierPriceType === 'pc') {
       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
       else {totalPacksModified = totalPacks + ` packs`}
   
-      if (window.innerWidth <= 600) {
+      if (window.innerWidth <= 614) {
         optionsHTML += `
         <option>${totalVolume} lin.m &nbsp;= $${priceModified} (${totalPacksModified})</option>
       `;

@@ -12,7 +12,7 @@ const products = [
 
     specs: {
       piecesInSquareMeterCm: 4800,
-      piecesInPack: 39,
+      piecesInPack: 48,
       squareMetersInPallet: 60,
       recommendedJointSpacing: '10-12',
       thickness: 9,
@@ -49,7 +49,7 @@ const products = [
     name: 'Brick slips Feldhaus Klinker R303NF9 ardor liso',
     availability: 'In stock',
     filepath: 'R303NF9.html',
-    priceCentsM2: 5240,
+    priceCentsM2: 65240,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,

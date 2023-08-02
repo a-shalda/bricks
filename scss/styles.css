@@ -809,10 +809,8 @@ sup {
   font-weight: 400;
 }
 .main__window__middle__top__stock {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-left: 1rem;
   align-items: center;
-  gap: 1rem;
 }
 .main__window__middle__top__stock__info {
   display: flex;
@@ -831,7 +829,6 @@ sup {
   color: rgb(162, 162, 162);
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  padding-left: 0.15rem;
 }
 .main__window__middle__top__buy {
   padding-inline: 1rem;
@@ -1116,7 +1113,7 @@ select {
   background-color: white;
   height: 3rem;
   border: 1px solid var(--light-gray-color);
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
   border-radius: 0.5rem;
   color: var(--gray-color);
   letter-spacing: 0.01rem;

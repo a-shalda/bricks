@@ -238,10 +238,11 @@
         }
 
         &__stock {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          padding-left: 1rem;
+          // display: grid;
+          // grid-template-columns: 1fr 1fr;
           align-items: center;
-          gap: 1rem;
+          // gap: 1rem;
 
           &__info {
             display: flex;
@@ -264,7 +265,7 @@
               color: rgb(162, 162, 162);
               font-size: 0.8rem;  
               letter-spacing: 0.05rem;
-              padding-left: 0.15rem;
+              // padding-left: 0.15rem;
             }
           }
         }
@@ -606,7 +607,7 @@ select {
   background-color: white;
   height: 3rem;
   border: 1px solid var(--light-gray-color);
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
   border-radius: 0.5rem;
   color: var(--gray-color);
   letter-spacing: 0.01rem;
