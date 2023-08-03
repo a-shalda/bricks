@@ -117,13 +117,13 @@ const products = [
     name: 'Corner brick slip Feldhaus Klinker W100NF9 perla liso',
     availability: 'In stock',
     filepath: 'W100NF9.html',
-    priceCentsPc: 470,
+    priceCentsPc: 1330,
     supplierPriceType: 'pc',
     isM2: false,
     isLinearMeter: true,
 
     specs: {
-      piecesInLinearMeterCm: 1300,
+      piecesInLinearMeterCm: 1923,
       piecesInPack: 15,
       piecesInPallet: 1155,
       recommendedJointSpacing: '12',

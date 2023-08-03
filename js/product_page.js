@@ -458,7 +458,7 @@ else if (supplierPriceType === 'pc') {
       }
     }
   
-    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
+    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} lin.m specify in the cart</option>`;}
     else {optionsHTML += `<option>>${totalVolume} lin.m select and specify in the cart</option>`;}
   
     document.querySelector('.select_select').innerHTML = optionsHTML;
