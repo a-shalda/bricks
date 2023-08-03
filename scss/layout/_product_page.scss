@@ -34,7 +34,23 @@
     border-radius: 0.5rem;
     box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
+      display: grid;
+
+      grid-template-areas: 
+      "two one"
+      "two one"
+      "two one"
+      "three three"
+      "four four";
+      
+      .main__window__top__left {grid-area: one;}
+      .main__window__bottom__left {grid-area: two;}
+      .main__window__middle__top {grid-area: three;}
+      .main__window__middle__bottom {grid-area: four;}
+    }
+
+    @include breakpoint(xlarge) {
       display: grid;
 
       grid-template-areas: 
@@ -102,7 +118,12 @@
             border-radius: 0.5rem;
             object-fit: cover;
 
-            @include breakpoint(large) {
+            @include breakpoint(medium) {
+              min-height: 29rem;
+              min-width: 27rem;
+            }
+
+            @include breakpoint(xlarge) {
               min-height: 29rem;
               min-width: 20rem;
             }
@@ -153,13 +174,23 @@
           }
 
           @include breakpoint(medium) {
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            max-width: 9.7rem;
+            grid-template-columns: 1fr;
             grid-template-areas: 
-            "one two three four five"
-            "six seven eight nine ten";
+            "one"
+            "two"
+            "three"
+            "four"
+            "five" 
+            "six"
+            "seven"
+            "eight"
+            "nine"
+            "ten";
           }
 
           @include breakpoint(xlarge) {
+            max-width: fit-content;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-areas: 
             "one two three four five six"

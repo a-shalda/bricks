@@ -615,7 +615,25 @@ sup {
   border-radius: 0.5rem;
   box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
 }
-@media (min-width: 56.625em) {
+@media (min-width: 42.75em) {
+  .main__window {
+    display: grid;
+    grid-template-areas: "two one" "two one" "two one" "three three" "four four";
+  }
+  .main__window .main__window__top__left {
+    grid-area: one;
+  }
+  .main__window .main__window__bottom__left {
+    grid-area: two;
+  }
+  .main__window .main__window__middle__top {
+    grid-area: three;
+  }
+  .main__window .main__window__middle__bottom {
+    grid-area: four;
+  }
+}
+@media (min-width: 79em) {
   .main__window {
     display: grid;
     grid-template-areas: "one three" "one four" "one four" "one four" "one four" "two two";
@@ -682,7 +700,13 @@ sup {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 56.625em) {
+@media (min-width: 42.75em) {
+  .main__window__top__left__cont__img {
+    min-height: 29rem;
+    min-width: 27rem;
+  }
+}
+@media (min-width: 79em) {
   .main__window__top__left__cont__img {
     min-height: 29rem;
     min-width: 20rem;
@@ -740,12 +764,15 @@ sup {
 }
 @media (min-width: 42.75em) {
   .main__window__bottom__left__grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "one two three four five" "six seven eight nine ten";
+    max-width: 9.7rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten";
   }
 }
 @media (min-width: 79em) {
   .main__window__bottom__left__grid {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "one two three four five six" "seven eight nine ten eleven twelve";
   }
