@@ -25,7 +25,6 @@
       }
       @include breakpoint(medium) {
         font-size: clamp(0.5rem, 3vw + 0.01rem, 2rem);
-        white-space: nowrap;
       }
     }
   }
@@ -630,9 +629,6 @@
   }
 }
 
-
-
-
 select {
   font-size: 1rem;
   background-color: white;
@@ -647,4 +643,3 @@ select {
     outline: 1px solid red;
   }
 }
-

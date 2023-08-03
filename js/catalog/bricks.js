@@ -12,7 +12,6 @@ bodyToggle.addEventListener('click', () => {
     body.classList.toggle('body-stop');
 })
 
-
 //PRODUCTS
 //Generating products on the page
 

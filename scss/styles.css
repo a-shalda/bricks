@@ -608,7 +608,6 @@ sup {
 @media (min-width: 42.75em) {
   .main__cont__title {
     font-size: clamp(0.5rem, 3vw + 0.01rem, 2rem);
-    white-space: nowrap;
   }
 }
 .main__window {
