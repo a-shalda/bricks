@@ -101,14 +101,14 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/K658WDF.jpg',
-    image_1: 'img/thumbnails/K658WDF.jpg',
+    image: 'img/thumbnails/K658WDF.jpeg',
+    image_1: 'img/thumbnails/K658WDF.jpeg',
 
     image_original: [
-      'img/images/K658WDF/original/K658WDF.jpg', 
+      'img/images/K658WDF/original/K658WDF.jpeg', 
     ],
     image_thumbnail: [
-      'img/images/K658WDF/thumbnails/K658WDF.jpg', 
+      'img/images/K658WDF/thumbnails/K658WDF.jpeg', 
     ]
     
   }, {
@@ -117,13 +117,13 @@ const products = [
     name: 'Corner brick slip Feldhaus Klinker W100NF9 perla liso',
     availability: 'In stock',
     filepath: 'W100NF9.html',
-    priceCentsPc: 1330,
+    priceCentsPc: 470,
     supplierPriceType: 'pc',
     isM2: false,
     isLinearMeter: true,
 
     specs: {
-      piecesInLinearMeterCm: 1923,
+      piecesInLinearMeterCm: 1300,
       piecesInPack: 15,
       piecesInPallet: 1155,
       recommendedJointSpacing: '12',
@@ -176,7 +176,7 @@ const products = [
       recommendedDryMortarVolume: '3-4',
       weightOf1PieceGramm: 153,
       weightOf1PackGramm: 916,
-      manufacturer: 'Ströher',
+      manufacturer: 'Stroeher',
       countryOfOrigin: 'Germany',
     },
 

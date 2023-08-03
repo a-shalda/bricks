@@ -1,5 +1,3 @@
-//HAMBURGER MENU
-
 const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
 const nav = document.querySelector('.header__lower--background');
 
@@ -14,14 +12,20 @@ bodyToggle.addEventListener('click', () => {
     body.classList.toggle('body-stop');
 })
 
+
 //PRODUCTS
 //Generating products on the page
 
 let productsHTML = '';
 
+let indicesOfProducts = [];
+
 products.forEach((product, index) => {
 
     if (product.type === 'brick slip' || product.type === 'corner brick slip') {
+
+        indicesOfProducts.push(index);
+
         let priceCentsM2 = product.priceCentsM2;
         let priceCentsPc = product.priceCentsPc;
         let supplierPriceType = product.supplierPriceType;
@@ -29,9 +33,9 @@ products.forEach((product, index) => {
         const piecesInLinearMeter = Number(product.specs?.piecesInLinearMeterCm / 100);
         const isM2 = product.isM2;
         const isLinearMeter = product.isLinearMeter;
-    
+
         if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
-    
+
             const priceM2 = ((priceCentsM2 / 100).toFixed(2));
             const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
             const indexOfDotM2 = priceM2.toString().indexOf('.');
@@ -129,8 +133,6 @@ products.forEach((product, index) => {
                         </div>
                     </div>
                 `;
-    
-    
             }
             else if (isM2 === false && isLinearMeter === true) {
     
@@ -139,7 +141,7 @@ products.forEach((product, index) => {
                 const indexOfDotLM = priceLM.toString().indexOf('.');
                 const indexofDotPc = pricePc.toString().indexOf('.');
     
-                let priceLMHTML = `<sup>$</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">l.m</span>`;
+                let priceLMHTML = `<sup>$</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lm</span>`;
                 let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
     
                 productsHTML +=`
@@ -230,21 +232,18 @@ products.forEach((product, index) => {
             }
         }
     }
-
-
 });
 document.querySelector('.products').innerHTML = productsHTML;
 
-
 //Adding onmouse image animation
-
 document.querySelectorAll('.product')
 
     .forEach((product, index) => {
+
         product.addEventListener('mouseenter', () => {
 
-            let first = document.querySelector('.product_img_' + index);
-            let second = document.querySelector('.product_img_second_' + index);
+            let first = document.querySelector('.product_img_' + indicesOfProducts[index]);
+            let second = document.querySelector('.product_img_second_' + indicesOfProducts[index]);
 
             first.classList.add('opacity');
             second.classList.add('opacity');
