@@ -6,7 +6,7 @@ const slides = slider_items.forEach((item) => {
 
 sliderHTML += `
     <div class="slideshow__slide">
-        <img src="${item.img}" class="slideshow__slide__img fade" loading="lazy" data-product-id="${item.id}">
+        <img src="${item.img}" class="slideshow__slide__img fade" data-product-id="${item.id}">
         <div class="slideshow__slide__abs">
             <div class="slideshow__slide__abs__box__cont">
                 <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
@@ -63,6 +63,7 @@ document.querySelector('.slideshow__button--next').addEventListener('click', () 
 //Code for the slider
 
 let slideIndex = 1;
+
 showSlides(slideIndex);
 
 function showSlides(n) {
@@ -91,7 +92,12 @@ let sliderInterval = function() {
     plusSlides(1);
 }
 
-let start = setInterval(sliderInterval, 3000);
+let start;
+
+window.onload = function() {
+    start = setInterval(sliderInterval, 3000);
+}
+
 document.querySelector('.slideshow').addEventListener('mouseenter', () => {clearInterval(start)});
 document.querySelector('.slideshow').addEventListener('mouseleave', () => {start = setInterval(sliderInterval, 3000);});
 
