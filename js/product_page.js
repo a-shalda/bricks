@@ -295,6 +295,8 @@ else if (supplierPriceType === 'pc') {
       optionsHTML += `<option>select quantity...</option>`;
     
       for (let i = 0; i < 99; i++) {
+
+        if (price >= priceTotalLimit) {break;}
     
         if (totalVolume >= 99) {break;}
         totalVolume = totalVolume + baseVolume;
@@ -303,8 +305,6 @@ else if (supplierPriceType === 'pc') {
     
         pieces = pieces + basePieces;
         price = (pieces * pricePc).toFixed(2);
-
-        if (price >= priceTotalLimit) {break;}
   
         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
@@ -349,14 +349,14 @@ else if (supplierPriceType === 'pc') {
       optionsHTML += `<option>select quantity...</option>`;
     
       for (let i = 0; i < 9; i++) {
-    
+
+        if (price >= priceTotalLimit) {break;}
+
         totalVolume = Number((totalVolume + baseVolume).toFixed(2));
         
         pieces = pieces + basePieces;
         price = (pieces * pricePc).toFixed(2);
 
-        if (price >= priceTotalLimit) {break;}
-    
         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
         let totalPalletsNumber = totalPallets;
         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
@@ -417,6 +417,8 @@ else if (supplierPriceType === 'pc') {
   
     for (let i = 0; i < 99; i++) {
   
+      if (price >= priceTotalLimit) {break;}
+      
       if (totalVolume >= 99) {break;}
       totalVolume = totalVolume + baseVolume;
   
@@ -424,8 +426,6 @@ else if (supplierPriceType === 'pc') {
   
       pieces = pieces + basePieces;
       price = (pieces * pricePc).toFixed(2);
-
-      if (price >= priceTotalLimit) {break;}
 
       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
       if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
