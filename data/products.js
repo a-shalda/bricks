@@ -101,14 +101,14 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/K658WDF.jpg',
-    image_1: 'img/thumbnails/K658WDF.jpg',
+    image: 'img/thumbnails/k658wdf.jpg',
+    image_1: 'img/thumbnails/k658wdf.jpg',
 
     image_original: [
-      'img/images/K658WDF/original/K658WDF.jpg', 
+      'img/images/K658WDF/original/k658wdf.jpg', 
     ],
     image_thumbnail: [
-      'img/images/K658WDF/thumbnails/K658WDF.jpg', 
+      'img/images/K658WDF/thumbnails/k658wdf.jpg', 
     ]
     
   }, {
