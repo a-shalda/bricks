@@ -98,6 +98,7 @@ window.onload = function() {
     start = setInterval(sliderInterval, 3000);
 }
 
+
 document.querySelector('.slideshow').addEventListener('mouseenter', () => {clearInterval(start)});
 document.querySelector('.slideshow').addEventListener('mouseleave', () => {start = setInterval(sliderInterval, 3000);});
 
@@ -214,7 +215,7 @@ products.forEach((product, index) => {
             
                 <div class="product__bottom">
                     <a href="${product.filepath}">
-                        <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                        <p class="product__bottom__title">${product.name}</p>
                     </a>
                     <div class="product__bottom__desc">
                         <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
@@ -265,7 +266,7 @@ products.forEach((product, index) => {
                 
                     <div class="product__bottom">
                         <a href="${product.filepath}">
-                            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                            <p class="product__bottom__title">${product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
@@ -316,7 +317,7 @@ products.forEach((product, index) => {
                 
                     <div class="product__bottom">
                         <a href="${product.filepath}">
-                            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                            <p class="product__bottom__title">${product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
@@ -363,7 +364,7 @@ products.forEach((product, index) => {
                 
                     <div class="product__bottom">
                         <a href="${product.filepath}">
-                            <p class="product__bottom__title">${product.name} <span class="format-nowrap">${product.specs?.format} mm</span></p>
+                            <p class="product__bottom__title">${product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
