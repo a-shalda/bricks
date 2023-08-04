@@ -1,6 +1,8 @@
-//464px, 684px, 906px, 1264px
+//400px, 464px, 684px, 906px, 1264px
+//limit 1440px (90em)
 
 $breakpoints-up: (
+  "tiny": 25em,
   "small": 29em,
   "medium": 42.75em,
   "large": 56.625em,

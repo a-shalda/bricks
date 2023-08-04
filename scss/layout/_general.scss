@@ -15,6 +15,12 @@
   padding: var(--padding);
 }
 
+.cont_min_products {
+  width: 100%;
+  max-width: 90em;
+  margin: 0 auto;
+}
+
 .divider {
   &--background {
     display: flex;
@@ -41,9 +47,9 @@
   font-size: 1.05rem;
 }
 
-.format-nowrap {
-  white-space: nowrap;
-}
+// .format-nowrap {
+//   white-space: nowrap;
+// }
 
 sup {
   font-size: 0.7rem;

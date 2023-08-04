@@ -2,13 +2,25 @@
 @use '../globals/colors' as *;
 @use '../util/breakpoints' as *;
 
+
+
 .products {
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+
+  @include breakpoint(tiny) {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
+  }
 
   @include breakpoint(small) {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   @include breakpoint(medium) {
@@ -29,6 +41,7 @@
   border: 1px solid var(--light-light-gray-color);
   border-radius: 0.5rem;
   transition: box-shadow 0.3s, border 0.3s;
+  min-width: 11.75rem; //min-width 188px;
 
   &:hover {
     box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
@@ -73,7 +86,7 @@
     &__price {
       &--m2 {
         display: flex;
-        width: 50%;
+        width: 60%;
         justify-content: center;
         align-items: center;
         padding-left: 0.5rem;
@@ -81,6 +94,10 @@
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
         margin-left: -1px;
+
+        @include breakpoint(small) {
+          width: 50%;
+        }
 
 
         &__p {

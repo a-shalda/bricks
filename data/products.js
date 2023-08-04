@@ -84,13 +84,13 @@ const products = [
     name: 'Brick Feldhaus Klinker K658WDF sintra ardor belino',
     availability: 'In stock',
     filepath: 'K658WDF.html',
-    priceCentsPc: 264,
+    priceCentsPc: 75964,
     supplierPriceType: 'pc',
     isM2: true,
     isLinearMeter: false,
 
     specs: {
-      piecesInSquareMeterCm: 5700,
+      piecesInSquareMeterCm: 110,
       piecesInPallet: 468,
       recommendedJointSpacing: '10-12',
       thickness: 65,
@@ -161,13 +161,13 @@ const products = [
     name: 'Stair loft angle tile Stroeher AERA 710 crio 4817',
     availability: 'In stock',
     filepath: 'SST4817.html',
-    priceCentsPc: 2698,
+    priceCentsPc: 92698,
     supplierPriceType: 'pc',
     isM2: false,
     isLinearMeter: true,
 
     specs: {
-      piecesInLinearMeterCm: 330,
+      piecesInLinearMeterCm: 100,
       piecesInPack: 6,
       piecesInPallet: 192,
       recommendedJointSpacing: '6',
