@@ -215,7 +215,7 @@ products.forEach((product, index) => {
             
                 <div class="product__bottom">
                     <a href="${product.filepath}">
-                        <p class="product__bottom__title">${product.name}</p>
+                        <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                     </a>
                     <div class="product__bottom__desc">
                         <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
@@ -266,7 +266,7 @@ products.forEach((product, index) => {
                 
                     <div class="product__bottom">
                         <a href="${product.filepath}">
-                            <p class="product__bottom__title">${product.name}</p>
+                            <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
@@ -317,7 +317,7 @@ products.forEach((product, index) => {
                 
                     <div class="product__bottom">
                         <a href="${product.filepath}">
-                            <p class="product__bottom__title">${product.name}</p>
+                            <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
@@ -364,7 +364,7 @@ products.forEach((product, index) => {
                 
                     <div class="product__bottom">
                         <a href="${product.filepath}">
-                            <p class="product__bottom__title">${product.name}</p>
+                            <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>

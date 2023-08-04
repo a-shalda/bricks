@@ -25,7 +25,7 @@ products.forEach((product, index) => {
 
   if (product.id === root) {
 
-    productTitle = product.name;
+    productTitle = product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format;
     productNumberInProducts = index;
     supplierPriceType = product.supplierPriceType;
 
@@ -288,7 +288,7 @@ else if (supplierPriceType === 'pc') {
   
     //Calculating the options
 
-    if (productType !== 'brick') {
+    if (productType !== 'Brick') {
       if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
       else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
     

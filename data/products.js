@@ -1,8 +1,8 @@
 const products = [
   {
     id: 'R100NF9',
-    type: 'brick slip',
-    name: 'Brick slip R100NF9 perla liso',
+    type: 'Brick slip',
+    name: 'R100NF9 perla liso',
     availability: 'In Stock',
     filepath: 'R100NF9.html',
     priceCentsM2: 5240, 
@@ -45,8 +45,8 @@ const products = [
     ]
   }, {
     id: 'R303NF9',
-    type: 'brick slip',
-    name: 'Brick slip R303NF9 ardor liso',
+    type: 'Brick slip',
+    name: 'R303NF9 ardor liso',
     availability: 'In stock',
     filepath: 'R303NF9.html',
     priceCentsM2: 5240,
@@ -80,8 +80,8 @@ const products = [
     ]
   }, {
     id: 'K658WDF',
-    type: 'brick',
-    name: 'Brick K658WDF sintra ardor belino',
+    type: 'Brick',
+    name: 'K658WDF sintra ardor belino',
     availability: 'In stock',
     filepath: 'K658WDF.html',
     priceCentsPc: 75964,
@@ -115,8 +115,8 @@ const products = [
     
   }, {
     id: 'W100NF9',
-    type: 'corner brick slip',
-    name: 'Corner brick slip W100NF9 perla liso',
+    type: 'Corner brick slip',
+    name: 'W100NF9 perla liso',
     availability: 'In stock',
     filepath: 'W100NF9.html',
     priceCentsPc: 470,
@@ -159,8 +159,8 @@ const products = [
 
   }, {
     id: 'SST4817',
-    type: 'stair tile',
-    name: 'Stair loft angle tile AERA 710 crio 4817',
+    type: 'Stair tile',
+    name: 'loft angle AERA 710 crio 4817',
     availability: 'In stock',
     filepath: 'SST4817.html',
     priceCentsPc: 92698,
