@@ -454,6 +454,7 @@ sup {
   padding: 0.8rem 0;
   border-top: 1px solid var(--light-light-gray-color);
   border-bottom: 1px solid var(--light-light-gray-color);
+  letter-spacing: 0.02rem;
 }
 .product__bottom__title:hover {
   cursor: pointer;
@@ -465,6 +466,7 @@ sup {
 .product__bottom__desc__p {
   font-size: 0.8rem;
   color: rgb(109, 109, 109);
+  letter-spacing: 0.01rem;
 }
 .product .moveLeft {
   transform: translate(-110%);
@@ -1069,6 +1071,7 @@ sup {
   font-size: 0.8rem;
   padding-left: 0.5rem;
   color: gray;
+  letter-spacing: 0.01rem;
 }
 .main .pc_price_selected {
   background-color: var(--gray-color);

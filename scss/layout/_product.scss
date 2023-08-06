@@ -131,6 +131,8 @@
       padding: 0.8rem 0;
       border-top: 1px solid var(--light-light-gray-color);
       border-bottom: 1px solid var(--light-light-gray-color);
+      letter-spacing: 0.02rem;
+
 
       &:hover {
         cursor: pointer;
@@ -144,6 +146,7 @@
       &__p {
         font-size: 0.8rem;
         color: rgb(109, 109, 109);
+        letter-spacing: 0.01rem;
       }
     }
   }

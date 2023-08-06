@@ -77,7 +77,7 @@ products.forEach((product, index) => {
                         <div class="product__bottom__desc">
                             <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
                             <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                            <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                            <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ products.forEach((product, index) => {
                             <div class="product__bottom__desc">
                                 <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
                                 <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                                <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                                <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@ products.forEach((product, index) => {
                             <div class="product__bottom__desc">
                                 <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
                                 <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                                <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                                <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@ products.forEach((product, index) => {
                             <div class="product__bottom__desc">
                                 <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
                                 <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                                <p class="product__bottom__desc__p">Format (mm): ${product.specs?.format}</p>
+                                <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
                             </div>
                         </div>
                     </div>
