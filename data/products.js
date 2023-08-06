@@ -25,9 +25,6 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/r100nf.jpg',
-    image_1: 'img/thumbnails/r100nf-side.jpg',
-
     image_original: [
       'img/images/R100NF/original/R100NF_full.jpg', 
       'img/images/R100NF/original/R100NF_full_side.jpg', 
@@ -37,8 +34,8 @@ const products = [
     ],
 
     image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
+      'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
+      'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
       'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
       'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
       'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
@@ -69,14 +66,12 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/r303nf.jpg',
-    image_1: 'img/thumbnails/r303nf-side.jpg',
-
     image_original: [
       'img/images/R303NF/original/r303nf.jpg', 
     ],
     image_thumbnail: [
-      'img/images/R303NF/thumbnails/r303nf.jpg', 
+      'images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_main.jpg', 
+      'images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_side.jpg', 
     ]
   }, {
     id: 'K658WDF',
@@ -101,16 +96,13 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/k658wdf_350x229_28kb_80perc.q..jpg',
-    image_1: 'img/thumbnails/k658wdf.jpg',
-
     image_original: [
-      'img/images/K658WDF/original/k658wdf.jpg', 
-      'img/thumbnails/k658wdf_350x229_28kb_80perc.q..jpg',
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
     ],
     image_thumbnail: [
-      'img/images/K658WDF/thumbnails/k658wdf.jpg', 
-      'img/thumbnails/k658wdf_350x229_28kb_80perc.q..jpg', 
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
     ]
     
   }, {
@@ -138,9 +130,6 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/r100nf.jpg',
-    image_1: 'img/thumbnails/r100nf-side.jpg',
-
     image_original: [
       'img/images/R100NF/original/R100NF_full.jpg', 
       'img/images/R100NF/original/R100NF_full_side.jpg', 
@@ -150,19 +139,16 @@ const products = [
     ],
 
     image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
+      'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
+      'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
 
   }, {
-    id: 'SST4817',
+    id: '4817710',
     type: 'Stair tile',
     name: 'loft angle AERA 710 crio 4817',
     availability: 'In stock',
-    filepath: 'SST4817.html',
+    filepath: '4817710.html',
     priceCentsPc: 92698,
     supplierPriceType: 'pc',
     isM2: false,
@@ -182,14 +168,12 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/SST4817.jpg',
-    image_1: 'img/thumbnails/SST4817.jpg',
-
     image_original: [
       'img/images/SST4817/original/SST4817.jpg', 
     ],
     image_thumbnail: [
-      'img/images/SST4817/thumbnails/SST4817.jpg', 
+      'images/product_images/stair_tile/4817710/thumbnail/4817710_main.jpg', 
+      'images/product_images/stair_tile/4817710/thumbnail/3030710.jpg', 
     ]
   }, {
     id: 'notm2lm',
