@@ -12,6 +12,7 @@ bodyToggle.addEventListener('click', () => {
     body.classList.toggle('body-stop');
 })
 
+
 //PRODUCTS
 //Generating products on the page
 
@@ -21,7 +22,7 @@ let indicesOfProducts = [];
 
 products.forEach((product, index) => {
 
-    if (product.type === 'Brick') {
+    if (product.type === 'Thermopanel') {
 
         indicesOfProducts.push(index);
 

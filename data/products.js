@@ -173,49 +173,73 @@ const products = [
     ],
     image_thumbnail: [
       'images/product_images/stair_tile/4817710/thumbnail/4817710_main.jpg', 
-      'images/product_images/stair_tile/4817710/thumbnail/3030710.jpg', 
+      'images/product_images/stair_tile/4817710/thumbnail/8031710_one.jpg', 
     ]
   }, {
-    id: 'notm2lm',
-    name: 'Not m2 or linear',
+    id: '8031710',
+    type: 'Floor tile',
+    name: 'AERA 710 crio 8031',
     availability: 'In stock',
-    filepath: 'notm2lm.html',
-    priceCentsPc: 2698,
-    supplierPriceType: 'pc',
-    isM2: false,
+    filepath: '8031710.html',
+    priceCentsM2: 8217, 
+    supplierPriceType: 'm2',
+    isM2: true,
     isLinearMeter: false,
 
     specs: {
-      piecesInPack: 6,
-      piecesInPallet: 192,
+      piecesInSquareMeterCm: 1100,
+      piecesInPack: 11,
+      squareMetersInPallet: 52,
+      recommendedJointSpacing: '6',
+      thickness: 9,
+      format: '294 x 294 x 10',
+      recommendedDryMortarVolume: '3-4',
+      weightOf1PieceGramm: 171,
+      weightOf1SquareMeter: 18.77, //not calculated
+      weightOf1PackGramm: 1877,
+      manufacturer: 'Stroeher',
+      countryOfOrigin: 'Germany',
+    },
+
+    image_original: [
+      'img/images/SST4817/original/SST4817.jpg', 
+    ],
+    image_thumbnail: [
+      'images/product_images/stair_tile/8031710/thumbnail/8031710_floor.jpg', 
+      'images/product_images/stair_tile/8031710/thumbnail/8031710_one.jpg', 
+    ]
+  }, {
+    id: 'TP228NF',
+    type: 'Thermopanel',
+    name: 'R303NF9 ardor liso',
+    availability: 'In stock',
+    filepath: 'TP228NF.html',
+    priceCentsM2: 8240,
+    supplierPriceType: 'm2',
+    isM2: true,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInSquareMeterCm: 200,
+      piecesInPack: 10,
+      squareMetersInPallet: 5,
       recommendedJointSpacing: '10-12',
       thickness: 9,
-      format: '240 x 71 x 9',
-      recommendedDryMortarVolume: '4-6',
-      weightOf1PieceGramm: 153,
-      weightOf1PackGramm: 916,
+      format: '240 x 71 x 9 x 60',
+      // recommendedDryMortarVolume: '4-6',
+      weightOf1PieceGramm: 1200,
+      weightOf1SquareMeter: 24,
+      weightOf1PackGramm: 12000,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
-    image: 'img/thumbnails/r303nf.jpg',
-    image_1: 'img/thumbnails/r303nf-side.jpg',
-
-    image_thumbnail: [
-      'img/images/R100NF/thumbnails/R100NF_full.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_full_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
-    ],
     image_original: [
-      'img/images/R100NF/original/R100NF_full.jpg', 
-      'img/images/R100NF/original/R100NF_full_side.jpg', 
-      'img/images/R100NF/original/R100NF_house_day.jpeg', 
-      'img/images/R100NF/original/R100NF_house_night.jpeg', 
-      'img/images/R100NF/original/R100NF_fasade.jpg', 
-      // 'img/images/R100NF/original/R100NF_fasade.jpg', 
+      'img/images/R303NF/original/r303nf.jpg', 
+    ],
+    image_thumbnail: [
+      'images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_main.jpg', 
+      'images/product_images/thermopanel/TP228NF/thumbnail/r303nf9_thumbnail_side.jpg', 
     ]
   }, {
     id: 'R690NF14',

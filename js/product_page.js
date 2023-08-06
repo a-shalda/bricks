@@ -234,7 +234,7 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
     else {totalPallets = totalPallets + ` pallets`;}
 
     totalPacks++;
-    totalWeight = totalWeight + weight;
+    totalWeight = Number((totalWeight + weight).toFixed(2));
 
     let priceLength = String(price).length;
     let priceModified = String(price);

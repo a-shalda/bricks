@@ -13,6 +13,7 @@ const categories = [
     id: 'three',
     img: 'images/categories/img_fasade-three.png',
     title: 'Fasade klinker brick slip thermo panels',
+    path: 'thermopanels.html'
   }, {
     id: 'four',
     img: 'images/categories/img_cover_small.png',
