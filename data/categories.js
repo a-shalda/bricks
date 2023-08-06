@@ -25,6 +25,7 @@ const categories = [
     id: 'six',
     img: 'images/categories/img_long-stairs.png',
     title: 'Klinker stairs',
+    path: 'stair_and_floor_tile.html',
   }, {
     id: 'seven',
     img: 'images/categories/img_cover.png',
