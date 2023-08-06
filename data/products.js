@@ -44,7 +44,7 @@ const products = [
     id: 'R303NF9',
     type: 'Brick slip',
     name: 'R303NF9 ardor liso',
-    availability: 'In stock',
+    availability: 'In Stock',
     filepath: 'R303NF9.html',
     priceCentsM2: 5240,
     supplierPriceType: 'm2',
@@ -77,7 +77,7 @@ const products = [
     id: 'K658WDF',
     type: 'Brick',
     name: 'K658WDF sintra ardor belino',
-    availability: 'In stock',
+    availability: 'In Stock',
     filepath: 'K658WDF.html',
     priceCentsPc: 75964,
     supplierPriceType: 'pc',
@@ -104,12 +104,11 @@ const products = [
       'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
       'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
     ]
-    
   }, {
     id: 'W100NF9',
     type: 'Corner brick slip',
     name: 'W100NF9 perla liso',
-    availability: 'In stock',
+    availability: 'In Stock',
     filepath: 'W100NF9.html',
     priceCentsPc: 470,
     supplierPriceType: 'pc',
@@ -147,7 +146,7 @@ const products = [
     id: '4817710',
     type: 'Stair tile',
     name: 'loft angle AERA 710 crio 4817',
-    availability: 'In stock',
+    availability: 'In Stock',
     filepath: '4817710.html',
     priceCentsPc: 92698,
     supplierPriceType: 'pc',
@@ -179,7 +178,7 @@ const products = [
     id: '8031710',
     type: 'Floor tile',
     name: 'AERA 710 crio 8031',
-    availability: 'In stock',
+    availability: 'In Stock',
     filepath: '8031710.html',
     priceCentsM2: 8217, 
     supplierPriceType: 'm2',
@@ -211,8 +210,8 @@ const products = [
   }, {
     id: 'TP228NF',
     type: 'Thermopanel',
-    name: 'R303NF9 ardor liso',
-    availability: 'In stock',
+    name: 'R228NF9 ardor liso',
+    availability: 'In Stock',
     filepath: 'TP228NF.html',
     priceCentsM2: 8240,
     supplierPriceType: 'm2',
@@ -239,7 +238,35 @@ const products = [
     ],
     image_thumbnail: [
       'images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_main.jpg', 
-      'images/product_images/thermopanel/TP228NF/thumbnail/r303nf9_thumbnail_side.jpg', 
+      'images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_side.jpg', 
+    ]
+  }, {
+    id: 'KKFCW01',
+    type: 'Fence cap',
+    name: 'Ruby red 01',
+    availability: 'In Stock',
+    filepath: 'KKFCW01.html',
+    priceCentsPc: 8026,
+    supplierPriceType: 'pc',
+    isM2: false,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInPallet: 48,
+      format: '445 x 445 x 90',
+      weightOf1PieceGramm: 1340,
+      weightOf1PackGramm: 1340,
+      manufacturer: 'King Klinker',
+      countryOfOrigin: 'Poland',
+    },
+
+    image_original: [
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+    ],
+    image_thumbnail: [
+      'images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_main.webp', 
+      'images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_fence.webp', 
     ]
   }, {
     id: 'R690NF14',
@@ -252,7 +279,7 @@ const products = [
     format: '240 x 71 x 14',
     piecesPerM2: 48,
     thickness: 14,
-    availability: 'In stock'
+    availability: 'In Stock'
   }, {
     id: 'R694NF14',
     image: 'img/thumbnails/r694nf.jpg',
@@ -264,7 +291,7 @@ const products = [
     format: '240 x 71 x 14',
     piecesPerM2: 48,
     thickness: 14,
-    availability: 'In stock'
+    availability: 'In Stock'
   }, {
     id: 'R766NF14',
     image: 'img/thumbnails/r766nf.jpg',
@@ -276,7 +303,7 @@ const products = [
     format: '240 x 71 x 14',
     piecesPerM2: 48,
     thickness: 14,
-    availability: 'In stock'
+    availability: 'In Stock'
   }, {
     id: 'R767NF14',
     image: 'img/thumbnails/r767nf.jpg',
@@ -288,7 +315,7 @@ const products = [
     format: '240 x 71 x 14',
     piecesPerM2: 48,
     thickness: 14,
-    availability: 'In stock'
+    availability: 'In Stock'
   }, {
     id: 'R773NF14',
     image: 'img/thumbnails/r773nf.jpg',
@@ -300,6 +327,6 @@ const products = [
     format: '240 x 71 x 14',
     piecesPerM2: 48,
     thickness: 14,
-    availability: 'In stock'
+    availability: 'In Stock'
   }
 ];

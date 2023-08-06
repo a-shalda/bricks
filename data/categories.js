@@ -17,7 +17,8 @@ const categories = [
   }, {
     id: 'four',
     img: 'images/categories/img_cover_small.png',
-    title: 'Ceramic post covers',
+    title: 'Ceramic fence caps',
+    path: 'fence_caps.html'
   }, {
     id: 'five',
     img: 'images/categories/img_mosaic.png',
