@@ -49,8 +49,8 @@ products.forEach((product, index) => {
             
                         <a href="${product.filepath}">
                             <div class="product__top__cont">
-                                <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.name}" width="264" height="195" loading="lazy">
-                                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.name}" width="264" height="195">
+                                <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195" loading="lazy">
+                                <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195">
                             </div>
                         </a>
                         
@@ -100,8 +100,8 @@ products.forEach((product, index) => {
                 
                             <a href="${product.filepath}">
                                 <div class="product__top__cont">
-                                    <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.name}" width="264" height="195" loading="lazy">
-                                    <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.name}" width="264" height="195">
+                                    <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195" loading="lazy">
+                                    <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195">
                                 </div>
                             </a>
                             
@@ -149,8 +149,8 @@ products.forEach((product, index) => {
                 
                             <a href="${product.filepath}">
                                 <div class="product__top__cont">
-                                    <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.name}" width="264" height="195" loading="lazy">
-                                    <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.name}" width="264" height="195">
+                                    <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195" loading="lazy">
+                                    <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195">
                                 </div>
                             </a>
                             
@@ -196,8 +196,8 @@ products.forEach((product, index) => {
                 
                             <a href="${product.filepath}">
                                 <div class="product__top__cont">
-                                    <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.name}" width="264" height="195" loading="lazy">
-                                    <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.name}" width="264" height="195">
+                                    <img class="product__top__cont__img product_img_${index}" src="${product.image_thumbnail[0]}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195" loading="lazy">
+                                    <img class="product__top__cont__img product_img_second_${index}" src="${product.image_thumbnail[1]}}" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="264" height="195">
                                 </div>
                             </a>
                             

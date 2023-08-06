@@ -36,14 +36,14 @@ products.forEach((product, index) => {
         <a class="main__window__top__left__button--prev">❮</a>
         <a class="main__window__top__left__button--next">❯</a>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt='${product.name}' loading="lazy">
+          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
       else {
         productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt='${product.name}' loading="lazy">
+          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
@@ -67,7 +67,7 @@ products.forEach((product, index) => {
 
       productThumbnailslHTML += `
         <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
-          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt='${product.name}' loading="lazy">
+          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
     });
