@@ -393,10 +393,10 @@ document.querySelectorAll('.product__top__cont').forEach((cont) => {
     })
 })
 
-
 //Adding onmouse image animation
 
-document.querySelectorAll('.product')
+window.onload = function() {
+    document.querySelectorAll('.product')
 
     .forEach((product, index) => {
         product.addEventListener('mouseenter', () => {
@@ -431,3 +431,4 @@ document.querySelectorAll('.product')
         });
     });
 });
+}
