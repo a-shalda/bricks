@@ -381,13 +381,12 @@ document.querySelector('.products').innerHTML = productsHTML;
 
 
 
+document.querySelectorAll('img').forEach((image) => {
 
-document.querySelectorAll('img', 'png').forEach((image) => {
-
-    image.classList.add('img_blurred');
+    image.classList.add('img_unloaded');
     
     image.addEventListener('load', () => {
-        image.classList.remove('img_blurred');
+        image.classList.remove('img_unloaded');
     })
 })
 

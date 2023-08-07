@@ -128,6 +128,8 @@ function showImage(n) {
   main_thumbnail[imageIndex-1].classList.add('main_thumbnail', 'clear');
 } 
 
+
+
 //MODAL
 
 function openModal () {

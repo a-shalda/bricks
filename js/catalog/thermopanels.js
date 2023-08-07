@@ -235,6 +235,15 @@ products.forEach((product, index) => {
 });
 document.querySelector('.products').innerHTML = productsHTML;
 
+document.querySelectorAll('img').forEach((image) => {
+
+    image.classList.add('img_unloaded');
+    
+    image.addEventListener('load', () => {
+        image.classList.remove('img_unloaded');
+    })
+  })
+
 //Adding onmouse image animation
 document.querySelectorAll('.product')
 
