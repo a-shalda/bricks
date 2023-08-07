@@ -37,6 +37,7 @@ const categories = [
   }, {
     id: 'eight',
     img: 'images/categories/img_glue.png',
-    title: 'Plasters',
+    title: 'Mortars',
+    path: 'mortars.html'
   }
 ];

@@ -330,5 +330,33 @@ const products = [
       'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_main.webp', 
       'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_window.webp', 
     ]
+  }, {
+    id: 'QMMDS01',
+    type: 'Mortar',
+    name: 'mineral waterproof MDS 72379',
+    availability: 'In Stock',
+    filepath: 'QMMDS01.html',
+    priceCentsPc: 2000,
+    supplierPriceType: 'pc',
+    isM2: false,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInPallet: 48,
+      weightOf1PieceGramm: 2500,
+      weightOf1PackGramm: 2500,
+      format: '5450x2200x2000',
+      manufacturer: 'Quick-mix',
+      countryOfOrigin: 'Germany',
+    },
+
+    image_original: [
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+    ],
+    image_thumbnail: [
+      'images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_main.png', 
+      'images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_side.png', 
+    ]
   }
 ];
