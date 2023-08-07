@@ -40,8 +40,8 @@ products.forEach((product, index) => {
             const indexOfDotM2 = priceM2.toString().indexOf('.');
             const indexofDotPc = pricePc.toString().indexOf('.');
     
-            let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-            let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+            let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
     
             productsHTML +=`
                 <div class="product">
@@ -91,8 +91,8 @@ products.forEach((product, index) => {
                 const indexOfDotM2 = priceM2.toString().indexOf('.');
                 const indexofDotPc = pricePc.toString().indexOf('.');
     
-                let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-                let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+                let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+                let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
     
                 productsHTML +=`
                     <div class="product">
@@ -140,8 +140,8 @@ products.forEach((product, index) => {
                 const indexOfDotLM = priceLM.toString().indexOf('.');
                 const indexofDotPc = pricePc.toString().indexOf('.');
     
-                let priceLMHTML = `<sup>$</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lm</span>`;
-                let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+                let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lm</span>`;
+                let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
     
                 productsHTML +=`
                     <div class="product">
@@ -188,7 +188,7 @@ products.forEach((product, index) => {
                 const pricePc = (priceCentsPc / 100).toFixed(2).toString();
                 const indexofDotPc = pricePc.toString().indexOf('.');
     
-                let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+                let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
     
                 productsHTML +=`
                     <div class="product">

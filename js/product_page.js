@@ -198,8 +198,8 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
   const indexOfDotM2 = priceM2.toString().indexOf('.');
   const indexofDotPc = pricePc.toString().indexOf('.');
 
-  let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-  let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+  let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+  let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
   
   pricesHTML = `
     <div class="main__window__middle__top__price__left">
@@ -250,12 +250,12 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
     if (window.innerWidth <= 600) {
       optionsHTML += `
-      <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
+      <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
     `;
     }
     else {
       optionsHTML += `
-      <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      <option>${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
     `;
     }
   }
@@ -274,8 +274,8 @@ else if (supplierPriceType === 'pc') {
     const indexOfDotM2 = priceM2.toString().indexOf('.');
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    let priceM2HTML = `<sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-    let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML = `
       <div class="main__window__middle__top__price__left">
@@ -327,12 +327,12 @@ else if (supplierPriceType === 'pc') {
     
         if (window.innerWidth <= 600) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPacksModified})</option>
+          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
         `;
         }
         else {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+          <option>${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
         `;
         }
       }
@@ -372,12 +372,12 @@ else if (supplierPriceType === 'pc') {
     
         if (window.innerWidth <= 600) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= $${priceModified} (${totalPalletsNumber} pal)</option>
+          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPalletsNumber} pal)</option>
         `;
         }
         else {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp; = &nbsp;$${priceModified} &nbsp;(${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+          <option>${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
         `;
         }
       }
@@ -396,8 +396,8 @@ else if (supplierPriceType === 'pc') {
     const indexOfDotLM = priceLM.toString().indexOf('.');
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    let priceLMHTML = `<sup>$</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
-    let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
+    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML = `
       <div class="main__window__middle__top__price__left">
@@ -448,12 +448,12 @@ else if (supplierPriceType === 'pc') {
   
       if (window.innerWidth <= 614) {
         optionsHTML += `
-        <option>${totalVolume} lin.m &nbsp;= $${priceModified} (${totalPacksModified})</option>
+        <option>${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;
       }
       else {
         optionsHTML += `
-        <option>${totalVolume} lin.m &nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+        <option>${totalVolume} lin.m &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
       `;
       }
     }
@@ -470,7 +470,7 @@ else if (supplierPriceType === 'pc') {
     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    let pricePcHTML = `<sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML = `
       <div class="main__window__middle__top__price__left">
@@ -515,12 +515,12 @@ else if (supplierPriceType === 'pc') {
   
       if (window.innerWidth <= 600) {
         optionsHTML += `
-        <option>${piecesModified} &nbsp;= $${priceModified} (${totalPacksModified})</option>
+        <option>${piecesModified} &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;
       }
       else {
         optionsHTML += `
-        <option>${piecesModified} &nbsp; = &nbsp;$${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
+        <option>${piecesModified} &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
       `;
       }
     }
@@ -818,10 +818,10 @@ inputArea.addEventListener('keydown', (event) => {
     
     pricesHTML += `
       <div class="main__window__middle__top__price__left">
-        <p class="main__window__middle__top__price__left__box"><sup>$</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
+        <p class="main__window__middle__top__price__left__box"><sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
       </div>
       <div class="main__window__middle__top__price__right">
-        <p class="main__window__middle__top__price__right__box"><sup>$</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
+        <p class="main__window__middle__top__price__right__box"><sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
       </div>
     `;
     
@@ -832,7 +832,7 @@ inputArea.addEventListener('keydown', (event) => {
     if (select == 'm2') {
       subTotal = priceM2 * inputArea.value;
       console.log(subTotal);
-      subTotalHTML = `Subtotal: $${subTotal}`;
+      subTotalHTML = `Subtotal: €${subTotal}`;
       
     }
     else if (select == 'pc') {}
