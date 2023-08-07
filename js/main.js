@@ -380,13 +380,16 @@ products.forEach((product, index) => {
 document.querySelector('.products').innerHTML = productsHTML;
 
 
+document.querySelectorAll('.product__top__cont').forEach((cont) => {
+    cont.classList.add('cont_blurred');
 
-document.querySelectorAll('img').forEach((image) => {
+    const image = cont.querySelector('img');
 
     image.classList.add('img_unloaded');
-    
+
     image.addEventListener('load', () => {
         image.classList.remove('img_unloaded');
+        cont.classList.remove('cont_blurred');
     })
 })
 

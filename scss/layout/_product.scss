@@ -76,6 +76,7 @@
         color: rgb(162, 162, 162);
         font-size: 0.8rem;
         border-bottom: 1px solid var(--light-light-gray-color);
+        letter-spacing: 0.01rem;
       }
     }
   }
@@ -171,7 +172,23 @@
 
   .img_unloaded {
     opacity: 0;
-    transition: opacity 2000ms;
+  }
+
+  .cont_blurred {
+    background-color: var(--medium-gray-color);
+    animation: pulse 2.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.2;
+    }
   }
 }
 
