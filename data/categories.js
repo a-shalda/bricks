@@ -22,7 +22,8 @@ const categories = [
   }, {
     id: 'five',
     img: 'images/categories/img_mosaic.png',
-    title: 'Klinker mosaic bricks',
+    title: 'Clay pavers',
+    path: 'clay_pavers.html'
   }, {
     id: 'six',
     img: 'images/categories/img_long-stairs.png',

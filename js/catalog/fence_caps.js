@@ -21,7 +21,7 @@ let indicesOfProducts = [];
 
 products.forEach((product, index) => {
 
-    if (product.type === 'Fence cap') {
+    if (product.type === 'Ceramic fence cap') {
 
         indicesOfProducts.push(index);
 

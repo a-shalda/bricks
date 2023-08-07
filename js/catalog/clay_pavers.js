@@ -12,7 +12,6 @@ bodyToggle.addEventListener('click', () => {
     body.classList.toggle('body-stop');
 })
 
-
 //PRODUCTS
 //Generating products on the page
 
@@ -22,7 +21,7 @@ let indicesOfProducts = [];
 
 products.forEach((product, index) => {
 
-    if (product.type === 'Klinker brick slip' || product.type === 'Klinker corner brick slip') {
+    if (product.type === 'Klinker clay paver') {
 
         indicesOfProducts.push(index);
 

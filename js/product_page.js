@@ -288,7 +288,7 @@ else if (supplierPriceType === 'pc') {
   
     //Calculating the options
 
-    if (productType !== 'Brick') {
+    if (productType !== 'Klinker brick' && productType !== 'Klinker clay paver') {
       if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
       else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
     

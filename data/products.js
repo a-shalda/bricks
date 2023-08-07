@@ -1,7 +1,7 @@
 const products = [
   {
     id: 'R100NF9',
-    type: 'Brick slip',
+    type: 'Klinker brick slip',
     name: 'R100NF9 perla liso',
     availability: 'In Stock',
     filepath: 'R100NF9.html',
@@ -42,7 +42,7 @@ const products = [
     ]
   }, {
     id: 'R303NF9',
-    type: 'Brick slip',
+    type: 'Klinker brick slip',
     name: 'R303NF9 ardor liso',
     availability: 'In Stock',
     filepath: 'R303NF9.html',
@@ -75,7 +75,7 @@ const products = [
     ]
   }, {
     id: 'K658WDF',
-    type: 'Brick',
+    type: 'Klinker brick',
     name: 'K658WDF sintra ardor belino',
     availability: 'In Stock',
     filepath: 'K658WDF.html',
@@ -106,7 +106,7 @@ const products = [
     ]
   }, {
     id: 'W100NF9',
-    type: 'Corner brick slip',
+    type: 'Klinker corner brick slip',
     name: 'W100NF9 perla liso',
     availability: 'In Stock',
     filepath: 'W100NF9.html',
@@ -144,7 +144,7 @@ const products = [
 
   }, {
     id: '4817710',
-    type: 'Stair tile',
+    type: 'Klinker stair tile',
     name: 'loft angle AERA 710 crio 4817',
     availability: 'In Stock',
     filepath: '4817710.html',
@@ -176,7 +176,7 @@ const products = [
     ]
   }, {
     id: '8031710',
-    type: 'Floor tile',
+    type: 'Klinker floor tile',
     name: 'AERA 710 crio 8031',
     availability: 'In Stock',
     filepath: '8031710.html',
@@ -242,7 +242,7 @@ const products = [
     ]
   }, {
     id: 'KKFCW01',
-    type: 'Fence cap',
+    type: 'Ceramic fence cap',
     name: 'Ruby red 01',
     availability: 'In Stock',
     filepath: 'KKFCW01.html',
@@ -269,10 +269,40 @@ const products = [
       'images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_fence.webp', 
     ]
   }, {
+    id: 'CP408KF',
+    type: 'Klinker clay paver',
+    name: 'P408KF gala nero',
+    availability: 'In Stock',
+    filepath: 'CP408KF.html',
+    priceCentsPc: 236,
+    supplierPriceType: 'pc',
+    isM2: true,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInSquareMeterCm: 4800,
+      piecesInPallet: 630,
+      recommendedJointSpacing: '3-4',
+      thickness: 45,
+      format: '200x100x45',
+      weightOf1PieceGramm: 210,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+
+    image_original: [
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
+      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+    ],
+    image_thumbnail: [
+      'images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_main.jpg', 
+      'images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_path.jpg', 
+    ]
+  }, {
     id: 'R690NF14',
     image: 'img/thumbnails/r690nf.jpg',
     image_1: 'img/thumbnails/r690nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R690NF14 sintra ardor blanca',
+    name: 'Klinker brick slips Feldhaus Klinker R690NF14 sintra ardor blanca',
     priceCentsM2: 7903,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
@@ -284,7 +314,7 @@ const products = [
     id: 'R694NF14',
     image: 'img/thumbnails/r694nf.jpg',
     image_1: 'img/thumbnails/r694nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R694NF14 sintra carmesi',
+    name: 'Klinker brick slips Feldhaus Klinker R694NF14 sintra carmesi',
     priceCentsM2: 7903,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
@@ -296,7 +326,7 @@ const products = [
     id: 'R766NF14',
     image: 'img/thumbnails/r766nf.jpg',
     image_1: 'img/thumbnails/r766nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R766NF14 vascu sabiosa rotado',
+    name: 'Klinker brick slips Feldhaus Klinker R766NF14 vascu sabiosa rotado',
     priceCentsM2: 8365,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
@@ -308,7 +338,7 @@ const products = [
     id: 'R767NF14',
     image: 'img/thumbnails/r767nf.jpg',
     image_1: 'img/thumbnails/r767nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R767NF14 vascu terracota locata',
+    name: 'Klinker brick slips Feldhaus Klinker R767NF14 vascu terracota locata',
     priceCentsM2: 8365,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',
@@ -320,7 +350,7 @@ const products = [
     id: 'R773NF14',
     image: 'img/thumbnails/r773nf.jpg',
     image_1: 'img/thumbnails/r773nf-side.jpg',
-    name: 'Brick slips Feldhaus Klinker R773NF14 vascu argo antrablanca',
+    name: 'Klinker brick slips Feldhaus Klinker R773NF14 vascu argo antrablanca',
     priceCentsM2: 8365,
     manufacturer: 'Feldhaus Klinker',
     country: 'Germany',

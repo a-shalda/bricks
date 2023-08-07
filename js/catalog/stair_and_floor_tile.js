@@ -22,7 +22,7 @@ let indicesOfProducts = [];
 
 products.forEach((product, index) => {
 
-    if (product.type === 'Stair tile' || product.type === 'Floor tile') {
+    if (product.type === 'Klinker stair tile' || product.type === 'Klinker floor tile') {
 
         indicesOfProducts.push(index);
 
