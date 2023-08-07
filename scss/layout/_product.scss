@@ -168,4 +168,10 @@
     top: 0;
     right: -110%;
   }
+
+  .img_blurred {
+    opacity: 0.2;
+    background-color: var(--gray-color);
+    transition: opacity 250ms ease-in-out;
+  }
 }

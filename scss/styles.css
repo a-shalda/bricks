@@ -482,6 +482,11 @@ sup {
   top: 0;
   right: -110%;
 }
+.product .img_blurred {
+  opacity: 0.2;
+  background-color: var(--gray-color);
+  transition: opacity 250ms ease-in-out;
+}
 
 .slideshow {
   position: relative;

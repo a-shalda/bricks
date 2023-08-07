@@ -380,6 +380,18 @@ products.forEach((product, index) => {
 document.querySelector('.products').innerHTML = productsHTML;
 
 
+
+
+document.querySelectorAll('img', 'png').forEach((image) => {
+
+    image.classList.add('img_blurred');
+    
+    image.addEventListener('load', () => {
+        image.classList.remove('img_blurred');
+    })
+})
+
+
 //Adding onmouse image animation
 
 document.querySelectorAll('.product')
