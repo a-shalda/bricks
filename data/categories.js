@@ -32,7 +32,8 @@ const categories = [
   }, {
     id: 'seven',
     img: 'images/categories/img_cover.png',
-    title: 'Ceramic fence covers',
+    title: 'Ceramic window sills',
+    path: 'window_sills.html'
   }, {
     id: 'eight',
     img: 'images/categories/img_glue.png',

@@ -299,64 +299,36 @@ const products = [
       'images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_path.jpg', 
     ]
   }, {
-    id: 'R690NF14',
-    image: 'img/thumbnails/r690nf.jpg',
-    image_1: 'img/thumbnails/r690nf-side.jpg',
-    name: 'Klinker brick slips Feldhaus Klinker R690NF14 sintra ardor blanca',
-    priceCentsM2: 7903,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240x71x14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In Stock'
-  }, {
-    id: 'R694NF14',
-    image: 'img/thumbnails/r694nf.jpg',
-    image_1: 'img/thumbnails/r694nf-side.jpg',
-    name: 'Klinker brick slips Feldhaus Klinker R694NF14 sintra carmesi',
-    priceCentsM2: 7903,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240x71x14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In Stock'
-  }, {
-    id: 'R766NF14',
-    image: 'img/thumbnails/r766nf.jpg',
-    image_1: 'img/thumbnails/r766nf-side.jpg',
-    name: 'Klinker brick slips Feldhaus Klinker R766NF14 vascu sabiosa rotado',
-    priceCentsM2: 8365,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240x71x14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In Stock'
-  }, {
-    id: 'R767NF14',
-    image: 'img/thumbnails/r767nf.jpg',
-    image_1: 'img/thumbnails/r767nf-side.jpg',
-    name: 'Klinker brick slips Feldhaus Klinker R767NF14 vascu terracota locata',
-    priceCentsM2: 8365,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240x71x14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In Stock'
-  }, {
-    id: 'R773NF14',
-    image: 'img/thumbnails/r773nf.jpg',
-    image_1: 'img/thumbnails/r773nf-side.jpg',
-    name: 'Klinker brick slips Feldhaus Klinker R773NF14 vascu argo antrablanca',
-    priceCentsM2: 8365,
-    manufacturer: 'Feldhaus Klinker',
-    country: 'Germany',
-    format: '240x71x14',
-    piecesPerM2: 48,
-    thickness: 14,
-    availability: 'In Stock'
+    id: 'KKWSO17',
+    type: 'Ceramic window sill',
+    name: '17 Onyx black',
+    availability: 'In Stock',
+    filepath: 'KKWSO17.html',
+    priceCentsPc: 430,
+    supplierPriceType: 'pc',
+    isM2: false,
+    isLinearMeter: true,
+
+    specs: {
+      piecesInLinearMeterCm: 715,
+      piecesInPack: 17,
+      piecesInPallet: 1224,
+      recommendedJointSpacing: '10-12',
+      thickness: 15,
+      format: '245x120x15',
+      recommendedDryMortarVolume: '3-4',
+      weightOf1PieceGramm: 96.5,
+      weightOf1PackGramm: 1640,
+      manufacturer: 'King Klinker',
+      countryOfOrigin: 'Poland',
+    },
+
+    image_original: [
+      'img/images/SST4817/original/SST4817.jpg', 
+    ],
+    image_thumbnail: [
+      'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_main.webp', 
+      'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_window.webp', 
+    ]
   }
 ];

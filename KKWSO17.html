@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bricks eCommerce Shop - R303NF9 Feldhaus Klinker</title>
+  <link rel="stylesheet" href="scss/styles.css">
+  <script src="https://kit.fontawesome.com/f2fb6ae114.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--HEADER--start-->
+  <header id="header" class="header">
+    <div class="header__upper cont">
+
+      <div class="header__upper__left">
+        <div class="header__upper__left__hamburger">
+          <button class="header__upper__left__hamburger__nav-toggle">
+            <i class="fa-solid fa-bars icon-style"></i>
+          </button>
+        </div>
+        <div class="header__upper__left__logo">
+          <a href="index.html">
+            <img class="header__upper__left__logo__img" id="header-img" src="images/logo.png" alt="logo klinker.vip" width="910" height="266">
+          </a>
+        </div>
+      </div>
+
+      <div class="header__upper__right">
+
+        <div class="header__upper__right__search">
+          <i class="header__upper__right__search__icon fa-solid fa-magnifying-glass icon-style"></i>
+          <input class="header__upper__right__search__form" type="text">
+        </div>
+
+        <div class="header__upper__right__liked">
+          <i class="fa-regular fa-heart icon-style"></i>
+        </div>
+
+        <div class="header__upper__right__seen">
+          <i class="fa-regular fa-eye icon-style"></i>
+        </div>
+
+        <div class="header__upper__right__basket">
+          <i class="fa-solid fa-basket-shopping icon-style"></i>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="header__lower--background cont-null">
+        <div class="header__lower cont">
+          <nav id="nav-bar" class="header__lower__nav">
+            <ul class="header__lower__nav__links">
+              <li class="header__lower__nav__links__link"><a href="catalog.html">Catalog</a></li>
+              <!-- <li class="header__lower__nav__links__link"><a href="">Services</a></li>
+              <li class="header__lower__nav__links__link"><a href="">About us</a></li>
+              <li class="header__lower__nav__links__link"><a href="">Contacts</a></li> -->
+              <li class="header__lower__nav__links__link"><a href="tel:+1509783513">+1 234 567 890</a></li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+  </header>
+  <!--HEADER--end-->
+
+  <main>
+    <section class="main cont">
+
+      <div class="main__cont">
+        <div class="main__cont__title"></div>
+      </div>
+
+      <div class="main__window">
+        <div class="main__window__top__left"></div>
+
+        <div class="main__window__bottom__left">
+          <div class="main__window__bottom__left__grid"></div>
+        </div>
+
+        <div class="main__window__middle__top">
+          <div class="main__window__middle__top__price"></div>
+
+          <div class="main__window__middle__top__stock">
+            <div class="main__window__middle__top__stock__info"></div>
+            <div class="main__window__middle__top__stock__subtotal">
+              <div class="main__window__middle__top__stock__subtotal__value">
+                <select name="Quantity" id="" class="select_select">
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="main__window__middle__top__buy">
+            <div class="main__window__middle__top__buy__select">
+              <button class="main__window__middle__top__buy__select__left">m<sup>2</sup></button>
+              <button class="main__window__middle__top__buy__select__middle">pc</button>
+              <button class="main__window__middle__top__buy__select__right">pack</button>
+            </div>
+            <div class="main__window__middle__top__buy__area">
+              <button class="main__window__middle__top__buy__area__left">-</button>
+              <input type="number" class="main__window__middle__top__buy__area__input" min="1" max="10000" list="browsers" name="browser" id="browser">
+              <button class="main__window__middle__top__buy__area__right">+</button>
+            </div>
+            <button class="main__window__middle__top__buy__button_buy">Buy</button>
+            <button class="main__window__middle__top__buy__button_add">Add to cart</button>
+          </div>
+        </div>
+
+        <div class="main__window__middle__bottom"></div>
+
+        <div class="main__window__right__top"></div>
+        <div class="main__window__right__bottom"></div>
+
+        <div class="modal">
+          <div class="modal__box">
+            <span class="close">&times;</span>
+            <img class="modal__content">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="additional"></section>
+    <section class="similar"></section>
+    <section class="recently_viewed"></section>
+
+  </main>
+  
+
+  <script src="data/cart.js"></script>
+  <script src="data/products.js"></script>
+  <script src="js/product_page.js"></script>
+  
+</body>
+</html>
