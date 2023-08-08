@@ -119,7 +119,6 @@ slideshowImages.forEach((image) => {
 //Starting slider once the latest slide has been loaded
 
 slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
-    console.log('last loaded');
     start = setInterval(sliderInterval, 3000);
 })
 
