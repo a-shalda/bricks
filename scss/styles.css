@@ -546,7 +546,7 @@ sup {
   left: 0;
   right: 0;
   top: 0;
-  background-color: hsla(0, 0%, 0%, 0.483);
+  background-color: hsla(0, 0%, 0%, 0.44);
   border-radius: 0.5rem;
 }
 .slideshow__slide__abs__box {
@@ -574,7 +574,7 @@ sup {
   color: white;
   font-size: clamp(1rem, 2vw + 0.01rem, 2rem);
   line-height: clamp(1.5rem, 2vw + 0.01rem, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.2rem;
   text-align: center;
 }

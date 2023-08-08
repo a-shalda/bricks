@@ -2,7 +2,7 @@ const slider_items = [
   {
     img: 'images/slider/7750_455_slider.jpg',
     title: 'Embelish your home',
-    desc: 'More than 1,000 fasade materials in stock at affordable prices',
+    desc: 'Fasade klinker brick slips in Moscow',
     id: 1
   }, 
   // {

@@ -11,7 +11,7 @@ sliderHTML += `
             <div class="slideshow__slide__abs__box__cont">
                 <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
                 <p class="slideshow__slide__abs__box__cont__desc">${item.desc}</p>
-                <button class="slideshow__slide__abs__box__cont__button">Explore</button>
+                <a href="brick_slips.html"><button class="slideshow__slide__abs__box__cont__button">Explore</button></a>
             </div>
         </div>
     </div>
