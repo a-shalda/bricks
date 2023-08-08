@@ -37,9 +37,6 @@ const sideButtonsHTML = `
 document.querySelector('.slideshow').innerHTML = sliderHTML + sideButtonsHTML;
 document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 
-//Adding pulsing animation
-
-
 
 //Adding event listeners
 
@@ -98,13 +95,33 @@ let sliderInterval = function() {
 
 let start;
 
-window.onload = function() {
-    start = setInterval(sliderInterval, 3000);
-}
-
-
 document.querySelector('.slideshow').addEventListener('mouseenter', () => {clearInterval(start)});
 document.querySelector('.slideshow').addEventListener('mouseleave', () => {start = setInterval(sliderInterval, 3000);});
+
+
+//Adding pulsing animation
+
+const slideshowPulse = document.querySelector('.slideshow');
+
+slideshowPulse.classList.add('slider_blurred');
+
+const slideshowImages = slideshowPulse.querySelectorAll('img');
+
+slideshowImages.forEach((image) => {
+    image.classList.add('img_unloaded');
+
+    image.addEventListener('load', () => {
+        image.classList.remove('img_unloaded');
+        slideshowPulse.classList.remove('slider_blurred');
+    })
+})
+
+//Starting slider once the latest slide has been loaded
+
+slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
+    console.log('last loaded');
+    start = setInterval(sliderInterval, 3000);
+})
 
 
 //HAMBURGER MENU
@@ -152,10 +169,8 @@ function showCategories() {
 
 document.querySelectorAll('.categories__box').forEach((cont) => {
     cont.classList.add('cont_blurred');
-    console.log(cont);
 
     const image = cont.querySelector('img');
-    console.log(image);
 
     image.classList.add('img_unloaded');
 

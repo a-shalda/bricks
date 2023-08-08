@@ -147,3 +147,25 @@
     to {opacity: 1}
   }
 }
+
+.img_unloaded {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.slider_blurred {
+  background-color: var(--medium-gray-color);
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
