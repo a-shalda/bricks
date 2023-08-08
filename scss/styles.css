@@ -307,6 +307,11 @@ sup {
      object-fit: cover;
   transition: transform 0.5s, opacity 0.5s;
 }
+@media (min-width: 79em) {
+  .categories__box__img {
+    height: 15rem;
+  }
+}
 .categories__box__title {
   position: absolute;
   bottom: 0;
