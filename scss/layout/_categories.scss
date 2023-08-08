@@ -35,11 +35,14 @@
     }
 
     &__img {
-      height: 13rem;
+      height: 10rem;
       width: 100%;
       border-radius: 0.5rem;
       object-fit: cover;
       transition: transform 0.5s, opacity 0.5s;
+
+      @include breakpoint(medium) {height: 12rem;}
+
     }
 
     &__title {

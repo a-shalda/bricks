@@ -300,12 +300,17 @@ sup {
   cursor: pointer;
 }
 .categories__box__img {
-  height: 13rem;
+  height: 10rem;
   width: 100%;
   border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.5s, opacity 0.5s;
+}
+@media (min-width: 42.75em) {
+  .categories__box__img {
+    height: 12rem;
+  }
 }
 .categories__box__title {
   position: absolute;
