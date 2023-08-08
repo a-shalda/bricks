@@ -37,6 +37,10 @@ const sideButtonsHTML = `
 document.querySelector('.slideshow').innerHTML = sliderHTML + sideButtonsHTML;
 document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 
+//Adding pulsing animation
+
+
+
 //Adding event listeners
 
 document.querySelectorAll('.slideshow__dots__cont__dot')
@@ -143,6 +147,23 @@ function showCategories() {
     }
     document.querySelector('.categories').innerHTML = categoriesHTML;
 }
+
+//Adding pulsing animation
+
+document.querySelectorAll('.categories__box').forEach((cont) => {
+    cont.classList.add('cont_blurred');
+    console.log(cont);
+
+    const image = cont.querySelector('img');
+    console.log(image);
+
+    image.classList.add('img_unloaded');
+
+    image.addEventListener('load', () => {
+        image.classList.remove('img_unloaded');
+        cont.classList.remove('cont_blurred');
+    })
+})
 
 
 //Adding event listeners to enlarge on mouseenter
@@ -392,6 +413,7 @@ document.querySelectorAll('.product__top__cont').forEach((cont) => {
         cont.classList.remove('cont_blurred');
     })
 })
+
 
 //Adding onmouse image animation
 
