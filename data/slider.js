@@ -1,7 +1,7 @@
 const slider_items = [
   {
     img: 'images/slider/336_06_slider.jpg',
-    title: 'Wide variety of fasade brick slips',
+    title: 'Fasade brick slips',
     desc: 'More than 1,000 colors and shapes in Moscow',
     id: 1
   }, 
