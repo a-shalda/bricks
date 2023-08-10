@@ -64,7 +64,8 @@ const products = [
     },
 
     image_original: [
-      'img/images/R303NF/original/r303nf.jpg', 
+      'images/product_images/brick_slip/r303nf9/main/r303nf9_main.jpg', 
+      'images/product_images/brick_slip/r303nf9/main/r303nf9_side.jpg', 
     ],
     image_thumbnail: [
       'images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_main.jpg', 
