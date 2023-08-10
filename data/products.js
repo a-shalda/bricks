@@ -26,19 +26,16 @@ const products = [
     },
 
     image_original: [
-      'img/images/R100NF/original/R100NF_full.jpg', 
-      'img/images/R100NF/original/R100NF_full_side.jpg', 
-      'img/images/R100NF/original/R100NF_house_day.jpeg', 
-      'img/images/R100NF/original/R100NF_house_night.jpeg', 
-      'img/images/R100NF/original/R100NF_fasade.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf9_main.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf9_side.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf_house_day.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf_house_night.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf_fasade.jpg', 
     ],
 
     image_thumbnail: [
       'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
       'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
-      'img/images/R100NF/thumbnails/R100NF_house_day.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_house_night.jpeg', 
-      'img/images/R100NF/thumbnails/R100NF_fasade.jpg', 
     ]
   }, {
     id: 'R303NF9',
@@ -130,11 +127,11 @@ const products = [
     },
 
     image_original: [
-      'img/images/R100NF/original/R100NF_full.jpg', 
-      'img/images/R100NF/original/R100NF_full_side.jpg', 
-      'img/images/R100NF/original/R100NF_house_day.jpeg', 
-      'img/images/R100NF/original/R100NF_house_night.jpeg', 
-      'img/images/R100NF/original/R100NF_fasade.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf9_main.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf9_side.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf_house_day.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf_house_night.jpg', 
+      'images/product_images/brick_slip/r100nf9/main/r100nf_fasade.jpg', 
     ],
 
     image_thumbnail: [
