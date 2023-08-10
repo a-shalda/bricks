@@ -4,18 +4,24 @@
 let sliderHTML = "";
 const slides = slider_items.forEach((item) => {
 
-sliderHTML += `
-    <div class="slideshow__slide">
-        <img src="${item.img}" class="slideshow__slide__img fade" data-product-id="${item.id}">
-        <div class="slideshow__slide__abs">
-            <div class="slideshow__slide__abs__box__cont">
-                <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
-                <p class="slideshow__slide__abs__box__cont__desc">${item.desc}</p>
-                <a href="brick_slips.html"><button class="slideshow__slide__abs__box__cont__button">Explore</button></a>
+    let sliderHeight;
+
+    if (window.innerWidth <= 906) {sliderHeight = 480;}
+    else {sliderHeight = 640;}
+
+    sliderHTML += `
+        <div class="slideshow__slide">
+            <img srcset="images/slider/medium_size/klinker_mix_500.jpg 500w, images/slider/medium_size/klinker_mix_800.jpg 800w, images/slider/klinker_mix.jpg 1200w" sizes="(max-width: 500px) 500px, (max-width: 800px) 800px, (max-width: 1200px) 1200px,"
+            src="images/slider/medium_size/klinker_mix_500.jpg" class="slideshow__slide__img fade" data-product-id="${item.id}" width="" height="${sliderHeight}" >
+            <div class="slideshow__slide__abs">
+                <div class="slideshow__slide__abs__box__cont">
+                    <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
+                    <p class="slideshow__slide__abs__box__cont__desc">${item.desc}</p>
+                    <a href="brick_slips.html"><button class="slideshow__slide__abs__box__cont__button">Explore</button></a>
+                </div>
             </div>
         </div>
-    </div>
-`
+    `
 });
 
 let lowerButtonsHTML = "";
@@ -118,9 +124,9 @@ slideshowImages.forEach((image) => {
 
 //Starting slider once the latest slide has been loaded
 
-slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
-    start = setInterval(sliderInterval, 3000);
-})
+// slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
+//     start = setInterval(sliderInterval, 3000);
+// })
 
 
 //HAMBURGER MENU
