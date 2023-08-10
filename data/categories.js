@@ -36,7 +36,7 @@ const categories = [
     path: 'window_sills.html'
   }, {
     id: 'eight',
-    img: 'images/categories/img_glue.jpg',
+    img: 'images/categories/mortar.jpg',
     title: 'Mortars',
     path: 'mortars.html'
   }

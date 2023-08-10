@@ -1,7 +1,7 @@
 const slider_items = [
   {
     img: 'images/slider/klinker_mix.jpg',
-    title: 'Various shapes and colors',
+    title: 'Shapes and colors',
     desc: 'To clad your walls with a style',
     id: 1
   },{
