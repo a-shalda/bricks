@@ -12,7 +12,7 @@ const slides = slider_items.forEach((item) => {
     sliderHTML += `
         <div class="slideshow__slide">
             <img srcset="${item.img_800} 800w, ${item.img} 1200w" sizes="(max-width: 500px) 800px, 1200px"
-            src="${item.img}" class="slideshow__slide__img fade" data-product-id="${item.id}" width="" height="${sliderHeight}">
+            src="${item.img}" class="slideshow__slide__img fade" data-product-id="${item.id}" height="${sliderHeight}">
             <div class="slideshow__slide__abs">
                 <div class="slideshow__slide__abs__box__cont">
                     <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
@@ -124,9 +124,9 @@ slideshowImages.forEach((image) => {
 
 //Starting slider once the latest slide has been loaded
 
-// slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
-//     start = setInterval(sliderInterval, 3000);
-// })
+slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
+    start = setInterval(sliderInterval, 3000);
+})
 
 
 //HAMBURGER MENU
