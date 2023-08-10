@@ -95,8 +95,7 @@ const products = [
     },
 
     image_original: [
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+      'images/product_images/brick/k658wdf/main/k658wdf_main.jpg', 
     ],
     image_thumbnail: [
       'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
