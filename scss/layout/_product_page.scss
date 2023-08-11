@@ -30,6 +30,7 @@
   }
 
   &__window {
+    padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
 
@@ -120,6 +121,10 @@
           // border-right: 1px solid var(--light-light-gray-color);
           height: 100%;
 
+          @include breakpoint(xlarge) {
+            height: 35rem;
+          }
+
           &__img {
             width: 100%;
             border-radius: 0.5rem;
@@ -128,11 +133,7 @@
             @include breakpoint(medium) {
               min-height: 29rem;
               min-width: 27rem;
-            }
-
-            @include breakpoint(xlarge) {
-              min-height: 29rem;
-              min-width: 20rem;
+              max-height: 44rem;
             }
 
             &:hover {
@@ -199,8 +200,9 @@
           }
 
           @include breakpoint(xlarge) {
+            padding-top: 2rem;
             grid-template-columns: repeat(10, 1fr);
-            gap: 0.5rem;
+            gap: 1rem;
             grid-template-areas: 
             "one two three four five six seven eight nine ten";
           }
@@ -211,6 +213,10 @@
             height: 85%;
             overflow: hidden;
             border-radius: 0.3rem;
+
+            @include breakpoint(xlarge) {
+              height: 6rem;
+            }
 
             &__img {
               border-radius: 0.3rem;
@@ -243,6 +249,10 @@
           padding-bottom: 1rem;
           gap: 1rem;
 
+          @include breakpoint(xlarge) {
+            padding-inline: 1rem;
+          }
+
           &__left {
             display: flex;
             width: 50%;
@@ -253,6 +263,12 @@
             border-top-right-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
             margin-left: -1px;
+
+            @include breakpoint(xlarge) {
+              margin-left: 0;
+              border-top-left-radius: 0.1rem;
+              border-bottom-left-radius: 0.1rem;
+            }
 
             &__box {
               line-height: 2.5rem;
@@ -509,7 +525,7 @@
         padding: 1.2rem;
 
         @include breakpoint(xlarge) {
-          padding-top: 0;
+          padding-top: 1rem;
         }
 
         &__left {
