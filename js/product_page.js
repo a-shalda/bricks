@@ -83,14 +83,14 @@ document.querySelector('.main__cont__title').innerHTML = productTitle;
 const imageBox = document.querySelectorAll('.main__window__top__left__cont');
 
 imageBox.forEach((box) => {
-  box.classList.add('slider_blurred');
+  box.classList.add('image_blurred');
 
   const image = box.querySelector('img');
   image.classList.add('img_unloaded');
 
   image.addEventListener('load', () => {
     image.classList.remove('img_unloaded');
-    box.classList.remove('slider_blurred');
+    box.classList.remove('image_blurred');
   })
 })
 
@@ -99,14 +99,14 @@ imageBox.forEach((box) => {
 const thumbnailBox = document.querySelectorAll('.main__window__bottom__left__grid__cont');
 
 thumbnailBox.forEach((box) => {
-  box.classList.add('slider_blurred');
+  box.classList.add('thumbnail_blurred');
 
   const thumbnailImage = box.querySelector('img');
   thumbnailImage.classList.add('img_unloaded');
 
   thumbnailImage.addEventListener('load', () => {
     thumbnailImage.classList.remove('img_unloaded');
-    box.classList.remove('slider_blurred');
+    box.classList.remove('thumbnail_blurred');
   })
 })
 

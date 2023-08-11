@@ -33,25 +33,29 @@
     border-radius: 0.5rem;
     box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
 
-    @include breakpoint(medium) {
-      display: grid;
+    display: grid;
 
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four";
+    
+    .main__window__top__left {grid-area: one;}
+    .main__window__bottom__left {grid-area: two;}
+    .main__window__middle__top {grid-area: three;}
+    .main__window__middle__bottom {grid-area: four;}
+
+    @include breakpoint(medium) {
       grid-template-areas: 
       "two one"
       "two one"
       "two one"
       "three three"
       "four four";
-      
-      .main__window__top__left {grid-area: one;}
-      .main__window__bottom__left {grid-area: two;}
-      .main__window__middle__top {grid-area: three;}
-      .main__window__middle__bottom {grid-area: four;}
     }
 
     @include breakpoint(xlarge) {
-      display: grid;
-
       grid-template-areas: 
       "one three"
       "one four"
@@ -59,11 +63,6 @@
       "one four"
       "one four"
       "two two";
-      
-      .main__window__top__left {grid-area: one;}
-      .main__window__bottom__left {grid-area: two;}
-      .main__window__middle__top {grid-area: three;}
-      .main__window__middle__bottom {grid-area: four;}
     }
 
     &__top {
@@ -109,8 +108,7 @@
         &__cont {
           display: none;
           padding: 1rem;
-          aspect-ratio: 5/4; // REMOVE
-          border-right: 1px solid var(--light-light-gray-color);
+          // border-right: 1px solid var(--light-light-gray-color);
 
           &__img {
             width: 100%;
@@ -201,7 +199,6 @@
             padding: 0.1rem;
             margin: 0.3rem;
             display: flex;
-            aspect-ratio: 5/4; //REMOVE
             transition: outline 0.3s;
 
             &__img {
@@ -644,4 +641,17 @@ select {
   &:focus {
     outline: 1px solid red;
   }
+}
+
+.image_blurred {
+  background-color: var(--medium-gray-color);
+  animation: pulse 2.5s infinite;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.thumbnail_blurred {
+  background-color: var(--medium-gray-color);
+  animation: pulse 2.5s infinite;
+  border-radius: 0.5rem;
 }
