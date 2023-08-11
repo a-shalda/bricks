@@ -183,6 +183,7 @@
 .slider_blurred {
   background-color: var(--medium-gray-color);
   animation: pulse 2.5s infinite;
+  border-radius: 0.5rem;
 }
 
 @keyframes pulse {

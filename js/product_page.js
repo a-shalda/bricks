@@ -78,6 +78,22 @@ document.querySelector('.main__window__top__left').innerHTML = productOriginalHT
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.main__cont__title').innerHTML = productTitle;
 
+//Adding pulsing animation
+const thumbnailBox = document.querySelectorAll('.main__window__bottom__left__grid__cont');
+
+thumbnailBox.forEach((box) => {
+  box.classList.add('slider_blurred');
+
+  const thumbnailImage = box.querySelector('img');
+  thumbnailImage.classList.add('img_unloaded');
+
+  thumbnailImage.addEventListener('load', () => {
+    thumbnailImage.classList.remove('img_unloaded');
+    box.classList.remove('slider_blurred');
+  })
+})
+
+
 //Image gallery
 
 document.querySelector('.main__window__top__left__button--prev').addEventListener('click', () => {
@@ -534,6 +550,11 @@ else if (supplierPriceType === 'pc') {
   }
 }
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
+
+
+
+
+
 
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
