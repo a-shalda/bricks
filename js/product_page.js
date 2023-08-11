@@ -252,9 +252,9 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
   optionsHTML += `<option>select quantity...</option>`;
 
-  for (let i = 0; i < 99; i++) {
+  for (let i = 0; i < 90; i++) {
 
-    if (totalVolume >= 99) {break;}
+    if (totalVolume >= 90) {break;}
     totalVolume = totalVolume + baseVolume;
 
     if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
@@ -283,7 +283,13 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
     if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
     else {totalPacksModified = totalPacks + ` packs`}
 
-    if (window.innerWidth <= 600) {
+
+    if (window.innerWidth <= 350) {
+      optionsHTML += `
+      <option>${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+    `;
+    }
+    else if (window.innerWidth <= 600) {
       optionsHTML += `
       <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
     `;
@@ -329,11 +335,11 @@ else if (supplierPriceType === 'pc') {
     
       optionsHTML += `<option>select quantity...</option>`;
     
-      for (let i = 0; i < 99; i++) {
+      for (let i = 0; i < 90; i++) {
 
         if (price >= priceTotalLimit) {break;}
     
-        if (totalVolume >= 99) {break;}
+        if (totalVolume >= 90) {break;}
         totalVolume = totalVolume + baseVolume;
     
         if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
@@ -360,7 +366,12 @@ else if (supplierPriceType === 'pc') {
         if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
         else {totalPacksModified = totalPacks + ` packs`}
     
-        if (window.innerWidth <= 600) {
+        if (window.innerWidth <= 350) {
+          optionsHTML += `
+          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+        `;
+        }
+        else if (window.innerWidth <= 600) {
           optionsHTML += `
           <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
         `;
@@ -404,8 +415,13 @@ else if (supplierPriceType === 'pc') {
         if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
     
         let piecesModified = pieces + ` pcs`;
-    
-        if (window.innerWidth <= 600) {
+
+        if (window.innerWidth <= 350) {
+          optionsHTML += `
+          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+        `;
+        }
+        else if (window.innerWidth <= 600) {
           optionsHTML += `
           <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPalletsNumber} pal)</option>
         `;
@@ -450,11 +466,11 @@ else if (supplierPriceType === 'pc') {
   
     optionsHTML += `<option>select quantity...</option>`;
   
-    for (let i = 0; i < 99; i++) {
+    for (let i = 0; i < 90; i++) {
   
       if (price >= priceTotalLimit) {break;}
       
-      if (totalVolume >= 99) {break;}
+      if (totalVolume >= 90) {break;}
       totalVolume = totalVolume + baseVolume;
   
       if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
@@ -481,7 +497,12 @@ else if (supplierPriceType === 'pc') {
       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
       else {totalPacksModified = totalPacks + ` packs`}
   
-      if (window.innerWidth <= 614) {
+      if (window.innerWidth <= 350) {
+        optionsHTML += `
+        <option>${totalVolume} lin.m &nbsp;= €${priceModified}</option>
+      `;
+      }
+      else if (window.innerWidth <= 614) {
         optionsHTML += `
         <option>${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;
@@ -519,7 +540,7 @@ else if (supplierPriceType === 'pc') {
   
     optionsHTML += `<option>select quantity...</option>`;
   
-    for (let i = 0; i < 99; i++) {
+    for (let i = 0; i < 90; i++) {
   
       if (totalVolume >= 50) {break;}
       totalVolume = totalVolume + baseVolume;
@@ -548,7 +569,12 @@ else if (supplierPriceType === 'pc') {
       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
       else {totalPacksModified = totalPacks + ` packs`}
   
-      if (window.innerWidth <= 600) {
+      if (window.innerWidth <= 350) {
+        optionsHTML += `
+        <option>${piecesModified} &nbsp;= €${priceModified}</option>
+      `;
+      }
+      else if (window.innerWidth <= 600) {
         optionsHTML += `
         <option>${piecesModified} &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;
