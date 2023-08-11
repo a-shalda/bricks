@@ -78,7 +78,24 @@ document.querySelector('.main__window__top__left').innerHTML = productOriginalHT
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.main__cont__title').innerHTML = productTitle;
 
-//Adding pulsing animation
+
+//Adding pulsing animation to main images
+const imageBox = document.querySelectorAll('.main__window__top__left__cont');
+
+imageBox.forEach((box) => {
+  box.classList.add('slider_blurred');
+
+  const image = box.querySelector('img');
+  image.classList.add('img_unloaded');
+
+  image.addEventListener('load', () => {
+    image.classList.remove('img_unloaded');
+    box.classList.remove('slider_blurred');
+  })
+})
+
+
+//Adding pulsing animation to thumbnails
 const thumbnailBox = document.querySelectorAll('.main__window__bottom__left__grid__cont');
 
 thumbnailBox.forEach((box) => {
