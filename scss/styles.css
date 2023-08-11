@@ -942,6 +942,7 @@ sup {
     padding-inline: 1rem;
     margin-left: 0;
     gap: 1rem;
+    border-bottom: none;
   }
 }
 .main__window__middle__top__price__left {
