@@ -107,24 +107,26 @@ document.querySelector('.slideshow').addEventListener('mouseleave', () => {start
 
 //Adding pulsing animation
 
-const slideshowPulse = document.querySelector('.slideshow');
+const imageBox = document.querySelectorAll('.slideshow__slide');
 
-slideshowPulse.classList.add('slider_blurred');
+imageBox.forEach((box) => {
+  box.classList.add('slider_blurred');
 
-const slideshowImages = slideshowPulse.querySelectorAll('img');
+  const image = box.querySelector('img');
+  image.classList.add('img_unloaded');
 
-slideshowImages.forEach((image) => {
-    image.classList.add('img_unloaded');
-
-    image.addEventListener('load', () => {
-        image.classList.remove('img_unloaded');
-        slideshowPulse.classList.remove('slider_blurred');
-    })
+  image.addEventListener('load', () => {
+    image.classList.remove('img_unloaded');
+    box.classList.remove('slider_blurred');
+  })
 })
 
 //Starting slider once the latest slide has been loaded
+const mainSlider = document.querySelector('.slideshow');
 
-slideshowImages[slideshowImages.length - 1].addEventListener('load', () => {
+const allSlides = mainSlider.querySelectorAll('img');
+
+allSlides[allSlides.length - 1].addEventListener('load', () => {
     start = setInterval(sliderInterval, 3000);
 })
 
