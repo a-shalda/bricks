@@ -740,14 +740,26 @@ sup {
 .main__window .main__window__middle__bottom {
   grid-area: four;
 }
+@media (min-width: 29em) {
+  .main__window {
+    grid-template-columns: 25% 1fr;
+    grid-template-areas: "two one" "two one" "two one" "three three" "four four";
+  }
+}
 @media (min-width: 42.75em) {
   .main__window {
-    grid-template-areas: "two one" "two one" "two one" "three three" "four four";
+    grid-template-columns: 20% 1fr;
+  }
+}
+@media (min-width: 56.625em) {
+  .main__window {
+    grid-template-columns: 15% 1fr;
   }
 }
 @media (min-width: 79em) {
   .main__window {
-    grid-template-areas: "one three" "one four" "one four" "one four" "one four" "two two";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "one one three three" "one one four four" "two two two two" "two two two two";
   }
 }
 .main__window__top__left {
@@ -790,6 +802,7 @@ sup {
 .main__window__top__left__cont {
   display: none;
   padding: 1rem;
+  height: 100%;
 }
 .main__window__top__left__cont__img {
   width: 100%;
@@ -822,6 +835,8 @@ sup {
   grid-template-areas: "one two three" "four five six" "seven eight nine";
   justify-content: space-between;
   padding: 1rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .main__window__bottom__left__grid .one {
   grid-area: one;
@@ -855,30 +870,23 @@ sup {
 }
 @media (min-width: 29em) {
   .main__window__bottom__left__grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "one two three four" "five six seven eight" "nine ten eleven twelve";
-  }
-}
-@media (min-width: 42.75em) {
-  .main__window__bottom__left__grid {
-    max-width: 9.7rem;
     grid-template-columns: 1fr;
     grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten";
   }
 }
 @media (min-width: 79em) {
   .main__window__bottom__left__grid {
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "one two three four five six" "seven eight nine ten eleven twelve";
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0.5rem;
+    grid-template-areas: "one two three four five six seven eight nine ten";
   }
 }
 .main__window__bottom__left__grid__cont {
   padding: 0.1rem;
-  margin: 0.3rem;
-  display: flex;
   transition: outline 0.3s;
+  height: 85%;
+  overflow: hidden;
+  border-radius: 0.3rem;
 }
 .main__window__bottom__left__grid__cont__img {
   border-radius: 0.3rem;
@@ -887,6 +895,7 @@ sup {
   width: 100%;
   opacity: 0.6;
   transition: opacity 0.3s;
+  height: 99%;
 }
 .main__window__bottom__left__grid__cont__img:hover {
   cursor: pointer;

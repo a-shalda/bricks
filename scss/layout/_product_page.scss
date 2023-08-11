@@ -46,7 +46,8 @@
     .main__window__middle__top {grid-area: three;}
     .main__window__middle__bottom {grid-area: four;}
 
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
+      grid-template-columns: 25% 1fr;
       grid-template-areas: 
       "two one"
       "two one"
@@ -55,14 +56,22 @@
       "four four";
     }
 
+    @include breakpoint(medium) {
+      grid-template-columns: 20% 1fr;
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: 15% 1fr;
+    }
+
     @include breakpoint(xlarge) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
       grid-template-areas: 
-      "one three"
-      "one four"
-      "one four"
-      "one four"
-      "one four"
-      "two two";
+      "one one three three"
+      "one one four four"
+      "two two two two"
+      "two two two two";
     }
 
     &__top {
@@ -109,6 +118,7 @@
           display: none;
           padding: 1rem;
           // border-right: 1px solid var(--light-light-gray-color);
+          height: 100%;
 
           &__img {
             width: 100%;
@@ -150,6 +160,7 @@
           "seven eight nine";
           justify-content: space-between;
           padding: 1rem;
+          column-gap: 0.5rem;
 
           .one {grid-area: one;}
           .two {grid-area: two;}
@@ -162,17 +173,18 @@
           .nine {grid-area: nine;}
           .ten {grid-area: ten;}
 
-          @include breakpoint(small) {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-areas: 
-            "one two three four"
-            "five six seven eight" 
-            "nine ten eleven twelve";
-          }
+          // @include breakpoint(small) {
+          //   grid-template-columns: 1fr 1fr 1fr 1fr;
+          //   grid-template-areas: 
+          //   "one two three four"
+          //   "five six seven eight" 
+          //   "nine ten eleven twelve";
+          // }
 
-          @include breakpoint(medium) {
-            max-width: 9.7rem;
+          @include breakpoint(small) {
+            // max-width: 7rem;
             grid-template-columns: 1fr;
+            
             grid-template-areas: 
             "one"
             "two"
@@ -187,19 +199,18 @@
           }
 
           @include breakpoint(xlarge) {
-            max-width: fit-content;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 0.5rem;
             grid-template-areas: 
-            "one two three four five six"
-            "seven eight nine ten eleven twelve";
-            // grid-auto-rows: min-content; //For Safari
+            "one two three four five six seven eight nine ten";
           }
 
           &__cont {
             padding: 0.1rem;
-            margin: 0.3rem;
-            display: flex;
             transition: outline 0.3s;
+            height: 85%;
+            overflow: hidden;
+            border-radius: 0.3rem;
 
             &__img {
               border-radius: 0.3rem;
@@ -207,6 +218,9 @@
               width: 100%;
               opacity: 0.6;
               transition: opacity 0.3s;
+              height: 99%;
+
+
 
               &:hover {
                 cursor: pointer;
