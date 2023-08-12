@@ -748,13 +748,13 @@ sup {
 @media (min-width: 42.75em) {
   .main__window {
     padding: 1rem;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 18% 1fr;
     grid-template-areas: "two one" "two one" "two one" "three three" "four four";
   }
 }
 @media (min-width: 56.625em) {
   .main__window {
-    grid-template-columns: 14% 1fr;
+    grid-template-columns: 13% 1fr;
   }
 }
 @media (min-width: 79em) {
@@ -803,7 +803,32 @@ sup {
 .main__window__top__left__cont {
   display: none;
   padding: 1rem;
-  height: 100%;
+  height: 16rem;
+}
+@media (min-width: 25em) {
+  .main__window__top__left__cont {
+    height: 20rem;
+  }
+}
+@media (min-width: 29em) {
+  .main__window__top__left__cont {
+    height: 25rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .main__window__top__left__cont {
+    height: 30rem;
+  }
+}
+@media (min-width: 50em) {
+  .main__window__top__left__cont {
+    height: 36.4rem;
+  }
+}
+@media (min-width: 56.625em) {
+  .main__window__top__left__cont {
+    height: 40rem;
+  }
 }
 @media (min-width: 79em) {
   .main__window__top__left__cont {
@@ -815,13 +840,6 @@ sup {
   border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media (min-width: 42.75em) {
-  .main__window__top__left__cont__img {
-    min-height: 29rem;
-    min-width: 27rem;
-    max-height: 37rem;
-  }
 }
 .main__window__top__left__cont__img:hover {
   cursor: pointer;

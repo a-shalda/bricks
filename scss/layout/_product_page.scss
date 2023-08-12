@@ -52,7 +52,7 @@
 
     @include breakpoint(medium) {
       padding: 1rem;
-      grid-template-columns: 20% 1fr;
+      grid-template-columns: 18% 1fr;
       grid-template-areas: 
       "two one"
       "two one"
@@ -62,7 +62,7 @@
     }
 
     @include breakpoint(large) {
-      grid-template-columns: 14% 1fr;
+      grid-template-columns: 13% 1fr;
     }
 
     @include breakpoint(xlarge) {
@@ -118,8 +118,27 @@
         &__cont {
           display: none;
           padding: 1rem;
-          // border-right: 1px solid var(--light-light-gray-color);
-          height: 100%;
+          height: 16rem;
+
+          @include breakpoint(tiny) {
+            height: 20rem;
+          }
+
+          @include breakpoint(small) {
+            height: 25rem;
+          }
+
+          @include breakpoint(medium) {
+            height: 30rem;
+          }
+
+          @include breakpoint(medium_product_card) {
+            height: 36.4rem;
+          }
+
+          @include breakpoint(large) {
+            height: 40rem;
+          }
 
           @include breakpoint(xlarge) {
             height: 35rem;
@@ -129,16 +148,6 @@
             width: 100%;
             border-radius: 0.5rem;
             object-fit: cover;
-
-            @include breakpoint(medium) {
-              min-height: 29rem;
-              min-width: 27rem;
-              max-height: 37rem;
-            }
-
-            @include breakpoint(large) {
-              // max-height: 44rem;
-            }
 
             &:hover {
               cursor: pointer;
