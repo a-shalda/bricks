@@ -72,6 +72,40 @@ const products = [
       'images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_side.jpg', 
     ]
   }, {
+    id: 'KKLF18O',
+    type: 'Klinker brick slip',
+    name: 'Obsidian shadow (LF18)',
+    availability: 'In Stock',
+    filepath: 'KKLF18O.html',
+    priceCentsPc: 235,
+    supplierPriceType: 'pc',
+    isM2: true,
+    isLinearMeter: false,
+
+    specs: {
+      piecesInSquareMeterCm: 3100,
+      piecesInPack: 16,
+      piecesInPallet: 1232,
+      recommendedJointSpacing: '10-12',
+      thickness: 14,
+      format: '290x52x14',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1PieceGramm: 86,
+      weightOf1SquareMeter: 26.66,
+      weightOf1PackGramm: 1376,
+      manufacturer: 'King Klinker',
+      countryOfOrigin: 'Poland',
+    },
+
+    image_original: [
+      'images/product_images/brick_slip/KKLF18O/main/KKLF18O_main.webp', 
+      'images/product_images/brick_slip/KKLF18O/main/KKLF18O_interior.webp', 
+    ],
+    image_thumbnail: [
+      'images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_main.webp', 
+      'images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_interior.webp', 
+    ]
+  }, {
     id: 'K658WDF',
     type: 'Klinker brick',
     name: 'K658WDF sintra ardor belino',
