@@ -50,7 +50,7 @@ const products = [
 
     specs: {
       piecesInSquareMeterCm: 4800,
-      piecesInPack: 39,
+      piecesInPack: 48,
       squareMetersInPallet: 60,
       recommendedJointSpacing: '10-12',
       thickness: 9,
@@ -100,6 +100,7 @@ const products = [
     image_original: [
       'images/product_images/brick_slip/KKLF18O/main/KKLF18O_main.webp', 
       'images/product_images/brick_slip/KKLF18O/main/KKLF18O_interior.webp', 
+      'images/product_images/brick_slip/KKLF18O/main/KKLF18O_wall.webp', 
     ],
     image_thumbnail: [
       'images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_main.webp', 

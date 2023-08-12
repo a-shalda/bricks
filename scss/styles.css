@@ -748,13 +748,13 @@ sup {
 @media (min-width: 42.75em) {
   .main__window {
     padding: 1rem;
-    grid-template-columns: 18% 1fr;
+    grid-template-columns: 16% 1fr;
     grid-template-areas: "two one" "two one" "two one" "three three" "four four";
   }
 }
 @media (min-width: 56.625em) {
   .main__window {
-    grid-template-columns: 13% 1fr;
+    grid-template-columns: 12% 1fr;
   }
 }
 @media (min-width: 79em) {
@@ -820,14 +820,9 @@ sup {
     height: 30rem;
   }
 }
-@media (min-width: 50em) {
-  .main__window__top__left__cont {
-    height: 36.4rem;
-  }
-}
 @media (min-width: 56.625em) {
   .main__window__top__left__cont {
-    height: 40rem;
+    height: 36.4rem;
   }
 }
 @media (min-width: 79em) {
@@ -854,8 +849,7 @@ sup {
   grid-template-areas: "one two three" "four five six" "seven eight nine";
   justify-content: space-between;
   padding: 1rem;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  gap: 0.5rem;
 }
 .main__window__bottom__left__grid .one {
   grid-area: one;
@@ -887,8 +881,14 @@ sup {
 .main__window__bottom__left__grid .ten {
   grid-area: ten;
 }
+@media (min-width: 25em) {
+  .main__window__bottom__left__grid {
+    gap: 0.75rem;
+  }
+}
 @media (min-width: 29em) {
   .main__window__bottom__left__grid {
+    gap: 0.5rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "one two three four five" "six seven eight nine ten";
   }
@@ -912,9 +912,24 @@ sup {
 .main__window__bottom__left__grid__cont {
   padding: 0.1rem;
   transition: outline 0.3s;
-  height: 85%;
+  height: 4rem;
   overflow: hidden;
   border-radius: 0.3rem;
+}
+@media (min-width: 25em) {
+  .main__window__bottom__left__grid__cont {
+    height: 5rem;
+  }
+}
+@media (min-width: 29em) {
+  .main__window__bottom__left__grid__cont {
+    height: 4rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .main__window__bottom__left__grid__cont {
+    height: 4rem;
+  }
 }
 @media (min-width: 79em) {
   .main__window__bottom__left__grid__cont {
@@ -1320,7 +1335,8 @@ select {
   background-color: white;
   height: 3rem;
   border: 1px solid var(--light-gray-color);
-  padding-inline: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
   border-radius: 0.5rem;
   color: var(--gray-color);
   letter-spacing: 0.01rem;

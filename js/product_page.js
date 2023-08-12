@@ -502,7 +502,7 @@ else if (supplierPriceType === 'pc') {
         <option>${totalVolume} lin.m &nbsp;= €${priceModified}</option>
       `;
       }
-      else if (window.innerWidth <= 630) {
+      else if (window.innerWidth <= 640) {
         optionsHTML += `
         <option>${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;

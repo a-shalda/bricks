@@ -1,12 +1,10 @@
 //tiny 400px, small 464px, medium 684px, large 906px, xlarge 1264px
 //limit 1440px (90em)
-//medium_product_card 800px
 
 $breakpoints-up: (
   "tiny": 25em,
   "small": 29em,
   "medium": 42.75em,
-  "medium_product_card": 50em,
   "large": 56.625em,
   "xlarge": 79em
 );
