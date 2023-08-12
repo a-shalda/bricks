@@ -35,7 +35,6 @@
 
     display: grid;
 
-
     grid-template-areas: 
     "one"
     "two"
@@ -63,7 +62,7 @@
     }
 
     @include breakpoint(large) {
-      grid-template-columns: 15% 1fr;
+      grid-template-columns: 14% 1fr;
     }
 
     @include breakpoint(xlarge) {
@@ -134,7 +133,11 @@
             @include breakpoint(medium) {
               min-height: 29rem;
               min-width: 27rem;
-              max-height: 44rem;
+              max-height: 37rem;
+            }
+
+            @include breakpoint(large) {
+              // max-height: 44rem;
             }
 
             &:hover {
@@ -245,25 +248,30 @@
     &__middle {
 
       &__top {
-        padding-top: 1rem;
 
         &__price {
           display: flex;
           border-bottom: 1px solid var(--light-light-gray-color);
-          padding-bottom: 1rem;
+          border-top: 1px solid var(--light-light-gray-color);
+          padding-block: 1rem;
           gap: 1rem;
 
           @include breakpoint(small) {
             margin-left: -0.5rem;
+            margin-right: -0.5rem;
+
             gap: 0.5rem;
           }
 
           @include breakpoint(medium) {
             margin-left: -1rem;
+            margin-right: -1rem;
             gap: 0;
           }
 
           @include breakpoint(xlarge) {
+            border-top: none;
+            padding-top: 1rem;
             padding-inline: 1rem;
             margin-left: 0;
             gap: 1rem;
@@ -340,7 +348,11 @@
               color: rgb(162, 162, 162);
               font-size: 0.8rem;  
               letter-spacing: 0.05rem;
-              // padding-left: 0.15rem;
+              padding-block: 1rem;
+
+              @include breakpoint(xlarge) {
+                border-top: 1px solid var(--light-light-gray-color);
+              }
             }
           }
         }
@@ -355,6 +367,10 @@
 
           border-bottom: 1px solid var(--light-light-gray-color);
 
+          @include breakpoint(xlarge) {
+            margin-left: 1rem;
+            padding-left: 0;
+          }
 
           &__select {
             display: flex;
