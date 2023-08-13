@@ -38,14 +38,14 @@ products.forEach((product, index) => {
         <a class="main__window__top__left__button--prev">❮</a>
         <a class="main__window__top__left__button--next">❯</a>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="2000" height="665" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
          </div>
       `;
       }
       else {
         productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="730" height="462" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
@@ -597,7 +597,7 @@ else if (supplierPriceType === 'pc') {
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
 
 
-//Checking the viewport to correctly display options
+//Prevent options from overflow when user flips the screen
 
 window.addEventListener("resize", function () {
 
@@ -608,10 +608,6 @@ window.addEventListener("resize", function () {
     document.querySelector('.select_select').classList.remove('hide_options');
   }
 });
-
-
-
-
 
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product

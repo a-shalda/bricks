@@ -919,11 +919,13 @@ sup {
 @media (min-width: 25em) {
   .main__window__bottom__left__grid__cont {
     height: 5rem;
+    max-width: 7rem;
   }
 }
 @media (min-width: 29em) {
   .main__window__bottom__left__grid__cont {
     height: 4rem;
+    max-width: 6.5rem;
   }
 }
 @media (min-width: 42.75em) {
@@ -934,6 +936,7 @@ sup {
 @media (min-width: 79em) {
   .main__window__bottom__left__grid__cont {
     height: 6rem;
+    max-width: 7.5rem;
   }
 }
 .main__window__bottom__left__grid__cont__img {

@@ -232,10 +232,12 @@
 
             @include breakpoint(tiny) {
               height: 5rem;
+              max-width: 7rem;
             }
 
             @include breakpoint(small) {
               height: 4rem;
+              max-width: 6.5rem;
             }
 
             @include breakpoint(medium) {
@@ -244,6 +246,7 @@
 
             @include breakpoint(xlarge) {
               height: 6rem;
+              max-width: 7.5rem;
             }
 
             &__img {
