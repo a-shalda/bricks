@@ -765,6 +765,32 @@ sup {
 }
 .main__window__top__left {
   position: relative;
+  height: 16rem;
+}
+@media (min-width: 25em) {
+  .main__window__top__left {
+    height: 20rem;
+  }
+}
+@media (min-width: 29em) {
+  .main__window__top__left {
+    height: 25rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .main__window__top__left {
+    height: 30rem;
+  }
+}
+@media (min-width: 56.625em) {
+  .main__window__top__left {
+    height: 36.4rem;
+  }
+}
+@media (min-width: 79em) {
+  .main__window__top__left {
+    height: 35rem;
+  }
 }
 .main__window__top__left__button--prev, .main__window__top__left__button--next {
   cursor: pointer;
@@ -801,7 +827,11 @@ sup {
   border-bottom-right-radius: 0.4rem;
 }
 .main__window__top__left__cont {
-  display: none;
+  display: flex;
+  opacity: 0;
+  transition: opacity 300ms;
+  position: absolute;
+  top: 0;
   padding: 1rem;
   height: 16rem;
 }
@@ -1268,7 +1298,7 @@ sup {
   opacity: 1;
 }
 .main .main_box {
-  display: flex;
+  opacity: 1;
 }
 .main .modal {
   display: none;

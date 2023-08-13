@@ -38,14 +38,14 @@ products.forEach((product, index) => {
         <a class="main__window__top__left__button--prev">❮</a>
         <a class="main__window__top__left__button--next">❯</a>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="2000" height="665" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-         </div>
+          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+        </div>
       `;
       }
       else {
         productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="730" height="462" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }

@@ -80,6 +80,28 @@
       &__left {
         position: relative;
 
+        height: 16rem;
+
+        @include breakpoint(tiny) {
+          height: 20rem;
+        }
+
+        @include breakpoint(small) {
+          height: 25rem;
+        }
+
+        @include breakpoint(medium) {
+          height: 30rem;
+        }
+
+        @include breakpoint(large) {
+          height: 36.4rem;
+        }
+
+        @include breakpoint(xlarge) {
+          height: 35rem;
+        }
+
         &__button--prev, &__button--next {
           cursor: pointer;
           position: absolute;
@@ -116,7 +138,12 @@
         }
 
         &__cont {
-          display: none;
+          display: flex;
+          opacity: 0;
+          transition: opacity 300ms;
+          position: absolute;
+          top: 0;
+
           padding: 1rem;
           height: 16rem;
 
@@ -641,7 +668,9 @@
   }
 
   .main_box {
-    display: flex;
+    // display: flex;
+
+    opacity: 1;
   }
 
   .modal {
