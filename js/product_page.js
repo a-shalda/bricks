@@ -1,5 +1,7 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+
+
 // localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
@@ -115,7 +117,6 @@ thumbnailBox.forEach((box) => {
 
 //Image gallery
 
-
 document.querySelector('.main__window__top__left__button--prev').addEventListener('click', () => {
   minusImage();
 });
@@ -126,9 +127,7 @@ document.querySelector('.main__window__top__left__button--next').addEventListene
 
 let imageIndex = 1;
 
-
 showImage(imageIndex);
-
 
 // Next/previous controls
 function minusImage() {
@@ -605,6 +604,8 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 
 window.addEventListener("resize", function () {
 
+  console.log(window.innerWidth);
+
   if(window.innerWidth < 630) {
     document.querySelector('.select_select').classList.add('hide_options');
   }
@@ -612,7 +613,6 @@ window.addEventListener("resize", function () {
     document.querySelector('.select_select').classList.remove('hide_options');
   }
 });
-
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
 

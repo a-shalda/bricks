@@ -759,6 +759,7 @@ sup {
 }
 @media (min-width: 79em) {
   .main__window {
+    min-width: 77rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "one one three three" "one one four four" "two two two two" "two two two two";
   }
