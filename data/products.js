@@ -129,6 +129,10 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
+    image_large: [
+      'images/product_images/brick/k658wdf/main/k658wdf_large.jpg', 
+    ],
+
     image_original: [
       'images/product_images/brick/k658wdf/main/k658wdf_main.jpg', 
     ],
@@ -392,3 +396,12 @@ const products = [
     ]
   }
 ];
+
+{/* <picture>
+<source media="(min-width: 1200px)" srcset="${product.image_large[index]}" />
+<source media="(max-width: 500px)" srcset="${image}" />
+
+<img src='${image}' 
+class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+
+</picture> */}

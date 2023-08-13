@@ -29,6 +29,8 @@ products.forEach((product, index) => {
     productNumberInProducts = index;
     supplierPriceType = product.supplierPriceType;
 
+    // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
+
     product.image_original.forEach((image, index) => {
 
       if (index === 0) {
@@ -37,7 +39,7 @@ products.forEach((product, index) => {
         <a class="main__window__top__left__button--next">❯</a>
         <div class="main__window__top__left__cont main_box">
           <img src='${image}' class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-        </div>
+         </div>
       `;
       }
       else {
@@ -168,7 +170,7 @@ function showImage(n) {
 function openModal () {
 
   document.querySelector(".modal").style.display = "block";
-  document.querySelector(".modal__content").src = document.querySelector(".main_image").src;
+  document.querySelector(".modal__content").src = document.querySelector(".main_image").currentSrc;
   document.body.style.overflow = 'hidden';
 
   // Get the <span> element that closes the modal
@@ -594,6 +596,18 @@ else if (supplierPriceType === 'pc') {
 }
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
 
+
+//Checking the viewport to correctly display options
+
+window.addEventListener("resize", function () {
+
+  if(window.innerWidth < 630) {
+    document.querySelector('.select_select').classList.add('hide_options');
+  }
+  else if (window.innerWidth >= 630) {
+    document.querySelector('.select_select').classList.remove('hide_options');
+  }
+});
 
 
 

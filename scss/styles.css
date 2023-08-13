@@ -1358,6 +1358,12 @@ select:focus {
   border-radius: 0.5rem;
 }
 
+.hide_options {
+  overflow: hidden;
+  text-overflow: clip;
+  max-width: 15rem;
+}
+
 .cart__cont__product {
   display: flex;
   gap: 1rem;
