@@ -115,6 +115,7 @@ thumbnailBox.forEach((box) => {
 
 //Image gallery
 
+
 document.querySelector('.main__window__top__left__button--prev').addEventListener('click', () => {
   minusImage();
 });
@@ -124,7 +125,10 @@ document.querySelector('.main__window__top__left__button--next').addEventListene
 });
 
 let imageIndex = 1;
+
+
 showImage(imageIndex);
+
 
 // Next/previous controls
 function minusImage() {

@@ -140,31 +140,32 @@
         &__cont {
           display: flex;
           opacity: 0;
-          transition: opacity 300ms;
+          transition: opacity 300ms, visibility 300ms;
           position: absolute;
+          visibility: hidden;
           top: 0;
 
-          padding: 1rem;
-          height: 16rem;
+          margin: 1rem;
+          height: 14rem;
 
           @include breakpoint(tiny) {
-            height: 20rem;
+            height: 18rem;
           }
 
           @include breakpoint(small) {
-            height: 25rem;
+            height: 22.5rem;
           }
 
           @include breakpoint(medium) {
-            height: 30rem;
+            height: 27rem;
           }
 
           @include breakpoint(large) {
-            height: 36.4rem;
+            height: 33.5rem;
           }
 
           @include breakpoint(xlarge) {
-            height: 35rem;
+            height: 32rem;
           }
 
           &__img {
@@ -671,6 +672,7 @@
     // display: flex;
 
     opacity: 1;
+    visibility: visible;
   }
 
   .modal {
@@ -763,7 +765,6 @@ select {
   background-color: var(--medium-gray-color);
   animation: pulse 2.5s infinite;
   border-radius: 0.5rem;
-  margin: 1rem;
 }
 
 .thumbnail_blurred {
