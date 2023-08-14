@@ -600,20 +600,6 @@ else if (supplierPriceType === 'pc') {
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
 
 
-//Prevent options from overflow when user flips the screen
-
-// window.addEventListener("resize", function () {
-
-//   console.log(window.innerWidth);
-
-//   if(window.innerWidth < 630) {
-//     document.querySelector('.select_select').classList.add('hide_options');
-//   }
-//   else if (window.innerWidth >= 630) {
-//     document.querySelector('.select_select').classList.remove('hide_options');
-//   }
-// });
-
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
 
 let selectLeft = document.querySelector('.main__window__middle__top__buy__select__left');

@@ -1384,30 +1384,10 @@ select {
   color: var(--gray-color);
   letter-spacing: 0.01rem;
   flex-grow: 1;
-  max-width: 16.9rem;
+  width: 100%;
 }
 select:focus {
   outline: 1px solid red;
-}
-@media (min-width: 25em) {
-  select {
-    max-width: 21rem;
-  }
-}
-@media (min-width: 29em) {
-  select {
-    max-width: 25rem;
-  }
-}
-@media (min-width: 42.75em) {
-  select {
-    max-width: 36.5rem;
-  }
-}
-@media (min-width: 56.625em) {
-  select {
-    max-width: none;
-  }
 }
 
 .image_blurred {
