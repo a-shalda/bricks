@@ -834,6 +834,9 @@ sup {
   position: absolute;
   visibility: hidden;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 1rem;
   height: 14rem;
 }
@@ -1053,8 +1056,7 @@ sup {
   font-weight: 400;
 }
 .main__window__middle__top__stock {
-  padding-left: 1rem;
-  align-items: center;
+  padding-inline: 1rem;
 }
 .main__window__middle__top__stock__info {
   display: flex;
@@ -1069,11 +1071,16 @@ sup {
   font-size: 0.8rem;
   letter-spacing: 0.02rem;
 }
+.main__window__middle__top__stock__subtotal {
+  display: flex;
+}
 .main__window__middle__top__stock__subtotal__value {
   color: rgb(162, 162, 162);
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   padding-block: 1rem;
+  display: flex;
+  flex-grow: 1;
 }
 @media (min-width: 79em) {
   .main__window__middle__top__stock__subtotal__value {
@@ -1376,9 +1383,31 @@ select {
   border-radius: 0.5rem;
   color: var(--gray-color);
   letter-spacing: 0.01rem;
+  flex-grow: 1;
+  max-width: 16.9rem;
 }
 select:focus {
   outline: 1px solid red;
+}
+@media (min-width: 25em) {
+  select {
+    max-width: 21rem;
+  }
+}
+@media (min-width: 29em) {
+  select {
+    max-width: 25rem;
+  }
+}
+@media (min-width: 42.75em) {
+  select {
+    max-width: 36.5rem;
+  }
+}
+@media (min-width: 56.625em) {
+  select {
+    max-width: none;
+  }
 }
 
 .image_blurred {

@@ -145,6 +145,9 @@
           position: absolute;
           visibility: hidden;
           top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
 
           margin: 1rem;
           height: 14rem;
@@ -372,11 +375,7 @@
         }
 
         &__stock {
-          padding-left: 1rem;
-          // display: grid;
-          // grid-template-columns: 1fr 1fr;
-          align-items: center;
-          // gap: 1rem;
+          padding-inline: 1rem;
 
           &__info {
             display: flex;
@@ -394,12 +393,15 @@
           }
 
           &__subtotal {
+            display: flex;
             
             &__value {
               color: rgb(162, 162, 162);
               font-size: 0.8rem;  
               letter-spacing: 0.05rem;
               padding-block: 1rem;
+              display: flex;
+              flex-grow: 1;
 
               @include breakpoint(xlarge) {
                 border-top: 1px solid var(--light-light-gray-color);
@@ -756,10 +758,33 @@ select {
   border-radius: 0.5rem;
   color: var(--gray-color);
   letter-spacing: 0.01rem;
+  flex-grow: 1;
+
+  max-width: 16.9rem;
 
   &:focus {
     outline: 1px solid red;
   }
+
+  @include breakpoint(tiny) {
+    max-width: 21rem;
+  }
+
+  @include breakpoint(small) {
+    max-width: 25rem;
+  }
+
+  @include breakpoint(medium) {
+    max-width: 36.5rem;
+  }
+
+  @include breakpoint(large) {
+    max-width: none;
+  }
+
+
+
+
 }
 
 .image_blurred {

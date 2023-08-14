@@ -602,17 +602,17 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 
 //Prevent options from overflow when user flips the screen
 
-window.addEventListener("resize", function () {
+// window.addEventListener("resize", function () {
 
-  console.log(window.innerWidth);
+//   console.log(window.innerWidth);
 
-  if(window.innerWidth < 630) {
-    document.querySelector('.select_select').classList.add('hide_options');
-  }
-  else if (window.innerWidth >= 630) {
-    document.querySelector('.select_select').classList.remove('hide_options');
-  }
-});
+//   if(window.innerWidth < 630) {
+//     document.querySelector('.select_select').classList.add('hide_options');
+//   }
+//   else if (window.innerWidth >= 630) {
+//     document.querySelector('.select_select').classList.remove('hide_options');
+//   }
+// });
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
 
