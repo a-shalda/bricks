@@ -726,9 +726,13 @@ let userPacks = document.querySelector('.select_select');
 
 function addToCart () {
 
+
   cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   userQuantity = Number(userPacks.value);
+
+  if (userQuantity != 0) {
+
   // let typeAdded;
 
   // if (!(typeof(userQuantity) === 'number' && userQuantity >= 1)) {
@@ -815,6 +819,9 @@ function addToCart () {
   // }, 5000);
 
   console.log(cart);
+
+  }
+
 }
 
 //When input field is empty and not focused, remove inputAreaFocus
