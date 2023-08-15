@@ -599,7 +599,6 @@ else if (supplierPriceType === 'pc') {
   }
 }
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
-console.log(optionsHTML);
 
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
@@ -723,66 +722,68 @@ function error (arg, quantity, type) {
   }, 5000);
 }
 
+let userPacks = document.querySelector('.select_select');
+
 function addToCart () {
 
   cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  userQuantity = Number(inputArea.value);
-  let typeAdded;
+  userQuantity = Number(userPacks.value);
+  // let typeAdded;
 
-  if (!(typeof(userQuantity) === 'number' && userQuantity >= 1)) {
-    inputArea.value = '';
-    return;
-  }
+  // if (!(typeof(userQuantity) === 'number' && userQuantity >= 1)) {
+  //   inputArea.value = '';
+  //   return;
+  // }
 
   //Selected 'm2'
-  if (select === 'm2') {
+  // if (select === 'm2') {
 
-    if (select === 'm2' && userQuantity === 1) {typeAdded = ' square meter';}
-    else if (select === 'm2' && userQuantity > 1) {typeAdded = ' square meters';}
+  //   if (select === 'm2' && userQuantity === 1) {typeAdded = ' square meter';}
+  //   else if (select === 'm2' && userQuantity > 1) {typeAdded = ' square meters';}
 
-    if (userQuantity > m2Limit) {
-      return error('max ', m2Limit, typeAdded);
-    }
-  }
+  //   if (userQuantity > m2Limit) {
+  //     return error('max ', m2Limit, typeAdded);
+  //   }
+  // }
   //Selected 'pc'
-  else if (select === 'pc') {
+  // else if (select === 'pc') {
 
-    if (select === 'pc' && userQuantity === 1) {typeAdded = ' piece';}
-    else if (select === 'pc' && userQuantity > 1) {typeAdded = ' pieces';}
+  //   if (select === 'pc' && userQuantity === 1) {typeAdded = ' piece';}
+  //   else if (select === 'pc' && userQuantity > 1) {typeAdded = ' pieces';}
 
-    if (userQuantity > pcLimit) {
-      return error('max ', pcLimit, typeAdded);
-    }
+  //   if (userQuantity > pcLimit) {
+  //     return error('max ', pcLimit, typeAdded);
+  //   }
 
-    if (userQuantity < piecesInPack) {
-      if (piecesInPack === 1) {typeAdded = ' piece';}
-      else if (piecesInPack > 1) {typeAdded = ' pieces';}
+  //   if (userQuantity < piecesInPack) {
+  //     if (piecesInPack === 1) {typeAdded = ' piece';}
+  //     else if (piecesInPack > 1) {typeAdded = ' pieces';}
 
-      return error('min ', piecesInPack, typeAdded);
-    }
+  //     return error('min ', piecesInPack, typeAdded);
+  //   }
 
-    if (!Number.isInteger(userQuantity / piecesInPack)) {
-      userQuantity = userQuantity - (userQuantity % piecesInPack);
-    }
-  }
+  //   if (!Number.isInteger(userQuantity / piecesInPack)) {
+  //     userQuantity = userQuantity - (userQuantity % piecesInPack);
+  //   }
+  // }
   //Selected 'pack'
-  else if (select === 'pack') {
+  // else if (select === 'pack') {
 
-    if (select === 'pack' && userQuantity === 1) {typeAdded = ' pack';}
-    else if (select === 'pack' && userQuantity > 1) {typeAdded = ' packs';}
+  //   if (select === 'pack' && userQuantity === 1) {typeAdded = ' pack';}
+  //   else if (select === 'pack' && userQuantity > 1) {typeAdded = ' packs';}
 
-    if (userQuantity > packLimit) {
-      return error('max ', packLimit, typeAdded);
-    }
-  }
+  //   if (userQuantity > packLimit) {
+  //     return error('max ', packLimit, typeAdded);
+  //   }
+  // }
 
   const order = {
     id: root,
-    supplierPriceType: supplierPriceType,
-    type: select,
     quantity: userQuantity
   };
+
+  userPacks.value = userPacks.value[0];
 
   let mathingIndex;
 
@@ -801,17 +802,17 @@ function addToCart () {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   
-  let sucessHTML = `Added ${userQuantity + typeAdded}`;
+  // let sucessHTML = `Added ${userQuantity + typeAdded}`;
 
-  inputArea.value = '';
+  // inputArea.value = '';
 
-  inputArea.placeholder = sucessHTML;
+  // inputArea.placeholder = sucessHTML;
 
-  inputArea.classList.add('inputAreaFocus');
+  // inputArea.classList.add('inputAreaFocus');
 
-  timeOutSuccess = setTimeout(function () {
-    placeholder();
-  }, 5000);
+  // timeOutSuccess = setTimeout(function () {
+  //   placeholder();
+  // }, 5000);
 
   console.log(cart);
 }
