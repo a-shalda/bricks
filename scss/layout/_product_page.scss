@@ -176,6 +176,7 @@
             width: 100%;
             border-radius: 0.5rem;
             object-fit: cover;
+            // border: 1px solid var(--light-light-gray-color);
 
             &:hover {
               cursor: pointer;
@@ -755,12 +756,11 @@ select {
   color: var(--gray-color);
   letter-spacing: 0.01rem;
   flex-grow: 1;
+  width: 100%;
 
   &:focus {
     outline: 1px solid red;
   }
-
-  width: 100%;
 }
 
 .image_blurred {

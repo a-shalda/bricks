@@ -204,11 +204,11 @@ const products = [
     },
 
     image_original: [
-      'img/images/SST4817/original/SST4817.jpg', 
-    ],
+      'images/product_images/stair_tile/4817710/main/4817710_main.jpg', 
+      'images/product_images/stair_tile/4817710/main/4817710_one.jpg',     ],
     image_thumbnail: [
-      'images/product_images/stair_tile/4817710/thumbnail/4817710_main.jpg', 
-      'images/product_images/stair_tile/4817710/thumbnail/8031710_one.jpg', 
+      'images/product_images/stair_tile/4817710/thumbnail/4817710_thumbnail_main.jpg', 
+      'images/product_images/stair_tile/4817710/thumbnail/8031710_thumbnail_one.jpg', 
     ]
   }, {
     id: '8031710',
@@ -237,7 +237,9 @@ const products = [
     },
 
     image_original: [
-      'img/images/SST4817/original/SST4817.jpg', 
+      'images/product_images/stair_tile/8031710/main/8031710_floor.jpg', 
+      'images/product_images/stair_tile/8031710/main/8031710_stairs.jpg', 
+      'images/product_images/stair_tile/8031710/main/8031710_one.jpg', 
     ],
     image_thumbnail: [
       'images/product_images/stair_tile/8031710/thumbnail/8031710_floor.jpg', 
@@ -270,7 +272,8 @@ const products = [
     },
 
     image_original: [
-      'img/images/R303NF/original/r303nf.jpg', 
+      'images/product_images/thermopanel/TP228NF/main/r228nf9_main.jpg', 
+      'images/product_images/thermopanel/TP228NF/main/r228nf9_side.jpg', 
     ],
     image_thumbnail: [
       'images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_main.jpg', 
@@ -297,8 +300,8 @@ const products = [
     },
 
     image_original: [
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+      'images/product_images/fence_cap/KKFCW01/main/KKFCW01_main.webp', 
+      'images/product_images/fence_cap/KKFCW01/main/KKFCW01_fence.webp', 
     ],
     image_thumbnail: [
       'images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_main.webp', 
@@ -327,8 +330,8 @@ const products = [
     },
 
     image_original: [
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+      'images/product_images/clay_pavers/p408kf/main/p408kf_main.jpg', 
+      'images/product_images/clay_pavers/p408kf/main/p408kf_path.jpg', 
     ],
     image_thumbnail: [
       'images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_main.jpg', 
@@ -360,8 +363,8 @@ const products = [
     },
 
     image_original: [
-      'img/images/SST4817/original/SST4817.jpg', 
-    ],
+      'images/product_images/window_sills/KKWSO17/main/KKWSO17_main.webp', 
+      'images/product_images/window_sills/KKWSO17/main/KKWSO17_window.webp',     ],
     image_thumbnail: [
       'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_main.webp', 
       'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_window.webp', 
@@ -387,8 +390,8 @@ const products = [
     },
 
     image_original: [
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
-      'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+      'images/product_images/mortars/QMMDS01/main/QMMDS01_main.png', 
+
     ],
     image_thumbnail: [
       'images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_main.png', 
