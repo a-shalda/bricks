@@ -255,7 +255,7 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
   if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
   else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
 
-  optionsHTML += `<option>select quantity...</option>`;
+  optionsHTML += `<option value="0">select quantity...</option>`;
 
   for (let i = 0; i < 90; i++) {
 
@@ -291,23 +291,23 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
     if (window.innerWidth <= 350) {
       optionsHTML += `
-      <option>${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+      <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
     `;
     }
     else if (window.innerWidth <= 600) {
       optionsHTML += `
-      <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
+      <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
     `;
     }
     else {
       optionsHTML += `
-      <option>${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
     `;
     }
   }
 
-  if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
-  else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+  if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
+  else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
 
   document.querySelector('.select_select').innerHTML = optionsHTML;
 }
@@ -338,7 +338,7 @@ else if (supplierPriceType === 'pc') {
       if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
       else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
     
-      optionsHTML += `<option>select quantity...</option>`;
+      optionsHTML += `<option value="0">select quantity...</option>`;
     
       for (let i = 0; i < 90; i++) {
 
@@ -373,23 +373,23 @@ else if (supplierPriceType === 'pc') {
     
         if (window.innerWidth <= 350) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
         `;
         }
         else if (window.innerWidth <= 600) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
         `;
         }
         else {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
         `;
         }
       }
     
-      if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
-      else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+      if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
+      else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
     
       document.querySelector('.select_select').innerHTML = optionsHTML;
     }
@@ -397,7 +397,7 @@ else if (supplierPriceType === 'pc') {
       baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
       basePieces = piecesInPallet;
   
-      optionsHTML += `<option>select quantity...</option>`;
+      optionsHTML += `<option value="0">select quantity...</option>`;
     
       for (let i = 0; i < 9; i++) {
 
@@ -409,6 +409,7 @@ else if (supplierPriceType === 'pc') {
         price = (pieces * pricePc).toFixed(2);
 
         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+        totalPacks = totalPallets;
         let totalPalletsNumber = totalPallets;
         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
         else {totalPallets = totalPallets + ` pallets`;}
@@ -423,23 +424,23 @@ else if (supplierPriceType === 'pc') {
 
         if (window.innerWidth <= 350) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
         `;
         }
         else if (window.innerWidth <= 600) {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPalletsNumber} pal)</option>
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPalletsNumber} pal)</option>
         `;
         }
         else {
           optionsHTML += `
-          <option>${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
         `;
         }
       }
     
-      if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} m&sup2; specify in the cart</option>`;}
-      else {optionsHTML += `<option>>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+      if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
+      else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
     
       document.querySelector('.select_select').innerHTML = optionsHTML;
     }
@@ -469,7 +470,7 @@ else if (supplierPriceType === 'pc') {
     if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
     else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
   
-    optionsHTML += `<option>select quantity...</option>`;
+    optionsHTML += `<option value="0">select quantity...</option>`;
   
     for (let i = 0; i < 90; i++) {
   
@@ -504,23 +505,23 @@ else if (supplierPriceType === 'pc') {
   
       if (window.innerWidth <= 350) {
         optionsHTML += `
-        <option>${totalVolume} lin.m &nbsp;= €${priceModified}</option>
+        <option value="${totalPacks}">${totalVolume} lin.m &nbsp;= €${priceModified}</option>
       `;
       }
       else if (window.innerWidth <= 640) {
         optionsHTML += `
-        <option>${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
+        <option value="${totalPacks}">${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;
       }
       else {
         optionsHTML += `
-        <option>${totalVolume} lin.m &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+        <option value="${totalPacks}">${totalVolume} lin.m &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
       `;
       }
     }
   
-    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} lin.m specify in the cart</option>`;}
-    else {optionsHTML += `<option>>${totalVolume} lin.m select and specify in the cart</option>`;}
+    if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} lin.m specify in the cart</option>`;}
+    else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} lin.m select and specify in the cart</option>`;}
   
     document.querySelector('.select_select').innerHTML = optionsHTML;
   }
@@ -543,7 +544,7 @@ else if (supplierPriceType === 'pc') {
     baseVolume = 1;
     basePieces = 1;
   
-    optionsHTML += `<option>select quantity...</option>`;
+    optionsHTML += `<option value="0">select quantity...</option>`;
   
     for (let i = 0; i < 90; i++) {
   
@@ -576,28 +577,29 @@ else if (supplierPriceType === 'pc') {
   
       if (window.innerWidth <= 350) {
         optionsHTML += `
-        <option>${piecesModified} &nbsp;= €${priceModified}</option>
+        <option value="${totalPacks}">${piecesModified} &nbsp;= €${priceModified}</option>
       `;
       }
       else if (window.innerWidth <= 600) {
         optionsHTML += `
-        <option>${piecesModified} &nbsp;= €${priceModified} (${totalPacksModified})</option>
+        <option value="${totalPacks}">${piecesModified} &nbsp;= €${priceModified} (${totalPacksModified})</option>
       `;
       }
       else {
         optionsHTML += `
-        <option>${piecesModified} &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
+        <option value="${totalPacks}">${piecesModified} &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
       `;
       }
     }
   
-    if (window.innerWidth <= 600) {optionsHTML += `<option>>${totalVolume} pcs specify in the cart</option>`;}
-    else {optionsHTML += `<option>>${totalVolume} pcs select and specify in the cart</option>`;}
+    if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} pcs specify in the cart</option>`;}
+    else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} pcs select and specify in the cart</option>`;}
   
     document.querySelector('.select_select').innerHTML = optionsHTML;
   }
 }
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
+console.log(optionsHTML);
 
 
 //QUANTITY TYPE SELECTOR (m2 or pc) of the product
