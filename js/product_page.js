@@ -783,7 +783,7 @@ function addToCart () {
     quantity: userQuantity
   };
 
-  userPacks.value = userPacks.value[0];
+  userPacks.value = 0;
 
   let mathingIndex;
 
