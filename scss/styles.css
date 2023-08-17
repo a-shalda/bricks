@@ -1409,9 +1409,14 @@ select:focus {
 }
 
 .cart__cont__product {
-  display: flex;
-  gap: 1rem;
+  display: block;
 }
 .cart__cont__product__image {
   display: block;
+}
+.cart__cont__product__image__img {
+  border-radius: 0.5rem;
+}
+.cart__cont__product__price {
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */
