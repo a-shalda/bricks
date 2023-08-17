@@ -1,14 +1,11 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 console.log(cart);
 
-//GENERATING TITLE AND IMAGES
 
 let supplierPriceType = '';
 const priceTotalLimit = 9000;
-let product = '';
 let quantityPacks = 0;
 let productTitle = '';
-
 let productHTML = '';
 
 cart.forEach(item => {
@@ -253,17 +250,38 @@ cart.forEach(item => {
             if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
 
             if (totalPacks === quantityPacks) {
-              optionsHTML += `
-                <p>Quantity: ${totalVolume} lin.m</p>
-                <button class="main__window__middle__top__buy__area__left">-</button>
-                <button class="main__window__middle__top__buy__area__right">+</button>
-                <p>Packs: ${totalPacks}</p>
-                <p>Pieces: ${pieces}</p>
-                <p>Pallets: ${totalPallets}</p>
-                <p>Weight (kg): ${totalWeight}</p>
 
-                <p>Subtotal: €${priceModified}</p>
-              `;
+              productHTML += `
+              <div class="cart__cont__product">
+                <p class="cart__cont__product__id">${product.id}</p>
+                <p class="cart__cont__product__packs">${totalPacks}</p>
+                <div class="cart__cont__product__image">
+                  <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                </div>
+                <div class="cart__cont__product__price">${pricesHTML}</div>
+                <div class="cart__cont__product__title">
+                  <p class="cart__cont__product__title__name">${productTitle}</p>
+                </div>
+                <div class="cart__cont__product__quantity">
+                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
+        
+                  <div class="cart__cont__product__quantity__buttons">
+                    <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                    <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                  </div>
+        
+                  <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                  <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                  <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+                  <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+            
+                  <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+        
+                </div>
+                <div class="cart__cont__product__save"></div>
+                <div class="cart__cont__product__remove"></div>
+              </div>
+              `
             }
           }
         }
@@ -322,69 +340,34 @@ cart.forEach(item => {
 
           document.querySelector('.cart__cont__product__quantity').innerHTML = optionsHTML;
         }
-      }
-
-
-      productHTML += `
-      <div class="cart__cont__product">
-        <div class="cart__cont__product__image">
-          <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
-        </div>
-        <div class="cart__cont__product__price">${pricesHTML}</div>
-        <div class="cart__cont__product__title">
-          <p class="cart__cont__product__title__name">${productTitle}</p>
-        </div>
-        <div class="cart__cont__product__quantity">${optionsHTML}</div>
-        <div class="cart__cont__product__save"></div>
-        <div class="cart__cont__product__remove"></div>
-      </div>
-      `
+      }          
     }
   })
 });
 
+
 document.querySelector('.cart__cont').innerHTML = productHTML;
 
+let modifyQuantity = document.querySelectorAll('.cart__cont__product');
 
+modifyQuantity.forEach((product, index) => {
 
+  const id = product.querySelector('.cart__cont__product__id').innerHTML;
+  const quantityPacksCurrent = Number(product.querySelector('.cart__cont__product__packs').innerHTML);
 
-document.querySelector('.main__window__middle__top__buy__area__left').addEventListener('click', () => {
-  
-  userQuantity = Number(inputArea.value);
+  product.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
 
-  if (userQuantity >= 1) {
-    userQuantity--;
-
-    if (userQuantity === 0) {
-      inputArea.value = '';
-      inputArea.classList.remove('inputAreaFocus');
-      inputAreaFocus = false;
-      return;
+    if (quantityPacksCurrent >= 1) {
+      cart[index].quantity--;
+      localStorage.setItem('cart', JSON.stringify(cart));
     }
-    inputArea.value = userQuantity;
-    
-    //Add focus
-    inputArea.classList.add('inputAreaFocus');
-    inputAreaFocus = true;
-  }
-})
+  })
 
-document.querySelector('.main__window__middle__top__buy__area__right').addEventListener('click', () => {
-  
-  userQuantity = Number(inputArea.value) || 0;
+  product.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('click', () => {
 
-  if (select === 'm2' && userQuantity === (m2Limit - 1)) {return;}
-  else if (select === 'pc' && userQuantity === (pcLimit - 1)) {return;}
-  else if (select === 'pack' && userQuantity === (packLimit - 1)) {return;}
-
-  if (inputArea.value === '') {
-    inputArea.value = 1;
-  }
-  userQuantity++;
-  inputArea.value = userQuantity;
-
-  //Add focus
-  inputArea.classList.add('inputAreaFocus');
-  inputAreaFocus = true;
-  inputArea.classList.remove('inputAreaError');
+    if (quantityPacksCurrent >= 1) {
+      cart[index].quantity++;
+      localStorage.setItem('cart', JSON.stringify(cart));    
+    }
+  })
 })
