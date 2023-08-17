@@ -1,6 +1,6 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-localStorage.removeItem('cart');
+// localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
 
@@ -983,9 +983,9 @@ if (specs.piecesInPack) {
     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPack}</span></p>
   `
 }
-if (specs.piecesInSquareMeter) {
+if (specs.piecesInSquareMeterCm) {
   specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInSquareMeter}</span></p>
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${piecesInSquareMeter}</span></p>
   `
 }
 if (piecesInLinearMeter) {
