@@ -1,6 +1,6 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// localStorage.removeItem('cart');
+localStorage.removeItem('cart');
 
 //GENERATING TITLE AND IMAGES
 
