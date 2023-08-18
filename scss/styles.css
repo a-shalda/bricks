@@ -1408,22 +1408,95 @@ select:focus {
   max-width: 15rem;
 }
 
+.cart__cont__title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  color: var(--gray-color);
+  padding-bottom: 1rem;
+}
 .cart__cont__product {
-  border: 1px solid var(--light-light-gray-color);
   border-radius: 0.5rem;
   margin-bottom: 1rem;
-}
-.cart__cont__product__vendor {
-  display: flex;
+  transition: opacity 200ms;
+  padding: 1rem;
+  box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
+  letter-spacing: 0.02rem;
 }
 .cart__cont__product__image {
   display: block;
 }
 .cart__cont__product__image__img {
   border-radius: 0.5rem;
+  max-width: 21.875rem;
+  width: 100%;
+}
+.cart__cont__product__image__img:hover {
+  opacity: 0.95;
 }
 .cart__cont__product__price {
   display: flex;
+  margin-left: -0.92rem;
+  margin-right: -2rem;
+  padding-block: 1rem;
+}
+.cart__cont__product__vendor {
+  display: flex;
+}
+.cart__cont__product__title__name {
+  padding-block: 1rem;
+}
+.cart__cont__product__title__name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.cart__cont__product__quantity {
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.cart__cont__product__quantity__modify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart__cont__product__quantity__qty {
+  margin-top: -0.2rem;
+}
+.cart__cont__product__quantity__pallets {
+  padding-bottom: 0.5rem;
+}
+.cart__cont__product__quantity__sub-del {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart__cont__product__quantity__subtotal {
+  font-weight: 500;
+}
+.cart__cont__product__quantity__delete {
+  width: 6rem;
+  height: 2rem;
+  background-color: white;
+  border: 1px solid var(--light-gray-color);
+  color: gray;
+  align-self: flex-end;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  transition: background-color 0.1s, color 0.1s, border 0.1s;
+}
+.cart__cont__product__quantity__delete:hover {
+  cursor: pointer;
+  background-color: var(--light-gray-color);
+  border: 1px solid var(--light-gray-color);
+  color: var(--gray-color);
+}
+.cart__cont__product__quantity__delete:active {
+  background-color: var(--gray-color);
+  color: white;
+  border: 1px solid var(--gray-color);
 }
 .cart__cont__product__quantity__buttons {
   display: flex;
@@ -1472,4 +1545,10 @@ select:focus {
   background-color: var(--gray-color);
   color: white;
   border: 1px solid var(--gray-color);
+}
+
+.hide_product {
+  opacity: 0;
+  height: 0;
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
