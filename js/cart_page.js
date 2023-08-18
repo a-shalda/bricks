@@ -91,8 +91,10 @@ cart.forEach(item => {
 
             productHTML += `
             <div class="cart__cont__product">
-              <p class="cart__cont__product__id">${product.id}</p>
-              <p class="cart__cont__product__packs">${totalPacks}</p>
+              <div class="cart__cont__product__vendor">
+                <p class="cart__cont__product__vendor__code">Vendor code:&nbsp;</p>
+                <p class="cart__cont__product__vendor__id">${product.id}</p>
+              </div>
               <div class="cart__cont__product__image">
                 <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
               </div>
@@ -171,8 +173,10 @@ cart.forEach(item => {
 
                 productHTML += `
                 <div class="cart__cont__product">
-                  <p class="cart__cont__product__id">${product.id}</p>
-                  <p class="cart__cont__product__packs">${totalPacks}</p>
+                  <div class="cart__cont__product__vendor">
+                    <p class="cart__cont__product__vendor__code">Vendor code:&nbsp;</p>
+                    <p class="cart__cont__product__vendor__id">${product.id}</p>
+                  </div>
                   <div class="cart__cont__product__image">
                     <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                   </div>
@@ -229,8 +233,10 @@ cart.forEach(item => {
 
                 productHTML += `
                 <div class="cart__cont__product">
-                  <p class="cart__cont__product__id">${product.id}</p>
-                  <p class="cart__cont__product__packs">${totalPacks}</p>
+                  <div class="cart__cont__product__vendor">
+                    <p class="cart__cont__product__vendor__code">Vendor code:&nbsp;</p>
+                    <p class="cart__cont__product__vendor__id">${product.id}</p>
+                  </div>
                   <div class="cart__cont__product__image">
                     <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                   </div>
@@ -306,8 +312,10 @@ cart.forEach(item => {
 
               productHTML += `
               <div class="cart__cont__product">
-                <p class="cart__cont__product__id">${product.id}</p>
-                <p class="cart__cont__product__packs">${totalPacks}</p>
+                <div class="cart__cont__product__vendor">
+                  <p class="cart__cont__product__vendor__code">Vendor code:&nbsp;</p>
+                  <p class="cart__cont__product__vendor__id">${product.id}</p>
+                </div>
                 <div class="cart__cont__product__image">
                   <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                 </div>
@@ -381,8 +389,10 @@ cart.forEach(item => {
 
               productHTML += `
               <div class="cart__cont__product">
-                <p class="cart__cont__product__id">${product.id}</p>
-                <p class="cart__cont__product__packs">${totalPacks}</p>
+                <div class="cart__cont__product__vendor">
+                  <p class="cart__cont__product__vendor__code">Vendor code:&nbsp;</p>
+                  <p class="cart__cont__product__vendor__id">${product.id}</p>
+                </div>
                 <div class="cart__cont__product__image">
                   <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                 </div>
@@ -420,11 +430,13 @@ document.querySelector('.cart__cont').innerHTML = productHTML;
 
 
 
+//MODIFYING THE QUANTITY
+
 let modifyQuantity = document.querySelectorAll('.cart__cont__product');
 
 modifyQuantity.forEach((item, index) => {
 
-  const id = item.querySelector('.cart__cont__product__id').innerHTML;
+  const id = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
 
   item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
 

@@ -8,9 +8,13 @@
   &__cont {
 
     &__product {
-      display: block;
-      // gap: 1rem;
-      transition: opacity 300ms;
+      border: 1px solid var(--light-light-gray-color);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+
+      &__vendor {
+        display: flex;
+      }
 
       &__image {
         display: block;
