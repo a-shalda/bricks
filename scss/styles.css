@@ -1408,6 +1408,9 @@ select:focus {
   max-width: 15rem;
 }
 
+.cart__cont {
+  max-width: 23rem;
+}
 .cart__cont__title {
   text-transform: uppercase;
   font-weight: 500;
