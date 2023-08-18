@@ -125,7 +125,6 @@ cart.forEach(item => {
                   <button class="cart__cont__product__quantity__delete">Delete</button>
                 </div>
 
-      
               </div>
               <div class="cart__cont__product__save"></div>
               <div class="cart__cont__product__remove"></div>
@@ -184,7 +183,9 @@ cart.forEach(item => {
                 productHTML += `
                 <div class="cart__cont__product">
                   <div class="cart__cont__product__image">
-                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    <a href="${product.filepath}">
+                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    </a>
                   </div>
                   <div class="cart__cont__product__price">${pricesHTML}</div>
                   <div class="cart__cont__product__vendor">
@@ -192,21 +193,29 @@ cart.forEach(item => {
                     <p class="cart__cont__product__vendor__id">${product.id}</p>
                   </div>
                   <div class="cart__cont__product__title">
-                    <p class="cart__cont__product__title__name">${productTitle}</p>
+                    <a href="${product.filepath}">
+                      <p class="cart__cont__product__title__name">${productTitle}</p>
+                    </a>
                   </div>
                   <div class="cart__cont__product__quantity">
-                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
-          
-                    <div class="cart__cont__product__quantity__buttons">
-                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                    <div class="cart__cont__product__quantity__modify">
+                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+
+                      <div class="cart__cont__product__quantity__buttons">
+                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      </div>
                     </div>
           
-                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
                     <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                     <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                     <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
-                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+
+                    <div class="cart__cont__product__quantity__sub-del">
+                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                    </div>
           
                   </div>
                   <div class="cart__cont__product__save"></div>
@@ -244,7 +253,9 @@ cart.forEach(item => {
                 productHTML += `
                 <div class="cart__cont__product">
                   <div class="cart__cont__product__image">
-                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    <a href="${product.filepath}">
+                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    </a>
                   </div>
                   <div class="cart__cont__product__price">${pricesHTML}</div>
                   <div class="cart__cont__product__vendor">
@@ -252,20 +263,28 @@ cart.forEach(item => {
                     <p class="cart__cont__product__vendor__id">${product.id}</p>
                   </div>
                   <div class="cart__cont__product__title">
-                    <p class="cart__cont__product__title__name">${productTitle}</p>
+                    <a href="${product.filepath}">
+                      <p class="cart__cont__product__title__name">${productTitle}</p>
+                    </a>
                   </div>
                   <div class="cart__cont__product__quantity">
-                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
-          
-                    <div class="cart__cont__product__quantity__buttons">
-                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                    
+                    <div class="cart__cont__product__quantity__modify">
+                      <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
+
+                      <div class="cart__cont__product__quantity__buttons">
+                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      </div>
                     </div>
-          
+    
+                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
                     <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                     <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
-                    <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
-                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                    <div class="cart__cont__product__quantity__sub-del">
+                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                    </div>
           
                   </div>
                   <div class="cart__cont__product__save"></div>
@@ -323,7 +342,9 @@ cart.forEach(item => {
               productHTML += `
               <div class="cart__cont__product">
                 <div class="cart__cont__product__image">
-                  <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                  <a href="${product.filepath}">
+                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                  </a>
                 </div>
                 <div class="cart__cont__product__price">${pricesHTML}</div>
                 <div class="cart__cont__product__vendor">
@@ -331,22 +352,30 @@ cart.forEach(item => {
                   <p class="cart__cont__product__vendor__id">${product.id}</p>
                 </div>
                 <div class="cart__cont__product__title">
-                  <p class="cart__cont__product__title__name">${productTitle}</p>
+                  <a href="${product.filepath}">
+                    <p class="cart__cont__product__title__name">${productTitle}</p>
+                  </a>
                 </div>
                 <div class="cart__cont__product__quantity">
-                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
-        
-                  <div class="cart__cont__product__quantity__buttons">
-                    <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                    <button class="cart__cont__product__quantity__buttons__plus">+</button>
+
+                  <div class="cart__cont__product__quantity__modify">
+                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+
+                    <div class="cart__cont__product__quantity__buttons">
+                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                    </div>
                   </div>
         
-                  <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
                   <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                   <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                   <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
             
-                  <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                  <div class="cart__cont__product__quantity__sub-del">
+                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                    <button class="cart__cont__product__quantity__delete">Delete</button>
+                  </div>
         
                 </div>
                 <div class="cart__cont__product__save"></div>
@@ -400,7 +429,9 @@ cart.forEach(item => {
               productHTML += `
               <div class="cart__cont__product">
                 <div class="cart__cont__product__image">
-                  <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                  <a href="${product.filepath}">
+                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                  </a>
                 </div>
                 <div class="cart__cont__product__price">${pricesHTML}</div>
                   <div class="cart__cont__product__vendor">
@@ -408,20 +439,29 @@ cart.forEach(item => {
                 <p class="cart__cont__product__vendor__id">${product.id}</p>
                 </div>
                 <div class="cart__cont__product__title">
-                  <p class="cart__cont__product__title__name">${productTitle}</p>
+                  <a href="${product.filepath}">
+                    <p class="cart__cont__product__title__name">${productTitle}</p>
+                  </a>
                 </div>
                 <div class="cart__cont__product__quantity">
-                  <p class="cart__cont__product__quantity__qty">Quantity: ${piecesModified}</p>
-        
-                  <div class="cart__cont__product__quantity__buttons">
-                    <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                    <button class="cart__cont__product__quantity__buttons__plus">+</button>
+
+                  <div class="cart__cont__product__quantity__modify">
+                    <p class="cart__cont__product__quantity__qty">Quantity: ${piecesModified}</p>
+
+                    <div class="cart__cont__product__quantity__buttons">
+                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                    </div>
                   </div>
-        
+
+                  <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
                   <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                   <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
             
-                  <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                  <div class="cart__cont__product__quantity__sub-del">
+                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                    <button class="cart__cont__product__quantity__delete">Delete</button>
+                  </div>
         
                 </div>
                 <div class="cart__cont__product__save"></div>
@@ -447,6 +487,12 @@ let modifyQuantity = document.querySelectorAll('.cart__cont__product');
 modifyQuantity.forEach((item, index) => {
 
   const id = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
+
+  item.querySelector('.cart__cont__product__quantity__delete').addEventListener('click', () => {
+    cart.splice(index, 1);
+    item.classList.add('hide_product');
+    localStorage.setItem('cart', JSON.stringify(cart));
+  });
 
   item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
 
@@ -621,6 +667,8 @@ modifyQuantity.forEach((item, index) => {
                 totalPacks++;
 
                 totalVolume = totalVolume + baseVolume;
+
+                if (price >= priceTotalLimit) {break;}
             
                 if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
             
@@ -679,6 +727,7 @@ modifyQuantity.forEach((item, index) => {
             
                 if (totalPacks === quantityPacks) {
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
+                  item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
                   item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
@@ -865,6 +914,8 @@ modifyQuantity.forEach((item, index) => {
                 totalPacks++;
 
                 totalVolume = totalVolume + baseVolume;
+
+                if (price >= priceTotalLimit) {break;}
             
                 if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
             
@@ -927,6 +978,7 @@ modifyQuantity.forEach((item, index) => {
 
                 if (totalPacks === quantityPacks) {
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
+                  item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
                   item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;

@@ -1462,12 +1462,6 @@ select:focus {
   align-items: center;
   justify-content: space-between;
 }
-.cart__cont__product__quantity__qty {
-  margin-top: -0.2rem;
-}
-.cart__cont__product__quantity__pallets {
-  padding-bottom: 0.5rem;
-}
 .cart__cont__product__quantity__sub-del {
   display: flex;
   align-items: center;
@@ -1475,6 +1469,8 @@ select:focus {
 }
 .cart__cont__product__quantity__subtotal {
   font-weight: 500;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
 }
 .cart__cont__product__quantity__delete {
   width: 6rem;
