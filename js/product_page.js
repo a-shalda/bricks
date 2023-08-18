@@ -13,7 +13,8 @@ let productNumberInProducts;
 let supplierPriceType = '';
 let userQuantity = 0;
 let subTotal = 0;
-const priceTotalLimit = 9000;
+const priceTotalLimit = 9000; //Used to generate options
+const packsTotalLimit = 1000;
 
 //Limits 
 
@@ -799,7 +800,11 @@ function addToCart () {
     cart.push(order);
   }
   else {
-    cart[mathingIndex].quantity += userQuantity;
+
+    if ((cart[mathingIndex].quantity + userQuantity) <= packsTotalLimit) {
+      cart[mathingIndex].quantity += userQuantity;
+    }
+
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));

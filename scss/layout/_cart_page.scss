@@ -10,6 +10,7 @@
     &__product {
       display: block;
       // gap: 1rem;
+      transition: opacity 300ms;
 
       &__image {
         display: block;

@@ -1410,6 +1410,7 @@ select:focus {
 
 .cart__cont__product {
   display: block;
+  transition: opacity 300ms;
 }
 .cart__cont__product__image {
   display: block;
