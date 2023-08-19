@@ -1414,8 +1414,51 @@ select:focus {
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
   color: var(--gray-color);
-  padding-bottom: 1rem;
   text-align: center;
+}
+.cart__checkout-wrapper {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 4.4rem;
+  z-index: 1;
+  height: 7rem;
+  background-color: white;
+  border-bottom: 1px solid var(--light-gray-color);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: 1.5rem;
+}
+.cart__checkout {
+  display: block;
+  letter-spacing: 0.05rem;
+  width: 91%;
+  max-width: 23rem;
+  background-color: var(--gray-color);
+  border: none;
+  color: white;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s;
+  min-height: 2.875rem;
+}
+@media (min-width: 25em) {
+  .cart__checkout {
+    margin-inline: auto;
+  }
+}
+.cart__checkout:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+.cart__checkout__subtotal {
+  padding-block: 0.7rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
 }
 .cart__cont {
   display: grid;
