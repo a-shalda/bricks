@@ -1564,7 +1564,6 @@ select:focus {
 }
 .cart__cont__product__quantity__subtotal {
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 0.03rem;
 }
 .cart__cont__product__quantity__delete {
