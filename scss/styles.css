@@ -1444,11 +1444,22 @@ select:focus {
   margin-right: -2rem;
   padding-block: 1rem;
 }
+@media (min-width: 56.625em) {
+  .cart__cont__product__price {
+    margin-left: -0.92rem;
+    margin-right: -2rem;
+    padding-block: 1rem;
+  }
+}
 .cart__cont__product__vendor {
   display: flex;
+  padding-inline: 0.5rem;
 }
 .cart__cont__product__title__name {
   padding-block: 1rem;
+  padding-inline: 0.5rem;
+  letter-spacing: 0.04rem;
+  font-weight: 500;
 }
 .cart__cont__product__title__name:hover {
   cursor: pointer;
@@ -1456,6 +1467,7 @@ select:focus {
 }
 .cart__cont__product__quantity {
   padding-bottom: 0.5rem;
+  padding-inline: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -1464,6 +1476,7 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -0.3rem;
 }
 .cart__cont__product__quantity__sub-del {
   display: flex;
@@ -1473,7 +1486,8 @@ select:focus {
 .cart__cont__product__quantity__subtotal {
   font-weight: 500;
   text-transform: uppercase;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+  letter-spacing: 0.03rem;
 }
 .cart__cont__product__quantity__delete {
   width: 6rem;

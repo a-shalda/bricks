@@ -48,17 +48,27 @@
         margin-left: -0.92rem;
         margin-right: -2rem;
         padding-block: 1rem;
+
+        @include breakpoint(large) {
+          margin-left: -0.92rem;
+          margin-right: -2rem;
+          padding-block: 1rem;
+        }
       }
 
 
       &__vendor {
         display: flex;
+        padding-inline: 0.5rem;
       }
 
       &__title {
 
         &__name {
           padding-block: 1rem;
+          padding-inline: 0.5rem;
+          letter-spacing: 0.04rem;
+          font-weight: 500;
     
           &:hover {
             cursor: pointer;
@@ -69,6 +79,7 @@
 
       &__quantity {
         padding-bottom: 0.5rem;
+        padding-inline: 0.5rem;
 
         display: flex;
         flex-direction: column;
@@ -79,6 +90,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          margin-bottom: -0.3rem;
         }
 
 
@@ -86,13 +98,13 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-
         }
 
         &__subtotal {
           font-weight: 500;
           text-transform: uppercase;
-          padding-top: 0.5rem;
+          padding-top: 1rem;
+          letter-spacing: 0.03rem;
         }
 
         &__delete {
