@@ -1426,8 +1426,6 @@ select:focus {
   height: 7rem;
   background-color: white;
   border-bottom: 1px solid var(--light-gray-color);
-  margin-left: -1rem;
-  margin-right: -1rem;
   margin-bottom: 1.5rem;
 }
 .cart__checkout {
@@ -1510,7 +1508,7 @@ select:focus {
 }
 .cart__cont__product__price {
   display: flex;
-  margin-left: -0.92rem;
+  margin-left: -0.93rem;
   margin-right: -2rem;
   padding-block: 1rem;
 }
