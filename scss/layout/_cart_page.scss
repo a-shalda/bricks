@@ -5,29 +5,50 @@
 
 .cart {
 
-  &__cont {
-    max-width: 23rem;
+  &__title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    color: var(--gray-color);
+    padding-bottom: 1rem;
+    text-align: center;
+  }
 
-    &__title {
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 1.1rem;
-      letter-spacing: 0.05rem;
-      color: var(--gray-color);
-      padding-bottom: 1rem;
+  &__cont {
+    display: grid;
+    gap: 1rem;
+
+    @include breakpoint (medium) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0.3rem;
+
     }
 
+    @include breakpoint (large) {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 0.3rem;
+      row-gap: 1rem;
+
+      // padding-inline: 15rem;
+    }
+
+    @include breakpoint (xlarge) {
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-inline: 8rem;
+    }
+    
     &__product {
+      position: relative;
+      margin-inline: auto;
+      max-width: 23rem;
+      min-width: 18rem;
       border-radius: 0.5rem;
-      margin-bottom: 1rem;
       transition: opacity 200ms;
       padding: 1rem;
       box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
       letter-spacing: 0.02rem;
-
-      @include breakpoint(tiny) {
-
-      }
 
       &__image {
         display: block;
@@ -48,6 +69,10 @@
         margin-left: -0.92rem;
         margin-right: -2rem;
         padding-block: 1rem;
+
+        @include breakpoint(large) {
+          margin-left: -0.95rem;
+        }
 
         @include breakpoint(xlarge) {
           margin-left: -1rem;
@@ -76,8 +101,9 @@
       }
 
       &__quantity {
-        padding-bottom: 0.5rem;
+        padding-bottom: 4rem;
         padding-inline: 0.5rem;
+        padding-top: 0.5rem;
 
         display: flex;
         flex-direction: column;
@@ -96,12 +122,16 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          padding-top: 1rem;
+          position: absolute;
+          bottom: 1.5rem;
+          left: 1.5rem;
+          right: 1.5rem;
         }
 
         &__subtotal {
           font-weight: 500;
           text-transform: uppercase;
-          padding-top: 1rem;
           letter-spacing: 0.03rem;
         }
 
@@ -111,7 +141,7 @@
           background-color: white;
           border: 1px solid var(--light-gray-color);
           color: gray;
-          align-self: flex-end;
+          align-self: center;
         
           border-radius: 0.4rem;
           font-size: 1rem;

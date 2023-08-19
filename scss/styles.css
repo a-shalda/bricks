@@ -1408,20 +1408,47 @@ select:focus {
   max-width: 15rem;
 }
 
-.cart__cont {
-  max-width: 23rem;
-}
-.cart__cont__title {
+.cart__title {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
   color: var(--gray-color);
   padding-bottom: 1rem;
+  text-align: center;
+}
+.cart__cont {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 42.75em) {
+  .cart__cont {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 0.3rem;
+         column-gap: 0.3rem;
+  }
+}
+@media (min-width: 56.625em) {
+  .cart__cont {
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 0.3rem;
+         column-gap: 0.3rem;
+    row-gap: 1rem;
+  }
+}
+@media (min-width: 79em) {
+  .cart__cont {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-inline: 8rem;
+  }
 }
 .cart__cont__product {
+  position: relative;
+  margin-inline: auto;
+  max-width: 23rem;
+  min-width: 18rem;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
   transition: opacity 200ms;
   padding: 1rem;
   box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
@@ -1444,6 +1471,11 @@ select:focus {
   margin-right: -2rem;
   padding-block: 1rem;
 }
+@media (min-width: 56.625em) {
+  .cart__cont__product__price {
+    margin-left: -0.95rem;
+  }
+}
 @media (min-width: 79em) {
   .cart__cont__product__price {
     margin-left: -1rem;
@@ -1464,8 +1496,9 @@ select:focus {
   text-decoration: underline;
 }
 .cart__cont__product__quantity {
-  padding-bottom: 0.5rem;
+  padding-bottom: 4rem;
   padding-inline: 0.5rem;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -1480,11 +1513,15 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
 }
 .cart__cont__product__quantity__subtotal {
   font-weight: 500;
   text-transform: uppercase;
-  padding-top: 1rem;
   letter-spacing: 0.03rem;
 }
 .cart__cont__product__quantity__delete {
@@ -1493,7 +1530,7 @@ select:focus {
   background-color: white;
   border: 1px solid var(--light-gray-color);
   color: gray;
-  align-self: flex-end;
+  align-self: center;
   border-radius: 0.4rem;
   font-size: 1rem;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
