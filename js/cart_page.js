@@ -90,46 +90,47 @@ cart.forEach(item => {
           if (totalPacks === quantityPacks) {
 
             productHTML += `
-            <div class="cart__cont__product">
-              <div class="cart__cont__product__image">
-                <a href="${product.filepath}">
-                  <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
-                </a>
-              </div>
-              <div class="cart__cont__product__price">${pricesHTML}</div>
-              <div class="cart__cont__product__vendor">
-                <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
-                <p class="cart__cont__product__vendor__id">${product.id}</p>
-              </div>
-              <div class="cart__cont__product__title">
-                <a href="${product.filepath}">
-                  <p class="cart__cont__product__title__name">${productTitle}</p>
-                </a>
-              </div>
-              <div class="cart__cont__product__quantity">
-                <div class="cart__cont__product__quantity__modify">
-                  <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+              <div class="cart__cont__product">
+                <div class="cart__cont__product__image">
+                  <a href="${product.filepath}">
+                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                  </a>
+                </div>
+                <div class="cart__cont__product__price">${pricesHTML}</div>
+                <div class="cart__cont__product__vendor">
+                  <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                  <p class="cart__cont__product__vendor__id">${product.id}</p>
+                </div>
+                <div class="cart__cont__product__title">
+                  <a href="${product.filepath}">
+                    <p class="cart__cont__product__title__name">${productTitle}</p>
+                  </a>
+                </div>
+                <div class="cart__cont__product__quantity">
+                  <div class="cart__cont__product__quantity__modify">
+                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
 
-                  <div class="cart__cont__product__quantity__buttons">
-                    <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                    <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                    <div class="cart__cont__product__quantity__buttons">
+                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                    </div>
                   </div>
-                </div>
-                <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
-                <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
-                <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
-                <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                  <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                  <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                  <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
 
-                <div class="cart__cont__product__quantity__sub-del">
-                  <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                  <button class="cart__cont__product__quantity__delete">Delete</button>
-                </div>
+                  <div class="cart__cont__product__quantity__sub-del">
+                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                    <button class="cart__cont__product__quantity__delete">Delete</button>
+                  </div>
 
+                </div>
+                <div class="cart__cont__product__save"></div>
+                <div class="cart__cont__product__remove"></div>
               </div>
-              <div class="cart__cont__product__save"></div>
-              <div class="cart__cont__product__remove"></div>
-            </div>
-            `
+            `;
+            break;
           }
         }
       }
@@ -181,47 +182,48 @@ cart.forEach(item => {
               if (totalPacks === quantityPacks) {
 
                 productHTML += `
-                <div class="cart__cont__product">
-                  <div class="cart__cont__product__image">
-                    <a href="${product.filepath}">
-                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
-                    </a>
-                  </div>
-                  <div class="cart__cont__product__price">${pricesHTML}</div>
-                  <div class="cart__cont__product__vendor">
-                    <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
-                    <p class="cart__cont__product__vendor__id">${product.id}</p>
-                  </div>
-                  <div class="cart__cont__product__title">
-                    <a href="${product.filepath}">
-                      <p class="cart__cont__product__title__name">${productTitle}</p>
-                    </a>
-                  </div>
-                  <div class="cart__cont__product__quantity">
-                    <div class="cart__cont__product__quantity__modify">
-                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                  <div class="cart__cont__product">
+                    <div class="cart__cont__product__image">
+                      <a href="${product.filepath}">
+                        <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      </a>
+                    </div>
+                    <div class="cart__cont__product__price">${pricesHTML}</div>
+                    <div class="cart__cont__product__vendor">
+                      <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                      <p class="cart__cont__product__vendor__id">${product.id}</p>
+                    </div>
+                    <div class="cart__cont__product__title">
+                      <a href="${product.filepath}">
+                        <p class="cart__cont__product__title__name">${productTitle}</p>
+                      </a>
+                    </div>
+                    <div class="cart__cont__product__quantity">
+                      <div class="cart__cont__product__quantity__modify">
+                        <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
 
-                      <div class="cart__cont__product__quantity__buttons">
-                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                        <div class="cart__cont__product__quantity__buttons">
+                          <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                          <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                        </div>
                       </div>
-                    </div>
-          
-                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
-                    <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
-                    <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
-                    <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+            
+                      <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                      <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                      <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                      <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
 
-                    <div class="cart__cont__product__quantity__sub-del">
-                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                      <div class="cart__cont__product__quantity__sub-del">
+                        <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                        <button class="cart__cont__product__quantity__delete">Delete</button>
+                      </div>
+            
                     </div>
-          
+                    <div class="cart__cont__product__save"></div>
+                    <div class="cart__cont__product__remove"></div>
                   </div>
-                  <div class="cart__cont__product__save"></div>
-                  <div class="cart__cont__product__remove"></div>
-                </div>
-                `
+                `;
+                break;
               }
             }
           }
@@ -251,46 +253,47 @@ cart.forEach(item => {
               if (totalPacks === quantityPacks) {
 
                 productHTML += `
-                <div class="cart__cont__product">
-                  <div class="cart__cont__product__image">
-                    <a href="${product.filepath}">
-                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
-                    </a>
-                  </div>
-                  <div class="cart__cont__product__price">${pricesHTML}</div>
-                  <div class="cart__cont__product__vendor">
-                    <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
-                    <p class="cart__cont__product__vendor__id">${product.id}</p>
-                  </div>
-                  <div class="cart__cont__product__title">
-                    <a href="${product.filepath}">
-                      <p class="cart__cont__product__title__name">${productTitle}</p>
-                    </a>
-                  </div>
-                  <div class="cart__cont__product__quantity">
-                    
-                    <div class="cart__cont__product__quantity__modify">
-                      <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
+                  <div class="cart__cont__product">
+                    <div class="cart__cont__product__image">
+                      <a href="${product.filepath}">
+                        <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      </a>
+                    </div>
+                    <div class="cart__cont__product__price">${pricesHTML}</div>
+                    <div class="cart__cont__product__vendor">
+                      <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                      <p class="cart__cont__product__vendor__id">${product.id}</p>
+                    </div>
+                    <div class="cart__cont__product__title">
+                      <a href="${product.filepath}">
+                        <p class="cart__cont__product__title__name">${productTitle}</p>
+                      </a>
+                    </div>
+                    <div class="cart__cont__product__quantity">
+                      
+                      <div class="cart__cont__product__quantity__modify">
+                        <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
 
-                      <div class="cart__cont__product__quantity__buttons">
-                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                        <div class="cart__cont__product__quantity__buttons">
+                          <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                          <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                        </div>
                       </div>
+      
+                      <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                      <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                      <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                      <div class="cart__cont__product__quantity__sub-del">
+                        <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                        <button class="cart__cont__product__quantity__delete">Delete</button>
+                      </div>
+            
                     </div>
-    
-                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
-                    <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
-                    <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
-                    <div class="cart__cont__product__quantity__sub-del">
-                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                      <button class="cart__cont__product__quantity__delete">Delete</button>
-                    </div>
-          
+                    <div class="cart__cont__product__save"></div>
+                    <div class="cart__cont__product__remove"></div>
                   </div>
-                  <div class="cart__cont__product__save"></div>
-                  <div class="cart__cont__product__remove"></div>
-                </div>
-                `
+                `;
+                break;
               }
             }
           }
@@ -340,48 +343,49 @@ cart.forEach(item => {
             if (totalPacks === quantityPacks) {
 
               productHTML += `
-              <div class="cart__cont__product">
-                <div class="cart__cont__product__image">
-                  <a href="${product.filepath}">
-                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
-                  </a>
-                </div>
-                <div class="cart__cont__product__price">${pricesHTML}</div>
-                <div class="cart__cont__product__vendor">
-                  <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
-                  <p class="cart__cont__product__vendor__id">${product.id}</p>
-                </div>
-                <div class="cart__cont__product__title">
-                  <a href="${product.filepath}">
-                    <p class="cart__cont__product__title__name">${productTitle}</p>
-                  </a>
-                </div>
-                <div class="cart__cont__product__quantity">
+                <div class="cart__cont__product">
+                  <div class="cart__cont__product__image">
+                    <a href="${product.filepath}">
+                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    </a>
+                  </div>
+                  <div class="cart__cont__product__price">${pricesHTML}</div>
+                  <div class="cart__cont__product__vendor">
+                    <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                    <p class="cart__cont__product__vendor__id">${product.id}</p>
+                  </div>
+                  <div class="cart__cont__product__title">
+                    <a href="${product.filepath}">
+                      <p class="cart__cont__product__title__name">${productTitle}</p>
+                    </a>
+                  </div>
+                  <div class="cart__cont__product__quantity">
 
-                  <div class="cart__cont__product__quantity__modify">
-                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                    <div class="cart__cont__product__quantity__modify">
+                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
 
-                    <div class="cart__cont__product__quantity__buttons">
-                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      <div class="cart__cont__product__quantity__buttons">
+                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      </div>
                     </div>
+          
+                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
+                    <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                    <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                    <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+              
+                    <div class="cart__cont__product__quantity__sub-del">
+                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                    </div>
+          
                   </div>
-        
-                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
-                  <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
-                  <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
-                  <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
-            
-                  <div class="cart__cont__product__quantity__sub-del">
-                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                    <button class="cart__cont__product__quantity__delete">Delete</button>
-                  </div>
-        
+                  <div class="cart__cont__product__save"></div>
+                  <div class="cart__cont__product__remove"></div>
                 </div>
-                <div class="cart__cont__product__save"></div>
-                <div class="cart__cont__product__remove"></div>
-              </div>
-              `
+              `;
+              break;
             }
           }
         }
@@ -427,47 +431,48 @@ cart.forEach(item => {
             if (totalPacks === quantityPacks) {
 
               productHTML += `
-              <div class="cart__cont__product">
-                <div class="cart__cont__product__image">
-                  <a href="${product.filepath}">
-                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
-                  </a>
-                </div>
-                <div class="cart__cont__product__price">${pricesHTML}</div>
-                  <div class="cart__cont__product__vendor">
-                  <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
-                <p class="cart__cont__product__vendor__id">${product.id}</p>
-                </div>
-                <div class="cart__cont__product__title">
-                  <a href="${product.filepath}">
-                    <p class="cart__cont__product__title__name">${productTitle}</p>
-                  </a>
-                </div>
-                <div class="cart__cont__product__quantity">
+                <div class="cart__cont__product">
+                  <div class="cart__cont__product__image">
+                    <a href="${product.filepath}">
+                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    </a>
+                  </div>
+                  <div class="cart__cont__product__price">${pricesHTML}</div>
+                    <div class="cart__cont__product__vendor">
+                    <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                  <p class="cart__cont__product__vendor__id">${product.id}</p>
+                  </div>
+                  <div class="cart__cont__product__title">
+                    <a href="${product.filepath}">
+                      <p class="cart__cont__product__title__name">${productTitle}</p>
+                    </a>
+                  </div>
+                  <div class="cart__cont__product__quantity">
 
-                  <div class="cart__cont__product__quantity__modify">
-                    <p class="cart__cont__product__quantity__qty">Quantity: ${piecesModified}</p>
+                    <div class="cart__cont__product__quantity__modify">
+                      <p class="cart__cont__product__quantity__qty">Quantity: ${piecesModified}</p>
 
-                    <div class="cart__cont__product__quantity__buttons">
-                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      <div class="cart__cont__product__quantity__buttons">
+                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
+                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      </div>
                     </div>
-                  </div>
 
-                  <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
-                  <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
-                  <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
-            
-                  <div class="cart__cont__product__quantity__sub-del">
-                    <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                    <button class="cart__cont__product__quantity__delete">Delete</button>
+                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                    <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                    <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+              
+                    <div class="cart__cont__product__quantity__sub-del">
+                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                    </div>
+          
                   </div>
-        
+                  <div class="cart__cont__product__save"></div>
+                  <div class="cart__cont__product__remove"></div>
                 </div>
-                <div class="cart__cont__product__save"></div>
-                <div class="cart__cont__product__remove"></div>
-              </div>
-              `
+              `;
+              break;
             }
           }
         }
@@ -576,6 +581,7 @@ modifyQuantity.forEach((item, index) => {
                 item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                 item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                 item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                break;
               }
             }
           }
@@ -618,6 +624,7 @@ modifyQuantity.forEach((item, index) => {
                     item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                    break;
                   }
                 }
               }
@@ -649,6 +656,7 @@ modifyQuantity.forEach((item, index) => {
                     item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                    break;
                   }
                 }
               }
@@ -690,6 +698,7 @@ modifyQuantity.forEach((item, index) => {
                   item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                  break;
                 }
               }
             }
@@ -731,6 +740,7 @@ modifyQuantity.forEach((item, index) => {
                   item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                  break;
                 }
               }
             }
@@ -819,6 +829,7 @@ modifyQuantity.forEach((item, index) => {
                 item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                 item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                 item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                break;
               }
             }
           }
@@ -863,6 +874,7 @@ modifyQuantity.forEach((item, index) => {
                     item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                    break;
                   }
                 }
               }
@@ -896,6 +908,7 @@ modifyQuantity.forEach((item, index) => {
                     item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                    break;
                   }
                 }
               }
@@ -939,6 +952,7 @@ modifyQuantity.forEach((item, index) => {
                   item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                  break;
                 }
               }
             }
@@ -982,6 +996,7 @@ modifyQuantity.forEach((item, index) => {
                   item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                  break;
                 }
               }
             }

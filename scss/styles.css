@@ -1444,11 +1444,9 @@ select:focus {
   margin-right: -2rem;
   padding-block: 1rem;
 }
-@media (min-width: 56.625em) {
+@media (min-width: 79em) {
   .cart__cont__product__price {
-    margin-left: -0.92rem;
-    margin-right: -2rem;
-    padding-block: 1rem;
+    margin-left: -1rem;
   }
 }
 .cart__cont__product__vendor {

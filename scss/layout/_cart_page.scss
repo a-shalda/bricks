@@ -49,10 +49,8 @@
         margin-right: -2rem;
         padding-block: 1rem;
 
-        @include breakpoint(large) {
-          margin-left: -0.92rem;
-          margin-right: -2rem;
-          padding-block: 1rem;
+        @include breakpoint(xlarge) {
+          margin-left: -1rem;
         }
       }
 
