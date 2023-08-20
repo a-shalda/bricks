@@ -17,6 +17,19 @@ let totalWeightCart = 0;
 let totalPalletsCart = 0;
 
 
+showTotal ();
+
+function showTotal () {
+  if (cart[0]) {
+    document.querySelector('.cart__checkout').classList.add('button-visible');
+    document.querySelector('.cart__checkout').classList.remove('button-hidden');
+  }
+  else {
+    document.querySelector('.cart__checkout__subtotal').innerHTML = 'Cart is empty';
+    document.querySelector('.cart__checkout').classList.add('button-hidden');
+  }
+}
+
 function updateTotal () {
 
   let total = document.querySelector('.cart__checkout__subtotal');
@@ -148,14 +161,15 @@ cart.forEach(item => {
                 </div>
                 <div class="cart__cont__product__quantity">
                   <div class="cart__cont__product__quantity__modify">
-                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
 
                     <div class="cart__cont__product__quantity__buttons">
                       <button class="cart__cont__product__quantity__buttons__minus">-</button>
                       <button class="cart__cont__product__quantity__buttons__plus">+</button>
                     </div>
                   </div>
-                  <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+
+                  <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
                   <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                   <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                   <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
@@ -248,7 +262,7 @@ cart.forEach(item => {
                     </div>
                     <div class="cart__cont__product__quantity">
                       <div class="cart__cont__product__quantity__modify">
-                        <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                        <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
 
                         <div class="cart__cont__product__quantity__buttons">
                           <button class="cart__cont__product__quantity__buttons__minus">-</button>
@@ -256,7 +270,7 @@ cart.forEach(item => {
                         </div>
                       </div>
             
-                      <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
                       <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                       <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                       <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
@@ -327,7 +341,7 @@ cart.forEach(item => {
                     <div class="cart__cont__product__quantity">
                       
                       <div class="cart__cont__product__quantity__modify">
-                        <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
+                      <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
 
                         <div class="cart__cont__product__quantity__buttons">
                           <button class="cart__cont__product__quantity__buttons__minus">-</button>
@@ -335,7 +349,7 @@ cart.forEach(item => {
                         </div>
                       </div>
       
-                      <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                      <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
                       <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                       <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                       <div class="cart__cont__product__quantity__sub-del">
@@ -425,7 +439,7 @@ cart.forEach(item => {
                   <div class="cart__cont__product__quantity">
 
                     <div class="cart__cont__product__quantity__modify">
-                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
 
                       <div class="cart__cont__product__quantity__buttons">
                         <button class="cart__cont__product__quantity__buttons__minus">-</button>
@@ -433,7 +447,7 @@ cart.forEach(item => {
                       </div>
                     </div>
           
-                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
+                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
                     <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
                     <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                     <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
@@ -557,6 +571,13 @@ document.querySelector('.cart__cont').innerHTML = productHTML;
 
 //MODIFYING THE QUANTITY
 
+if (cart.length === 1) {
+
+}
+else if (cart.length >= 2) {
+  
+}
+
 let modifyQuantity = document.querySelectorAll('.cart__cont__product');
 
 modifyQuantity.forEach((item, index) => {
@@ -567,9 +588,14 @@ modifyQuantity.forEach((item, index) => {
     cart.splice(index, 1);
     item.classList.add('hide_product');
     localStorage.setItem('cart', JSON.stringify(cart));
+    showTotal ();
   });
 
   item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
+
+    console.log(modifyQuantity);
+    console.log(cart.length);
+
 
     if (cart[index].quantity >= 1) {
       cart[index].quantity--;
@@ -579,6 +605,7 @@ modifyQuantity.forEach((item, index) => {
       if (updatedQuantity === 0) {
         cart.splice(index, 1);
         item.classList.add('hide_product');
+        showTotal ();
       }
 
       localStorage.setItem('cart', JSON.stringify(cart));

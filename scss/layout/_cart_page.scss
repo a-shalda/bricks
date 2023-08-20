@@ -21,7 +21,6 @@
   }
 
   &__checkout {
-    display: block;
     letter-spacing: 0.05rem;
     width: 91%;
     max-width: 23rem;
@@ -270,5 +269,13 @@
 .hide_product {
   opacity: 0;
   height: 0;
+  display: none;
+}
+
+.button-visible {
+  display: block;
+}
+
+.button-hidden {
   display: none;
 }
