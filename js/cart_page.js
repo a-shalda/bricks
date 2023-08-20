@@ -8,6 +8,38 @@ let quantityPacks = 0;
 let productTitle = '';
 let productHTML = '';
 
+let totalCostCart = 0;
+let totalSquareMetersCart = 0;
+let totalLinearMetersCart = 0;
+let totalPacksCart = 0;
+let totalPiecesCart = 0;
+let totalWeightCart = 0;
+let totalPalletsCart = 0;
+
+
+function updateTotal () {
+
+  let total = document.querySelector('.cart__checkout__subtotal');
+
+  if (totalSquareMetersCart != 0 && totalLinearMetersCart != 0) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCart} pcs, <br>${totalPacksCart} packs, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+  }
+  else if (totalSquareMetersCart != 0) {
+    if (totalPacksCart === 0) {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCart} pcs, <br>${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    }
+    else {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCart} pcs, <br>${totalPacksCart} packs, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    }
+  }
+  else if (totalLinearMetersCart != 0) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCart} pcs, <br>${totalPacksCart} packs, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+  }
+  else if (totalPacksCart != 0) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalPiecesCart} pcs, <br>${totalPacksCart} packs, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+  }
+}
+
 cart.forEach(item => {
 
   products.forEach(product => {
@@ -88,6 +120,14 @@ cart.forEach(item => {
           if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
 
           if (totalPacks === quantityPacks) {
+
+            totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+            totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+            totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+            totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+            totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+            totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+            updateTotal();
 
             productHTML += `
               <div class="cart__cont__product">
@@ -181,6 +221,14 @@ cart.forEach(item => {
           
               if (totalPacks === quantityPacks) {
 
+                totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+                totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                updateTotal();
+
                 productHTML += `
                   <div class="cart__cont__product">
                     <div class="cart__cont__product__image">
@@ -251,6 +299,13 @@ cart.forEach(item => {
               if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
           
               if (totalPacks === quantityPacks) {
+
+                totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+                totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                totalPalletsCart = (Number(totalPalletsCart) + Number(totalPalletsNumber)).toFixed(2);
+                updateTotal();
 
                 productHTML += `
                   <div class="cart__cont__product">
@@ -342,6 +397,14 @@ cart.forEach(item => {
 
             if (totalPacks === quantityPacks) {
 
+              totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+              totalLinearMetersCart = (Number(totalLinearMetersCart) + Number(totalVolume)).toFixed(2);
+              totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+              totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+              totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+              totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+              updateTotal();
+
               productHTML += `
                 <div class="cart__cont__product">
                   <div class="cart__cont__product__image">
@@ -429,6 +492,13 @@ cart.forEach(item => {
             else {piecesModified = pieces + ` pcs`;}
           
             if (totalPacks === quantityPacks) {
+
+              totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+              totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+              totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+              totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+              totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+              updateTotal();
 
               productHTML += `
                 <div class="cart__cont__product">

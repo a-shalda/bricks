@@ -5,15 +5,6 @@
 
 .cart {
 
-  &__title {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.1rem;
-    letter-spacing: 0.05rem;
-    color: var(--gray-color);
-    text-align: center;
-  }
-
   &__checkout-wrapper {
     position: sticky;
     display: flex;
@@ -21,7 +12,6 @@
     align-items: center;
     top: 4.4rem; //to the nav bar
     z-index: 1;
-    height: 7rem;
     background-color: white;
     border-bottom: 1px solid var(--light-gray-color);
     // margin-left: -1rem;
@@ -35,6 +25,7 @@
     letter-spacing: 0.05rem;
     width: 91%;
     max-width: 23rem;
+    margin-bottom: 1rem;
 
     background-color: var(--gray-color);
     border: none;
@@ -61,7 +52,16 @@
     &__subtotal {
       padding-block: 0.7rem;
       letter-spacing: 0.05rem;
-      font-weight: 500;
+      text-align: center;
+      width: 91%;
+      color: gray;
+
+      &__bold {
+        font-weight: 700;
+        letter-spacing: 0.09rem;
+        color: var(--gray-color);
+      }
+
     }
   }
 
@@ -72,7 +72,6 @@
     @include breakpoint (medium) {
       grid-template-columns: 1fr 1fr;
       column-gap: 0.3rem;
-
     }
 
     @include breakpoint (large) {
