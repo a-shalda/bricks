@@ -29,12 +29,11 @@ function showTotal () {
   else {
     document.querySelector('.cart__checkout__subtotal').innerHTML = 'Cart is empty';
     document.querySelector('.cart__checkout').classList.add('button-hidden');
+    document.body.scrollTop = 0;
   }
 }
 
 function updateTotal () {
-
-  console.log(totalPiecesCart);
 
   let total = document.querySelector('.cart__checkout__subtotal');
 
@@ -109,11 +108,11 @@ cart.forEach(item => {
         let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
         
         pricesHTML = `
-          <div class="main__window__middle__top__price__left">
-            <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
+          <div class="cart__cont__product__price__left">
+            <p class="cart__cont__product__price__left__box">${priceM2HTML}</p>
           </div>
-          <div class="main__window__middle__top__price__right">
-            <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+          <div class="cart__cont__product__price__right">
+            <p class="cart__cont__product__price__right__box">${pricePcHTML}</p>
           </div>
         `;
 
@@ -211,11 +210,11 @@ cart.forEach(item => {
           let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
           pricesHTML = `
-            <div class="main__window__middle__top__price__left">
-              <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
+            <div class="cart__cont__product__price__left">
+              <p class="cart__cont__product__price__left__box">${priceM2HTML}</p>
             </div>
-            <div class="main__window__middle__top__price__right">
-              <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+            <div class="cart__cont__product__price__right">
+              <p class="cart__cont__product__price__right__box">${pricePcHTML}</p>
             </div>
           `;
         
@@ -388,11 +387,11 @@ cart.forEach(item => {
           let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
           pricesHTML = `
-            <div class="main__window__middle__top__price__left">
-              <p class="main__window__middle__top__price__left__box">${priceLMHTML}</p>
+            <div class="cart__cont__product__price__left">
+              <p class="cart__cont__product__price__left__box">${priceLMHTML}</p>
             </div>
-            <div class="main__window__middle__top__price__right">
-              <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+            <div class="cart__cont__product__price__right">
+              <p class="cart__cont__product__price__right__box">${pricePcHTML}</p>
             </div>
           `;
 
@@ -486,8 +485,8 @@ cart.forEach(item => {
           let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
           pricesHTML = `
-            <div class="main__window__middle__top__price__left">
-              <p class="main__window__middle__top__price__left__box">${pricePcHTML}</p>
+            <div class="cart__cont__product__price__left">
+              <p class="cart__cont__product__price__left__box">${pricePcHTML}</p>
             </div>
           `;
         

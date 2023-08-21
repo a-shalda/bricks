@@ -54,6 +54,8 @@
       text-align: center;
       width: 91%;
       color: gray;
+      font-size: 1rem;
+
 
       &__bold {
         font-weight: 700;
@@ -112,19 +114,45 @@
 
       &__price {
         display: flex;
-        margin-left: -0.93rem;
-        margin-right: -2rem;
         padding-block: 1rem;
+        gap: 1rem;
 
-        @include breakpoint(large) {
-          margin-left: -0.95rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+      
+        &__left {
+          display: flex;
+          width: 50%;
+          justify-content: center;
+          align-items: center;
+          padding-left: 0.5rem;
+          background-color: var(--gray-color);
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+
+          &__box {
+            line-height: 2.5rem;
+            color: $white-color;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+          }
         }
 
-        @include breakpoint(xlarge) {
-          margin-left: -1rem;
+        &__right {
+          display: flex;
+          width: 50%;
+          justify-content: center;
+          align-items: center;
+          
+          &__box {
+            line-height: 2.5rem;
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            font-weight: 400;
+          }
         }
       }
-
 
       &__vendor {
         display: flex;

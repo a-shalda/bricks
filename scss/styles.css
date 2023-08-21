@@ -1450,6 +1450,7 @@ select:focus {
   text-align: center;
   width: 91%;
   color: gray;
+  font-size: 1rem;
 }
 .cart__checkout__subtotal__bold {
   font-weight: 700;
@@ -1506,19 +1507,39 @@ select:focus {
 }
 .cart__cont__product__price {
   display: flex;
-  margin-left: -0.93rem;
-  margin-right: -2rem;
   padding-block: 1rem;
+  gap: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
-@media (min-width: 56.625em) {
-  .cart__cont__product__price {
-    margin-left: -0.95rem;
-  }
+.cart__cont__product__price__left {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  background-color: var(--gray-color);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
-@media (min-width: 79em) {
-  .cart__cont__product__price {
-    margin-left: -1rem;
-  }
+.cart__cont__product__price__left__box {
+  line-height: 2.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.cart__cont__product__price__right {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.cart__cont__product__price__right__box {
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  color: var(--gray-color);
+  font-weight: 400;
 }
 .cart__cont__product__vendor {
   display: flex;
