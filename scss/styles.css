@@ -1027,7 +1027,6 @@ sup {
   background-color: var(--gray-color);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  margin-left: -1px;
 }
 @media (min-width: 79em) {
   .main__window__middle__top__price__left {
@@ -1449,6 +1448,7 @@ select:focus {
   letter-spacing: 0.05rem;
   text-align: center;
   width: 91%;
+  max-width: 23rem;
   color: gray;
   font-size: 1rem;
 }

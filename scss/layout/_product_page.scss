@@ -341,7 +341,7 @@
             background-color: var(--gray-color);
             border-top-right-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
-            margin-left: -1px;
+            // margin-left: -1px;
 
             @include breakpoint(xlarge) {
               margin-left: 0;
