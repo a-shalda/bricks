@@ -35,6 +35,9 @@ function showTotal () {
 
 function updateTotal () {
 
+  
+
+
   let total = document.querySelector('.cart__checkout__subtotal');
 
   if (totalPiecesCart === 1) {totalPiecesCartMofified = totalPiecesCart + ' pc';}
@@ -591,7 +594,8 @@ function updateEvents () {
       cart.splice(index, 1);
       item.classList.add('hide_product');
       localStorage.setItem('cart', JSON.stringify(cart));
-      showTotal ();
+      updateTotal();
+      showTotal();
 
       //Removing all event listeners
 
@@ -674,6 +678,7 @@ function updateEvents () {
             let squareMetersInPallet = product.specs.squareMetersInPallet;
             let totalPallets = 0;
             let productType = product.type;
+            let onPallet = 0;
       
             if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       
@@ -685,7 +690,7 @@ function updateEvents () {
               else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
       
               for (let i = 0; i < 1000; i++) {
-      
+
                 totalVolume = totalVolume + baseVolume;
       
                 if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
@@ -695,6 +700,7 @@ function updateEvents () {
       
                 if (price >= priceTotalLimit) {break;}
       
+                onPallet = Number((baseVolume / squareMetersInPallet).toFixed(2));
                 totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
       
                 totalPacks++;
@@ -703,7 +709,17 @@ function updateEvents () {
                 let priceLength = String(price).length;
                 let priceModified = String(price);
                 if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
-      
+
+                if (i === 0) {
+                  totalCostCart = (Number(totalCostCart) - Number(price)).toFixed(2);
+                  totalSquareMetersCart = (Number(totalSquareMetersCart) - Number(totalVolume)).toFixed(2);
+                  totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
+                  totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
+                  totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
+                  totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                  updateTotal();
+                }
+
                 if (totalPacks === quantityPacks) {
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -746,7 +762,17 @@ function updateEvents () {
                     let priceLength = String(price).length;
                     let priceModified = String(price);
                     if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
-                
+
+                    if (i === 0) {
+                      totalCostCart = (Number(totalCostCart) - Number(price)).toFixed(2);
+                      totalSquareMetersCart = (Number(totalSquareMetersCart) - Number(totalVolume)).toFixed(2);
+                      totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
+                      totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
+                      totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
+                      totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                      updateTotal();
+                    }
+
                     if (totalPacks === quantityPacks) {
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                       item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -780,6 +806,15 @@ function updateEvents () {
                     let priceModified = String(price);
                     if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
                 
+                    if (i === 0) {
+                      totalCostCart = (Number(totalCostCart) - Number(price)).toFixed(2);
+                      totalSquareMetersCart = (Number(totalSquareMetersCart) - Number(totalVolume)).toFixed(2);
+                      totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
+                      totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
+                      totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                      updateTotal();
+                    }
+
                     if (totalPacks === quantityPacks) {
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                       item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
@@ -821,6 +856,16 @@ function updateEvents () {
                   let priceModified = String(price);
                   if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
       
+                  if (i === 0) {
+                    totalCostCart = (Number(totalCostCart) - Number(price)).toFixed(2);
+                    totalLinearMetersCart = (Number(totalLinearMetersCart) - Number(totalVolume)).toFixed(2);
+                    totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
+                    totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
+                    totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
+                    totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                    updateTotal();
+                  }
+
                   if (totalPacks === quantityPacks) {
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -863,7 +908,16 @@ function updateEvents () {
                   let piecesModified = '';
                   if (pieces === 1) {piecesModified = pieces + ` pc`;}
                   else {piecesModified = pieces + ` pcs`;}
-              
+
+                  if (i === 0) {
+                    totalCostCart = (Number(totalCostCart) - Number(price)).toFixed(2);
+                    totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
+                    totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
+                    totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
+                    totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                    updateTotal();
+                  }
+
                   if (totalPacks === quantityPacks) {
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
@@ -920,6 +974,7 @@ function updateEvents () {
             let squareMetersInPallet = product.specs.squareMetersInPallet;
             let totalPallets = 0;
             let productType = product.type;
+            let onPallet = 0;
       
             if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
       
@@ -941,6 +996,7 @@ function updateEvents () {
       
                 if (price >= priceTotalLimit) {break;}
       
+                onPallet = Number((baseVolume / squareMetersInPallet).toFixed(2));
                 totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
       
                 totalPacks++;
@@ -952,6 +1008,16 @@ function updateEvents () {
       
                 if (totalPacks >= packsTotalLimit) {break;}
   
+                if (i === 0) {
+                  totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                  totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+                  totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                  totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                  totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                  totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                  updateTotal();
+                }
+
                 if (totalPacks === quantityPacks) {
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -996,6 +1062,16 @@ function updateEvents () {
                     if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
                 
                     if (totalPacks >= packsTotalLimit) {break;}
+
+                    if (i === 0) {
+                      totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                      totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+                      totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                      totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                      totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                      totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                      updateTotal();
+                    }
   
                     if (totalPacks === quantityPacks) {
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
@@ -1031,6 +1107,15 @@ function updateEvents () {
                     if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
                 
                     if (totalPacks >= packsTotalLimit) {break;}
+
+                    if (i === 0) {
+                      totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                      totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+                      totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                      totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                      totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                      updateTotal();
+                    }
   
                     if (totalPacks === quantityPacks) {
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
@@ -1074,6 +1159,16 @@ function updateEvents () {
                   if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
       
                   if (totalPacks >= packsTotalLimit) {break;}
+
+                  if (i === 0) {
+                    totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                    totalLinearMetersCart = (Number(totalLinearMetersCart) + Number(totalVolume)).toFixed(2);
+                    totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                    totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                    totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                    totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                    updateTotal();
+                  }
   
                   if (totalPacks === quantityPacks) {
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
@@ -1119,6 +1214,15 @@ function updateEvents () {
                   else {piecesModified = pieces + ` pcs`;}
               
                   if (totalPacks >= packsTotalLimit) {break;}
+
+                  if (i === 0) {
+                    totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                    totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                    totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                    totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                    totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                    updateTotal();
+                  }
   
                   if (totalPacks === quantityPacks) {
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
