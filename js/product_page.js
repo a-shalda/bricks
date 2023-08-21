@@ -287,7 +287,6 @@ if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
     if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
     else {totalPacksModified = totalPacks + ` packs`}
 
-
     if (window.innerWidth <= 350) {
       optionsHTML += `
       <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>

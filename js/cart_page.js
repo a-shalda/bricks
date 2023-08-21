@@ -1,14 +1,12 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
-console.log(cart);
 
 let supplierPriceType = '';
-const priceTotalLimit = 30000; //Used to set a celing on the order subtotal
-const packsTotalLimit = 1000; //Used to set a celing on the order packs
 let quantityPacks = 0;
 let productTitle = '';
 let productHTML = '';
 
 let totalCostCart = 0;
+let totalCostCartLimit = 100000; //Used to set a celing on the order total
 let totalSquareMetersCart = 0;
 let totalLinearMetersCart = 0;
 let totalPacksCart = 0;
@@ -47,22 +45,26 @@ function updateTotal () {
   if (totalPacksCart === 1) {totalPacksCartMofified = totalPacksCart + ' pack';}
   else {totalPacksCartMofified = totalPacksCart + ' packs';}
 
+  let totalCostCartLength = String(totalCostCart).length;
+  let totalCostCartModified = String(totalCostCart);
+  if (totalCostCartLength > 6) {totalCostCartModified = totalCostCartModified.replace(totalCostCartModified.slice(-6), ',' + totalCostCartModified.slice(-6));}
+
   if (totalSquareMetersCart != 0 && totalLinearMetersCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
   }
   else if (totalSquareMetersCart != 0) {
     if (totalPacksCart === 0) {
-      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${totalPalletsCart} pal`;
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${totalPalletsCart} pal`;
     }
     else {
-      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
     }
   }
   else if (totalLinearMetersCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
   }
   else if (totalPacksCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
   }
 }
 
@@ -125,7 +127,7 @@ cart.forEach(item => {
         if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
         else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
 
-        for (let i = 0; i < 1000; i++) {
+        for (let i = 0; i < 5000; i++) {
 
           totalVolume = totalVolume + baseVolume;
 
@@ -133,8 +135,6 @@ cart.forEach(item => {
 
           pieces = pieces + basePieces;
           price = (totalVolume * priceM2).toFixed(2);
-
-          if (price >= priceTotalLimit) {break;}
 
           totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
 
@@ -228,7 +228,7 @@ cart.forEach(item => {
             if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
             else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
               
-            for (let i = 0; i < 1000; i++) {
+            for (let i = 0; i < 5000; i++) {
           
               totalVolume = totalVolume + baseVolume;
           
@@ -306,7 +306,7 @@ cart.forEach(item => {
             baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
             basePieces = piecesInPallet;
             
-            for (let i = 0; i < 1000; i++) {
+            for (let i = 0; i < 5000; i++) {
 
               totalVolume = Number((totalVolume + baseVolume).toFixed(2));
               
@@ -404,7 +404,7 @@ cart.forEach(item => {
           if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
           else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
           
-          for (let i = 0; i < 1000; i++) {
+          for (let i = 0; i < 5000; i++) {
         
             totalVolume = totalVolume + baseVolume;
         
@@ -498,7 +498,7 @@ cart.forEach(item => {
           baseVolume = 1;
           basePieces = 1;
           
-          for (let i = 0; i < 1000; i++) {
+          for (let i = 0; i < 5000; i++) {
         
             totalVolume = totalVolume + baseVolume;
           
@@ -638,7 +638,7 @@ function updateEvents () {
             if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
             else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
     
-            for (let i = 0; i < 1000; i++) {
+            for (let i = 0; i < 5000; i++) {
 
               totalVolume = totalVolume + baseVolume;
     
@@ -646,9 +646,7 @@ function updateEvents () {
     
               pieces = pieces + basePieces;
               price = (totalVolume * priceM2).toFixed(2);
-    
-              if (price >= priceTotalLimit) {break;}
-    
+        
               totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
     
               totalPacks++;
@@ -681,10 +679,8 @@ function updateEvents () {
                 if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
                 else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
                   
-                for (let i = 0; i < 1000; i++) {
-    
-                  if (price >= priceTotalLimit) {break;}
-              
+                for (let i = 0; i < 5000; i++) {
+                  
                   totalVolume = totalVolume + baseVolume;
               
                   if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
@@ -716,10 +712,8 @@ function updateEvents () {
                 baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
                 basePieces = piecesInPallet;
                 
-                for (let i = 0; i < 1000; i++) {
-    
-                  if (price >= priceTotalLimit) {break;}
-    
+                for (let i = 0; i < 5000; i++) {
+        
                   totalVolume = Number((totalVolume + baseVolume).toFixed(2));
                   
                   pieces = pieces + basePieces;
@@ -754,13 +748,11 @@ function updateEvents () {
               if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
               else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
               
-              for (let i = 0; i < 1000; i++) {
+              for (let i = 0; i < 5000; i++) {
 
                 totalPacks++;
 
                 totalVolume = totalVolume + baseVolume;
-
-                if (price >= priceTotalLimit) {break;}
             
                 if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
             
@@ -796,15 +788,13 @@ function updateEvents () {
               baseVolume = 1;
               basePieces = 1;
               
-              for (let i = 0; i < 1000; i++) {
+              for (let i = 0; i < 5000; i++) {
             
                 totalVolume = totalVolume + baseVolume;
               
                 pieces = pieces + basePieces;
                 price = (pieces * pricePc).toFixed(2);
-    
-                if (price >= priceTotalLimit) {break;}
-    
+        
                 totalPallets = Number((pieces / piecesInPallet).toFixed(2));
     
                 totalPacks++;
@@ -929,7 +919,7 @@ function updateEvents () {
               if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
               else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
       
-              for (let i = 0; i < 1000; i++) {
+              for (let i = 0; i < 5000; i++) {
 
                 totalVolume = totalVolume + baseVolume;
       
@@ -937,9 +927,7 @@ function updateEvents () {
       
                 pieces = pieces + basePieces;
                 price = (totalVolume * priceM2).toFixed(2);
-      
-                if (price >= priceTotalLimit) {break;}
-      
+            
                 totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
       
                 totalPacks++;
@@ -982,10 +970,8 @@ function updateEvents () {
                   if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
                   else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
                     
-                  for (let i = 0; i < 1000; i++) {
-      
-                    if (price >= priceTotalLimit) {break;}
-                
+                  for (let i = 0; i < 5000; i++) {
+                      
                     totalVolume = totalVolume + baseVolume;
                 
                     if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
@@ -1027,10 +1013,8 @@ function updateEvents () {
                   baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
                   basePieces = piecesInPallet;
                   
-                  for (let i = 0; i < 1000; i++) {
-      
-                    if (price >= priceTotalLimit) {break;}
-      
+                  for (let i = 0; i < 5000; i++) {
+            
                     totalVolume = Number((totalVolume + baseVolume).toFixed(2));
                     
                     pieces = pieces + basePieces;
@@ -1074,14 +1058,12 @@ function updateEvents () {
                 if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
                 else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
                 
-                for (let i = 0; i < 1000; i++) {
+                for (let i = 0; i < 5000; i++) {
   
                   totalPacks++;
   
                   totalVolume = totalVolume + baseVolume;
-  
-                  if (price >= priceTotalLimit) {break;}
-              
+                
                   if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
               
                   pieces = pieces + basePieces;
@@ -1126,15 +1108,13 @@ function updateEvents () {
                 baseVolume = 1;
                 basePieces = 1;
                 
-                for (let i = 0; i < 1000; i++) {
+                for (let i = 0; i < 5000; i++) {
               
                   totalVolume = totalVolume + baseVolume;
                 
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
-      
-                  if (price >= priceTotalLimit) {break;}
-      
+            
                   totalPallets = Number((pieces / piecesInPallet).toFixed(2));
       
                   totalPacks++;
@@ -1174,241 +1154,135 @@ function updateEvents () {
     })
   
     item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('click', () => {
-  
-      if (cart[index].quantity < packsTotalLimit) {
-        cart[index].quantity++;
-  
-        let updatedQuantity = cart[index].quantity;
-  
-        localStorage.setItem('cart', JSON.stringify(cart));
-  
-        products.forEach(product => {
-      
-          if (product.id === id) {
-      
-            quantityPacks = updatedQuantity;
-            supplierPriceType = product.supplierPriceType;
-            productTitle = product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format;
-      
-            //GENERATING PRICES
-            let priceCentsM2 = product.priceCentsM2;
-            let priceCentsPc = product.priceCentsPc;
-            const piecesInSquareMeter = Number(product.specs.piecesInSquareMeterCm / 100);
-            const piecesInPack = product.specs.piecesInPack;
-            const piecesInLinearMeter = Number(product.specs.piecesInLinearMeterCm / 100);
-            const isM2 = product.isM2;
-            const isLinearMeter = product.isLinearMeter;
-      
-            //Calculating the options
-            let baseVolume;
-            let totalVolume = 0;
-            let price;
-            let basePieces = piecesInPack;
-            let pieces = 0;
-            let totalPacks = 0;
-            let weight = Number(product.specs.weightOf1PackGramm / 100);
-            let weightOf1Piece = Number(product.specs.weightOf1PieceGramm / 100) //For bricks and mortars
-            let totalWeight = 0;
-            let piecesInPallet = product.specs.piecesInPallet;
-            let squareMetersInPallet = product.specs.squareMetersInPallet;
-            let totalPallets = 0;
-            let productType = product.type;
-      
-            if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
-      
-              const priceM2 = ((priceCentsM2 / 100).toFixed(2));
-      
-              //Calculating the options
-      
-              if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
-              else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
-      
-              for (let i = 0; i < 1000; i++) {
-                
-                totalVolume = totalVolume + baseVolume;
-      
-                if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
-      
-                pieces = pieces + basePieces;
-                price = (totalVolume * priceM2).toFixed(2);
-      
-                if (price >= priceTotalLimit) {break;}
-      
-                totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
-      
-                totalPacks++;
-                totalWeight = Number((totalWeight + weight).toFixed(2));
-      
-                let priceLength = String(price).length;
-                let priceModified = String(price);
-                if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
-      
-                if (totalPacks >= packsTotalLimit) {break;}
-  
-                if (i === 0) {
-                  totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
-                  totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
-                  totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
-                  totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
-                  totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                  totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
-                  updateTotal();
-                }
 
-                if (totalPacks === quantityPacks) {
-                  item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
-                  item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
-                  item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                  item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
-                  item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
-                  item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
-                  break;
-                }
+      if (totalCostCart >= totalCostCartLimit) {return;}
+  
+      cart[index].quantity++;
+      let updatedQuantity = cart[index].quantity;
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      products.forEach(product => {
+    
+        if (product.id === id) {
+    
+          quantityPacks = updatedQuantity;
+          supplierPriceType = product.supplierPriceType;
+          productTitle = product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format;
+    
+          //GENERATING PRICES
+          let priceCentsM2 = product.priceCentsM2;
+          let priceCentsPc = product.priceCentsPc;
+          const piecesInSquareMeter = Number(product.specs.piecesInSquareMeterCm / 100);
+          const piecesInPack = product.specs.piecesInPack;
+          const piecesInLinearMeter = Number(product.specs.piecesInLinearMeterCm / 100);
+          const isM2 = product.isM2;
+          const isLinearMeter = product.isLinearMeter;
+    
+          //Calculating the options
+          let baseVolume;
+          let totalVolume = 0;
+          let price;
+          let basePieces = piecesInPack;
+          let pieces = 0;
+          let totalPacks = 0;
+          let weight = Number(product.specs.weightOf1PackGramm / 100);
+          let weightOf1Piece = Number(product.specs.weightOf1PieceGramm / 100) //For bricks and mortars
+          let totalWeight = 0;
+          let piecesInPallet = product.specs.piecesInPallet;
+          let squareMetersInPallet = product.specs.squareMetersInPallet;
+          let totalPallets = 0;
+          let productType = product.type;
+    
+          if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
+    
+            const priceM2 = ((priceCentsM2 / 100).toFixed(2));
+    
+            //Calculating the options
+    
+            if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+            else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
+    
+            for (let i = 0; i < 5000; i++) {
+              
+              totalVolume = totalVolume + baseVolume;
+    
+              if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+    
+              pieces = pieces + basePieces;
+              price = (totalVolume * priceM2).toFixed(2);
+    
+              totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
+    
+              totalPacks++;
+              totalWeight = Number((totalWeight + weight).toFixed(2));
+    
+              let priceLength = String(price).length;
+              let priceModified = String(price);
+              if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+      
+              if (i === 0) {
+                totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
+                totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                updateTotal();
+              }
+
+              if (totalPacks === quantityPacks) {
+                item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
+                item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
+                item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
+                item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
+                item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
+                item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                break;
               }
             }
-            else if (supplierPriceType === 'pc') {
-      
-              if (isM2 === true && isLinearMeter === false) {
-      
-                const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-              
-                //Calculating the options
-      
-                if (productType !== 'Klinker brick' && productType !== 'Klinker clay paver') {
-                  if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
-                  else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
-                    
-                  for (let i = 0; i < 1000; i++) {
-      
-                    if (price >= priceTotalLimit) {break;}
-                
-                    totalVolume = totalVolume + baseVolume;
-                
-                    if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
-                
-                    pieces = pieces + basePieces;
-                    price = (pieces * pricePc).toFixed(2);
-              
-                    totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-              
-                    totalPacks++;
-                    totalWeight = Number((totalWeight + weight).toFixed(2));
-                
-                    let priceLength = String(price).length;
-                    let priceModified = String(price);
-                    if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
-                
-                    if (totalPacks >= packsTotalLimit) {break;}
-
-                    if (i === 0) {
-                      totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
-                      totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
-                      totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
-                      totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
-                      totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                      totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
-                      updateTotal();
-                    }
-  
-                    if (totalPacks === quantityPacks) {
-                      item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
-                      item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
-                      item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                      item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
-                      item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
-                      item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
-                      break;
-                    }
-                  }
-                }
-                else {
-                  baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
-                  basePieces = piecesInPallet;
+          }
+          else if (supplierPriceType === 'pc') {
+    
+            if (isM2 === true && isLinearMeter === false) {
+    
+              const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            
+              //Calculating the options
+    
+              if (productType !== 'Klinker brick' && productType !== 'Klinker clay paver') {
+                if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+                else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
                   
-                  for (let i = 0; i < 1000; i++) {
-      
-                    if (price >= priceTotalLimit) {break;}
-      
-                    totalVolume = Number((totalVolume + baseVolume).toFixed(2));
+                for (let i = 0; i < 5000; i++) {
                     
-                    pieces = pieces + basePieces;
-                    price = (pieces * pricePc).toFixed(2);
-      
-                    totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-                    totalPacks = totalPallets;
-                
-                    totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
-                
-                    let priceLength = String(price).length;
-                    let priceModified = String(price);
-                    if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
-                
-                    if (totalPacks >= packsTotalLimit) {break;}
-
-                    if (i === 0) {
-                      totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
-                      totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
-                      totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
-                      totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                      totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
-                      updateTotal();
-                    }
-  
-                    if (totalPacks === quantityPacks) {
-                      item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
-                      item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                      item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
-                      item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
-                      item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
-                      break;
-                    }
-                  }
-                }
-              }
-              else if (isM2 === false && isLinearMeter === true) {
-      
-                const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-      
-                //Calculating the options
-      
-                if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
-                else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
-                
-                for (let i = 0; i < 1000; i++) {
-  
-                  totalPacks++;
-  
                   totalVolume = totalVolume + baseVolume;
-  
-                  if (price >= priceTotalLimit) {break;}
               
-                  if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+                  if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
               
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
-      
+            
                   totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-      
+            
+                  totalPacks++;
                   totalWeight = Number((totalWeight + weight).toFixed(2));
               
                   let priceLength = String(price).length;
                   let priceModified = String(price);
                   if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
-      
-                  if (totalPacks >= packsTotalLimit) {break;}
-
-                  if (i === 0) {
+              
+                  if (i === 0 && totalCostCart) {
                     totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
-                    totalLinearMetersCart = (Number(totalLinearMetersCart) + Number(totalVolume)).toFixed(2);
+                    totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
                     totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
                     totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
                     totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
                     totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
                     updateTotal();
                   }
-  
+
                   if (totalPacks === quantityPacks) {
-                    item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
+                    item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                     item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
                     item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
@@ -1418,52 +1292,38 @@ function updateEvents () {
                   }
                 }
               }
-              else if (isM2 === false && isLinearMeter === false) {
-      
-                //This type of product is sold by 1 piece
-      
-                const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-  
-                //Calculating the options
-                baseVolume = 1;
-                basePieces = 1;
+              else {
+                baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
+                basePieces = piecesInPallet;
                 
-                for (let i = 0; i < 1000; i++) {
-              
-                  totalVolume = totalVolume + baseVolume;
-                
+                for (let i = 0; i < 5000; i++) {
+          
+                  totalVolume = Number((totalVolume + baseVolume).toFixed(2));
+                  
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
-      
-                  if (price >= priceTotalLimit) {break;}
-      
+    
                   totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-      
-                  totalPacks++;
-                  totalWeight = Number((totalWeight + weight).toFixed(2));
+                  totalPacks = totalPallets;
+              
+                  totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
               
                   let priceLength = String(price).length;
                   let priceModified = String(price);
                   if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
               
-                  let piecesModified = '';
-                  if (pieces === 1) {piecesModified = pieces + ` pc`;}
-                  else {piecesModified = pieces + ` pcs`;}
-              
-                  if (totalPacks >= packsTotalLimit) {break;}
-
                   if (i === 0) {
                     totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
-                    totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                    totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
                     totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
                     totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
                     totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
                     updateTotal();
                   }
-  
+
                   if (totalPacks === quantityPacks) {
-                    item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
-                    item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
+                    item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
+                    item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
                     item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
@@ -1471,10 +1331,108 @@ function updateEvents () {
                   }
                 }
               }
-            }          
-          }
-        })
-      }
+            }
+            else if (isM2 === false && isLinearMeter === true) {
+    
+              const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+    
+              //Calculating the options
+    
+              if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
+              else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
+              
+              for (let i = 0; i < 5000; i++) {
+
+                totalPacks++;
+
+                totalVolume = totalVolume + baseVolume;
+              
+                if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+            
+                pieces = pieces + basePieces;
+                price = (pieces * pricePc).toFixed(2);
+    
+                totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+    
+                totalWeight = Number((totalWeight + weight).toFixed(2));
+            
+                let priceLength = String(price).length;
+                let priceModified = String(price);
+                if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+    
+                if (i === 0) {
+                  totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                  totalLinearMetersCart = (Number(totalLinearMetersCart) + Number(totalVolume)).toFixed(2);
+                  totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                  totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                  totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                  totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                  updateTotal();
+                }
+
+                if (totalPacks === quantityPacks) {
+                  item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
+                  item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
+                  item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
+                  item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
+                  item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
+                  item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                  break;
+                }
+              }
+            }
+            else if (isM2 === false && isLinearMeter === false) {
+    
+              //This type of product is sold by 1 piece
+    
+              const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+
+              //Calculating the options
+              baseVolume = 1;
+              basePieces = 1;
+              
+              for (let i = 0; i < 5000; i++) {
+            
+                totalVolume = totalVolume + baseVolume;
+              
+                pieces = pieces + basePieces;
+                price = (pieces * pricePc).toFixed(2);
+          
+                totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+    
+                totalPacks++;
+                totalWeight = Number((totalWeight + weight).toFixed(2));
+            
+                let priceLength = String(price).length;
+                let priceModified = String(price);
+                if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+            
+                let piecesModified = '';
+                if (pieces === 1) {piecesModified = pieces + ` pc`;}
+                else {piecesModified = pieces + ` pcs`;}
+            
+                if (i === 0) {
+                  totalCostCart = (Number(totalCostCart) + Number(price)).toFixed(2);
+                  totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
+                  totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
+                  totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
+                  totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                  updateTotal();
+                }
+
+                if (totalPacks === quantityPacks) {
+                  item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
+                  item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
+                  item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
+                  item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
+                  item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
+                  break;
+                }
+              }
+            }
+          }          
+        }
+      })
     })
   })
 }
