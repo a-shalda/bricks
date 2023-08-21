@@ -36,6 +36,10 @@ function showTotal () {
 function updateTotal () {
 
   let total = document.querySelector('.cart__checkout__subtotal');
+  let totalItems = 0;
+
+  if (cart.length === 1) {totalItems = '1 item'}
+  else {totalItems = `${cart.length} items`}
 
   if (totalPiecesCart === 1) {totalPiecesCartMofified = totalPiecesCart + ' pc';}
   else {totalPiecesCartMofified = totalPiecesCart + ' pcs';}
@@ -44,21 +48,21 @@ function updateTotal () {
   else {totalPacksCartMofified = totalPacksCart + ' packs';}
 
   if (totalSquareMetersCart != 0 && totalLinearMetersCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
   }
   else if (totalSquareMetersCart != 0) {
     if (totalPacksCart === 0) {
-      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${totalPalletsCart} pal`;
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${totalPalletsCart} pal`;
     }
     else {
-      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
     }
   }
   else if (totalLinearMetersCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
   }
   else if (totalPacksCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart}<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCart} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${totalPalletsCart} pal`;
   }
 }
 
@@ -847,6 +851,7 @@ function updateEvents () {
         newPlus.replaceWith(newPlus.cloneNode(true));
       })
 
+      updateTotal();
       showTotal();
       updateEvents();
     });
