@@ -981,7 +981,7 @@ function updateEvents () {
                     pieces = pieces + basePieces;
                     price = (pieces * pricePc).toFixed(2);
               
-                    totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                    totalPallets = Number((pieces / piecesInPallet).toFixed(5));
               
                     totalPacks++;
                     totalWeight = Number((totalWeight + weight).toFixed(2));
@@ -996,14 +996,14 @@ function updateEvents () {
                       totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
                       totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
                       totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
-                      totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                      totalPalletsCart = Number((Number(totalPalletsCart) - Number(totalPallets)).toFixed(5));
                       updateTotal();
                     }
 
                     if (totalPacks === quantityPacks) {
 
-                      if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                      else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                      if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                      else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                       item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -1025,7 +1025,7 @@ function updateEvents () {
                     pieces = pieces + basePieces;
                     price = (pieces * pricePc).toFixed(2);
       
-                    totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                    totalPallets = Number((pieces / piecesInPallet).toFixed(5));
                     totalPacks = totalPallets;
                 
                     totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
@@ -1039,14 +1039,14 @@ function updateEvents () {
                       totalSquareMetersCart = (Number(totalSquareMetersCart) - Number(totalVolume)).toFixed(2);
                       totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
                       totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
-                      totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                      totalPalletsCart = Number((Number(totalPalletsCart) - Number(totalPallets)).toFixed(5));
                       updateTotal();
                     }
 
                     if (totalPacks === quantityPacks) {
 
-                      if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                      else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                      if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                      else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                       item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
@@ -1077,7 +1077,7 @@ function updateEvents () {
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
       
-                  totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                  totalPallets = Number((pieces / piecesInPallet).toFixed(5));
       
                   totalWeight = Number((totalWeight + weight).toFixed(2));
               
@@ -1091,14 +1091,14 @@ function updateEvents () {
                     totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
                     totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
                     totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
-                    totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                    totalPalletsCart = Number((Number(totalPalletsCart) - Number(totalPallets)).toFixed(5));
                     updateTotal();
                   }
 
                   if (totalPacks === quantityPacks) {
 
-                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -1126,7 +1126,7 @@ function updateEvents () {
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
             
-                  totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                  totalPallets = Number((pieces / piecesInPallet).toFixed(5));
       
                   totalPacks++;
                   totalWeight = Number((totalWeight + weight).toFixed(2));
@@ -1144,14 +1144,14 @@ function updateEvents () {
                     totalPacksCart = (Number(totalPacksCart) - Number(totalPacks));
                     totalPiecesCart = (Number(totalPiecesCart) - Number(pieces));
                     totalWeightCart = (Number(totalWeightCart) - Number(totalWeight)).toFixed(2);
-                    totalPalletsCart = (Number(totalPalletsCart) - Number(totalPallets)).toFixed(2);
+                    totalPalletsCart = Number((Number(totalPalletsCart) - Number(totalPallets)).toFixed(5));
                     updateTotal();
                   }
 
                   if (totalPacks === quantityPacks) {
 
-                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
@@ -1279,7 +1279,7 @@ function updateEvents () {
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
             
-                  totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                  totalPallets = Number((pieces / piecesInPallet).toFixed(5));
             
                   totalPacks++;
                   totalWeight = Number((totalWeight + weight).toFixed(2));
@@ -1294,14 +1294,14 @@ function updateEvents () {
                     totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
                     totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
                     totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                    totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                    totalPalletsCart = Number((Number(totalPalletsCart) + Number(totalPallets)).toFixed(5));
                     updateTotal();
                   }
 
                   if (totalPacks === quantityPacks) {
 
-                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -1323,7 +1323,7 @@ function updateEvents () {
                   pieces = pieces + basePieces;
                   price = (pieces * pricePc).toFixed(2);
     
-                  totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                  totalPallets = Number((pieces / piecesInPallet).toFixed(5));
                   totalPacks = totalPallets;
               
                   totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
@@ -1337,14 +1337,14 @@ function updateEvents () {
                     totalSquareMetersCart = (Number(totalSquareMetersCart) + Number(totalVolume)).toFixed(2);
                     totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
                     totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                    totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                    totalPalletsCart = Number((Number(totalPalletsCart) + Number(totalPallets)).toFixed(5));
                     updateTotal();
                   }
 
                   if (totalPacks === quantityPacks) {
 
-                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                     item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
@@ -1375,7 +1375,7 @@ function updateEvents () {
                 pieces = pieces + basePieces;
                 price = (pieces * pricePc).toFixed(2);
     
-                totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                totalPallets = Number((pieces / piecesInPallet).toFixed(5));
     
                 totalWeight = Number((totalWeight + weight).toFixed(2));
             
@@ -1389,14 +1389,14 @@ function updateEvents () {
                   totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
                   totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
                   totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                  totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                  totalPalletsCart = Number((Number(totalPalletsCart) + Number(totalPallets)).toFixed(5));
                   updateTotal();
                 }
 
                 if (totalPacks === quantityPacks) {
 
-                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
@@ -1424,7 +1424,7 @@ function updateEvents () {
                 pieces = pieces + basePieces;
                 price = (pieces * pricePc).toFixed(2);
           
-                totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                totalPallets = Number((pieces / piecesInPallet).toFixed(5));
     
                 totalPacks++;
                 totalWeight = Number((totalWeight + weight).toFixed(2));
@@ -1442,14 +1442,14 @@ function updateEvents () {
                   totalPacksCart = (Number(totalPacksCart) + Number(totalPacks));
                   totalPiecesCart = (Number(totalPiecesCart) + Number(pieces));
                   totalWeightCart = (Number(totalWeightCart) + Number(totalWeight)).toFixed(2);
-                  totalPalletsCart = (Number(totalPalletsCart) + Number(totalPallets)).toFixed(2);
+                  totalPalletsCart = Number((Number(totalPalletsCart) + Number(totalPallets)).toFixed(5));
                   updateTotal();
                 }
 
                 if (totalPacks === quantityPacks) {
 
-                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
-                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart.toFixed(2)}`;}
+                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets.toFixed(2)}`;}
 
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
