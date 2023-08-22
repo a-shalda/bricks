@@ -27,7 +27,6 @@ function showTotal () {
   else {
     document.querySelector('.cart__checkout__subtotal').innerHTML = 'Cart is empty';
     document.querySelector('.cart__checkout').classList.add('button-hidden');
-    document.body.scrollTop = 0;
   }
 }
 
@@ -948,10 +947,13 @@ function updateEvents () {
                 }
 
                 if (totalPacks === quantityPacks) {
+
+                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                   item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                  item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                   break;
@@ -999,10 +1001,13 @@ function updateEvents () {
                     }
 
                     if (totalPacks === quantityPacks) {
+
+                      if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                      else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                       item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                       item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                      item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                       item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                       item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                       break;
@@ -1039,9 +1044,12 @@ function updateEvents () {
                     }
 
                     if (totalPacks === quantityPacks) {
+
+                      if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                      else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                       item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                       item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                      item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                       item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                       item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                       break;
@@ -1088,10 +1096,13 @@ function updateEvents () {
                   }
 
                   if (totalPacks === quantityPacks) {
+
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                     item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                    item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                     break;
@@ -1138,9 +1149,12 @@ function updateEvents () {
                   }
 
                   if (totalPacks === quantityPacks) {
+
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
-                    item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                     break;
@@ -1231,10 +1245,13 @@ function updateEvents () {
               }
 
               if (totalPacks === quantityPacks) {
+
+                if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                 item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                 item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                 item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                 item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                 item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                 break;
@@ -1282,10 +1299,13 @@ function updateEvents () {
                   }
 
                   if (totalPacks === quantityPacks) {
+
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                     item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                     item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                    item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                     break;
@@ -1322,9 +1342,12 @@ function updateEvents () {
                   }
 
                   if (totalPacks === quantityPacks) {
+
+                    if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                    else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                     item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} m&sup2;`;
                     item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                    item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                     item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                     item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                     break;
@@ -1371,10 +1394,13 @@ function updateEvents () {
                 }
 
                 if (totalPacks === quantityPacks) {
+
+                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${totalVolume} lin.m`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${totalPacks}`;
                   item.querySelector('.cart__cont__product__quantity__pieces').innerHTML = `Pieces: ${pieces}`;
-                  item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                   break;
@@ -1421,9 +1447,12 @@ function updateEvents () {
                 }
 
                 if (totalPacks === quantityPacks) {
+
+                  if (cart.length === 1) {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPalletsCart}`;}
+                  else {item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;}
+
                   item.querySelector('.cart__cont__product__quantity__qty').innerHTML = `Quantity: ${piecesModified}`;
                   item.querySelector('.cart__cont__product__quantity__packs').innerHTML = `Packs: ${pieces}`;
-                  item.querySelector('.cart__cont__product__quantity__pallets').innerHTML = `Pallets: ${totalPallets}`;
                   item.querySelector('.cart__cont__product__quantity__weight').innerHTML = `Weight (kg): ${totalWeight}`;
                   item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML = `Subtotal: €${priceModified}`;
                   break;
