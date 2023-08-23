@@ -362,14 +362,41 @@
           letter-spacing: 0.05rem;
           text-align: center;
           font-size: 1.2rem;
-    
           font-weight: 500;
-          // letter-spacing: 0.09rem;
           color: var(--gray-color);
-          
+          padding-bottom: 1rem;
         }
 
         &__form {
+
+          &__submit {
+            letter-spacing: 0.05rem;
+            width: 91%;
+            max-width: 23rem;
+            margin-bottom: 1rem;
+        
+            background-color: #a43434;
+            border: none;
+            color: white;
+            padding-block: 0.3rem;
+            padding-inline: 1rem;
+            font-size: 1.2rem;
+            border-radius: 0.4rem;
+            transition: background-color 0.3s;
+            min-height: 2.875rem; //Height of the price box
+        
+            @include breakpoint (tiny) {
+              margin-inline: auto;
+            }
+        
+            &:hover {
+              background-color: hsla(0, 68%, 42%, 0.885);
+              cursor: pointer;
+            }
+          }
+        }
+
+        &__order {
 
         }
       }

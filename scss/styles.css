@@ -1727,6 +1727,31 @@ select:focus {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--gray-color);
+  padding-bottom: 1rem;
+}
+.cart__modal__box__content__form__submit {
+  letter-spacing: 0.05rem;
+  width: 91%;
+  max-width: 23rem;
+  margin-bottom: 1rem;
+  background-color: #a43434;
+  border: none;
+  color: white;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s;
+  min-height: 2.875rem;
+}
+@media (min-width: 25em) {
+  .cart__modal__box__content__form__submit {
+    margin-inline: auto;
+  }
+}
+.cart__modal__box__content__form__submit:hover {
+  background-color: hsla(0, 68%, 42%, 0.885);
+  cursor: pointer;
 }
 .hide_product {
   opacity: 0;

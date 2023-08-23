@@ -75,7 +75,7 @@ function updateTotal () {
 
 
 function updateOrder () {
-  let total = document.querySelector('.cart__modal__box__content__order');
+  let total = document.querySelector('.cart__modal__box__content__subtotal');
   let totalItems = 0;
   
   if (cart.length === 1) {totalItems = '1 item'}
@@ -127,9 +127,6 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     document.body.style.overflow = 'visible';
   });
 
-  // document.querySelector('.cart__modal__box__content__order').forEach(item => {
-
-  // })
 
 
   updateOrder();
@@ -139,44 +136,35 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   document.querySelectorAll('.cart__cont__product').forEach(item => {
 
     const itemTitle = item.querySelector('.cart__cont__product__title__name').innerHTML;
-
+    const itemCode = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
     const itemQuantity = item.querySelector('.cart__cont__product__quantity__qty').innerHTML;
-
-    let itemPacks = '';
-
-    if (item.querySelector('.cart__cont__product__quantity__packs')) {
-      itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;
-    }
-
-    let itemPieces = '';
-    
-    if (item.querySelector('.cart__cont__product__quantity__pieces')) {
-      itemPieces = item.querySelector('.cart__cont__product__quantity__pieces').innerHTML;
-    }
-
     const itemWeight = item.querySelector('.cart__cont__product__quantity__weight').innerHTML;
     const itemPallets = item.querySelector('.cart__cont__product__quantity__pallets').innerHTML;
     const itemSubtotal = item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML;
 
+    let itemPacks = '';
+    if (item.querySelector('.cart__cont__product__quantity__packs')) {itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;}
+
+    let itemPieces = '';
+    if (item.querySelector('.cart__cont__product__quantity__pieces')) {itemPieces = item.querySelector('.cart__cont__product__quantity__pieces').innerHTML;}
+
     orderHTML += `
       <div>
-        <p>${itemTitle}</p>
-        <p>${itemQuantity}</p>
-        <p>${itemPacks}</p>
-        <p>${itemPieces}</p>
-        <p>${itemWeight}</p>
-        <p>${itemPallets}</p>
-        <p>${itemSubtotal}</p>
+        <br>
+        <p class="cart__modal__box__content__order__title">${itemTitle}</p>
+        <p class="cart__modal__box__content__order__code">Code: ${itemCode}</p>
+        <p class="cart__modal__box__content__order__quantity">${itemQuantity}</p>
+        <p class="cart__modal__box__content__order__packs">${itemPacks}</p>
+        <p class="cart__modal__box__content__order__pieces">${itemPieces}</p>
+        <p class="cart__modal__box__content__order__weight">${itemWeight}</p>
+        <p class="cart__modal__box__content__order__pallets">${itemPallets}</p>
+        <p class="cart__modal__box__content__order__subtotal">${itemSubtotal}</p>
         <br>
       </div>
     `
-
   })
 
   document.querySelector('.cart__modal__box__content__order').innerHTML = orderHTML;
-
-
-  
 
 
 })
