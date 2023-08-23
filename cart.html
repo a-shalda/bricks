@@ -76,19 +76,27 @@
       <div class="cart__modal">
         <div class="cart__modal__box">
           <div class="cart__modal__box__content">
-            <p class="cart__modal__box__content__subtotal"></p>
 
             <form action="" class="cart__modal__box__content__form">
-              <input type="text" name="" id="">
-              <input type="text" name="" id="">
-              <input type="text" name="" id="">
-              <input type="hidden" name="" id="" class="cart__modal__box__content__form__back">
-              <input class="cart__modal__box__content__form__submit" type="submit" value="Place order" name="" id="">
+              <label for="name">Name
+                <input type="text" name="name" id="name" required>
+              </label>
+              <label for="phone">Phone
+                <input type="tel" name="phone" id="phone" required>
+              </label>
+              <label for="email">Email
+                <input type="email" name="email" id="email" required>
+              </label>
+              <input type="hidden" name="orderString" id="" class="cart__modal__box__content__form__back" readonly>
+              <input type="hidden" name="cartString" id="" class="cart__modal__box__content__order__back" readonly>
+              <input type="submit" value="Place order" name="" id="" class="cart__modal__box__content__form__submit">
+              <button class="cart__modal__box__content__continue">Continue shopping</button>
+
             </form>
 
-            <button class="cart__modal__box__content__continue">Continue shopping</button>
-            <p class="cart__modal__box__content__desc">After placing the order we will contact you shortly</p>
+            <!-- <p class="cart__modal__box__content__desc">After placing the order we will contact you shortly</p> -->
 
+            <p class="cart__modal__box__content__subtotal"></p>
             <p class="cart__modal__box__content__order"></p>
           </div>
         </div>

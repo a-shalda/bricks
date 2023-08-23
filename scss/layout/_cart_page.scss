@@ -348,15 +348,21 @@
         background-color: white;
         padding: 1rem;
 
+        &__subtotal {
+          padding-top: 1rem;
+          word-spacing: 0.1rem;
+        }
+
         &__form {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          // align-items: center;
           padding-top: 1rem;
           gap: 1rem;
           width: 100%;
           max-width: 23rem;
+          border-bottom: 1px solid var(--light-gray-color);
 
 
           &__submit {
@@ -385,11 +391,30 @@
         }
 
         &__order {
-          // max-width: 20rem;
+          max-width: 23rem;
+          padding-top: 1rem;
+
+          &__div {
+            border-top: 1px solid var(--light-gray-color);
+            padding: 1rem;
+          }
+
+          &__image {
+            border-radius: 0.5rem;
+          }
+
+          &__title {
+            font-weight: 500;
+            margin-block: 0.5rem;
+          }
+
+          &__subtotal {
+            font-weight: 500;
+            padding-top: 0.5rem;
+          }
         }
 
         &__continue {
-          margin-top: 1rem;
 
           letter-spacing: 0.05rem;
           width: 100%;
@@ -430,6 +455,7 @@
 
         &__desc {
           text-align: center;
+          color: gray;
         }
       }
     }
@@ -448,4 +474,19 @@
 
 .button-hidden {
   display: none;
+}
+
+input {
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--light-gray-color);
+  padding: 0.2rem;
+  color: var(--gray-color);
+  width: 100%;
+
+}
+
+form {
+  color: gray;
+
 }

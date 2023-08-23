@@ -1712,15 +1712,19 @@ select:focus {
   background-color: white;
   padding: 1rem;
 }
+.cart__modal__box__content__subtotal {
+  padding-top: 1rem;
+  word-spacing: 0.1rem;
+}
 .cart__modal__box__content__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding-top: 1rem;
   gap: 1rem;
   width: 100%;
   max-width: 23rem;
+  border-bottom: 1px solid var(--light-gray-color);
 }
 .cart__modal__box__content__form__submit {
   letter-spacing: 0.05rem;
@@ -1744,8 +1748,26 @@ select:focus {
   background-color: hsla(0, 68%, 42%, 0.885);
   cursor: pointer;
 }
+.cart__modal__box__content__order {
+  max-width: 23rem;
+  padding-top: 1rem;
+}
+.cart__modal__box__content__order__div {
+  border-top: 1px solid var(--light-gray-color);
+  padding: 1rem;
+}
+.cart__modal__box__content__order__image {
+  border-radius: 0.5rem;
+}
+.cart__modal__box__content__order__title {
+  font-weight: 500;
+  margin-block: 0.5rem;
+}
+.cart__modal__box__content__order__subtotal {
+  font-weight: 500;
+  padding-top: 0.5rem;
+}
 .cart__modal__box__content__continue {
-  margin-top: 1rem;
   letter-spacing: 0.05rem;
   width: 100%;
   margin-bottom: 1rem;
@@ -1780,6 +1802,7 @@ select:focus {
 }
 .cart__modal__box__content__desc {
   text-align: center;
+  color: gray;
 }
 
 .hide_product {
@@ -1794,4 +1817,17 @@ select:focus {
 
 .button-hidden {
   display: none;
+}
+
+input {
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--light-gray-color);
+  padding: 0.2rem;
+  color: var(--gray-color);
+  width: 100%;
+}
+
+form {
+  color: gray;
 }/*# sourceMappingURL=styles.css.map */

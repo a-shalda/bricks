@@ -140,9 +140,9 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 
 
 
-    cart.length = 0;
-    localStorage.clear(); 
-    location.reload();
+    // cart.length = 0;
+    // localStorage.clear(); 
+    // location.reload();
   })
 
   updateOrder();
@@ -158,6 +158,8 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     const itemWeight = item.querySelector('.cart__cont__product__quantity__weight').innerHTML;
     const itemPallets = item.querySelector('.cart__cont__product__quantity__pallets').innerHTML;
     const itemSubtotal = item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML;
+    const itemImage = item.querySelector('.cart__cont__product__image__img').src;
+
 
     let itemPacks = '';
     if (item.querySelector('.cart__cont__product__quantity__packs')) {itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;}
@@ -166,8 +168,8 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     if (item.querySelector('.cart__cont__product__quantity__pieces')) {itemPieces = item.querySelector('.cart__cont__product__quantity__pieces').innerHTML;}
 
     orderHTML += `
-      <div>
-        <br>
+      <div class='cart__modal__box__content__order__div'>
+        <img src="${itemImage}" class="cart__modal__box__content__order__image">
         <p class="cart__modal__box__content__order__title">${itemTitle}</p>
         <p class="cart__modal__box__content__order__code">Code: ${itemCode}</p>
         <p class="cart__modal__box__content__order__quantity">${itemQuantity}</p>
@@ -176,7 +178,6 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
         <p class="cart__modal__box__content__order__weight">${itemWeight}</p>
         <p class="cart__modal__box__content__order__pallets">${itemPallets}</p>
         <p class="cart__modal__box__content__order__subtotal">${itemSubtotal}</p>
-        <br>
       </div>
     `
 
