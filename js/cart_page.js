@@ -31,6 +31,11 @@ function showTotal () {
   }
 }
 
+
+
+
+
+
 function updateTotal () {
 
   let total = document.querySelector('.cart__checkout__subtotal');
@@ -67,6 +72,114 @@ function updateTotal () {
     total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
   }
 }
+
+
+function updateOrder () {
+  let total = document.querySelector('.cart__modal__box__content__order');
+  let totalItems = 0;
+  
+  if (cart.length === 1) {totalItems = '1 item'}
+  else {totalItems = `${cart.length} items`}
+
+  if (totalPiecesCart === 1) {totalPiecesCartMofified = totalPiecesCart + ' pc';}
+  else {totalPiecesCartMofified = totalPiecesCart + ' pcs';}
+
+  if (totalPacksCart === 1) {totalPacksCartMofified = totalPacksCart + ' pack';}
+  else {totalPacksCartMofified = totalPacksCart + ' packs';}
+
+  let totalCostCartLength = String(totalCostCart).length;
+  let totalCostCartModified = String(totalCostCart);
+  if (totalCostCartLength > 6) {totalCostCartModified = totalCostCartModified.replace(totalCostCartModified.slice(-6), ',' + totalCostCartModified.slice(-6));}
+
+  if (totalSquareMetersCart != 0 && totalLinearMetersCart != 0) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+  }
+  else if (totalSquareMetersCart != 0) {
+    if (totalPacksCart === 0) {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+    }
+    else {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+    }
+  }
+  else if (totalLinearMetersCart != 0) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+  }
+  else if (totalPacksCart != 0) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+  }
+}
+
+
+
+
+
+//Form
+
+document.querySelector('.cart__checkout__proceed').addEventListener('click', () => {
+
+  const form = document.querySelector('.cart__modal');
+  form.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+
+  document.querySelector('.cart__modal__box__close').addEventListener('click',  () => {
+    form.style.display = "none";
+    document.body.style.overflow = 'visible';
+  });
+
+  // document.querySelector('.cart__modal__box__content__order').forEach(item => {
+
+  // })
+
+
+  updateOrder();
+
+  let orderHTML = '';
+
+  document.querySelectorAll('.cart__cont__product').forEach(item => {
+
+    const itemTitle = item.querySelector('.cart__cont__product__title__name').innerHTML;
+
+    const itemQuantity = item.querySelector('.cart__cont__product__quantity__qty').innerHTML;
+
+    let itemPacks = '';
+
+    if (item.querySelector('.cart__cont__product__quantity__packs')) {
+      itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;
+    }
+
+    let itemPieces = '';
+    
+    if (item.querySelector('.cart__cont__product__quantity__pieces')) {
+      itemPieces = item.querySelector('.cart__cont__product__quantity__pieces').innerHTML;
+    }
+
+    const itemWeight = item.querySelector('.cart__cont__product__quantity__weight').innerHTML;
+    const itemPallets = item.querySelector('.cart__cont__product__quantity__pallets').innerHTML;
+    const itemSubtotal = item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML;
+
+    orderHTML += `
+      <div>
+        <p>${itemTitle}</p>
+        <p>${itemQuantity}</p>
+        <p>${itemPacks}</p>
+        <p>${itemPieces}</p>
+        <p>${itemWeight}</p>
+        <p>${itemPallets}</p>
+        <p>${itemSubtotal}</p>
+        <br>
+      </div>
+    `
+
+  })
+
+  document.querySelector('.cart__modal__box__content__order').innerHTML = orderHTML;
+
+
+  
+
+
+})
 
 cart.forEach(item => {
 
