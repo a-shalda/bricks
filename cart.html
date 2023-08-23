@@ -75,17 +75,19 @@
 
       <div class="cart__modal">
         <div class="cart__modal__box">
-          <span class="cart__modal__box__close">&times;</span>
           <div class="cart__modal__box__content">
-            <p class="cart__modal__box__content__title">Your order:</p>
             <p class="cart__modal__box__content__subtotal"></p>
 
             <form action="" class="cart__modal__box__content__form">
               <input type="text" name="" id="">
               <input type="text" name="" id="">
               <input type="text" name="" id="">
-              <input class="cart__modal__box__content__form__submit" type="submit" name="" id="">
+              <input type="hidden" name="" id="" class="cart__modal__box__content__form__back">
+              <input class="cart__modal__box__content__form__submit" type="submit" value="Place order" name="" id="">
             </form>
+
+            <button class="cart__modal__box__content__continue">Continue shopping</button>
+            <p class="cart__modal__box__content__desc">After placing the order we will contact you shortly</p>
 
             <p class="cart__modal__box__content__order"></p>
           </div>

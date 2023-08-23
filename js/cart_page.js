@@ -73,11 +73,12 @@ function updateTotal () {
   }
 }
 
+let orderToBackEndTotal = '';
 
 function updateOrder () {
   let total = document.querySelector('.cart__modal__box__content__subtotal');
   let totalItems = 0;
-  
+
   if (cart.length === 1) {totalItems = '1 item'}
   else {totalItems = `${cart.length} items`}
 
@@ -91,27 +92,35 @@ function updateOrder () {
   let totalCostCartModified = String(totalCostCart);
   if (totalCostCartLength > 6) {totalCostCartModified = totalCostCartModified.replace(totalCostCartModified.slice(-6), ',' + totalCostCartModified.slice(-6));}
 
-  if (totalSquareMetersCart != 0 && totalLinearMetersCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+  if (cart.length === 1) {
+    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified}</span>`;
+    orderToBackEndTotal = `Total: €${totalCostCartModified}`;
   }
-  else if (totalSquareMetersCart != 0) {
-    if (totalPacksCart === 0) {
-      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+  else {
+    if (totalSquareMetersCart != 0 && totalLinearMetersCart != 0) {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+      orderToBackEndTotal = `Total: €${totalCostCartModified} (${totalItems}) ${totalSquareMetersCart} m2, ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, ${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
     }
-    else {
-      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+    else if (totalSquareMetersCart != 0) {
+      if (totalPacksCart === 0) {
+        total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+        orderToBackEndTotal = `Total: €${totalCostCartModified} (${totalItems}) ${totalSquareMetersCart} m2, ${totalPiecesCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+      }
+      else {
+        total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalSquareMetersCart} m<sup>2</sup>, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+        orderToBackEndTotal = `Total: €${totalCostCartModified} (${totalItems}) ${totalSquareMetersCart} m2, ${totalPiecesCartMofified}, ${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+      }
     }
-  }
-  else if (totalLinearMetersCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
-  }
-  else if (totalPacksCart != 0) {
-    total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+    else if (totalLinearMetersCart != 0) {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+      orderToBackEndTotal = `Total: €${totalCostCartModified} (${totalItems}) ${totalLinearMetersCart} lin.m, ${totalPiecesCartMofified}, ${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+    }
+    else if (totalPacksCart != 0) {
+      total.innerHTML = `<span class="cart__checkout__subtotal__bold">Total: €${totalCostCartModified} (${totalItems})<br></span> ${totalPiecesCartMofified}, <br>${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+      orderToBackEndTotal = `Total: €${totalCostCartModified} (${totalItems}) ${totalPiecesCartMofified}, ${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
+    }
   }
 }
-
-
-
 
 
 //Form
@@ -122,18 +131,26 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   form.style.display = 'block';
   document.body.style.overflow = 'hidden';
 
-  document.querySelector('.cart__modal__box__close').addEventListener('click',  () => {
+  document.querySelector('.cart__modal__box__content__continue').addEventListener('click',  () => {
     form.style.display = "none";
     document.body.style.overflow = 'visible';
   });
 
+  document.querySelector('.cart__modal__box__content__form__submit').addEventListener('click', () => {
 
+
+
+    cart.length = 0;
+    localStorage.clear(); 
+    location.reload();
+  })
 
   updateOrder();
 
   let orderHTML = '';
+  let orderToBackEndDetails = '';
 
-  document.querySelectorAll('.cart__cont__product').forEach(item => {
+  document.querySelectorAll('.cart__cont__product').forEach((item, index) => {
 
     const itemTitle = item.querySelector('.cart__cont__product__title__name').innerHTML;
     const itemCode = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
@@ -162,10 +179,23 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
         <br>
       </div>
     `
+
+    orderToBackEndDetails += `
+        Position [${index + 1}]:
+        Code: ${itemCode},
+        ${itemTitle},
+        ${itemQuantity},
+        ${itemPacks + ', '}
+        ${itemPieces + ', '}
+        ${itemWeight},
+        ${itemPallets},
+        ${itemSubtotal}
+      /
+    `
   })
 
   document.querySelector('.cart__modal__box__content__order').innerHTML = orderHTML;
-
+  document.querySelector('.cart__modal__box__content__form__back').innerHTML = orderToBackEndTotal + ' || ' + orderToBackEndDetails;
 
 })
 

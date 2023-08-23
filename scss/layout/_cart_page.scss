@@ -334,46 +334,34 @@
       align-items: center;
       height: 100%;
 
-      &__close {
-        position: fixed;
-        top: 1rem;
-        right: 3rem;
-        color: #f1f1f1;
-        font-size: 3rem;
-        font-weight: bold;
-        transition: 0.3s;
-    
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
       &__content {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         max-width: 80em;
+
         height: auto;
         border-radius: 0.5rem;
         margin: auto;
         background-color: white;
         padding: 1rem;
 
-        &__title {
-          letter-spacing: 0.05rem;
-          text-align: center;
-          font-size: 1.2rem;
-          font-weight: 500;
-          color: var(--gray-color);
-          padding-bottom: 1rem;
-        }
-
         &__form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-top: 1rem;
+          gap: 1rem;
+          width: 100%;
+          max-width: 23rem;
+
 
           &__submit {
             letter-spacing: 0.05rem;
-            width: 91%;
-            max-width: 23rem;
-            margin-bottom: 1rem;
+            width: 100%;
         
             background-color: #a43434;
             border: none;
@@ -397,7 +385,51 @@
         }
 
         &__order {
+          // max-width: 20rem;
+        }
 
+        &__continue {
+          margin-top: 1rem;
+
+          letter-spacing: 0.05rem;
+          width: 100%;
+          margin-bottom: 1rem;
+          max-width: 23rem;
+      
+          padding-block: 0.3rem;
+          padding-inline: 1rem;
+          font-size: 1.2rem;
+          transition: background-color 0.3s;
+          min-height: 2.875rem; //Height of the price box
+      
+          @include breakpoint (tiny) {
+            margin-inline: auto;
+          }
+
+          background-color: gray;
+          border: 1px solid gray;
+          color: white;
+          align-self: center;
+        
+          border-radius: 0.4rem;
+          transition: background-color 0.1s, color 0.1s, border 0.1s;
+        
+          &:hover {
+            cursor: pointer;
+            background-color: var(--medium-gray-color);
+            border: 1px solid var(--medium-gray-color);
+            color: white;
+          }
+
+          &:active {
+            background-color: var(--gray-color);
+            color: white;
+            border: 1px solid var(--gray-color);
+          }
+        }
+
+        &__desc {
+          text-align: center;
         }
       }
     }
