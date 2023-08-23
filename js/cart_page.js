@@ -21,12 +21,13 @@ showTotal ();
 
 function showTotal () {
   if (cart[0]) {
-    document.querySelector('.cart__checkout').classList.add('button-visible');
-    document.querySelector('.cart__checkout').classList.remove('button-hidden');
+    document.querySelector('.cart__checkout__proceed').classList.remove('button-hidden');
+    document.querySelector('.cart__checkout__continue').classList.add('button-hidden');
   }
   else {
     document.querySelector('.cart__checkout__subtotal').innerHTML = 'Cart is empty';
-    document.querySelector('.cart__checkout').classList.add('button-hidden');
+    document.querySelector('.cart__checkout__proceed').classList.add('button-hidden');
+    document.querySelector('.cart__checkout__continue').classList.remove('button-hidden');
   }
 }
 

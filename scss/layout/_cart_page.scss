@@ -5,7 +5,7 @@
 
 .cart {
 
-  &__checkout-wrapper {
+  &__checkout {
     position: sticky;
     display: flex;
     flex-direction: column;
@@ -14,39 +14,7 @@
     z-index: 1;
     background-color: white;
     border-bottom: 1px solid var(--light-gray-color);
-    // margin-left: -1rem;
-    // margin-right: -1rem;
     margin-bottom: 1.5rem;
-
-  }
-
-  &__checkout {
-    letter-spacing: 0.05rem;
-    width: 91%;
-    max-width: 23rem;
-    margin-bottom: 1rem;
-
-    background-color: var(--gray-color);
-    border: none;
-    color: white;
-    padding-block: 0.3rem;
-    padding-inline: 1rem;
-    // margin-left: 1rem;
-    // margin-right: 1rem;
-    font-size: 1.2rem;
-    border-radius: 0.4rem;
-    transition: background-color 0.3s;
-    min-height: 2.875rem; //Height of the price box
-
-    @include breakpoint (tiny) {
-      margin-inline: auto;
-    }
-
-    &:hover {
-      background-color: gray;
-      color: white;
-      cursor: pointer;
-    }
 
     &__subtotal {
       padding-block: 0.7rem;
@@ -62,7 +30,62 @@
         letter-spacing: 0.09rem;
         color: var(--gray-color);
       }
+    }
 
+    &__proceed {
+      letter-spacing: 0.05rem;
+      width: 91%;
+      max-width: 23rem;
+      margin-bottom: 1rem;
+  
+      background-color: var(--gray-color);
+      border: none;
+      color: white;
+      padding-block: 0.3rem;
+      padding-inline: 1rem;
+      font-size: 1.2rem;
+      border-radius: 0.4rem;
+      transition: background-color 0.3s;
+      min-height: 2.875rem; //Height of the price box
+  
+      @include breakpoint (tiny) {
+        margin-inline: auto;
+      }
+  
+      &:hover {
+        background-color: gray;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    &__continue {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.09rem;
+      width: 91%;
+      max-width: 23rem;
+      margin-bottom: 1rem;
+      background-color: var(--gray-color);
+      border: none;
+      color: white;
+      padding-block: 0.3rem;
+      padding-inline: 1rem;
+      font-size: 1.2rem;
+      border-radius: 0.4rem;
+      transition: background-color 0.3s;
+      min-height: 2.875rem; //Height of the price box
+  
+      @include breakpoint (tiny) {
+        margin-inline: auto;
+      }
+  
+      &:hover {
+        background-color: gray;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 
