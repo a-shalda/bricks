@@ -127,6 +127,9 @@ function updateOrder () {
 
 document.querySelector('.cart__checkout__proceed').addEventListener('click', () => {
 
+  checkoutProductsHTML = '';
+  updateCheckout();
+
   const form = document.querySelector('.cart__modal');
   form.style.display = 'block';
   document.body.style.overflow = 'hidden';
@@ -147,7 +150,6 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 
   updateOrder();
 
-  let orderHTML = '';
   let orderToBackEndDetails = '';
 
   document.querySelectorAll('.cart__cont__product').forEach((item, index) => {
@@ -160,26 +162,11 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     const itemSubtotal = item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML;
     const itemImage = item.querySelector('.cart__cont__product__image__img').src;
 
-
     let itemPacks = '';
     if (item.querySelector('.cart__cont__product__quantity__packs')) {itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;}
 
     let itemPieces = '';
     if (item.querySelector('.cart__cont__product__quantity__pieces')) {itemPieces = item.querySelector('.cart__cont__product__quantity__pieces').innerHTML;}
-
-    orderHTML += `
-      <div class='cart__modal__box__content__order__div'>
-        <img src="${itemImage}" class="cart__modal__box__content__order__image">
-        <p class="cart__modal__box__content__order__title">${itemTitle}</p>
-        <p class="cart__modal__box__content__order__code">Code: ${itemCode}</p>
-        <p class="cart__modal__box__content__order__quantity">${itemQuantity}</p>
-        <p class="cart__modal__box__content__order__packs">${itemPacks}</p>
-        <p class="cart__modal__box__content__order__pieces">${itemPieces}</p>
-        <p class="cart__modal__box__content__order__weight">${itemWeight}</p>
-        <p class="cart__modal__box__content__order__pallets">${itemPallets}</p>
-        <p class="cart__modal__box__content__order__subtotal">${itemSubtotal}</p>
-      </div>
-    `
 
     orderToBackEndDetails += `
         Position [${index + 1}]:
@@ -195,10 +182,443 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     `
   })
 
-  document.querySelector('.cart__modal__box__content__order').innerHTML = orderHTML;
+  // document.querySelector('.cart__modal__box__content__order').innerHTML = orderHTML;
   document.querySelector('.cart__modal__box__content__form__back').innerHTML = orderToBackEndTotal + ' || ' + orderToBackEndDetails;
 
 })
+
+let checkoutProductsHTML = '';
+
+function updateCheckout () {
+
+  cart.forEach(item => {
+
+    products.forEach(product => {
+  
+      if (product.id === item.id) {
+  
+        quantityPacks = item.quantity;
+        supplierPriceType = product.supplierPriceType;
+        productTitle = product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format;
+  
+        //GENERATING PRICES
+        let priceCentsM2 = product.priceCentsM2;
+        let priceCentsPc = product.priceCentsPc;
+        const piecesInSquareMeter = Number(product.specs.piecesInSquareMeterCm / 100);
+        const piecesInPack = product.specs.piecesInPack;
+        const piecesInLinearMeter = Number(product.specs.piecesInLinearMeterCm / 100);
+        const isM2 = product.isM2;
+        const isLinearMeter = product.isLinearMeter;
+        let pricesHTML = '';
+  
+        //Calculating the options
+        let baseVolume;
+        let totalVolume = 0;
+        let price;
+        let basePieces = piecesInPack;
+        let pieces = 0;
+        let totalPacks = 0;
+        let weight = Number(product.specs.weightOf1PackGramm / 100);
+        let weightOf1Piece = Number(product.specs.weightOf1PieceGramm / 100) //For bricks and mortars
+        let totalWeight = 0;
+        let piecesInPallet = product.specs.piecesInPallet;
+        let squareMetersInPallet = product.specs.squareMetersInPallet;
+        let totalPallets = 0;
+        let productType = product.type;
+  
+        if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
+  
+          const priceM2 = ((priceCentsM2 / 100).toFixed(2));
+          const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+          const indexOfDotM2 = priceM2.toString().indexOf('.');
+          const indexofDotPc = pricePc.toString().indexOf('.');
+  
+          let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+          let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+          
+          pricesHTML = `
+            <div class="cart__cont__product__price__left">
+              <p class="cart__cont__product__price__left__box">${priceM2HTML}</p>
+            </div>
+            <div class="cart__cont__product__price__right">
+              <p class="cart__cont__product__price__right__box">${pricePcHTML}</p>
+            </div>
+          `;
+  
+          //Calculating the options
+  
+          if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+          else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
+  
+          for (let i = 0; i < 5000; i++) {
+  
+            totalVolume = totalVolume + baseVolume;
+  
+            if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+  
+            pieces = pieces + basePieces;
+            price = (totalVolume * priceM2).toFixed(2);
+  
+            totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
+  
+            totalPacks++;
+            totalWeight = Number((totalWeight + weight).toFixed(2));
+  
+            let priceLength = String(price).length;
+            let priceModified = String(price);
+            if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+  
+            if (totalPacks === quantityPacks) {
+  
+              checkoutProductsHTML += `
+                <div class="cart__cont__product">
+                  <div class="cart__cont__product__image">
+                    <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                  </div>
+                  <div class="cart__cont__product__price">${pricesHTML}</div>
+                  <div class="cart__cont__product__vendor">
+                    <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                    <p class="cart__cont__product__vendor__id">${product.id}</p>
+                  </div>
+                  <div class="cart__cont__product__title">
+                    <p class="cart__cont__product__title__name-checkout">${productTitle}</p>
+                  </div>
+                  <div class="cart__cont__product__quantity">
+                    <div class="cart__cont__product__quantity__modify">
+                    <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                      <div class="cart__cont__product__quantity__buttons"></div>
+                    </div>
+  
+                    <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                    <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                    <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                    <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+  
+                    <div class="cart__cont__product__quantity__sub-del">
+                      <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                    </div>
+  
+                  </div>
+                  <div class="cart__cont__product__save"></div>
+                  <div class="cart__cont__product__remove"></div>
+                </div>
+              `;
+              break;
+            }
+          }
+        }
+        else if (supplierPriceType === 'pc') {
+  
+          if (isM2 === true && isLinearMeter === false) {
+  
+            const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+            const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            const indexOfDotM2 = priceM2.toString().indexOf('.');
+            const indexofDotPc = pricePc.toString().indexOf('.');
+  
+            let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+  
+            pricesHTML = `
+              <div class="cart__cont__product__price__left">
+                <p class="cart__cont__product__price__left__box">${priceM2HTML}</p>
+              </div>
+              <div class="cart__cont__product__price__right">
+                <p class="cart__cont__product__price__right__box">${pricePcHTML}</p>
+              </div>
+            `;
+          
+            //Calculating the options
+  
+            if (productType !== 'Klinker brick' && productType !== 'Klinker clay paver') {
+              if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+              else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
+                
+              for (let i = 0; i < 5000; i++) {
+            
+                totalVolume = totalVolume + baseVolume;
+            
+                if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+            
+                pieces = pieces + basePieces;
+                price = (pieces * pricePc).toFixed(2);
+          
+                totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+          
+                totalPacks++;
+                totalWeight = Number((totalWeight + weight).toFixed(2));
+            
+                let priceLength = String(price).length;
+                let priceModified = String(price);
+                if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+            
+                if (totalPacks === quantityPacks) {
+  
+                  checkoutProductsHTML += `
+                    <div class="cart__cont__product">
+                      <div class="cart__cont__product__image">
+                        <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      </div>
+                      <div class="cart__cont__product__price">${pricesHTML}</div>
+                      <div class="cart__cont__product__vendor">
+                        <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                        <p class="cart__cont__product__vendor__id">${product.id}</p>
+                      </div>
+                      <div class="cart__cont__product__title">
+                        <p class="cart__cont__product__title__name-checkout">${productTitle}</p>
+                      </div>
+                      <div class="cart__cont__product__quantity">
+                        <div class="cart__cont__product__quantity__modify">
+                          <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                          <div class="cart__cont__product__quantity__buttons"></div>
+                        </div>
+              
+                        <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                        <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                        <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                        <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+  
+                        <div class="cart__cont__product__quantity__sub-del">
+                          <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                        </div>
+              
+                      </div>
+                      <div class="cart__cont__product__save"></div>
+                      <div class="cart__cont__product__remove"></div>
+                    </div>
+                  `;
+                  break;
+                }
+              }
+            }
+            else {
+              baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
+              basePieces = piecesInPallet;
+              
+              for (let i = 0; i < 5000; i++) {
+  
+                totalVolume = Number((totalVolume + baseVolume).toFixed(2));
+                
+                pieces = pieces + basePieces;
+                price = (pieces * pricePc).toFixed(2);
+  
+                totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+                totalPacks = totalPallets;
+                let totalPalletsNumber = totalPallets;
+                if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+                else {totalPallets = totalPallets + ` pallets`;}
+            
+                totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
+            
+                let priceLength = String(price).length;
+                let priceModified = String(price);
+                if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+            
+                if (totalPacks === quantityPacks) {
+  
+                  checkoutProductsHTML += `
+                    <div class="cart__cont__product">
+                      <div class="cart__cont__product__image">
+                        <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      </div>
+                      <div class="cart__cont__product__price">${pricesHTML}</div>
+                      <div class="cart__cont__product__vendor">
+                        <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                        <p class="cart__cont__product__vendor__id">${product.id}</p>
+                      </div>
+                      <div class="cart__cont__product__title">
+                        <p class="cart__cont__product__title__name-checkout">${productTitle}</p>
+                      </div>
+                      <div class="cart__cont__product__quantity">
+                        
+                        <div class="cart__cont__product__quantity__modify">
+                        <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
+                          <div class="cart__cont__product__quantity__buttons"></div>
+                        </div>
+        
+                        <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPalletsNumber}</p>
+                        <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                        <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                        <div class="cart__cont__product__quantity__sub-del">
+                          <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                        </div>
+              
+                      </div>
+                      <div class="cart__cont__product__save"></div>
+                      <div class="cart__cont__product__remove"></div>
+                    </div>
+                  `;
+                  break;
+                }
+              }
+            }
+          }
+          else if (isM2 === false && isLinearMeter === true) {
+  
+            const priceLM = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
+            const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            const indexOfDotLM = priceLM.toString().indexOf('.');
+            const indexofDotPc = pricePc.toString().indexOf('.');
+  
+            let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+  
+            pricesHTML = `
+              <div class="cart__cont__product__price__left">
+                <p class="cart__cont__product__price__left__box">${priceLMHTML}</p>
+              </div>
+              <div class="cart__cont__product__price__right">
+                <p class="cart__cont__product__price__right__box">${pricePcHTML}</p>
+              </div>
+            `;
+  
+            //Calculating the options
+  
+            if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
+            else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
+            
+            for (let i = 0; i < 5000; i++) {
+          
+              totalVolume = totalVolume + baseVolume;
+          
+              if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+          
+              pieces = pieces + basePieces;
+              price = (pieces * pricePc).toFixed(2);
+  
+              totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+  
+              totalPacks++;
+              totalWeight = Number((totalWeight + weight).toFixed(2));
+          
+              let priceLength = String(price).length;
+              let priceModified = String(price);
+              if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+  
+              if (totalPacks === quantityPacks) {
+  
+                checkoutProductsHTML += `
+                  <div class="cart__cont__product">
+                    <div class="cart__cont__product__image">
+                      <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    </div>
+                    <div class="cart__cont__product__price">${pricesHTML}</div>
+                    <div class="cart__cont__product__vendor">
+                      <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                      <p class="cart__cont__product__vendor__id">${product.id}</p>
+                    </div>
+                    <div class="cart__cont__product__title">
+                      <p class="cart__cont__product__title__name-checkout">${productTitle}</p>
+                    </div>
+                    <div class="cart__cont__product__quantity">
+  
+                      <div class="cart__cont__product__quantity__modify">
+                      <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
+                        <div class="cart__cont__product__quantity__buttons"></div>
+                      </div>
+            
+                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                      <p class="cart__cont__product__quantity__pieces">Pieces: ${pieces}</p>
+                      <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                      <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+                
+                      <div class="cart__cont__product__quantity__sub-del">
+                        <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                      </div>
+            
+                    </div>
+                    <div class="cart__cont__product__save"></div>
+                    <div class="cart__cont__product__remove"></div>
+                  </div>
+                `;
+                break;
+              }
+            }
+          }
+          else if (isM2 === false && isLinearMeter === false) {
+  
+            //This type of product is sold by 1 piece
+  
+            const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+            const indexofDotPc = pricePc.toString().indexOf('.');
+  
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+  
+            pricesHTML = `
+              <div class="cart__cont__product__price__left">
+                <p class="cart__cont__product__price__left__box">${pricePcHTML}</p>
+              </div>
+            `;
+          
+            //Calculating the options
+            baseVolume = 1;
+            basePieces = 1;
+            
+            for (let i = 0; i < 5000; i++) {
+          
+              totalVolume = totalVolume + baseVolume;
+            
+              pieces = pieces + basePieces;
+              price = (pieces * pricePc).toFixed(2);
+  
+              totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+  
+              totalPacks++;
+              totalWeight = Number((totalWeight + weight).toFixed(2));
+          
+              let priceLength = String(price).length;
+              let priceModified = String(price);
+              if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+          
+              let piecesModified = '';
+              if (pieces === 1) {piecesModified = pieces + ` pc`;}
+              else {piecesModified = pieces + ` pcs`;}
+            
+              if (totalPacks === quantityPacks) {
+  
+                checkoutProductsHTML += `
+                  <div class="cart__cont__product">
+                    <div class="cart__cont__product__image">
+                      <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    </div>
+                    <div class="cart__cont__product__price">${pricesHTML}</div>
+                      <div class="cart__cont__product__vendor">
+                      <p class="cart__cont__product__vendor__code">Code:&nbsp;</p>
+                    <p class="cart__cont__product__vendor__id">${product.id}</p>
+                    </div>
+                    <div class="cart__cont__product__title">
+                      <p class="cart__cont__product__title__name-checkout">${productTitle}</p>
+                    </div>
+                    <div class="cart__cont__product__quantity">
+  
+                      <div class="cart__cont__product__quantity__modify">
+                        <p class="cart__cont__product__quantity__qty">Quantity: ${piecesModified}</p>
+                        <div class="cart__cont__product__quantity__buttons"></div>
+                      </div>
+  
+                      <p class="cart__cont__product__quantity__packs">Packs: ${totalPacks}</p>
+                      <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
+                      <p class="cart__cont__product__quantity__pallets">Pallets: ${totalPallets}</p>
+                
+                      <div class="cart__cont__product__quantity__sub-del">
+                        <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
+                      </div>
+            
+                    </div>
+                    <div class="cart__cont__product__save"></div>
+                    <div class="cart__cont__product__remove"></div>
+                  </div>
+                `;
+                break;
+              }
+            }
+          }
+        }          
+      }
+    })
+  });
+  document.querySelector('.cart__modal__box__content__order').innerHTML = checkoutProductsHTML;
+}
 
 cart.forEach(item => {
 

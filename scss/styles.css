@@ -1533,6 +1533,14 @@ select:focus {
 .cart__cont__product__image__img:hover {
   opacity: 0.95;
 }
+.cart__cont__product__image__img-checkout {
+  border-radius: 0.5rem;
+  max-width: 21.875rem;
+  width: 100%;
+}
+.cart__cont__product__image__img-checkout:hover {
+  opacity: 1;
+}
 .cart__cont__product__price {
   display: flex;
   padding-block: 1rem;
@@ -1582,6 +1590,16 @@ select:focus {
 .cart__cont__product__title__name:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+.cart__cont__product__title__name-checkout {
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+  letter-spacing: 0.04rem;
+  font-weight: 500;
+}
+.cart__cont__product__title__name-checkout:hover {
+  cursor: auto;
+  text-decoration: none;
 }
 .cart__cont__product__quantity {
   padding-bottom: 4rem;
@@ -1738,6 +1756,7 @@ select:focus {
   border-radius: 0.4rem;
   transition: background-color 0.3s;
   min-height: 2.875rem;
+  font-weight: 400;
 }
 @media (min-width: 25em) {
   .cart__modal__box__content__form__submit {
@@ -1749,12 +1768,35 @@ select:focus {
   cursor: pointer;
 }
 .cart__modal__box__content__order {
-  max-width: 23rem;
   padding-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 42.75em) {
+  .cart__modal__box__content__order {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+}
+@media (min-width: 56.625em) {
+  .cart__modal__box__content__order {
+    gap: 1rem;
+  }
+}
+@media (min-width: 79em) {
+  .cart__modal__box__content__order {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-inline: 4rem;
+  }
 }
 .cart__modal__box__content__order__div {
-  border-top: 1px solid var(--light-gray-color);
+  border: 1px solid var(--light-gray-color);
+  border-radius: 0.5rem;
   padding: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02rem;
 }
 .cart__modal__box__content__order__image {
   border-radius: 0.5rem;
@@ -1762,6 +1804,7 @@ select:focus {
 .cart__modal__box__content__order__title {
   font-weight: 500;
   margin-block: 0.5rem;
+  letter-spacing: 0.04rem;
 }
 .cart__modal__box__content__order__subtotal {
   font-weight: 500;
