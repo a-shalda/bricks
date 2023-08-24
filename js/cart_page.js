@@ -152,15 +152,25 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 
   let orderToBackEndDetails = '';
 
-  document.querySelectorAll('.cart__cont__product').forEach((item, index) => {
+  const checkoutItems = document.querySelector('.cart__modal__box__content__order');
 
-    const itemTitle = item.querySelector('.cart__cont__product__title__name').innerHTML;
+  checkoutItems.querySelectorAll('.cart__cont__product').forEach((item, index) => {
+
+    const itemTitle = item.querySelector('.cart__cont__product__title__name-checkout').innerHTML;
+
+
+    let itemPriceFirst = '';
+    if (item.querySelector('.cart__cont__product__price__left__box')) {itemPriceFirst = item.querySelector('.cart__cont__product__price__left__box').textContent;}
+    
+    let itemPriceSecond = '';
+    if (item.querySelector('.cart__cont__product__price__right__box')) {itemPriceSecond = item.querySelector('.cart__cont__product__price__right__box').textContent;}
+    
     const itemCode = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
     const itemQuantity = item.querySelector('.cart__cont__product__quantity__qty').innerHTML;
     const itemWeight = item.querySelector('.cart__cont__product__quantity__weight').innerHTML;
     const itemPallets = item.querySelector('.cart__cont__product__quantity__pallets').innerHTML;
     const itemSubtotal = item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML;
-    const itemImage = item.querySelector('.cart__cont__product__image__img').src;
+    const itemImage = item.querySelector('.cart__cont__product__image__img-checkout').src;
 
     let itemPacks = '';
     if (item.querySelector('.cart__cont__product__quantity__packs')) {itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;}
@@ -172,6 +182,8 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
         Position [${index + 1}]:
         Code: ${itemCode},
         ${itemTitle},
+        Price: ${itemPriceFirst}
+        ${itemPriceSecond},
         ${itemQuantity},
         ${itemPacks + ', '}
         ${itemPieces + ', '}
@@ -182,9 +194,7 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     `
   })
 
-  // document.querySelector('.cart__modal__box__content__order').innerHTML = orderHTML;
   document.querySelector('.cart__modal__box__content__form__back').innerHTML = orderToBackEndTotal + ' || ' + orderToBackEndDetails;
-
 })
 
 let checkoutProductsHTML = '';
