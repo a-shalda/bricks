@@ -1792,6 +1792,38 @@ select:focus {
   background-color: hsla(0, 68%, 42%, 0.885);
   cursor: pointer;
 }
+.cart__modal__box__content__placed {
+  height: 10rem;
+  max-width: 23rem;
+  padding: 1rem;
+}
+.cart__modal__box__content__placed__message {
+  text-align: center;
+}
+.cart__modal__box__content__placed__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.09rem;
+  width: 91%;
+  max-width: 23rem;
+  margin-block: 1rem;
+  margin-inline: auto;
+  background-color: var(--gray-color);
+  border: none;
+  color: white;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s;
+  min-height: 2.875rem;
+}
+.cart__modal__box__content__placed__button:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
 .cart__modal__box__content__order {
   padding-top: 1rem;
   display: grid;
@@ -1840,6 +1872,7 @@ select:focus {
   width: 100%;
   margin-bottom: 1rem;
   max-width: 23rem;
+  margin-top: 1rem;
   padding-block: 0.3rem;
   padding-inline: 1rem;
   font-size: 1.2rem;

@@ -136,13 +136,25 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     document.body.style.overflow = 'visible';
   });
 
-  document.querySelector('.cart__modal__box__content__form__submit').addEventListener('click', () => {
+  document.querySelector('.cart__modal__box__content__form').addEventListener('submit', () => {
 
-    window.print();
+    const userName = document.querySelector('input[name="name"]').value;
 
-    // cart.length = 0;
-    // localStorage.clear(); 
-    // location.reload();
+    const orderRandom = (Math.random() * 100).toFixed(0);
+
+    document.querySelector('.cart__modal__box__content').innerHTML = `
+
+      <div class="cart__modal__box__content__placed">
+      
+        <p class="cart__modal__box__content__placed__message">
+          Thank you, ${userName}, your order #${orderRandom} has been formed. We will contact you shortly.
+        </p>
+        <a href="index.html" class="cart__modal__box__content__placed__button">Go to home page</a>
+      
+      </div>
+    `
+    cart.length = 0;
+    localStorage.clear(); 
   })
 
   updateOrder();
