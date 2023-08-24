@@ -74,6 +74,7 @@ function updateTotal () {
 }
 
 let orderToBackEndTotal = '';
+let cartOrderBack = '';
 
 function updateOrder () {
   let total = document.querySelector('.cart__modal__box__content__subtotal');
@@ -158,7 +159,6 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 
     const itemTitle = item.querySelector('.cart__cont__product__title__name-checkout').innerHTML;
 
-
     let itemPriceFirst = '';
     if (item.querySelector('.cart__cont__product__price__left__box')) {itemPriceFirst = item.querySelector('.cart__cont__product__price__left__box').textContent;}
     
@@ -170,7 +170,6 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     const itemWeight = item.querySelector('.cart__cont__product__quantity__weight').innerHTML;
     const itemPallets = item.querySelector('.cart__cont__product__quantity__pallets').innerHTML;
     const itemSubtotal = item.querySelector('.cart__cont__product__quantity__subtotal').innerHTML;
-    const itemImage = item.querySelector('.cart__cont__product__image__img-checkout').src;
 
     let itemPacks = '';
     if (item.querySelector('.cart__cont__product__quantity__packs')) {itemPacks = item.querySelector('.cart__cont__product__quantity__packs').innerHTML;}
@@ -194,6 +193,11 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     `
   })
 
+  cart.forEach(item => {
+    cartOrderBack += `${item.id}: ${item.quantity}; `;
+  })
+
+  document.querySelector('.cart__modal__box__content__order__back').innerHTML = cartOrderBack;
   document.querySelector('.cart__modal__box__content__form__back').innerHTML = orderToBackEndTotal + ' || ' + orderToBackEndDetails;
 })
 
