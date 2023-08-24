@@ -32,10 +32,6 @@ function showTotal () {
 }
 
 
-
-
-
-
 function updateTotal () {
 
   let total = document.querySelector('.cart__checkout__subtotal');
@@ -202,6 +198,8 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 })
 
 let checkoutProductsHTML = '';
+
+let modifyQuantity;
 
 function updateCheckout () {
 
@@ -1151,7 +1149,8 @@ document.querySelector('.cart__cont').innerHTML = productHTML;
 
 function updateEvents () {
 
-  let modifyQuantity = document.querySelectorAll('.cart__cont__product');
+  const cartProductsWithoutCheckout = document.querySelector('.cart__cont');
+  modifyQuantity = cartProductsWithoutCheckout.querySelectorAll('.cart__cont__product');
 
   modifyQuantity.forEach((item, index) => {
 
