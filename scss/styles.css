@@ -1432,6 +1432,11 @@ select:focus {
   letter-spacing: 0.09rem;
   color: var(--gray-color);
 }
+@media (min-width: 42.75em) {
+  .cart__checkout__subtotal {
+    padding-block: 1.5rem;
+  }
+}
 .cart__checkout__proceed {
   letter-spacing: 0.05rem;
   width: 91%;
@@ -1730,9 +1735,17 @@ select:focus {
   background-color: white;
   padding: 1rem;
 }
-.cart__modal__box__content__subtotal {
+.cart__modal__box__content__title {
+  font-weight: 500;
+  letter-spacing: 0.09rem;
+  color: var(--gray-color);
+  font-size: 1.1rem;
   padding-top: 1rem;
+}
+.cart__modal__box__content__subtotal {
+  padding-block: 1rem;
   word-spacing: 0.1rem;
+  font-size: 1rem;
 }
 .cart__modal__box__content__form {
   display: flex;
@@ -1742,7 +1755,19 @@ select:focus {
   gap: 1rem;
   width: 100%;
   max-width: 23rem;
-  border-bottom: 1px solid var(--light-gray-color);
+  color: gray;
+}
+.cart__modal__box__content__form__input {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-gray-color);
+  padding-left: 1rem;
+  color: var(--gray-color);
+  width: 100%;
+  min-height: 2.875rem;
+}
+.cart__modal__box__content__form__input:focus {
+  outline: 1px solid var(--medium-gray-color);
 }
 .cart__modal__box__content__form__submit {
   letter-spacing: 0.05rem;
@@ -1860,17 +1885,4 @@ select:focus {
 
 .button-hidden {
   display: none;
-}
-
-input {
-  font-size: 1rem;
-  border-radius: 0.2rem;
-  border: 1px solid var(--light-gray-color);
-  padding: 0.2rem;
-  color: var(--gray-color);
-  width: 100%;
-}
-
-form {
-  color: gray;
 }/*# sourceMappingURL=styles.css.map */

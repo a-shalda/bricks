@@ -138,7 +138,7 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 
   document.querySelector('.cart__modal__box__content__form__submit').addEventListener('click', () => {
 
-
+    window.print();
 
     // cart.length = 0;
     // localStorage.clear(); 

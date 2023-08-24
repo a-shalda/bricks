@@ -30,6 +30,10 @@
         letter-spacing: 0.09rem;
         color: var(--gray-color);
       }
+
+      @include breakpoint(medium) {
+        padding-block: 1.5rem;
+      }
     }
 
     &__proceed {
@@ -370,9 +374,18 @@
         background-color: white;
         padding: 1rem;
 
-        &__subtotal {
+        &__title {
+          font-weight: 500;
+          letter-spacing: 0.09rem;
+          color: var(--gray-color);
+          font-size: 1.1rem;
           padding-top: 1rem;
+        }
+
+        &__subtotal {
+          padding-block: 1rem;
           word-spacing: 0.1rem;
+          font-size: 1rem;
         }
 
         &__form {
@@ -383,8 +396,21 @@
           gap: 1rem;
           width: 100%;
           max-width: 23rem;
-          border-bottom: 1px solid var(--light-gray-color);
+          color: gray;
 
+          &__input {
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--light-gray-color);
+            padding-left: 1rem;
+            color: var(--gray-color);
+            width: 100%;
+            min-height: 2.875rem;
+          
+            &:focus {
+              outline: 1px solid var(--medium-gray-color);
+            }
+          }
 
           &__submit {
             letter-spacing: 0.05rem;
@@ -516,19 +542,4 @@
 
 .button-hidden {
   display: none;
-}
-
-input {
-  font-size: 1rem;
-  border-radius: 0.2rem;
-  border: 1px solid var(--light-gray-color);
-  padding: 0.2rem;
-  color: var(--gray-color);
-  width: 100%;
-
-}
-
-form {
-  color: gray;
-
 }
