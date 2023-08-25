@@ -1106,6 +1106,9 @@ sup {
 .main__window__middle__top__stock__subtotal__value__select:hover {
   cursor: pointer;
 }
+.main__window__middle__top__stock__subtotal__value__select__focus {
+  border: 1px solid hsla(0, 68%, 42%, 0.426);
+}
 .main__window__middle__top__buy {
   padding-inline: 1rem;
   padding-bottom: 1.5rem;
@@ -1121,7 +1124,7 @@ sup {
     padding-left: 0;
   }
 }
-.main__window__middle__top__buy__button_buy {
+.main__window__middle__top__buy__button_wish {
   border: none;
   padding-block: 0.6rem;
   padding-inline: 1rem;
@@ -1132,7 +1135,7 @@ sup {
   min-height: 2.875rem;
   background-color: rgb(95, 95, 95);
 }
-.main__window__middle__top__buy__button_buy:hover {
+.main__window__middle__top__buy__button_wish:hover {
   cursor: pointer;
   background-color: gray;
 }

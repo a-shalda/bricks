@@ -1,6 +1,11 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
+wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+console.log(wishlist);
 
 // localStorage.removeItem('cart');
+
+// localStorage.removeItem('wishlist');
 
 //GENERATING TITLE AND IMAGES
 
@@ -701,12 +706,6 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 // }
 
 
-//ADDING TO CART
-//Add to cart
-
-document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
-  addToCart ();
-})
 
 // function error (arg, quantity, type) {
 //   inputArea.value = '';
@@ -719,6 +718,72 @@ document.querySelector('.main__window__middle__top__buy__button_add').addEventLi
 
 //   }, 5000);
 // }
+
+
+//Add to wishlist
+
+const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
+
+buttonWish.addEventListener('click', () => {
+  ModifyWishlist ();
+})
+
+function checkWishlist () {
+  wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+  if (wishlist.length === 0) {
+    return;
+  }
+
+  const wish = {
+    id: root,
+  };
+
+  wishlist.forEach(item => {
+    if (item.id === wish.id) {
+      buttonWish.innerHTML = "Remove from wishlist";  
+    }
+  })
+}
+
+checkWishlist ();
+
+function ModifyWishlist () {
+
+  wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+  const wish = {
+    id: root,
+  };
+
+  let mathingIndex;
+
+  wishlist.forEach((item, index) => {
+    if (item.id === wish.id) {
+      mathingIndex = index;
+    }
+  })
+
+  if (mathingIndex === undefined) {
+    wishlist.push(wish);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    buttonWish.innerHTML = "Remove from wishlist";  
+  }
+  else {
+    wishlist.splice([mathingIndex], 1);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    buttonWish.innerHTML = "Add to wishlist";  
+  }
+
+  console.log(wishlist);
+}
+
+
+//Add to cart
+
+document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
+  addToCart ();
+})
 
 let userPacks = document.querySelector('.main__window__middle__top__stock__subtotal__value__select');
 
@@ -821,6 +886,17 @@ function addToCart () {
 
   console.log(cart);
 
+  }
+  else {
+    userPacks.classList.add('main__window__middle__top__stock__subtotal__value__select__focus');
+
+    function removeFocus() {
+      userPacks.classList.remove('main__window__middle__top__stock__subtotal__value__select__focus');
+    }
+
+    setTimeout(function () {
+      removeFocus();
+    }, 300);
   }
 
 }
