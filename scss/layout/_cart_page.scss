@@ -42,7 +42,7 @@
       max-width: 23rem;
       margin-bottom: 1rem;
   
-      background-color: var(--gray-color);
+      background-color: #a43434;
       border: none;
       color: white;
       padding-block: 0.3rem;
@@ -57,7 +57,7 @@
       }
   
       &:hover {
-        background-color: gray;
+        background-color: hsla(0, 68%, 42%, 0.885);
         color: white;
         cursor: pointer;
       }
@@ -457,7 +457,7 @@
             margin-block: 1rem;
             margin-inline: auto;
 
-            background-color: var(--gray-color);
+            background-color: rgb(95, 95, 95);
             border: none;
             color: white;
             padding-block: 0.3rem;
@@ -537,8 +537,8 @@
             margin-inline: auto;
           }
 
-          background-color: gray;
-          border: 1px solid gray;
+          background-color: rgb(95, 95, 95);
+          border: 1px solid rgb(95, 95, 95);
           color: white;
           align-self: center;
         
@@ -547,8 +547,8 @@
         
           &:hover {
             cursor: pointer;
-            background-color: var(--medium-gray-color);
-            border: 1px solid var(--medium-gray-color);
+            background-color: gray;
+            border: 1px solid gray;
             color: white;
           }
 
