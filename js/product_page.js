@@ -741,7 +741,7 @@ function checkWishlist () {
 
   wishlist.forEach(item => {
     if (item.id === wish.id) {
-      buttonWish.innerHTML = "Remove from wishlist";  
+      buttonWish.innerHTML = "Unsave";  
     }
   })
 }
@@ -767,12 +767,12 @@ function ModifyWishlist () {
   if (mathingIndex === undefined) {
     wishlist.push(wish);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    buttonWish.innerHTML = "Remove from wishlist";  
+    buttonWish.innerHTML = "Unsave";  
   }
   else {
     wishlist.splice([mathingIndex], 1);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    buttonWish.innerHTML = "Add to wishlist";  
+    buttonWish.innerHTML = "Save";  
   }
 
   console.log(wishlist);
