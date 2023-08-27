@@ -345,7 +345,7 @@
   &__modal {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 100ms, visibility 100ms;
+    transition: opacity 300ms, visibility 300ms;
 
     position: fixed; 
     z-index: 3;
