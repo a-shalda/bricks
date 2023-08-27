@@ -367,6 +367,7 @@
         align-items: center;
         width: 100%;
         max-width: 80em;
+        position: relative;
 
         height: auto;
         border-radius: 0.5rem;
@@ -380,6 +381,25 @@
           color: var(--gray-color);
           font-size: 1.1rem;
           padding-top: 1rem;
+        }
+
+        &__close {
+          display: none;
+          position: absolute;
+          top: 0.5rem;
+          right: 2rem;
+          color: gray;
+          font-size: 3rem;
+          font-weight: bold;
+          transition: 0.3s;
+  
+          @include breakpoint(tiny) {
+            display: block;
+          }
+  
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         &__subtotal {

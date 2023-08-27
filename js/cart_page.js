@@ -135,6 +135,11 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     document.body.style.overflow = 'visible';
   });
 
+  document.querySelector('.cart__modal__box__content__close').addEventListener('click',  () => {
+    form.style.display = "none";
+    document.body.style.overflow = 'visible';
+  });
+
   document.querySelector('.cart__modal__box__content__form').addEventListener('submit', () => {
 
     const userName = document.querySelector('input[name="name"]').value;
