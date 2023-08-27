@@ -396,6 +396,7 @@
           font-size: 3rem;
           font-weight: bold;
           transition: 0.3s;
+          user-select: none;
   
           @include breakpoint(tiny) {
             display: block;

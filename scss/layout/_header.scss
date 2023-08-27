@@ -19,7 +19,10 @@
     height: 4.3875rem;
     
     background-color: var(--nav-white-color);
-    border-bottom: 1px solid var(--light-gray-color);
+    // border-bottom: 1px solid var(--light-gray-color);
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.207);
+    clip-path: inset(0px 0px -10px 0px);
+
     padding: var(--upper-nav);
 
     &__left, &__right {
@@ -32,21 +35,29 @@
 
       &__logo {
         display: none;
+        user-select: none;
+        font-weight: 900;
+        letter-spacing: 0.02rem;
+        font-size: 1.3rem;
+
+        &__bricks {
+          color: #a43434;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
 
         &__img {
           width: 118px;
           height: auto;
         }
 
-        @include breakpoint(small) {
+        @include breakpoint(tiny) {
           display: block;
         }
       }
       &__hamburger {
-
-        @include breakpoint(medium) {
-          display: none;
-        }
 
         &__nav-toggle {
           display: block;
