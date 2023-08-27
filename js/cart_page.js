@@ -119,7 +119,6 @@ function updateOrder () {
   }
 }
 
-
 //Form
 
 document.querySelector('.cart__checkout__proceed').addEventListener('click', () => {

@@ -648,16 +648,17 @@ function ModifyWishlist () {
 
 //Adding to cart
 
-document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
-  addToCart ();
-})
-
 let userPacks = document.querySelector('.main__window__middle__top__stock__subtotal__value__select');
 
-function addToCart () {
+document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
+  addToCart();
+  modalToCart();
+  userPacks.value = 0;
+})
+
+function addToCart() {
 
   cart = JSON.parse(localStorage.getItem('cart')) || [];
-
   userQuantity = Number(userPacks.value);
 
   if (userQuantity != 0) {
@@ -666,8 +667,6 @@ function addToCart () {
     id: root,
     quantity: userQuantity
   };
-
-  userPacks.value = 0;
 
   let mathingIndex;
 
@@ -685,7 +684,6 @@ function addToCart () {
     if ((cart[mathingIndex].quantity + userQuantity) <= packsTotalLimit) {
       cart[mathingIndex].quantity += userQuantity;
     }
-
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
@@ -703,6 +701,25 @@ function addToCart () {
       removeFocus();
     }, 300);
   }
+}
+
+function modalToCart() {
+
+  const modalToCartWindow = document.querySelector('.modal__cart');
+  modalToCartWindow.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+
+  document.querySelector('.modal__cart__box__content__continue').addEventListener('click',  () => {
+    modalToCartWindow.style.display = "none";
+    document.body.style.overflow = 'visible';
+  });
+
+  // this.options[this.selectedIndex].text
+
+  // userPacks.options[userPacks[userPacks.value]].text;
+
+  let toCartMessage = `<span class="modal__cart__box__content__message--title">Added to Cart:</span><br> ${userPacks[userPacks.value].text}`;
+  document.querySelector('.modal__cart__box__content__message').innerHTML = toCartMessage;
 }
 
 //GENERATING SPECS
