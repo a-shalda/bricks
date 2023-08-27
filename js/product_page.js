@@ -44,14 +44,14 @@ products.forEach((product, index) => {
         <a class="main__window__top__left__button--prev">❮</a>
         <a class="main__window__top__left__button--next">❯</a>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
       else {
         productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
@@ -170,42 +170,27 @@ function showImage(n) {
   main_thumbnail[imageIndex-1].classList.add('main_thumbnail', 'clear');
 } 
 
-
-
 //MODAL
 
-function openModal () {
+document.querySelectorAll('.main__window__top__left__cont__img').forEach(image => {
 
-  document.querySelector(".modal__image").style.display = "block";
-  document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
-  document.body.style.overflow = 'hidden';
+  image.addEventListener('click', () => {
 
-  // Get the <span> element that closes the modal
-  let span = document.querySelectorAll(".modal__image__box__close")[0];
+    document.querySelector(".modal__image").style.display = "block";
+    document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
+    document.body.style.overflow = 'hidden';
   
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    document.querySelector(".modal__image").style.display = "none";
-  } 
+    document.querySelectorAll(".modal__image__box__close")[0].addEventListener('click', () => {
+      document.querySelector(".modal__image").style.display = "none";
+      document.body.style.overflow = 'visible';
+    })
 
-  document.querySelector('.modal__image').addEventListener('click',  () => {
-    span.onclick();
-    document.body.style.overflow = 'visible';
-  });
-}
-
-
-//GENERATING STOCK INFO
-
-// let stockInfo = '';
-
-// if (products[productNumberInProducts].availability) {
-//   stockInfo += `
-//     <i class="fa-solid fa-check stock"></i>
-//     <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
-//   `
-// }
-// document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
+    document.querySelector('.modal__image').addEventListener('click',  () => {
+      document.querySelector(".modal__image").style.display = "none";
+      document.body.style.overflow = 'visible';
+    });
+  })
+})
 
 
 //GENERATING PRICES
@@ -604,122 +589,6 @@ else if (supplierPriceType === 'pc') {
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
 
 
-//QUANTITY TYPE SELECTOR (m2 or pc) of the product
-
-// let selectLeft = document.querySelector('.main__window__middle__top__buy__select__left');
-// let selectMiddle = document.querySelector('.main__window__middle__top__buy__select__middle');
-// let selectRight = document.querySelector('.main__window__middle__top__buy__select__right');
-
-// let select; 
-
-// if (products[productNumberInProducts].supplierPriceType === 'm2') {
-//   select = 'm2';
-//   selectLeft.classList.add('selected');
-// }
-// else if (products[productNumberInProducts].supplierPriceType === 'pc') {
-//   select = 'pc';
-//   selectMiddle.classList.add('selected');
-//   selectLeft.style.display = 'none';
-//   selectMiddle.classList.add('main__window__middle__top__buy__select__left');
-// }
-
-// selectLeft.addEventListener('click', () => {
-
-//   if (select === 'pc') {
-//     selectMiddle.classList.remove('selected');
-//   }
-//   else if (select === 'pack') {
-//     selectRight.classList.remove('selected');
-//   }
-//   selectLeft.classList.add('selected');
-//   select = 'm2';
-//   placeholder();
-// })
-
-// selectMiddle.addEventListener('click', () => {
-
-//   if (select === 'm2') {
-//     selectLeft.classList.remove('selected');
-//   }
-//   else if (select === 'pack') {
-//     selectRight.classList.remove('selected');
-//   }
-//   selectMiddle.classList.add('selected');
-//   select = 'pc';
-//   placeholder();
-// })
-
-// selectRight.addEventListener('click', () => {
-
-//   if (select === 'm2') {
-//     selectLeft.classList.remove('selected');
-//   }
-//   else if (select === 'pc') {
-//     selectMiddle.classList.remove('selected');
-//   }
-//   selectRight.classList.add('selected');
-//   select = 'pack';
-//   placeholder();
-// })
-
-
-//SETTING PLACEHOLDER
-
-// let piecesInM2 = product.specs.piecesInSquareMeter;
-// let inputArea = document.querySelector('.main__window__middle__top__buy__area__input');
-// let timeOutSuccess;
-// let timeOutError;
-// let inputAreaFocus = false;
-
-// placeholder ();
-
-// function placeholder () {
-
-//   inputArea.value = '';
-
-//   if (window.innerWidth <= 549) {
-//     if (select === 'm2' || select === 'pack') {inputArea.placeholder = `1 - 1000`;}
-//     else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
-//     else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `min ${piecesInPack.toFixed(0)}`;}
-//   }
-//   else if (window.innerWidth >= 550) {
-//     if (select === 'm2') {inputArea.placeholder = `min 1 square meter`;}
-//     else if (select === 'pc' && piecesInPack === 1) {inputArea.placeholder = `multiple of ${piecesInPack.toFixed(0)} piece`;}
-//     else if (select === 'pc' && piecesInPack > 1) {inputArea.placeholder = `multiple of ${piecesInPack.toFixed(0)} pieces`;}
-//     else if (select === 'pack') {inputArea.placeholder = `min 1 pack`;}
-//   }
-
-//   if (inputAreaFocus) {
-//     inputArea.classList.remove('inputAreaFocus');
-//   }
-
-//   if (timeOutSuccess >= 0) {
-//     clearTimeout(timeOutSuccess);
-//     timeOutSuccess = undefined;
-//     inputArea.classList.remove('inputAreaFocus');
-//   }
-//   if (timeOutError >= 0) {
-//     clearTimeout(timeOutError);
-//     timeOutError = undefined;
-//     inputArea.classList.remove('inputAreaError');
-//   }
-// }
-
-
-
-// function error (arg, quantity, type) {
-//   inputArea.value = '';
-//   inputArea.placeholder = `${arg}${quantity}${type}`;
-//   inputArea.classList.add('inputAreaError');
-
-//   timeOutError = setTimeout(function () {
-//     placeholder();
-//     inputArea.classList.remove('inputAreaError');
-
-//   }, 5000);
-// }
-
-
 //Add to wishlist
 
 const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
@@ -774,12 +643,10 @@ function ModifyWishlist () {
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = "Save";  
   }
-
   console.log(wishlist);
 }
 
-
-//Add to cart
+//Adding to cart
 
 document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
   addToCart ();
@@ -794,56 +661,7 @@ function addToCart () {
   userQuantity = Number(userPacks.value);
 
   if (userQuantity != 0) {
-
-  // let typeAdded;
-
-  // if (!(typeof(userQuantity) === 'number' && userQuantity >= 1)) {
-  //   inputArea.value = '';
-  //   return;
-  // }
-
-  //Selected 'm2'
-  // if (select === 'm2') {
-
-  //   if (select === 'm2' && userQuantity === 1) {typeAdded = ' square meter';}
-  //   else if (select === 'm2' && userQuantity > 1) {typeAdded = ' square meters';}
-
-  //   if (userQuantity > m2Limit) {
-  //     return error('max ', m2Limit, typeAdded);
-  //   }
-  // }
-  //Selected 'pc'
-  // else if (select === 'pc') {
-
-  //   if (select === 'pc' && userQuantity === 1) {typeAdded = ' piece';}
-  //   else if (select === 'pc' && userQuantity > 1) {typeAdded = ' pieces';}
-
-  //   if (userQuantity > pcLimit) {
-  //     return error('max ', pcLimit, typeAdded);
-  //   }
-
-  //   if (userQuantity < piecesInPack) {
-  //     if (piecesInPack === 1) {typeAdded = ' piece';}
-  //     else if (piecesInPack > 1) {typeAdded = ' pieces';}
-
-  //     return error('min ', piecesInPack, typeAdded);
-  //   }
-
-  //   if (!Number.isInteger(userQuantity / piecesInPack)) {
-  //     userQuantity = userQuantity - (userQuantity % piecesInPack);
-  //   }
-  // }
-  //Selected 'pack'
-  // else if (select === 'pack') {
-
-  //   if (select === 'pack' && userQuantity === 1) {typeAdded = ' pack';}
-  //   else if (select === 'pack' && userQuantity > 1) {typeAdded = ' packs';}
-
-  //   if (userQuantity > packLimit) {
-  //     return error('max ', packLimit, typeAdded);
-  //   }
-  // }
-
+  
   const order = {
     id: root,
     quantity: userQuantity
@@ -871,19 +689,6 @@ function addToCart () {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  
-  // let sucessHTML = `Added ${userQuantity + typeAdded}`;
-
-  // inputArea.value = '';
-
-  // inputArea.placeholder = sucessHTML;
-
-  // inputArea.classList.add('inputAreaFocus');
-
-  // timeOutSuccess = setTimeout(function () {
-  //   placeholder();
-  // }, 5000);
-
   console.log(cart);
 
   }
@@ -898,159 +703,7 @@ function addToCart () {
       removeFocus();
     }, 300);
   }
-
 }
-
-//When input field is empty and not focused, remove inputAreaFocus
-// inputArea.addEventListener('blur', () => {
-
-//   if (inputArea.value.length === 0) {
-//     inputArea.classList.remove('inputAreaFocus');
-//     inputAreaFocus = false;
-//   }
-// })
-
-// inputArea.addEventListener('keydown', (event) => {
-
-//   //Checking if the previous operation was adding to cart or an error, stop animations
-//   if (timeOutSuccess >= 0) {
-//     clearTimeout(timeOutSuccess);
-//     placeholder();
-//     timeOutSuccess = undefined;
-//   }
-//   if (timeOutError >= 0) {
-//     clearTimeout(timeOutError);
-//     timeOutError = undefined;
-//     inputArea.classList.remove('inputAreaError');
-//   }
-
-//   //Add focus
-//   inputArea.classList.add('inputAreaFocus');
-//   inputAreaFocus = true;
-
-//   //Adding to cart on Enter
-//   if (event.key === 'Enter') {
-//     addToCart();
-//     document.activeElement.blur();
-//     inputArea.classList.add('inputAreaFocus');
-//   }
-
-//   //Input validation - First digit is not 0
-//   if (inputArea.value.length === 0 && event.key === '0') {
-//     event.preventDefault();
-//   }
-
-//   //Input validation - Preventing characters other than numbers from typing
-//   if (event.key !== '0' &&  event.key !== '1' && event.key !== '2' &&  event.key !== '3' && event.key !== '4' &&  event.key !== '5' &&event.key !== '6' &&  event.key !== '7' &&event.key !== '8' &&  event.key !== '9' && event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
-//     event.preventDefault();
-//   }
-
-//   //Input validation - Max length of the quantity
-//   if (select === 'm2' && inputArea.value.length >= 3) {
-//     limitInputAreaLength(event);
-//   }
-//   else if (select === 'pc' && inputArea.value.length >= 4) {
-//     limitInputAreaLength(event);
-//   }
-//   else if (select === 'pack' && inputArea.value.length >= 3) {
-//     limitInputAreaLength(event);
-//   }
-
-//   //Calculating subtotal
-//   let subTotalHTML = '';
-
-//   if (supplierPriceType === 'm2') {
-
-//     let initialPrice = products[productNumberInProducts].priceCentsM2;
-//     let piecesInM2 = products[productNumberInProducts].specs.piecesInSquareMeter;
-  
-//     const priceM2 = ((initialPrice / 100).toFixed(2));
-//     const pricePc = (Math.ceil((initialPrice / piecesInM2).toFixed(4)) / 100).toFixed(2);
-//     const indexOfDotM2 = priceM2.toString().indexOf('.');
-//     const indexofDotPc = pricePc.toString().indexOf('.');
-    
-//     pricesHTML += `
-//       <div class="main__window__middle__top__price__left">
-//         <p class="main__window__middle__top__price__left__box"><sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span></p>
-//       </div>
-//       <div class="main__window__middle__top__price__right">
-//         <p class="main__window__middle__top__price__right__box"><sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span></p>
-//       </div>
-//     `;
-    
-//     // document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
-
-//     //TODO
-
-//     if (select == 'm2') {
-//       subTotal = priceM2 * inputArea.value;
-//       console.log(subTotal);
-//       subTotalHTML = `Subtotal: €${subTotal}`;
-      
-//     }
-//     else if (select == 'pc') {}
-//     else if (select == 'pack') {}
-//   }
-//   else if (supplierPriceType === 'pc') {
-//     if (select == 'pc') {}
-//     else if (select == 'pack') {}
-//   }
-
-//   document.querySelector('.main__window__middle__top__stock__subtotal__value').innerHTML = subTotalHTML;
-// })
-
-// function limitInputAreaLength (event) {
-//   if (event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
-//     event.preventDefault();
-//   }
-// }
-
-// document.querySelector('.main__window__middle__top__buy__area__left').addEventListener('click', () => {
-  
-//   userQuantity = Number(inputArea.value);
-
-//   if (userQuantity >= 1) {
-//     userQuantity--;
-
-//     if (userQuantity === 0) {
-//       inputArea.value = '';
-//       inputArea.classList.remove('inputAreaFocus');
-//       inputAreaFocus = false;
-//       return;
-//     }
-//     inputArea.value = userQuantity;
-    
-//     //Add focus
-//     inputArea.classList.add('inputAreaFocus');
-//     inputAreaFocus = true;
-//   }
-// })
-
-// document.querySelector('.main__window__middle__top__buy__area__right').addEventListener('click', () => {
-  
-//   userQuantity = Number(inputArea.value) || 0;
-
-//   if (select === 'm2' && userQuantity === (m2Limit - 1)) {return;}
-//   else if (select === 'pc' && userQuantity === (pcLimit - 1)) {return;}
-//   else if (select === 'pack' && userQuantity === (packLimit - 1)) {return;}
-
-//   if (inputArea.value === '') {
-//     inputArea.value = 1;
-//   }
-//   userQuantity++;
-//   inputArea.value = userQuantity;
-
-//   //Add focus
-//   inputArea.classList.add('inputAreaFocus');
-//   inputAreaFocus = true;
-//   inputArea.classList.remove('inputAreaError');
-// })
-
-
-
-//window.open('cart.html', '_parent');
-
-
 
 //GENERATING SPECS
 
@@ -1133,3 +786,53 @@ if (specs.countryOfOrigin) {
   `
 }
 document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
+
+
+// OLD code - validating input
+
+//   //Adding to cart on Enter
+//   if (event.key === 'Enter') {
+//     addToCart();
+//     document.activeElement.blur();
+//     inputArea.classList.add('inputAreaFocus');
+//   }
+
+//   //Input validation - First digit is not 0
+//   if (inputArea.value.length === 0 && event.key === '0') {
+//     event.preventDefault();
+//   }
+
+//   //Input validation - Preventing characters other than numbers from typing
+//   if (event.key !== '0' &&  event.key !== '1' && event.key !== '2' &&  event.key !== '3' && event.key !== '4' &&  event.key !== '5' &&event.key !== '6' &&  event.key !== '7' &&event.key !== '8' &&  event.key !== '9' && event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
+//     event.preventDefault();
+//   }
+
+//   //Input validation - Max length of the quantity
+//   if (select === 'm2' && inputArea.value.length >= 3) {
+//     limitInputAreaLength(event);
+//   }
+//   else if (select === 'pc' && inputArea.value.length >= 4) {
+//     limitInputAreaLength(event);
+//   }
+//   else if (select === 'pack' && inputArea.value.length >= 3) {
+//     limitInputAreaLength(event);
+//   }
+
+// function limitInputAreaLength (event) {
+//   if (event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
+//     event.preventDefault();
+//   }
+// }
+
+
+//GENERATING STOCK INFO
+
+// let stockInfo = '';
+
+// if (products[productNumberInProducts].availability) {
+//   stockInfo += `
+//     <i class="fa-solid fa-check stock"></i>
+//     <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
+//   `
+// }
+// document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
