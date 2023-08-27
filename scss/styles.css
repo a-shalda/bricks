@@ -1186,29 +1186,8 @@ sup {
   color: gray;
   letter-spacing: 0.01rem;
 }
-.main .pc_price_selected {
-  background-color: var(--gray-color);
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  margin-left: -1px;
-}
-.main .selected {
-  background-color: var(--gray-color);
-  color: white;
-  border: 1px solid var(--gray-color);
-}
-.main .active {
-  outline: 3px solid gray;
-  border-radius: 0.3rem;
-}
-.main .clear {
-  opacity: 1;
-}
-.main .main_box {
-  opacity: 1;
-  visibility: visible;
-}
-.main .modal {
+
+.modal__image {
   display: none;
   position: fixed;
   z-index: 3;
@@ -1221,7 +1200,12 @@ sup {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
 }
-.main .modal__content {
+.modal__image__box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.modal__image__box__content {
   display: block;
   width: 100%;
   max-width: 80em;
@@ -1229,10 +1213,10 @@ sup {
   border-radius: 0.5rem;
   margin: auto;
 }
-.main .modal__content:hover {
+.modal__image__box__content:hover {
   cursor: pointer;
 }
-.main .close {
+.modal__image__box__close {
   position: fixed;
   top: 1rem;
   right: 3rem;
@@ -1241,18 +1225,29 @@ sup {
   font-weight: bold;
   transition: 0.3s;
 }
-.main .close:hover {
+.modal__image__box__close:hover {
   cursor: pointer;
 }
-.main .modal__box {
-  display: flex;
-  align-items: center;
-  height: 100%;
+
+.active {
+  outline: 3px solid gray;
+  border-radius: 0.3rem;
 }
-.main .fade {
+
+.clear {
+  opacity: 1;
+}
+
+.main_box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fade {
   animation-name: fade;
   animation-duration: 0.5s;
 }
+
 @keyframes fade {
   from {
     opacity: 0.8;
@@ -1261,16 +1256,6 @@ sup {
     opacity: 1;
   }
 }
-.main .inputAreaFocus {
-  color: var(--gray-color);
-  border-left: none;
-  background-color: var(--light-light-gray-color);
-}
-.main .inputAreaError {
-  color: firebrick;
-  border-left: none;
-}
-
 .image_blurred {
   background-color: var(--medium-gray-color);
   animation: pulse 2.5s infinite;
@@ -1281,12 +1266,6 @@ sup {
   background-color: var(--medium-gray-color);
   animation: pulse 2.5s infinite;
   border-radius: 0.5rem;
-}
-
-.hide_options {
-  overflow: hidden;
-  text-overflow: clip;
-  max-width: 15rem;
 }
 
 .cart__checkout {
@@ -1709,6 +1688,7 @@ sup {
 .cart__modal__box__content__order {
   padding-top: 1rem;
   display: grid;
+  justify-content: center;
   gap: 1rem;
 }
 @media (min-width: 42.75em) {

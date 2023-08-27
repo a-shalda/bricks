@@ -176,19 +176,19 @@ function showImage(n) {
 
 function openModal () {
 
-  document.querySelector(".modal").style.display = "block";
-  document.querySelector(".modal__content").src = document.querySelector(".main_image").currentSrc;
+  document.querySelector(".modal__image").style.display = "block";
+  document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
   document.body.style.overflow = 'hidden';
 
   // Get the <span> element that closes the modal
-  let span = document.querySelectorAll(".close")[0];
+  let span = document.querySelectorAll(".modal__image__box__close")[0];
   
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
-    document.querySelector(".modal").style.display = "none";
+    document.querySelector(".modal__image").style.display = "none";
   } 
 
-  document.querySelector('.modal').addEventListener('click',  () => {
+  document.querySelector('.modal__image').addEventListener('click',  () => {
     span.onclick();
     document.body.style.overflow = 'visible';
   });
