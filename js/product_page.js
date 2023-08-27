@@ -707,16 +707,20 @@ function addToCart() {
 function modalToCart() {
 
   const modalToCartWindow = document.querySelector('.modal__cart');
-  modalToCartWindow.style.display = 'block';
+  modalToCartWindow.style.visibility = 'visible';
+  modalToCartWindow.style.opacity = '1';
+
   document.body.style.overflow = 'hidden';
 
   document.querySelector('.modal__cart__box__content__continue').addEventListener('click',  () => {
-    modalToCartWindow.style.display = "none";
+    modalToCartWindow.style.visibility = 'hidden';
+    modalToCartWindow.style.opacity = '0';
     document.body.style.overflow = 'visible';
   });
 
   document.querySelector(".modal__cart__box__content__close").addEventListener('click', () => {
-    modalToCartWindow.style.display = "none";
+    modalToCartWindow.style.visibility = 'hidden';
+    modalToCartWindow.style.opacity = '0';
     document.body.style.overflow = 'visible';
   })
 

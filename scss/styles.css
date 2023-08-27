@@ -46,6 +46,7 @@ body {
   line-height: 1.5;
   font-family: Roboto, sans-serif;
   color: var(--gray-color);
+  transition: background-color 100ms;
 }
 
 img,
@@ -1230,7 +1231,8 @@ sup {
 }
 
 .modal__cart {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 3;
   padding: 1rem;
@@ -1241,6 +1243,7 @@ sup {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
+  transition: opacity 100ms, visibility 100ms;
 }
 .modal__cart__box {
   display: flex;
