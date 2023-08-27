@@ -174,19 +174,29 @@ function showImage(n) {
 
 document.querySelectorAll('.main__window__top__left__cont__img').forEach(image => {
 
+  let modalImage = document.querySelector(".modal__image");
+
   image.addEventListener('click', () => {
 
-    document.querySelector(".modal__image").style.display = "block";
+    modalImage.style.visibility = 'visible';
+    modalImage.style.opacity = '1';
+
     document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
     document.body.style.overflow = 'hidden';
   
     document.querySelectorAll(".modal__image__box__close")[0].addEventListener('click', () => {
-      document.querySelector(".modal__image").style.display = "none";
+
+      modalImage.style.visibility = 'hidden';
+      modalImage.style.opacity = '0';
+
       document.body.style.overflow = 'visible';
     })
 
-    document.querySelector('.modal__image').addEventListener('click',  () => {
-      document.querySelector(".modal__image").style.display = "none";
+    modalImage.addEventListener('click',  () => {
+
+      modalImage.style.visibility = 'hidden';
+      modalImage.style.opacity = '0';
+      
       document.body.style.overflow = 'visible';
     });
   })
