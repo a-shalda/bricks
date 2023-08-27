@@ -44,7 +44,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial;
   color: var(--gray-color);
   transition: background-color 100ms;
 }
@@ -142,6 +142,7 @@ sup {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 4.3875rem;
   background-color: var(--nav-white-color);
   border-bottom: 1px solid var(--light-gray-color);
   padding: var(--upper-nav);
@@ -1408,6 +1409,7 @@ sup {
   max-width: 23rem;
   color: gray;
   font-size: 1rem;
+  font-family: Roboto, Arial;
 }
 .cart__checkout__subtotal__bold {
   font-weight: 700;
