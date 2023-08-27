@@ -1248,6 +1248,7 @@ sup {
   height: 100%;
 }
 .modal__cart__box__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1259,6 +1260,24 @@ sup {
   margin: auto;
   background-color: white;
   padding: 1rem;
+}
+.modal__cart__box__content__close {
+  display: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  color: gray;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+@media (min-width: 25em) {
+  .modal__cart__box__content__close {
+    display: block;
+  }
+}
+.modal__cart__box__content__close:hover {
+  cursor: pointer;
 }
 .modal__cart__box__content__message {
   text-align: center;

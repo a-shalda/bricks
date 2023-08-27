@@ -592,6 +592,7 @@
 
     &__content {
 
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -604,6 +605,25 @@
       margin: auto;
       background-color: white;
       padding: 1rem;
+
+      &__close {
+        display: none;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        color: gray;
+        font-size: 3rem;
+        font-weight: bold;
+        transition: 0.3s;
+
+        @include breakpoint(tiny) {
+          display: block;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
 
       &__message {
         text-align: center;

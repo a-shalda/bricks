@@ -652,8 +652,6 @@ let userPacks = document.querySelector('.main__window__middle__top__stock__subto
 
 document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
   addToCart();
-  modalToCart();
-  userPacks.value = 0;
 })
 
 function addToCart() {
@@ -689,6 +687,9 @@ function addToCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
   console.log(cart);
 
+  modalToCart();
+  userPacks.value = 0;
+
   }
   else {
     userPacks.classList.add('main__window__middle__top__stock__subtotal__value__select__focus');
@@ -714,9 +715,10 @@ function modalToCart() {
     document.body.style.overflow = 'visible';
   });
 
-  // this.options[this.selectedIndex].text
-
-  // userPacks.options[userPacks[userPacks.value]].text;
+  document.querySelector(".modal__cart__box__content__close").addEventListener('click', () => {
+    modalToCartWindow.style.display = "none";
+    document.body.style.overflow = 'visible';
+  })
 
   let toCartMessage = `<span class="modal__cart__box__content__message--title">Added to Cart:</span><br> ${userPacks[userPacks.value].text}`;
   document.querySelector('.modal__cart__box__content__message').innerHTML = toCartMessage;
