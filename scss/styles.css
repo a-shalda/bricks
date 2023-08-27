@@ -1687,7 +1687,9 @@ sup {
   border: 1px solid var(--gray-color);
 }
 .cart__modal {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 100ms, visibility 100ms;
   position: fixed;
   z-index: 3;
   padding: 1rem;

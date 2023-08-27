@@ -127,22 +127,26 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   updateCheckout();
 
   const form = document.querySelector('.cart__modal');
-  form.style.display = 'block';
   document.body.style.overflow = 'hidden';
 
+  form.style.visibility = 'visible';
+  form.style.opacity = '1';
+
   document.querySelector('.cart__modal__box__content__continue').addEventListener('click',  () => {
-    form.style.display = "none";
+    form.style.visibility = 'hidden';
+    form.style.opacity = '0';
     document.body.style.overflow = 'visible';
   });
 
   document.querySelector('.cart__modal__box__content__close').addEventListener('click',  () => {
-    form.style.display = "none";
+    form.style.visibility = 'hidden';
+    form.style.opacity = '0';
     document.body.style.overflow = 'visible';
   });
 
-  document.querySelector('.cart__modal__box__content__form').addEventListener('submit', () => {
+  const userName = document.querySelector('input[name="name"]').value;
 
-    const userName = document.querySelector('input[name="name"]').value;
+  document.querySelector('.cart__modal__box__content__form').addEventListener('submit', () => {
 
     const orderRandom = (Math.random() * 100).toFixed(0);
 
