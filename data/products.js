@@ -112,13 +112,13 @@ const products = [
     name: 'K658WDF sintra ardor belino',
     availability: 'In Stock',
     filepath: 'K658WDF.html',
-    priceCentsPc: 75964,
+    priceCentsPc: 264,
     supplierPriceType: 'pc',
     isM2: true,
     isLinearMeter: false,
 
     specs: {
-      piecesInSquareMeterCm: 110,
+      piecesInSquareMeterCm: 5700,
       piecesInPallet: 468,
       recommendedJointSpacing: '10-12',
       thickness: 65,
@@ -184,13 +184,13 @@ const products = [
     name: 'loft angle AERA 710 crio 4817',
     availability: 'In Stock',
     filepath: '4817710.html',
-    priceCentsPc: 92698,
+    priceCentsPc: 2698,
     supplierPriceType: 'pc',
     isM2: false,
     isLinearMeter: true,
 
     specs: {
-      piecesInLinearMeterCm: 100,
+      piecesInLinearMeterCm: 330,
       piecesInPack: 6,
       piecesInPallet: 192,
       recommendedJointSpacing: '6',

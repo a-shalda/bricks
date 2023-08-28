@@ -1,7 +1,6 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-console.log(wishlist);
 
 // localStorage.removeItem('cart');
 
@@ -650,7 +649,6 @@ function ModifyWishlist () {
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = "Save";  
   }
-  console.log(wishlist);
 }
 
 //Adding to cart
@@ -692,8 +690,6 @@ function addToCart() {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  console.log(cart);
-
   modalToCart();
   userPacks.value = 0;
 

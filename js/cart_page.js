@@ -122,7 +122,9 @@ function updateOrder () {
 
 //Form
 
+
 document.querySelector('.cart__checkout__proceed').addEventListener('click', () => {
+  const userForm = document.querySelector('.cart__modal__box__content__form');
 
   checkoutProductsHTML = '';
   updateCheckout();
@@ -145,9 +147,11 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     document.body.classList.remove('stop-scroll');
   });
 
-  const userName = document.querySelector('input[name="name"]').value;
 
-  document.querySelector('.cart__modal__box__content__form').addEventListener('submit', () => {
+
+  userForm.addEventListener('submit', () => {
+
+    const userName = document.querySelector('input[name="name"]');
 
     const orderRandom = (Math.random() * 100).toFixed(0);
 
@@ -156,7 +160,7 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
       <div class="cart__modal__box__content__placed">
       
         <p class="cart__modal__box__content__placed__message">
-          Thank you, ${userName}, your order #${orderRandom} has been formed. We will contact you shortly.
+          Thank you, ${userName.value}, your order #${orderRandom} has been formed. We will contact you shortly.
         </p>
         <a href="index.html" class="cart__modal__box__content__placed__button">Go to home page</a>
       
