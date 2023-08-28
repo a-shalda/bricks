@@ -69,6 +69,10 @@ picture {
     scroll-behavior: auto !important;
   }
 }
+.search--link:hover {
+  text-decoration: underline;
+}
+
 .icon-style {
   color: var(--gray-color);
   font-size: 1.5rem;
@@ -225,6 +229,12 @@ sup {
   width: 100%;
   padding-left: 0.5rem;
   background-color: var(--search-white-color1);
+}
+.header__upper__right__search__form::-moz-placeholder {
+  color: gray;
+}
+.header__upper__right__search__form::placeholder {
+  color: gray;
 }
 .header__upper__right__search, .header__upper__right__saved, .header__upper__right__seen, .header__upper__right__basket {
   display: flex;

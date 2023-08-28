@@ -98,6 +98,10 @@
           width: 100%;
           padding-left: 0.5rem;
           background-color: var(--search-white-color1);
+
+          &::placeholder {
+            color: gray;
+          }
         }
       }
       &__search, &__saved, &__seen, &__basket {
