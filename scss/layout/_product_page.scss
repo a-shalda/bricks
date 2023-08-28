@@ -6,6 +6,14 @@
 
 .main {
 
+  @include breakpoint (medium) {
+    padding-inline: 1.5rem;
+  }
+
+  @include breakpoint (xlarge) {
+    padding-inline: 2rem;
+  }
+
   &__cont {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
@@ -66,7 +74,7 @@
     }
 
     @include breakpoint(xlarge) {
-      min-width: 77rem;
+      min-width: 75rem;
       grid-template-columns: 1fr 1fr 1fr 1fr;
 
       grid-template-areas: 
@@ -419,6 +427,7 @@
               
                 &:focus {
                   border: 1px solid var(--medium-gray-color);
+                  outline: none;
                 }
 
                 &:hover {
