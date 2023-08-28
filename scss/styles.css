@@ -275,6 +275,16 @@ sup {
 
 @media (min-width: 42.75em) {
   .categories {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 79em) {
+  .categories {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "one one two two" "three three three four" "five five six six" "seven seven seven eight";
@@ -380,6 +390,16 @@ sup {
   justify-items: center;
   gap: 0.5rem;
   padding: 1rem;
+}
+@media (min-width: 42.75em) {
+  .products {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 79em) {
+  .products {
+    padding-inline: 2rem;
+  }
 }
 @media (min-width: 25em) {
   .products {
@@ -548,6 +568,16 @@ sup {
 
 .slideshow {
   position: relative;
+}
+@media (min-width: 42.75em) {
+  .slideshow {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 79em) {
+  .slideshow {
+    padding-inline: 2rem;
+  }
 }
 .slideshow__slide {
   display: none;
@@ -1224,7 +1254,7 @@ sup {
 .modal__image {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 100ms, visibility 100ms;
+  transition: opacity 200ms, visibility 200ms;
   position: fixed;
   z-index: 3;
   padding: 1rem;
@@ -1271,7 +1301,7 @@ sup {
 .modal__cart {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 300ms, visibility 300ms;
+  transition: opacity 200ms, visibility 200ms;
   position: fixed;
   z-index: 3;
   padding: 1rem;
@@ -1426,6 +1456,12 @@ sup {
   background-color: var(--medium-gray-color);
   animation: pulse 2.5s infinite;
   border-radius: 0.5rem;
+}
+
+.stop-scroll {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
 }
 
 .cart__checkout {
@@ -1729,7 +1765,7 @@ sup {
 .cart__modal {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 300ms, visibility 300ms;
+  transition: opacity 200ms, visibility 200ms;
   position: fixed;
   z-index: 3;
   padding: 1rem;

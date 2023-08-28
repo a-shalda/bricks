@@ -538,7 +538,7 @@
 .modal__image {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 100ms, visibility 100ms;
+  transition: opacity 200ms, visibility 200ms;
 
   position: fixed; 
   z-index: 3;
@@ -589,7 +589,7 @@
 .modal__cart {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 300ms, visibility 300ms;
+  transition: opacity 200ms, visibility 200ms;
   position: fixed; 
   z-index: 3;
   padding: 1rem;
@@ -753,4 +753,10 @@
   background-color: var(--medium-gray-color);
   animation: pulse 2.5s infinite;
   border-radius: 0.5rem;
+}
+
+.stop-scroll {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
 }

@@ -3,6 +3,15 @@
 @use '../globals/colors' as *;
 
 .slideshow {
+
+  @include breakpoint (medium) {
+    padding-inline: 1.5rem;
+  }
+
+  @include breakpoint (xlarge) {
+    padding-inline: 2rem;
+  }
+  
   position: relative;
 
   &__slide {

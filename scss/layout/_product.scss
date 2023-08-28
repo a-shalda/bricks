@@ -5,6 +5,15 @@
 
 
 .products {
+
+  @include breakpoint (medium) {
+    padding-inline: 1.5rem;
+  }
+
+  @include breakpoint (xlarge) {
+    padding-inline: 2rem;
+  }
+  
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;

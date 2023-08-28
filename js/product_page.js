@@ -170,7 +170,7 @@ function showImage(n) {
   main_thumbnail[imageIndex-1].classList.add('main_thumbnail', 'clear');
 } 
 
-//MODAL
+//MODAL image
 
 document.querySelectorAll('.main__window__top__left__cont__img').forEach(image => {
 
@@ -180,24 +180,21 @@ document.querySelectorAll('.main__window__top__left__cont__img').forEach(image =
 
     modalImage.style.visibility = 'visible';
     modalImage.style.opacity = '1';
-
     document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('stop-scroll');
   
     document.querySelectorAll(".modal__image__box__close")[0].addEventListener('click', () => {
 
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
-
-      document.body.style.overflow = 'visible';
+      document.body.classList.remove('stop-scroll');
     })
 
     modalImage.addEventListener('click',  () => {
 
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
-      
-      document.body.style.overflow = 'visible';
+      document.body.classList.remove('stop-scroll');
     });
   })
 })
@@ -719,19 +716,18 @@ function modalToCart() {
   const modalToCartWindow = document.querySelector('.modal__cart');
   modalToCartWindow.style.visibility = 'visible';
   modalToCartWindow.style.opacity = '1';
-
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('stop-scroll');
 
   document.querySelector('.modal__cart__box__content__continue').addEventListener('click',  () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
-    document.body.style.overflow = 'visible';
+    document.body.classList.remove('stop-scroll');
   });
 
   document.querySelector(".modal__cart__box__content__close").addEventListener('click', () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
-    document.body.style.overflow = 'visible';
+    document.body.classList.remove('stop-scroll');
   })
 
   let toCartMessage = `<span class="modal__cart__box__content__message--title">Added to Cart:</span><br> ${userPacks[userPacks.value].text}`;

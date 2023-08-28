@@ -3,6 +3,14 @@
 
 .categories {
 
+  @include breakpoint (medium) {
+    padding-inline: 1.5rem;
+  }
+
+  @include breakpoint (xlarge) {
+    padding-inline: 2rem;
+  }
+
   @include breakpoint(medium) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; 
