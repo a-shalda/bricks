@@ -1,3 +1,6 @@
+cart = JSON.parse(localStorage.getItem('cart')) || [];
+wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
 const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
 const nav = document.querySelector('.header__lower--background');
 

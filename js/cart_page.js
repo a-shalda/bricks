@@ -147,8 +147,6 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     document.body.classList.remove('stop-scroll');
   });
 
-
-
   userForm.addEventListener('submit', () => {
 
     const userName = document.querySelector('input[name="name"]');
