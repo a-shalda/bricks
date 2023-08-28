@@ -3,32 +3,19 @@
 @use '../util/breakpoints' as *;
 
 
-
 .products {
 
-  @include breakpoint (medium) {
-    padding-inline: 1.5rem;
-  }
-
-  @include breakpoint (xlarge) {
-    padding-inline: 2rem;
-  }
-  
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 0.5rem;
-  padding: 1rem;
 
   @include breakpoint(tiny) {
     grid-template-columns: 1fr 1fr;
-    padding-inline: 0.5rem;
-    padding-block: 1rem;
   }
 
   @include breakpoint(small) {
     gap: 1rem;
-    padding: 1rem;
   }
 
   @include breakpoint(medium) {

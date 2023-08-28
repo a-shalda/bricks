@@ -1,4 +1,5 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
+wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
 let supplierPriceType = '';
 let quantityPacks = 0;

@@ -1,24 +1,27 @@
 @use '../globals/typography' as *;
 @use '../globals/colors' as *;
-
+@use '../util/breakpoints' as *;
 
 :root {
-  --padding: 1rem;
-  --upper-nav: 1rem;
-  --lower-nav: 0.5rem 1rem;
+  --padding-block: 1rem;
+  --padding-inline: 1rem;
+
+  @include breakpoint (medium) {
+    --padding-inline: 1.5rem;
+  }
+
+  @include breakpoint (xlarge) {
+    --padding-inline: 2rem;
+  }
 }
+
 
 .cont {
   width: 100%;
   max-width: 90em;
   margin: 0 auto;
-  padding: var(--padding);
-}
-
-.cont_min_products {
-  width: 100%;
-  max-width: 90em;
-  margin: 0 auto;
+  padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
 }
 
 .divider {
@@ -53,4 +56,13 @@
 
 sup {
   font-size: 0.7rem;
+}
+
+.section__title {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
 }

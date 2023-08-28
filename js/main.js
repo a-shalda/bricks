@@ -1,3 +1,6 @@
+cart = JSON.parse(localStorage.getItem('cart')) || [];
+wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
 //SLIDER
 //Generating slider on the page
 
@@ -211,6 +214,8 @@ document.querySelectorAll('.categories__box')
 let productsHTML = '';
 
 products.forEach((product, index) => {
+
+    // if (index >= 5) {return;}
 
     let priceCentsM2 = product.priceCentsM2;
     let priceCentsPc = product.priceCentsPc;
