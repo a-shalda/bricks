@@ -10,6 +10,11 @@
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
   max-width: 23rem;
+  transition: border 300ms;
+
+  &__focus {
+    border: 1px solid var(--medium-gray-color);
+  }
 
   &__icon {
     font-size: 1.2rem;

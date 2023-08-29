@@ -7,8 +7,7 @@ const searchResult = document.querySelector('.products');
 let resultArray = [];
 let productsHTML = '';
 
-const searchLimit = 5;
-
+const searchLimit = 30;
 
 searchField.addEventListener('keydown', () => {
 
@@ -44,6 +43,9 @@ searchField.addEventListener('keydown', () => {
     }
 
     generateProducts();
+    blurredLoading();
+    onMouseAnimation();
+
   }, 300);
 
 })
@@ -51,9 +53,11 @@ searchField.addEventListener('keydown', () => {
 
 //Generating products on the page
 
+let indicesOfProducts = [];
+
 function generateProducts () {
 
-  let indicesOfProducts = [];
+  indicesOfProducts = [];
 
   resultArray.forEach(result => {
 
@@ -277,8 +281,9 @@ function generateProducts () {
 }
 
 
+function blurredLoading () {
 
-document.querySelectorAll('.product__top__cont').forEach((cont) => {
+  document.querySelectorAll('.product__top__cont').forEach((cont) => {
     cont.classList.add('cont_blurred');
 
     const image = cont.querySelector('img');
@@ -289,45 +294,56 @@ document.querySelectorAll('.product__top__cont').forEach((cont) => {
         image.classList.remove('img_unloaded');
         cont.classList.remove('cont_blurred');
     })
+  })
+}
+
+
+function onMouseAnimation () {
+
+  document.querySelectorAll('.product')
+  
+      .forEach((product, index) => {
+  
+          product.addEventListener('mouseenter', () => {
+  
+              let first = document.querySelector('.product_img_' + indicesOfProducts[index]);
+              let second = document.querySelector('.product_img_second_' + indicesOfProducts[index]);
+  
+              first.classList.add('opacity');
+              second.classList.add('opacity');
+  
+              function moveLeft() {
+                  first.classList.add('moveLeft');
+                  second.classList.add('moveLeft');
+              }
+  
+              function moveRight() {
+                  first.classList.add('moveRight');
+                  second.classList.add('moveRight');
+              }
+              
+              let timeOut = setTimeout(moveLeft, 1000);
+              let timeOutBack = setTimeout(moveRight, 5000);
+  
+          product.addEventListener('mouseleave', () => {
+  
+              clearTimeout(timeOut);
+              clearTimeout(timeOutBack);
+              moveRight();
+  
+              first.classList.remove('opacity','moveLeft','moveRight');
+              second.classList.remove('opacity','moveLeft','moveRight');
+          });
+      });
+  });
+  
+}
+
+
+searchField.addEventListener('focus', () => {
+  document.querySelector('.search').classList.add('search__focus');
 })
 
-
-//Adding onmouse image animation
-window.onload = function() {
-document.querySelectorAll('.product')
-
-    .forEach((product, index) => {
-
-        product.addEventListener('mouseenter', () => {
-
-            let first = document.querySelector('.product_img_' + indicesOfProducts[index]);
-            let second = document.querySelector('.product_img_second_' + indicesOfProducts[index]);
-
-            first.classList.add('opacity');
-            second.classList.add('opacity');
-
-            function moveLeft() {
-                first.classList.add('moveLeft');
-                second.classList.add('moveLeft');
-            }
-
-            function moveRight() {
-                first.classList.add('moveRight');
-                second.classList.add('moveRight');
-            }
-            
-            let timeOut = setTimeout(moveLeft, 1000);
-            let timeOutBack = setTimeout(moveRight, 5000);
-
-        product.addEventListener('mouseleave', () => {
-
-            clearTimeout(timeOut);
-            clearTimeout(timeOutBack);
-            moveRight();
-
-            first.classList.remove('opacity','moveLeft','moveRight');
-            second.classList.remove('opacity','moveLeft','moveRight');
-        });
-    });
-});
-}
+searchField.addEventListener('focusout', () => {
+  document.querySelector('.search').classList.remove('search__focus');
+})
