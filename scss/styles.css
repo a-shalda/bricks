@@ -77,6 +77,11 @@ picture {
   color: var(--gray-color);
 }
 
+.icon-style--saved {
+  color: var(--gray-color);
+  width: 1.875rem;
+}
+
 .icon-style--search {
   color: var(--gray-color);
 }
@@ -210,19 +215,20 @@ sup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  width: 9.8875rem;
+  position: relative;
 }
 .header__upper__right__has-counter {
   padding-right: 1.6rem;
 }
 @media (min-width: 25em) {
   .header__upper__right {
-    gap: 2rem;
+    width: 10.8875rem;
   }
 }
 @media (min-width: 42.75em) {
   .header__upper__right {
-    gap: 2.5rem;
+    width: 11.8875rem;
   }
 }
 .header__upper__right__search, .header__upper__right__saved, .header__upper__right__seen, .header__upper__right__basket {
@@ -232,8 +238,25 @@ sup {
 .header__upper__right__search {
   font-size: 1.35rem;
 }
-.header__upper__right__saved, .header__upper__right__cart {
+.header__upper__right__saved {
+  width: 1.875rem;
+  position: absolute;
+  right: 5.1rem;
+}
+@media (min-width: 25em) {
+  .header__upper__right__saved {
+    right: 5.5rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .header__upper__right__saved {
+    right: 6rem;
+  }
+}
+.header__upper__right__cart {
   position: relative;
+}
+.header__upper__right__saved, .header__upper__right__cart {
   font-size: 1.5rem;
 }
 .header__upper__right__saved__counter, .header__upper__right__cart__counter {

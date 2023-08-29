@@ -25,8 +25,8 @@ const headerHTML = `
         </div>
 
         <div class="header__upper__right__saved">
-          <a href="saved.html">
-            <i class="fa-regular fa-heart icon-style">&nbsp;</i>
+          <a href="saved.html" class="header__upper__right__saved--link">
+            <i class="fa-regular fa-heart icon-style--saved">&nbsp;</i>
             <p class="header__upper__right__saved__counter"></p>
           </a>
         </div>

@@ -64,18 +64,19 @@
       display: flex;  
       align-items: center;
       justify-content: space-between;
-      gap: 1.5rem;
+      width: 9.8875rem;
+      position: relative;
 
       &__has-counter {
         padding-right: 1.6rem;
       }
 
       @include breakpoint(tiny) {
-        gap: 2rem;
+        width: 10.8875rem;
       }
 
       @include breakpoint(medium) {
-        gap: 2.5rem;
+        width: 11.8875rem;
       }
 
       &__search, &__saved, &__seen, &__basket {
@@ -87,8 +88,25 @@
         font-size: 1.35rem;
       }
 
-      &__saved, &__cart {
+      &__saved {
+        width: 1.875rem;
+        position: absolute;
+        right: 5.1rem;
+
+        @include breakpoint(tiny) {
+          right: 5.5rem;
+        }
+  
+        @include breakpoint(medium) {
+          right: 6rem;
+        }
+      }
+
+      &__cart {
         position: relative;
+      }
+
+      &__saved, &__cart {
         font-size: 1.5rem;
 
         &__counter {
@@ -112,54 +130,4 @@
       }
     }
   }
-
-  // &__lower--background {
-  //   visibility: hidden;
-  //   position: absolute;
-  //   height: 0;
-  //   background-color: var(--gray-color);
-
-  //   @include breakpoint(medium) {
-  //     visibility: visible;
-  //     position: relative;
-  //     height: auto;
-  //   }
-
-  //   &--visible {
-  //     visibility: visible;
-  //     height: 100vh; 
-  //     position: relative;
-  //   }
-  // }
-
-  // &__lower {
-  //   padding: var(--lower-nav);
-
-  //   &__nav {
-  //     &__links {
-  //       display: flex;
-  //       flex-direction: column;
-  //       align-items: center;
-  //       // text-transform: uppercase;
-  //       font-weight: 400;
-  //       font-size: $s-font-size;
-  //       letter-spacing: 0.05rem;
-
-  //       // &__link:last-child {
-  //       //   font-weight: 700;
-  //       // }
-
-  //       @include breakpoint(medium) {
-  //         flex-direction: row;
-  //         justify-content: flex-start;
-  //         gap: 2rem;
-  //         font-weight: 300;
-
-  //         &__link:last-child {
-  //           margin-left: auto;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }
