@@ -29,24 +29,15 @@
     &__left {
       gap: 1rem;
 
+      @include breakpoint(small) {
+        gap: 1.5rem;
+      }
+
       &__logo {
         user-select: none;
         font-weight: 900;
-        letter-spacing: 0.02rem;
-        font-size: 1.3rem;
-        // display: flex;
-        // align-items: flex-end;
-
-        &__moscow {
-          display: none;
-
-          @include breakpoint(tiny) {
-            display: flex;
-          }
-        }
-
-        &__link {
-        }
+        letter-spacing: 0.04rem;
+        font-size: 1.5rem;
 
         &__bricks {
           color: #a43434;
@@ -55,8 +46,6 @@
         &:hover {
           opacity: 0.8;
         }
-
-
       }
       &__hamburger {
 
@@ -74,36 +63,20 @@
       display: flex;  
       align-items: center;
       justify-content: space-between;
+      gap: 1.5rem;
 
-      &__search {
-        display: flex;
-        width: 40%;
-        font-weight: 300;
-        background-color: var(--search-white-color1);
-        border: 1px solid var(--light-gray-color);
-        padding: 0.5rem 0.8rem 0.5rem 1rem;
-        margin-left: 1rem;
-        border-radius: 1.5rem;
-
-        &__icon {
-          font-size: 1.2rem;
-          color: var(--medium-gray-color);
-          display: block;
-          margin: auto 0;
-        }
-
-        &__form {
-          border: none;
-          outline: none;
-          width: 100%;
-          padding-left: 0.5rem;
-          background-color: var(--search-white-color1);
-
-          &::placeholder {
-            color: gray;
-          }
-        }
+      @include breakpoint(tiny) {
+        gap: 2rem;
       }
+
+      @include breakpoint(medium) {
+        gap: 2.5rem;
+      }
+
+      @include breakpoint(medium) {
+        gap: 3rem;
+      }
+
       &__search, &__saved, &__seen, &__basket {
         display: flex;
         align-items: center;
