@@ -649,6 +649,8 @@ function ModifyWishlist () {
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = "Save";  
   }
+
+  updateCounters();
 }
 
 //Adding to cart
@@ -692,6 +694,8 @@ function addToCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
   modalToCart();
   userPacks.value = 0;
+  
+  updateCounters();
 
   }
   else {

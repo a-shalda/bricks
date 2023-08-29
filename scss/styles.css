@@ -78,6 +78,11 @@ picture {
   font-size: 1.5rem;
 }
 
+.icon-style--search {
+  color: var(--gray-color);
+  font-size: 1.4rem;
+}
+
 .icon-style:hover {
   color: firebrick;
   cursor: pointer;
@@ -164,7 +169,7 @@ sup {
   background-color: var(--nav-white-color);
   -webkit-clip-path: inset(0px 0px -10px 0px);
           clip-path: inset(0px 0px -10px 0px);
-  padding-block: 0.7rem;
+  padding-block: 1rem;
 }
 .header__upper__left, .header__upper__right {
   display: flex;
@@ -205,6 +210,9 @@ sup {
   justify-content: space-between;
   gap: 1.5rem;
 }
+.header__upper__right__has-counter {
+  padding-right: 1.6rem;
+}
 @media (min-width: 25em) {
   .header__upper__right {
     gap: 2rem;
@@ -224,45 +232,26 @@ sup {
   display: flex;
   align-items: center;
 }
-.header__lower--background {
-  visibility: hidden;
-  position: absolute;
-  height: 0;
-  background-color: var(--gray-color);
-}
-@media (min-width: 42.75em) {
-  .header__lower--background {
-    visibility: visible;
-    position: relative;
-    height: auto;
-  }
-}
-.header__lower--background--visible {
-  visibility: visible;
-  height: 100vh;
+.header__upper__right__saved, .header__upper__right__cart {
   position: relative;
 }
-.header__lower {
-  padding: var(--lower-nav);
+.header__upper__right__saved__counter, .header__upper__right__cart__counter {
+  opacity: 0;
+  transition: opacity 300ms;
+  position: absolute;
+  top: -0.2rem;
+  right: -1.6rem;
+  color: white;
+  background-color: rgba(164, 52, 52, 0.9137254902);
+  border-radius: 0.3rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  width: 1.8875rem;
+  text-align: center;
+  padding-inline: 0.5rem;
 }
-.header__lower__nav__links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 400;
-  font-size: 1.125rem;
-  letter-spacing: 0.05rem;
-}
-@media (min-width: 42.75em) {
-  .header__lower__nav__links {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2rem;
-    font-weight: 300;
-  }
-  .header__lower__nav__links__link:last-child {
-    margin-left: auto;
-  }
+.header__upper__right__saved__counter__not-blurred, .header__upper__right__cart__counter__not-blurred {
+  opacity: 1;
 }
 
 .body-stop {
