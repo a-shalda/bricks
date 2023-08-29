@@ -118,6 +118,7 @@ function updateOrder () {
       orderToBackEndTotal = `Total: €${totalCostCartModified} (${totalItems}) ${totalPiecesCartMofified}, ${totalPacksCartMofified}, ${totalWeightCart} kg, ${Number(totalPalletsCart).toFixed(2)} pal`;
     }
   }
+
 }
 
 //Form
@@ -1432,6 +1433,8 @@ function updateEvents () {
       updateTotal();
       showTotal();
       updateEvents();
+      updateCounters();
+
     });
   
     item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
@@ -1465,6 +1468,7 @@ function updateEvents () {
         }
   
         localStorage.setItem('cart', JSON.stringify(cart));
+        updateCounters();
   
         products.forEach(product => {
       

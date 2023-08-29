@@ -1,3 +1,56 @@
+const headerHTML = `
+
+  <!--HEADER--start-->
+    <div class="header__upper cont">
+
+      <div class="header__upper__left">
+        <div class="header__upper__left__hamburger">
+          <button class="header__upper__left__hamburger__nav-toggle">
+            <i class="fa-solid fa-bars icon-style"></i>
+          </button>
+        </div>
+        <div class="header__upper__left__logo">
+          <a href="index.html" class="header__upper__left__logo__link">
+            <p class="header__upper__left__logo__bricks">Bricks</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="header__upper__right">
+
+        <div class="header__upper__right__search">
+          <a href="search.html">
+            <i class="header__upper__right__search__icon fa-solid fa-magnifying-glass icon-style--search"></i>
+          </a>
+        </div>
+
+        <div class="header__upper__right__saved">
+          <a href="saved.html">
+            <i class="fa-regular fa-heart icon-style">&nbsp;</i>
+            <p class="header__upper__right__saved__counter"></p>
+          </a>
+        </div>
+
+        <!-- <div class="header__upper__right__seen">
+          <i class="fa-regular fa-eye icon-style"></i>
+        </div> -->
+
+        <div class="header__upper__right__cart">
+          <a href="cart.html">
+            <i class="fa-solid fa-basket-shopping icon-style">&nbsp;</i>
+            <p class="header__upper__right__cart__counter"></p>
+          </a>
+        </div>
+        
+      </div>
+    
+    </div>
+  <!--HEADER--end-->
+`;
+
+document.querySelector('.header').innerHTML = headerHTML;
+
+
 function updateCounters () {
 
   cart = JSON.parse(localStorage.getItem('cart')) || [];

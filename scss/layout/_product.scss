@@ -72,9 +72,12 @@
         padding-block: 0.5rem;
         padding-inline: 1rem;
         color: rgb(162, 162, 162);
-        font-size: 1rem;
         border-bottom: 1px solid var(--light-light-gray-color);
         letter-spacing: 0.01rem;
+
+        &__desc {
+          font-size: 0.8rem;
+        }
       }
     }
   }

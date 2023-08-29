@@ -78,10 +78,6 @@
         gap: 2.5rem;
       }
 
-      @include breakpoint(medium) {
-        gap: 3rem;
-      }
-
       &__search, &__saved, &__seen, &__basket {
         display: flex;
         align-items: center;

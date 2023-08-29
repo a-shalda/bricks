@@ -225,11 +225,6 @@ sup {
     gap: 2.5rem;
   }
 }
-@media (min-width: 42.75em) {
-  .header__upper__right {
-    gap: 3rem;
-  }
-}
 .header__upper__right__search, .header__upper__right__saved, .header__upper__right__seen, .header__upper__right__basket {
   display: flex;
   align-items: center;
@@ -444,9 +439,11 @@ sup {
   padding-block: 0.5rem;
   padding-inline: 1rem;
   color: rgb(162, 162, 162);
-  font-size: 1rem;
   border-bottom: 1px solid var(--light-light-gray-color);
   letter-spacing: 0.01rem;
+}
+.product__top__cont__stock__desc {
+  font-size: 0.8rem;
 }
 .product__middle {
   display: flex;
