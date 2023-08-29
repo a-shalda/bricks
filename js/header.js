@@ -1,7 +1,8 @@
-cart = JSON.parse(localStorage.getItem('cart')) || [];
-wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-
 function updateCounters () {
+
+  cart = JSON.parse(localStorage.getItem('cart')) || [];
+  wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
   if (cart.length != 0) {document.querySelector('.header__upper__right').classList.add('header__upper__right__has-counter');}
   else {document.querySelector('.header__upper__right').classList.remove('header__upper__right__has-counter');}
 

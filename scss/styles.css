@@ -75,12 +75,14 @@ picture {
 
 .icon-style {
   color: var(--gray-color);
-  font-size: 1.5rem;
 }
 
 .icon-style--search {
   color: var(--gray-color);
-  font-size: 1.4rem;
+}
+.icon-style--search:hover {
+  color: firebrick;
+  cursor: pointer;
 }
 
 .icon-style:hover {
@@ -89,7 +91,6 @@ picture {
 }
 
 .stock {
-  font-size: 1.1rem;
   color: firebrick;
 }
 
@@ -175,14 +176,6 @@ sup {
   display: flex;
   align-items: center;
 }
-.header__upper__left {
-  gap: 1rem;
-}
-@media (min-width: 29em) {
-  .header__upper__left {
-    gap: 1.5rem;
-  }
-}
 .header__upper__left__logo {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -197,7 +190,16 @@ sup {
 .header__upper__left__logo:hover {
   opacity: 0.8;
 }
+.header__upper__left__hamburger {
+  width: 2rem;
+}
+@media (min-width: 42.75em) {
+  .header__upper__left__hamburger {
+    width: 2.5rem;
+  }
+}
 .header__upper__left__hamburger__nav-toggle {
+  font-size: 1.5rem;
   display: block;
   border: none;
   background-color: inherit;
@@ -232,17 +234,21 @@ sup {
   display: flex;
   align-items: center;
 }
+.header__upper__right__search {
+  font-size: 1.35rem;
+}
 .header__upper__right__saved, .header__upper__right__cart {
   position: relative;
+  font-size: 1.5rem;
 }
 .header__upper__right__saved__counter, .header__upper__right__cart__counter {
   opacity: 0;
   transition: opacity 300ms;
   position: absolute;
   top: -0.2rem;
-  right: -1.6rem;
+  right: -1.1rem;
   color: white;
-  background-color: rgba(164, 52, 52, 0.9137254902);
+  background-color: rgba(164, 52, 52, 0.937254902);
   border-radius: 0.3rem;
   font-size: 0.8rem;
   width: 1.8875rem;
@@ -438,7 +444,7 @@ sup {
   padding-block: 0.5rem;
   padding-inline: 1rem;
   color: rgb(162, 162, 162);
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-bottom: 1px solid var(--light-light-gray-color);
   letter-spacing: 0.01rem;
 }

@@ -27,11 +27,6 @@
     }
   
     &__left {
-      gap: 1rem;
-
-      @include breakpoint(small) {
-        gap: 1.5rem;
-      }
 
       &__logo {
         user-select: none;
@@ -48,8 +43,14 @@
         }
       }
       &__hamburger {
+        width: 2rem;
+
+        @include breakpoint(medium) {
+          width: 2.5rem;
+        }
 
         &__nav-toggle {
+          font-size: 1.5rem;
           display: block;
           border: none;
           background-color: inherit;
@@ -86,17 +87,22 @@
         align-items: center;
       }
 
+      &__search {
+        font-size: 1.35rem;
+      }
+
       &__saved, &__cart {
         position: relative;
+        font-size: 1.5rem;
 
         &__counter {
           opacity: 0;
           transition: opacity 300ms;
           position: absolute;
           top: -0.2rem;
-          right: -1.6rem;
+          right: -1.1rem;
           color: white;
-          background-color: #a43434e9;
+          background-color: #a43434ef;
           border-radius: 0.3rem;
           font-size: 0.8rem;
           width: 1.8875rem;

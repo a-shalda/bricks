@@ -1,11 +1,14 @@
 .icon-style {
   color: var(--gray-color);
-  font-size: 1.5rem;
 }
 
 .icon-style--search {
   color: var(--gray-color);
-  font-size: 1.4rem;
+
+  &:hover {
+    color: firebrick;
+    cursor: pointer;
+  }
 }
 
 .icon-style:hover {
@@ -14,6 +17,5 @@
 }
 
 .stock {
-  font-size: 1.1rem;
   color: firebrick;
 }
