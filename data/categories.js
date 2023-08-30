@@ -27,7 +27,7 @@ const categories = [
   }, {
     id: 'six',
     img: 'images/categories/img_long-stairs.jpg',
-    title: 'Klinker stairs',
+    title: 'Stair and floor tile',
     path: 'stair_and_floor_tile.html',
   }, {
     id: 'seven',
