@@ -32,7 +32,7 @@ const footerHTML = `
         <p class="footer__upper__column__item">Quick Mix</p>
         <p class="footer__upper__column__item">Perel</p>
       </div>
-      
+
       <div class="footer__upper__column upper--four"></div>
       <div class="footer__upper__column upper--four"></div>
 
@@ -41,7 +41,9 @@ const footerHTML = `
     <div class="footer__lower">
 
       <div class="footer__lower__left">Designed and developed by Alex Shalda</div>
-      <div class="footer__lower__right"></div>
+      <div class="footer__lower__right">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
 
     </div>
 
