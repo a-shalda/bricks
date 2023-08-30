@@ -5,7 +5,6 @@ wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 //Generating products on the page
 
 let productsHTML = '';
-
 let indicesOfProducts = [];
 
 products.forEach((product, index) => {

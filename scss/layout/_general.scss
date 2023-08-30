@@ -29,13 +29,12 @@
     display: flex;
     align-items: center;
     background-color: var(--light-gray-color);
-    height: 43px;
+    height: 3rem;
   }
 
   &__desc {
-    text-transform: uppercase;
-    font-size: $s-font-size;
-    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
   }
 }
 

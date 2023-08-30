@@ -7,8 +7,7 @@
   letter-spacing: 0.02rem;
 
   &--background {
-    // background-color: rgb(193, 193, 193);
-    background-color: var(--gray-color);
+    background-color: rgb(66, 65, 65);
   }
 
   &__upper {
@@ -67,8 +66,8 @@
     color: gray;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 2rem;
-    // min-height: 2.5rem;
 
     &__left {
       display: flex;

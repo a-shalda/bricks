@@ -94,6 +94,10 @@ picture {
   color: var(--gray-color);
   width: 1.875rem;
 }
+.icon-style--saved:hover {
+  color: firebrick;
+  cursor: pointer;
+}
 
 .icon-style--search {
   color: var(--gray-color);
@@ -139,12 +143,11 @@ picture {
   display: flex;
   align-items: center;
   background-color: var(--light-gray-color);
-  height: 43px;
+  height: 3rem;
 }
 .divider__desc {
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
 }
 
 .price-small {
@@ -307,7 +310,7 @@ sup {
   letter-spacing: 0.02rem;
 }
 .footer--background {
-  background-color: var(--gray-color);
+  background-color: rgb(66, 65, 65);
 }
 .footer__upper {
   margin-inline: 1rem;
@@ -361,6 +364,7 @@ sup {
   color: gray;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 .footer__lower__left {

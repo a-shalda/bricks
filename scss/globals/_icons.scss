@@ -9,6 +9,11 @@
 .icon-style--saved {
   color: var(--gray-color);
   width: 1.875rem;
+
+  &:hover {
+    color: firebrick;
+    cursor: pointer;
+  }
 }
 
 .icon-style--search {
