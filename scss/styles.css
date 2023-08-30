@@ -77,6 +77,10 @@ picture {
   color: var(--gray-color);
 }
 
+.icon-style--footer {
+  color: var(--medium-gray-color);
+}
+
 .icon-style--saved {
   color: var(--gray-color);
   width: 1.875rem;
@@ -290,7 +294,6 @@ sup {
 }
 
 .footer {
-  margin-inline: 0.5rem;
   margin-top: 1rem;
   color: var(--light-gray-color);
   letter-spacing: 0.02rem;
@@ -339,9 +342,21 @@ sup {
   color: var(--medium-gray-color);
 }
 .footer__lower {
+  margin-inline: 0.5rem;
   padding-top: 1rem;
   color: var(--medium-gray-color);
+  display: flex;
+  justify-content: space-between;
 }
+.footer__lower__right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.footer__lower__right__icon {
+  font-size: 1.5rem;
+}
+
 .body-stop {
   overflow: hidden;
 }

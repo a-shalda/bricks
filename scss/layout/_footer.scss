@@ -3,7 +3,6 @@
 
 .footer {
 
-  margin-inline: 0.5rem;
   margin-top: 1rem;
   color: var(--light-gray-color);  
   letter-spacing: 0.02rem;
@@ -14,6 +13,7 @@
   }
 
   &__upper {
+
 
     display: grid;
     grid-template-columns: 1fr;
@@ -62,13 +62,26 @@
   }
 
   &__lower {
+    margin-inline: 0.5rem;
     padding-top: 1rem;
     color: var(--medium-gray-color);
+    display: flex;
+    justify-content: space-between;
 
 
 
     &__left {
 
+    }
+
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+
+      &__icon {
+        font-size: 1.5rem;
+      }
     }
 
   }

@@ -42,7 +42,9 @@ const footerHTML = `
 
       <div class="footer__lower__left">Designed and developed by Alex Shalda</div>
       <div class="footer__lower__right">
-        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-instagram footer__lower__right__icon icon-style--footer"></i>
+        <i class="fa-brands fa-square-youtube footer__lower__right__icon icon-style--footer"></i>
+        <i class="fa-brands fa-square-facebook footer__lower__right__icon icon-style--footer"></i>
       </div>
 
     </div>
