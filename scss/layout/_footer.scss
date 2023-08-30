@@ -13,7 +13,7 @@
   }
 
   &__upper {
-
+    margin-inline: 0.5rem;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -64,9 +64,10 @@
   &__lower {
     margin-inline: 0.5rem;
     padding-top: 1rem;
-    color: var(--medium-gray-color);
+    color: gray;
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 
 
 
@@ -77,12 +78,24 @@
     &__right {
       display: flex;
       justify-content: flex-end;
-      gap: 2rem;
+      gap: 1.5rem;
+      align-items: center;
+
+      @include breakpoint(tiny) {
+        gap: 2rem;
+      }
 
       &__icon {
         font-size: 1.5rem;
       }
     }
+  }
 
+  &--link {
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--medium-gray-color);
+    }
   }
 }

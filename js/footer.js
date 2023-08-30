@@ -40,7 +40,7 @@ const footerHTML = `
 
     <div class="footer__lower">
 
-      <div class="footer__lower__left">Designed and developed by Alex Shalda</div>
+      <div class="footer__lower__left">Designed and developed by <a href="https://www.linkedin.com/in/a-shalda/" class="footer--link">Alex Shalda</a></div>
       <div class="footer__lower__right">
         <i class="fa-brands fa-instagram footer__lower__right__icon icon-style--footer"></i>
         <i class="fa-brands fa-square-youtube footer__lower__right__icon icon-style--footer"></i>

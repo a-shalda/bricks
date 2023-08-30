@@ -302,6 +302,7 @@ sup {
   background-color: var(--gray-color);
 }
 .footer__upper {
+  margin-inline: 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
   -moz-column-gap: 1rem;
@@ -344,17 +345,28 @@ sup {
 .footer__lower {
   margin-inline: 0.5rem;
   padding-top: 1rem;
-  color: var(--medium-gray-color);
+  color: gray;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 .footer__lower__right {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 25em) {
+  .footer__lower__right {
+    gap: 2rem;
+  }
 }
 .footer__lower__right__icon {
   font-size: 1.5rem;
+}
+.footer--link:hover {
+  text-decoration: underline;
+  color: var(--medium-gray-color);
 }
 
 .body-stop {
