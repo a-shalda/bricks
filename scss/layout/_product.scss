@@ -101,6 +101,21 @@
           width: 50%;
         }
 
+        @include breakpoint(medium) {
+          width: 60%;
+        }
+
+        @include breakpoint(medium--products) {
+          width: 50%;
+        }
+
+        @include breakpoint(large) {
+          width: 60%;
+        }
+
+        @include breakpoint(large--products) {
+          width: 50%;
+        }
 
         &__p {
           line-height: 2.5rem;

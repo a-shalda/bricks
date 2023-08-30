@@ -132,6 +132,10 @@
       right: 1rem;
       border-top-left-radius: 0.5rem;
       border-bottom-left-radius: 0.5rem;
+
+      @include breakpoint (medium) {
+        right: 1.5rem;
+      }
     }
 
     &--prev {

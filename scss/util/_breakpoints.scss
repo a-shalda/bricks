@@ -4,7 +4,9 @@ $breakpoints-up: (
   "tiny": 25em,
   "small": 29em,
   "medium": 42.75em,
+  "medium--products": 46em, //Only for products to avoid overflow in the prices, 736px
   "large": 56.625em,
+  "large--products": 60em, //Only for products to avoid overflow in the prices, 960px
   "xlarge": 79em
 );
 

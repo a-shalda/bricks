@@ -239,7 +239,6 @@ sup {
   font-size: 1.35rem;
 }
 .header__upper__right__saved {
-  width: 1.875rem;
   position: absolute;
   right: 5.1rem;
 }
@@ -488,6 +487,26 @@ sup {
     width: 50%;
   }
 }
+@media (min-width: 42.75em) {
+  .product__middle__price--m2 {
+    width: 60%;
+  }
+}
+@media (min-width: 46em) {
+  .product__middle__price--m2 {
+    width: 50%;
+  }
+}
+@media (min-width: 56.625em) {
+  .product__middle__price--m2 {
+    width: 60%;
+  }
+}
+@media (min-width: 60em) {
+  .product__middle__price--m2 {
+    width: 50%;
+  }
+}
 .product__middle__price--m2__p {
   line-height: 2.5rem;
   color: #fff;
@@ -678,6 +697,11 @@ sup {
   right: 1rem;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+}
+@media (min-width: 42.75em) {
+  .slideshow__button--next {
+    right: 1.5rem;
+  }
 }
 .slideshow__button--prev {
   border-top-right-radius: 0.5rem;
