@@ -215,20 +215,20 @@ sup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 9.8875rem;
+  width: 9rem;
   position: relative;
 }
 .header__upper__right__has-counter {
-  padding-right: 1.6rem;
+  padding-right: 1.2rem;
 }
 @media (min-width: 25em) {
   .header__upper__right {
-    width: 10.8875rem;
+    width: 10rem;
   }
 }
 @media (min-width: 42.75em) {
   .header__upper__right {
-    width: 11.8875rem;
+    width: 12rem;
   }
 }
 .header__upper__right__search, .header__upper__right__saved, .header__upper__right__seen, .header__upper__right__basket {
@@ -240,16 +240,29 @@ sup {
 }
 .header__upper__right__saved {
   position: absolute;
-  right: 5.1rem;
+  right: 3.7rem;
 }
 @media (min-width: 25em) {
   .header__upper__right__saved {
-    right: 5.5rem;
+    right: 4.2rem;
   }
 }
 @media (min-width: 42.75em) {
   .header__upper__right__saved {
-    right: 6rem;
+    right: 5rem;
+  }
+}
+.header__upper__right__saved__has-counter {
+  right: 4.5rem;
+}
+@media (min-width: 25em) {
+  .header__upper__right__saved__has-counter {
+    right: 5rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .header__upper__right__saved__has-counter {
+    right: 5.8rem;
   }
 }
 .header__upper__right__cart {

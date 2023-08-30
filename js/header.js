@@ -56,8 +56,14 @@ function updateCounters () {
   cart = JSON.parse(localStorage.getItem('cart')) || [];
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-  if (cart.length != 0) {document.querySelector('.header__upper__right').classList.add('header__upper__right__has-counter');}
-  else {document.querySelector('.header__upper__right').classList.remove('header__upper__right__has-counter');}
+  if (cart.length != 0) {
+    document.querySelector('.header__upper__right').classList.add('header__upper__right__has-counter');
+    document.querySelector('.header__upper__right__saved').classList.add('header__upper__right__saved__has-counter');
+  }
+  else {
+    document.querySelector('.header__upper__right').classList.remove('header__upper__right__has-counter');
+    document.querySelector('.header__upper__right__saved').classList.remove('header__upper__right__saved__has-counter');
+  }
 
   const savedCounter = document.querySelector('.header__upper__right__saved__counter');
   const cartCounter = document.querySelector('.header__upper__right__cart__counter');

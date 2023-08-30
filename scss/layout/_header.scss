@@ -64,19 +64,19 @@
       display: flex;  
       align-items: center;
       justify-content: space-between;
-      width: 9.8875rem;
+      width: 9rem;
       position: relative;
 
       &__has-counter {
-        padding-right: 1.6rem;
+        padding-right: 1.2rem;
       }
 
       @include breakpoint(tiny) {
-        width: 10.8875rem;
+        width: 10rem;
       }
 
       @include breakpoint(medium) {
-        width: 11.8875rem;
+        width: 12rem;
       }
 
       &__search, &__saved, &__seen, &__basket {
@@ -89,16 +89,27 @@
       }
 
       &__saved {
-        // width: 1.875rem;
         position: absolute;
-        right: 5.1rem;
+        right: 3.7rem;
 
         @include breakpoint(tiny) {
-          right: 5.5rem;
+          right: 4.2rem;
         }
   
         @include breakpoint(medium) {
-          right: 6rem;
+          right: 5rem;
+        }
+
+        &__has-counter {
+          right: 4.5rem;
+
+          @include breakpoint(tiny) {
+            right: 5rem;
+          }
+    
+          @include breakpoint(medium) {
+            right: 5.8rem;
+          }
         }
       }
 
