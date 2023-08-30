@@ -17,7 +17,7 @@
     margin-bottom: 1.5rem;
 
     &__subtotal {
-      padding-top: 1.5rem;
+      padding-top: 1.2rem;
       padding-bottom: 0.7rem;
       letter-spacing: 0.05rem;
       text-align: center;
@@ -31,10 +31,6 @@
         font-weight: 700;
         letter-spacing: 0.09rem;
         color: var(--gray-color);
-      }
-
-      @include breakpoint(medium) {
-        padding-block: 1.5rem;
       }
     }
 

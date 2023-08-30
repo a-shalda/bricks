@@ -3,22 +3,22 @@
 
 .footer {
 
-  margin-top: 1rem;
   color: var(--light-gray-color);  
   letter-spacing: 0.02rem;
 
-
   &--background {
+    // background-color: rgb(193, 193, 193);
     background-color: var(--gray-color);
   }
 
   &__upper {
-    margin-inline: 0.5rem;
+    margin-inline: 1rem;
 
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 1rem;
     border-bottom: 1px solid rgba(128, 128, 128, 0.197);
+
     padding-bottom: 0.5rem;
 
     @include breakpoint(tiny) {
@@ -40,44 +40,42 @@
     &__column {
 
       &__title {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         padding-bottom: 0.5rem;
         margin-top: 1rem;
         margin-bottom: 0.4rem;
         border-bottom: 1px solid rgba(128, 128, 128, 0.197);
-        color: var(--light-light-gray-color);
-
+        color: var(--light-gray-color);
       }
 
       &__item {
         line-height: 1.7rem;
         color: var(--medium-gray-color);
+        font-size: 0.8rem;
 
-
+        &:hover {
+          color: var(--light-gray-color);
+          cursor: pointer;
+        }
       }
     }
-
-
-
   }
 
   &__lower {
-    margin-inline: 0.5rem;
+    margin-inline: 1rem;
     padding-top: 1rem;
     color: gray;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-
-
-
-
+    // min-height: 2.5rem;
 
     &__left {
       display: flex;
       justify-content: flex-end;
       gap: 1.5rem;
       align-items: center;
+      height: 1.5rem;
 
       @include breakpoint(tiny) {
         gap: 2rem;
@@ -85,15 +83,24 @@
 
       &__icon {
         font-size: 1.5rem;
+
+        &:hover {
+          color: var(--light-gray-color);
+          cursor: pointer;
+        }
       }
     }
-  }
 
-  &--link {
-
-    &:hover {
-      text-decoration: underline;
-      color: var(--medium-gray-color);
+    &__right {
+      font-size: 0.8rem;
     }
+  }
+}
+
+.signature {
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--medium-gray-color);
   }
 }
