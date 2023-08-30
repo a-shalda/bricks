@@ -4,18 +4,21 @@ const slider_items = [
     img_800: 'images/slider/medium_size/klinker_mix_800.jpg',
     title: 'Shapes and colors',
     desc: 'To clad your walls with a style',
+    path: 'brick_slips.html',
     id: 1
   },{
     img: 'images/slider/336_06_slider.jpg',
     img_800: 'images/slider/medium_size/336_06_slider_800.jpg',
-    title: 'Fasade brick slips',
-    desc: 'More than 1,000 colors and shapes in Moscow',
+    title: 'Fasade bricks',
+    desc: 'More than 100 colors and shapes',
+    path: 'bricks.html',
     id: 2
   },{
     img: 'images/slider/7750_455_slider.jpg',
     img_800: 'images/slider/medium_size/7750_455_slider_800.jpg',
     title: 'Embelish your home',
     desc: 'Long format with straight-edged design',
+    path: 'brick_slips.html',
     id: 3
   }
 ];

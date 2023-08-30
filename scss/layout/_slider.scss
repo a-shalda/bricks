@@ -87,9 +87,8 @@
             font-weight: 500;
             font-size: 1.2rem;
             letter-spacing: 0.1rem;
-
-            border: 1px solid var(--light-gray-color);
-            color: gray;
+            background-color: white;
+            color: var(--gray-color);
             transition: background-color 0.1s, color 0.1s, border 0.1s;
 
             &:hover {
@@ -157,7 +156,7 @@
         cursor: pointer;
         height: 1rem;
         width: 2rem;
-        background-color: var(--gray-color);
+        background-color: gray;
         border-radius: 0.2rem;
         display: inline-block;
         transition: background-color 0.6s ease;
@@ -169,8 +168,10 @@
     }
   }
 
-  .active {
+  .active--button {
     background-color: white;
+    outline: 3px solid gray;
+    border-radius: 0.2rem;
   }
   
   .fade {

@@ -20,7 +20,7 @@ const slides = slider_items.forEach((item) => {
                 <div class="slideshow__slide__abs__box__cont">
                     <p class="slideshow__slide__abs__box__cont__title">${item.title}</p>
                     <p class="slideshow__slide__abs__box__cont__desc">${item.desc}</p>
-                    <a href="brick_slips.html"><button class="slideshow__slide__abs__box__cont__button">Explore</button></a>
+                    <a href=${item.path}><button class="slideshow__slide__abs__box__cont__button">Explore</button></a>
                 </div>
             </div>
         </div>
@@ -89,11 +89,11 @@ function showSlides(n) {
   }
 
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active--button", "");
   }
   
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active--button";
 }
 
 //Setting and clearing intervals for the slider
