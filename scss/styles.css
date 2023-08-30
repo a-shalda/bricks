@@ -350,18 +350,18 @@ sup {
   justify-content: space-between;
   gap: 2rem;
 }
-.footer__lower__right {
+.footer__lower__left {
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
   align-items: center;
 }
 @media (min-width: 25em) {
-  .footer__lower__right {
+  .footer__lower__left {
     gap: 2rem;
   }
 }
-.footer__lower__right__icon {
+.footer__lower__left__icon {
   font-size: 1.5rem;
 }
 .footer--link:hover {
