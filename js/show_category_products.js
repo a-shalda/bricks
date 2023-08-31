@@ -12,6 +12,13 @@ function showCategoryProducts () {
     let categoryOne = '';
     let categoryTwo = '';
 
+    // let categoryArray = [];
+
+    // categoryArray.push(categoryOne);
+    // categoryArray.push(categoryTwo);
+
+    // return categoryArray;
+
     if (root === 'brick_slips') {
         categoryOne = 'Klinker brick slip';
         categoryTwo = 'Klinker corner brick slip';
