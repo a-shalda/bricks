@@ -1,14 +1,14 @@
 cart = JSON.parse(localStorage.getItem('cart')) || [];
 wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-
 // localStorage.removeItem('cart');
-
 // localStorage.removeItem('wishlist');
 
 //GENERATING TITLE AND IMAGES
 
-const root = document.URL.slice(-12, -5);
+const findSlash = document.URL.lastIndexOf('/');
+const findDot = document.URL.indexOf('.html');
+const root = document.URL.slice((findSlash + 1), findDot);
 
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
