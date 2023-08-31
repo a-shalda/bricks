@@ -1,10 +1,10 @@
 const products = [
   {
-    id: 'klinker-brick-slip-R100NF9-feldhaus-klinker',
+    id: 'klinker-brick-slip-r100nf9-feldhaus-klinker',
     type: 'Klinker brick slip',
     name: 'R100NF9 perla liso',
     availability: 'In Stock',
-    filepath: 'klinker-brick-slip-R100NF9-feldhaus-klinker.html',
+    filepath: 'klinker-brick-slip-r100nf9-feldhaus-klinker.html',
     priceCentsM2: 5240, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -38,11 +38,11 @@ const products = [
       'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-R303NF9-feldhaus-klinker',
+    id: 'klinker-brick-slip-r303nf9-feldhaus-klinker',
     type: 'Klinker brick slip',
     name: 'R303NF9 ardor liso',
     availability: 'In Stock',
-    filepath: 'klinker-brick-slip-R303NF9-feldhaus-klinker.html',
+    filepath: 'klinker-brick-slip-r303nf9-feldhaus-klinker.html',
     priceCentsM2: 5240,
     supplierPriceType: 'm2',
     isM2: true,
@@ -141,11 +141,11 @@ const products = [
       'images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'W100NF9',
+    id: 'klinker-brick-slip-w100nf9-feldhaus-klinker',
     type: 'Klinker corner brick slip',
     name: 'W100NF9 perla liso',
     availability: 'In Stock',
-    filepath: 'W100NF9.html',
+    filepath: 'klinker-brick-slip-w100nf9-feldhaus-klinker.html',
     priceCentsPc: 470,
     supplierPriceType: 'pc',
     isM2: false,
@@ -179,11 +179,11 @@ const products = [
     ]
 
   }, {
-    id: '4817710',
+    id: 'klinker-stair-tile-loft-angle-aera-710-crio-4817-stroeher',
     type: 'Klinker stair tile',
     name: 'loft angle AERA 710 crio 4817',
     availability: 'In Stock',
-    filepath: '4817710.html',
+    filepath: 'klinker-stair-tile-loft-angle-aera-710-crio-4817-stroeher.html',
     priceCentsPc: 2698,
     supplierPriceType: 'pc',
     isM2: false,
@@ -211,11 +211,11 @@ const products = [
       'images/product_images/stair_tile/4817710/thumbnail/8031710_thumbnail_one.jpg', 
     ]
   }, {
-    id: '8031710',
+    id: 'klinker-floor-tile-aera-710-crio-8031-stroeher',
     type: 'Klinker floor tile',
     name: 'AERA 710 crio 8031',
     availability: 'In Stock',
-    filepath: '8031710.html',
+    filepath: 'klinker-floor-tile-aera-710-crio-8031-stroeher.html',
     priceCentsM2: 8217, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -246,11 +246,11 @@ const products = [
       'images/product_images/stair_tile/8031710/thumbnail/8031710_one.jpg', 
     ]
   }, {
-    id: 'TP228NF',
+    id: 'thermopanel-with-klinker-brick-slip-r228nf9-feldhaus-klinker',
     type: 'Thermopanel',
     name: 'R228NF9 ardor liso',
     availability: 'In Stock',
-    filepath: 'TP228NF.html',
+    filepath: 'thermopanel-with-klinker-brick-slip-r228nf9-feldhaus-klinker.html',
     priceCentsM2: 8240,
     supplierPriceType: 'm2',
     isM2: true,
@@ -280,11 +280,11 @@ const products = [
       'images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'KKFCW01',
+    id: 'ceramic-fence-cap-king-klinker-ruby-red-01',
     type: 'Ceramic fence cap',
     name: 'Ruby red 01',
     availability: 'In Stock',
-    filepath: 'KKFCW01.html',
+    filepath: 'ceramic-fence-cap-king-klinker-ruby-red-01.html',
     priceCentsPc: 8026,
     supplierPriceType: 'pc',
     isM2: false,
@@ -308,11 +308,11 @@ const products = [
       'images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_fence.webp', 
     ]
   }, {
-    id: 'CP408KF',
+    id: 'klinker-clay-paver-p408kf-gala-nero-feldhaus-klinker',
     type: 'Klinker clay paver',
     name: 'P408KF gala nero',
     availability: 'In Stock',
-    filepath: 'CP408KF.html',
+    filepath: 'klinker-clay-paver-p408kf-gala-nero-feldhaus-klinker.html',
     priceCentsPc: 236,
     supplierPriceType: 'pc',
     isM2: true,
@@ -338,11 +338,11 @@ const products = [
       'images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_path.jpg', 
     ]
   }, {
-    id: 'KKWSO17',
+    id: 'ceramic-window-sill-onyx-black-17-king-klinker',
     type: 'Ceramic window sill',
     name: '17 Onyx black',
     availability: 'In Stock',
-    filepath: 'KKWSO17.html',
+    filepath: 'ceramic-window-sill-onyx-black-17-king-klinker.html',
     priceCentsPc: 430,
     supplierPriceType: 'pc',
     isM2: false,
@@ -370,11 +370,11 @@ const products = [
       'images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_window.webp', 
     ]
   }, {
-    id: 'QMMDS01',
+    id: 'mineral-waterproof-mortar-mds-72379-quick-mix',
     type: 'Mortar',
     name: 'mineral waterproof MDS 72379',
     availability: 'In Stock',
-    filepath: 'QMMDS01.html',
+    filepath: 'mineral-waterproof-mortar-mds-72379-quick-mix.html',
     priceCentsPc: 2000,
     supplierPriceType: 'pc',
     isM2: false,
