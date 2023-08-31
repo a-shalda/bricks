@@ -192,6 +192,9 @@
       &__vendor {
         display: flex;
         padding-inline: 0.5rem;
+        user-select: none;
+        color: white;
+        height: 0;
       }
 
       &__title {

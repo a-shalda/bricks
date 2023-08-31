@@ -1,10 +1,10 @@
 const products = [
   {
-    id: 'R100NF9',
+    id: 'klinker-brick-slip-R100NF9-feldhaus-klinker',
     type: 'Klinker brick slip',
     name: 'R100NF9 perla liso',
     availability: 'In Stock',
-    filepath: 'R100NF9.html',
+    filepath: 'klinker-brick-slip-R100NF9-feldhaus-klinker.html',
     priceCentsM2: 5240, 
     supplierPriceType: 'm2',
     isM2: true,
