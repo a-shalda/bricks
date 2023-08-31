@@ -24,7 +24,6 @@ searchField.addEventListener('keydown', () => {
       const format = (products[i].specs?.format).toLowerCase();
       const type = (products[i].type).toLowerCase();
   
-  
       if (id.includes(`${input}`) || name.includes(`${input}`) || manufacturer.includes(`${input}`) || format.includes(`${input}`) || type.includes(`${input}`)) {
         resultArray.push(`${products[i].id}`);
       }
@@ -51,7 +50,6 @@ searchField.addEventListener('keydown', () => {
   }, 300);
 
 })
-
 
 let indicesOfProducts = [];
 

@@ -1,9 +1,3 @@
-cart = JSON.parse(localStorage.getItem('cart')) || [];
-wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-
-// localStorage.removeItem('cart');
-// localStorage.removeItem('wishlist');
-
 //GENERATING TITLE AND IMAGES
 
 const findSlash = document.URL.lastIndexOf('/');

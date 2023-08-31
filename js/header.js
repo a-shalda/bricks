@@ -1,3 +1,6 @@
+// localStorage.removeItem('cart');
+// localStorage.removeItem('wishlist');
+
 const headerHTML = `
 
   <!--HEADER--start-->
