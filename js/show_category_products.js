@@ -1,5 +1,6 @@
 //Generating products on the page
 
+//For eight major categories and brand pages
 function showCategoryProducts () {
 
     const findSlash = document.URL.lastIndexOf('/');
@@ -11,13 +12,6 @@ function showCategoryProducts () {
 
     let categoryOne = '';
     let categoryTwo = '';
-
-    // let categoryArray = [];
-
-    // categoryArray.push(categoryOne);
-    // categoryArray.push(categoryTwo);
-
-    // return categoryArray;
 
     if (root === 'brick_slips') {
         categoryOne = 'Klinker brick slip';
@@ -45,18 +39,51 @@ function showCategoryProducts () {
     else if (root === 'window_sills') {
         categoryOne = 'Ceramic window sill';
     }
+
+    if (categoryOne != '') {
+        products.forEach((product, index) => {
+
+            if (product.type === categoryOne || product.type === categoryTwo) {
     
-    products.forEach((product, index) => {
+                productsHTML += showProducts (product, index, indicesOfProducts);
+            }
+        });
+    }
+    else {
 
-        if (product.type === categoryOne || product.type === categoryTwo) {
-
-            productsHTML += showProducts (product, index, indicesOfProducts);
+        if (root === 'feldhaus') {
+            categoryOne = 'Feldhaus Klinker';
         }
-        else if (categoryOne === '') {
-            productsHTML += showProducts (product, index, indicesOfProducts);
+        else if (root === 'stroeher') {
+            categoryOne = 'Stroeher';
+        }
+        else if (root === 'roben') {
+            categoryOne = 'Roben';
+        }
+        else if (root === 'abc-klinkergruppe') {
+            categoryOne = 'ABC-Klinkergruppe';
+        }
+        else if (root === 'king-klinker') {
+            categoryOne = 'King Klinker';
+        }
+        else if (root === 'zg-klinker') {
+            categoryOne = 'ZG Clinker';
+        }
+        else if (root === 'quick-mix') {
+            categoryOne = 'Quick-Mix';
+        }
+        else if (root === 'perel') {
+            categoryOne = 'Perel';
         }
 
-    });
+        products.forEach((product, index) => {
+
+            if (product.specs.manufacturer === categoryOne) {
+                productsHTML += showProducts (product, index, indicesOfProducts);
+            }
+        });
+    }
+
     document.querySelector('.products').innerHTML = productsHTML;
     
     //Adding pulsing image animation on load
@@ -64,7 +91,6 @@ function showCategoryProducts () {
     
     //Adding onmouse image animation
     addOnMouseImageAnimation(indicesOfProducts);
-
 }
 
 function showProducts (product, index, indicesOfProducts) {

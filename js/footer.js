@@ -18,14 +18,14 @@ const footerHTML = `
 
       <div class="footer__upper__column upper--two">
         <p class="footer__upper__column__title">Manufacturers</p>
-        <p class="footer__upper__column__item">Feldhaus Klinker</p>
-        <p class="footer__upper__column__item">Stroeher</p>
-        <p class="footer__upper__column__item">Roben</p>
-        <p class="footer__upper__column__item">ABC-Klinkergruppe</p>
-        <p class="footer__upper__column__item">King Klinker</p>
-        <p class="footer__upper__column__item">ZG Clinker</p>
-        <p class="footer__upper__column__item">Quick Mix</p>
-        <p class="footer__upper__column__item">Perel</p>
+        <a href="feldhaus.html"><p class="footer__upper__column__item">Feldhaus Klinker</p>
+        <a href="stroeher.html"><p class="footer__upper__column__item">Stroeher</p></a>
+        <a href="roben.html"><p class="footer__upper__column__item">Roben</p></a>
+        <a href="abc-klinkergruppe.html"><p class="footer__upper__column__item">ABC-Klinkergruppe</p></a>
+        <a href="king-klinker.html"><p class="footer__upper__column__item">King Klinker</p></a>
+        <a href="zg-clinker.html"><p class="footer__upper__column__item">ZG Clinker</p></a>
+        <a href="quick-mix.html"><p class="footer__upper__column__item">Quick Mix</p></a>
+        <a href="perel.html"><p class="footer__upper__column__item">Perel</p></a>
       </div>
 
       <div class="footer__upper__column upper--three"></div>
