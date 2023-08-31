@@ -274,20 +274,18 @@ function showProducts (product, index, indicesOfProducts) {
 }
 
 function addOnMouseImageAnimation (indicesOfProducts) {
+    
+    document.querySelectorAll('.product')
+    
+        .forEach((product, index) => {
 
-    window.onload = function() {
-        document.querySelectorAll('.product')
-        
-            .forEach((product, index) => {
-        
-                product.addEventListener('mouseenter', () => {
-        
-                    let first = document.querySelector('.product_img_' + indicesOfProducts[index]);
-                    let second = document.querySelector('.product_img_second_' + indicesOfProducts[index]);
-        
-                    first.classList.add('opacity');
-                    second.classList.add('opacity');
-        
+            const first = product.querySelector('.product_img_' + indicesOfProducts[index]);
+            const second = product.querySelector('.product_img_second_' + indicesOfProducts[index]);
+
+            second.addEventListener('load', () => {
+                
+                first.addEventListener('load', () => {
+
                     function moveLeft() {
                         first.classList.add('moveLeft');
                         second.classList.add('moveLeft');
@@ -297,22 +295,27 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                         first.classList.add('moveRight');
                         second.classList.add('moveRight');
                     }
+        
+                    product.addEventListener('mouseenter', () => {
+            
+                        first.classList.add('opacity');
+                        second.classList.add('opacity');
+                        let timeOut = setTimeout(moveLeft, 1000);
+                        let timeOutBack = setTimeout(moveRight, 5000);
                     
-                    let timeOut = setTimeout(moveLeft, 1000);
-                    let timeOutBack = setTimeout(moveRight, 5000);
-        
-                product.addEventListener('mouseleave', () => {
-        
-                    clearTimeout(timeOut);
-                    clearTimeout(timeOutBack);
-                    moveRight();
-        
-                    first.classList.remove('opacity','moveLeft','moveRight');
-                    second.classList.remove('opacity','moveLeft','moveRight');
-                });
-            });
+                    product.addEventListener('mouseleave', () => {
+            
+                        clearTimeout(timeOut);
+                        clearTimeout(timeOutBack);
+                        moveRight();
+            
+                        first.classList.remove('opacity','moveLeft','moveRight');
+                        second.classList.remove('opacity','moveLeft','moveRight');
+                    });
+                })
+            })
         });
-    }
+    });
 }
 
 function addPulsingImageAnimation () {

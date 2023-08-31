@@ -1,6 +1,4 @@
-//SLIDER
 //Generating slider on the page
-
 let sliderHTML = "";
 const slides = slider_items.forEach((item) => {
 
@@ -45,7 +43,6 @@ document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 
 
 //Adding event listeners
-
 document.querySelectorAll('.slideshow__dots__cont__dot')
 
     .forEach((button) => {
@@ -55,7 +52,6 @@ document.querySelectorAll('.slideshow__dots__cont__dot')
 });
 
 //Code for side buttons
-
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
@@ -68,7 +64,6 @@ document.querySelector('.slideshow__button--prev').addEventListener('click', () 
 document.querySelector('.slideshow__button--next').addEventListener('click', () => {plusSlides(1);});
 
 //Code for the slider
-
 let slideIndex = 1;
 
 showSlides(slideIndex);
@@ -94,7 +89,6 @@ function showSlides(n) {
 }
 
 //Setting and clearing intervals for the slider
-
 let sliderInterval = function() {
     plusSlides(1);
 }
@@ -106,7 +100,6 @@ document.querySelector('.slideshow').addEventListener('mouseleave', () => {start
 
 
 //Adding pulsing animation
-
 const imageBox = document.querySelectorAll('.slideshow__slide');
 
 imageBox.forEach((box) => {
@@ -132,7 +125,6 @@ allSlides[allSlides.length - 1].addEventListener('load', () => {
 
 
 //HAMBURGER MENU
-
 // const navToggle = document.querySelector('.header__upper__left__hamburger__nav-toggle');
 // const nav = document.querySelector('.header__lower--background');
 
@@ -148,9 +140,7 @@ allSlides[allSlides.length - 1].addEventListener('load', () => {
 // })
 
 
-//CATEGORIES
 //Generating categories on the page
-
 showCategories();
 
 function showCategories() {
@@ -173,7 +163,6 @@ function showCategories() {
 }
 
 //Adding pulsing animation
-
 document.querySelectorAll('.categories__box').forEach((cont) => {
     cont.classList.add('cont_blurred');
 
@@ -189,7 +178,6 @@ document.querySelectorAll('.categories__box').forEach((cont) => {
 
 
 //Adding event listeners to enlarge on mouseenter
-
 let changeCategorySize = 'enlarge';
 document.querySelectorAll('.categories__box')
 
@@ -204,4 +192,5 @@ document.querySelectorAll('.categories__box')
     });
 });
 
+//Generating products on the page
 showCategoryProducts();

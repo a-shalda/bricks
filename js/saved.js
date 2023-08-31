@@ -1,6 +1,4 @@
-//PRODUCTS
 //Generating products on the page
-
 let productsHTML = '';
 
 let indicesOfProducts = [];
