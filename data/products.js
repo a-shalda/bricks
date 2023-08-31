@@ -38,11 +38,11 @@ const products = [
       'images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'R303NF9',
+    id: 'klinker-brick-slip-R303NF9-feldhaus-klinker',
     type: 'Klinker brick slip',
     name: 'R303NF9 ardor liso',
     availability: 'In Stock',
-    filepath: 'R303NF9.html',
+    filepath: 'klinker-brick-slip-R303NF9-feldhaus-klinker.html',
     priceCentsM2: 5240,
     supplierPriceType: 'm2',
     isM2: true,
@@ -72,11 +72,11 @@ const products = [
       'images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'KKLF18O',
+    id: 'klinker-brick-slip-king-klinker-obsidian-shadow-lf18',
     type: 'Klinker brick slip',
     name: 'Obsidian shadow (LF18)',
     availability: 'In Stock',
-    filepath: 'KKLF18O.html',
+    filepath: 'klinker-brick-slip-king-klinker-obsidian-shadow-lf18.html',
     priceCentsPc: 235,
     supplierPriceType: 'pc',
     isM2: true,
@@ -107,11 +107,11 @@ const products = [
       'images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_interior.webp', 
     ]
   }, {
-    id: 'K658WDF',
+    id: 'klinker-brick-k658wdf-sintra-ardor-belino-feldhaus-klinker',
     type: 'Klinker brick',
     name: 'K658WDF sintra ardor belino',
     availability: 'In Stock',
-    filepath: 'K658WDF.html',
+    filepath: 'klinker-brick-k658wdf-sintra-ardor-belino-feldhaus-klinker.html',
     priceCentsPc: 264,
     supplierPriceType: 'pc',
     isM2: true,
