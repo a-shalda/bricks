@@ -270,28 +270,25 @@
           border-radius: 0.4rem;
           font-size: 1rem;
           transition: background-color 0.1s, color 0.1s, border 0.1s;
-        
-          &:hover {
-            cursor: pointer;
-            background-color: var(--light-gray-color);
-            border: 1px solid var(--light-gray-color);
-            color: var(--gray-color);
+
+          @media(hover: hover) {
+            &:hover {
+              cursor: pointer;
+              background-color: var(--light-gray-color);
+              border: 1px solid var(--light-gray-color);
+              color: var(--gray-color);
+            }
           }
+
           &:active {
             background-color: var(--gray-color);
             color: white;
             border: 1px solid var(--gray-color);
           }
-          &:visited {
-            background-color: white;
-            color: gray;
-          }
         }
-
 
         &__buttons {
           display: flex;
-
 
           &__minus {
             width: 3rem;
@@ -305,20 +302,19 @@
             font-size: 1rem;
             transition: background-color 0.1s, color 0.1s, border 0.1s;
           
-            &:hover {
-              cursor: pointer;
-              background-color: var(--light-gray-color);
-              border: 1px solid var(--light-gray-color);
-              color: var(--gray-color);
+            @media(hover: hover) {
+              &:hover {
+                cursor: pointer;
+                background-color: var(--light-gray-color);
+                border: 1px solid var(--light-gray-color);
+                color: var(--gray-color);
+              }
             }
+
             &:active {
               background-color: var(--gray-color);
               color: white;
               border: 1px solid var(--gray-color);
-            }
-            &:visited {
-              background-color: white;
-              color: gray;
             }
           }
   
@@ -334,12 +330,15 @@
             font-size: 1rem;
             transition: background-color 0.1s, color 0.1s, border 0.1s;
           
-            &:hover {
-              cursor: pointer;
-              background-color: var(--light-gray-color);
-              border: 1px solid var(--light-gray-color);
-              color: var(--gray-color);
+            @media(hover: hover) {
+              &:hover {
+                cursor: pointer;
+                background-color: var(--light-gray-color);
+                border: 1px solid var(--light-gray-color);
+                color: var(--gray-color);
+              }
             }
+
             &:active {
               background-color: var(--gray-color);
               color: white;

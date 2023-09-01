@@ -1919,20 +1919,18 @@ sup {
   font-size: 1rem;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
 }
-.cart__cont__product__quantity__delete:hover {
-  cursor: pointer;
-  background-color: var(--light-gray-color);
-  border: 1px solid var(--light-gray-color);
-  color: var(--gray-color);
+@media (hover: hover) {
+  .cart__cont__product__quantity__delete:hover {
+    cursor: pointer;
+    background-color: var(--light-gray-color);
+    border: 1px solid var(--light-gray-color);
+    color: var(--gray-color);
+  }
 }
 .cart__cont__product__quantity__delete:active {
   background-color: var(--gray-color);
   color: white;
   border: 1px solid var(--gray-color);
-}
-.cart__cont__product__quantity__delete:visited {
-  background-color: white;
-  color: gray;
 }
 .cart__cont__product__quantity__buttons {
   display: flex;
@@ -1948,20 +1946,18 @@ sup {
   font-size: 1rem;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
 }
-.cart__cont__product__quantity__buttons__minus:hover {
-  cursor: pointer;
-  background-color: var(--light-gray-color);
-  border: 1px solid var(--light-gray-color);
-  color: var(--gray-color);
+@media (hover: hover) {
+  .cart__cont__product__quantity__buttons__minus:hover {
+    cursor: pointer;
+    background-color: var(--light-gray-color);
+    border: 1px solid var(--light-gray-color);
+    color: var(--gray-color);
+  }
 }
 .cart__cont__product__quantity__buttons__minus:active {
   background-color: var(--gray-color);
   color: white;
   border: 1px solid var(--gray-color);
-}
-.cart__cont__product__quantity__buttons__minus:visited {
-  background-color: white;
-  color: gray;
 }
 .cart__cont__product__quantity__buttons__plus {
   margin-left: -1px;
@@ -1975,11 +1971,13 @@ sup {
   font-size: 1rem;
   transition: background-color 0.1s, color 0.1s, border 0.1s;
 }
-.cart__cont__product__quantity__buttons__plus:hover {
-  cursor: pointer;
-  background-color: var(--light-gray-color);
-  border: 1px solid var(--light-gray-color);
-  color: var(--gray-color);
+@media (hover: hover) {
+  .cart__cont__product__quantity__buttons__plus:hover {
+    cursor: pointer;
+    background-color: var(--light-gray-color);
+    border: 1px solid var(--light-gray-color);
+    color: var(--gray-color);
+  }
 }
 .cart__cont__product__quantity__buttons__plus:active {
   background-color: var(--gray-color);
