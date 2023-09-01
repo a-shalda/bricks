@@ -1392,9 +1392,14 @@ sup {
   justify-content: center;
   align-items: center;
 }
-.main__window__middle__top__buy__button_wish:hover {
+.main__window__middle__top__buy__button_wish:hover, .main__window__middle__top__buy__button_wish:active {
   cursor: pointer;
   background-color: gray;
+  border: none;
+}
+.main__window__middle__top__buy__button_wish:visited {
+  cursor: pointer;
+  background-color: rgb(95, 95, 95);
   border: none;
 }
 .main__window__middle__top__buy__button_wish__cont {
@@ -1422,11 +1427,15 @@ sup {
   transition: background-color 0.3s;
   min-height: 2.875rem;
 }
-.main__window__middle__top__buy__button_add:hover {
+.main__window__middle__top__buy__button_add:hover, .main__window__middle__top__buy__button_add:active {
   background-color: hsla(0, 68%, 42%, 0.885);
   color: white;
   cursor: pointer;
   border: none;
+}
+.main__window__middle__top__buy__button_add:visited {
+  background-color: #a43434;
+  cursor: pointer;
 }
 .main__window__middle__bottom {
   padding: 1.2rem;
