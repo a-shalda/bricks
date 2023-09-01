@@ -270,6 +270,7 @@
           border-radius: 0.4rem;
           font-size: 1rem;
           transition: background-color 0.1s, color 0.1s, border 0.1s;
+          user-select: none;
 
           @media(hover: hover) {
             &:hover {
@@ -278,12 +279,12 @@
               border: 1px solid var(--light-gray-color);
               color: var(--gray-color);
             }
-          }
 
-          &:active {
-            background-color: var(--gray-color);
-            color: white;
-            border: 1px solid var(--gray-color);
+            &:active {
+              background-color: var(--gray-color);
+              color: white;
+              border: 1px solid var(--gray-color);
+            }
           }
         }
 
@@ -301,6 +302,7 @@
             border-bottom-left-radius: 0.4rem;
             font-size: 1rem;
             transition: background-color 0.1s, color 0.1s, border 0.1s;
+            user-select: none;
           
             @media(hover: hover) {
               &:hover {
@@ -309,12 +311,12 @@
                 border: 1px solid var(--light-gray-color);
                 color: var(--gray-color);
               }
-            }
 
-            &:active {
-              background-color: var(--gray-color);
-              color: white;
-              border: 1px solid var(--gray-color);
+              &:active {
+                background-color: var(--gray-color);
+                color: white;
+                border: 1px solid var(--gray-color);
+              }
             }
           }
   
@@ -329,6 +331,7 @@
             border-bottom-right-radius: 0.4rem;
             font-size: 1rem;
             transition: background-color 0.1s, color 0.1s, border 0.1s;
+            user-select: none;
           
             @media(hover: hover) {
               &:hover {
@@ -337,12 +340,12 @@
                 border: 1px solid var(--light-gray-color);
                 color: var(--gray-color);
               }
-            }
 
-            &:active {
-              background-color: var(--gray-color);
-              color: white;
-              border: 1px solid var(--gray-color);
+              &:active {
+                background-color: var(--gray-color);
+                color: white;
+                border: 1px solid var(--gray-color);
+              }
             }
           }
         }

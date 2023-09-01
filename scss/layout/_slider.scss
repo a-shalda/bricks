@@ -97,13 +97,13 @@
                 background-color: var(--light-gray-color);
                 color: var(--gray-color);
               }
-            }
 
-            &:active {
-              cursor: pointer;
-              background-color: var(--gray-color);
-              border: 1px solid var(--gray-color);
-              color: white;
+              &:active {
+                cursor: pointer;
+                background-color: var(--gray-color);
+                border: 1px solid var(--gray-color);
+                color: white;
+              }
             }
           }
         }
@@ -129,10 +129,9 @@
         &:hover {
           background-color: rgba(58, 58, 58, 0.473);
         }
-      }
-
-      &:active {
-        background-color: rgba(58, 58, 58, 0.473);
+        &:active {
+          background-color: rgba(58, 58, 58, 0.473);
+        }
       }
     }
 
@@ -176,10 +175,9 @@
           &:hover {
             background-color: white;
           }
-        }
-
-        &:active {
-          background-color: white;
+          &:active {
+            background-color: white;
+          }
         }
       }
     }
