@@ -102,6 +102,7 @@
               letter-spacing: 0.05rem;
               line-height: 3rem;
               border-top: 1px solid var(--gray-color);
+              font-size: 0.9rem;
 
               @include breakpoint(small) {
                 margin-inline: 2rem;

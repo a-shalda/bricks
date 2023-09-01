@@ -131,5 +131,4 @@ document.querySelector('.header__upper__left__hamburger__nav-toggle').addEventLi
 
   document.querySelector('.header__upper__left__hamburger__dropdown').classList.toggle('header__upper__left__hamburger__dropdown__visible');
   document.querySelector('.header__upper__left__hamburger__nav-toggle__icon').classList.toggle('header__upper__left__hamburger__nav-toggle__icon--active');
-  document.body.classList.toggle('body-stop');
 })
