@@ -178,6 +178,7 @@ sup {
   top: 0;
   z-index: 2;
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.207);
+  background-color: rgba(255, 255, 255, 0.97);
 }
 .header__upper, .header__lower {
   width: 100%;
@@ -187,7 +188,6 @@ sup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--nav-white-color);
   padding-block: 1rem;
 }
 .header__upper__left, .header__upper__right {
