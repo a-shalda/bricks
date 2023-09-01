@@ -282,6 +282,10 @@
             color: white;
             border: 1px solid var(--gray-color);
           }
+          &:visited {
+            background-color: white;
+            color: gray;
+          }
         }
 
 
@@ -311,6 +315,10 @@
               background-color: var(--gray-color);
               color: white;
               border: 1px solid var(--gray-color);
+            }
+            &:visited {
+              background-color: white;
+              color: gray;
             }
           }
   

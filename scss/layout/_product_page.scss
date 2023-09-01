@@ -122,8 +122,12 @@
             font-size: 2rem;
           }
 
-          &:hover {
+          &:hover, &:active {
             background-color: hsla(0, 0%, 25%, 0.713);
+          }
+
+          &:visited {
+            background-color: var(--gray-color);
           }
         }
 
@@ -443,6 +447,7 @@
           grid-template-columns: 1fr 1fr;
           justify-content: space-around;
           gap: 1rem;
+          min-height: 2.875rem; //Height of the price box
 
           border-bottom: 1px solid var(--light-light-gray-color);
 
@@ -459,25 +464,23 @@
             border-radius: 0.4rem;
             color: white;
             transition: background-color 0.3s;
-            min-height: 2.875rem; //Height of the price box
             background-color: rgb(95, 95, 95);
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            &:hover, &:active {
-              cursor: pointer;
-              background-color: gray;
-              border: none;
-            }
-
             &:visited {
               cursor: pointer;
               background-color: rgb(95, 95, 95);
-              border: none;
+              outline: 0;
             }
 
+            &:hover, &:active {
+              cursor: pointer;
+              background-color: gray;
+              outline: 0;
+            }
 
             &__cont {
               position: relative;
@@ -506,18 +509,17 @@
             font-size: 1.2rem;
             border-radius: 0.4rem;
             transition: background-color 0.3s;
-            min-height: 2.875rem; //Height of the price box
+
+            &:visited {
+              background-color: #a43434;
+              outline: 0;
+            }
 
             &:hover, &:active {
               background-color: hsla(0, 68%, 42%, 0.885);
               color: white;
               cursor: pointer;
-              border: none;
-            }
-
-            &:visited {
-              background-color: #a43434;
-              cursor: pointer;
+              outline: 0;
             }
           }
         }

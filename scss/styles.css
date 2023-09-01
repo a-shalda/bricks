@@ -1066,8 +1066,11 @@ sup {
     font-size: 2rem;
   }
 }
-.main__window__top__left__button--prev:hover, .main__window__top__left__button--next:hover {
+.main__window__top__left__button--prev:hover, .main__window__top__left__button--prev:active, .main__window__top__left__button--next:hover, .main__window__top__left__button--next:active {
   background-color: hsla(0, 0%, 25%, 0.713);
+}
+.main__window__top__left__button--prev:visited, .main__window__top__left__button--next:visited {
+  background-color: var(--gray-color);
 }
 .main__window__top__left__button--next {
   right: 1rem;
@@ -1370,6 +1373,7 @@ sup {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   gap: 1rem;
+  min-height: 2.875rem;
   border-bottom: 1px solid var(--light-light-gray-color);
 }
 @media (min-width: 79em) {
@@ -1386,21 +1390,20 @@ sup {
   border-radius: 0.4rem;
   color: white;
   transition: background-color 0.3s;
-  min-height: 2.875rem;
   background-color: rgb(95, 95, 95);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main__window__middle__top__buy__button_wish:hover, .main__window__middle__top__buy__button_wish:active {
-  cursor: pointer;
-  background-color: gray;
-  border: none;
-}
 .main__window__middle__top__buy__button_wish:visited {
   cursor: pointer;
   background-color: rgb(95, 95, 95);
-  border: none;
+  outline: 0;
+}
+.main__window__middle__top__buy__button_wish:hover, .main__window__middle__top__buy__button_wish:active {
+  cursor: pointer;
+  background-color: gray;
+  outline: 0;
 }
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;
@@ -1425,17 +1428,16 @@ sup {
   font-size: 1.2rem;
   border-radius: 0.4rem;
   transition: background-color 0.3s;
-  min-height: 2.875rem;
+}
+.main__window__middle__top__buy__button_add:visited {
+  background-color: #a43434;
+  outline: 0;
 }
 .main__window__middle__top__buy__button_add:hover, .main__window__middle__top__buy__button_add:active {
   background-color: hsla(0, 68%, 42%, 0.885);
   color: white;
   cursor: pointer;
-  border: none;
-}
-.main__window__middle__top__buy__button_add:visited {
-  background-color: #a43434;
-  cursor: pointer;
+  outline: 0;
 }
 .main__window__middle__bottom {
   padding: 1.2rem;
@@ -1932,6 +1934,10 @@ sup {
   color: white;
   border: 1px solid var(--gray-color);
 }
+.cart__cont__product__quantity__delete:visited {
+  background-color: white;
+  color: gray;
+}
 .cart__cont__product__quantity__buttons {
   display: flex;
 }
@@ -1956,6 +1962,10 @@ sup {
   background-color: var(--gray-color);
   color: white;
   border: 1px solid var(--gray-color);
+}
+.cart__cont__product__quantity__buttons__minus:visited {
+  background-color: white;
+  color: gray;
 }
 .cart__cont__product__quantity__buttons__plus {
   margin-left: -1px;
