@@ -122,12 +122,10 @@
             font-size: 2rem;
           }
 
-          &:hover, &:active {
-            background-color: hsla(0, 0%, 25%, 0.713);
-          }
-
-          &:visited {
-            background-color: var(--gray-color);
+          @media(hover: hover) {
+            &:hover {
+              background-color: hsla(0, 0%, 25%, 0.713);
+            }
           }
         }
 
@@ -458,6 +456,7 @@
 
           &__button_wish {
             border: none;
+            cursor: pointer;
             padding-block: 0.6rem;
             padding-inline: 1rem;
             font-size: 1.2rem;
@@ -472,7 +471,7 @@
 
             @media(hover: hover) {
 
-              &:hover, &:active {
+              &:hover {
                 cursor: pointer;
                 background-color: gray;
                 outline: 0;
@@ -498,6 +497,7 @@
           }
 
           &__button_add {
+            cursor: pointer;
             background-color: #a43434;
             border: none;
             color: white;
@@ -508,7 +508,7 @@
             transition: background-color 0.3s;
 
             @media(hover: hover) {
-              &:hover, &:active {
+              &:hover {
                 background-color: hsla(0, 68%, 42%, 0.885);
                 color: white;
                 cursor: pointer;

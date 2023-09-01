@@ -1066,11 +1066,10 @@ sup {
     font-size: 2rem;
   }
 }
-.main__window__top__left__button--prev:hover, .main__window__top__left__button--prev:active, .main__window__top__left__button--next:hover, .main__window__top__left__button--next:active {
-  background-color: hsla(0, 0%, 25%, 0.713);
-}
-.main__window__top__left__button--prev:visited, .main__window__top__left__button--next:visited {
-  background-color: var(--gray-color);
+@media (hover: hover) {
+  .main__window__top__left__button--prev:hover, .main__window__top__left__button--next:hover {
+    background-color: hsla(0, 0%, 25%, 0.713);
+  }
 }
 .main__window__top__left__button--next {
   right: 1rem;
@@ -1384,6 +1383,7 @@ sup {
 }
 .main__window__middle__top__buy__button_wish {
   border: none;
+  cursor: pointer;
   padding-block: 0.6rem;
   padding-inline: 1rem;
   font-size: 1.2rem;
@@ -1395,15 +1395,12 @@ sup {
   justify-content: center;
   align-items: center;
 }
-.main__window__middle__top__buy__button_wish:visited {
-  cursor: pointer;
-  background-color: rgb(95, 95, 95);
-  outline: 0;
-}
-.main__window__middle__top__buy__button_wish:hover, .main__window__middle__top__buy__button_wish:active {
-  cursor: pointer;
-  background-color: gray;
-  outline: 0;
+@media (hover: hover) {
+  .main__window__middle__top__buy__button_wish:hover {
+    cursor: pointer;
+    background-color: gray;
+    outline: 0;
+  }
 }
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;
@@ -1420,6 +1417,7 @@ sup {
   padding-left: 1rem;
 }
 .main__window__middle__top__buy__button_add {
+  cursor: pointer;
   background-color: #a43434;
   border: none;
   color: white;
@@ -1429,15 +1427,13 @@ sup {
   border-radius: 0.4rem;
   transition: background-color 0.3s;
 }
-.main__window__middle__top__buy__button_add:visited {
-  background-color: #a43434;
-  outline: 0;
-}
-.main__window__middle__top__buy__button_add:hover, .main__window__middle__top__buy__button_add:active {
-  background-color: hsla(0, 68%, 42%, 0.885);
-  color: white;
-  cursor: pointer;
-  outline: 0;
+@media (hover: hover) {
+  .main__window__middle__top__buy__button_add:hover {
+    background-color: hsla(0, 68%, 42%, 0.885);
+    color: white;
+    cursor: pointer;
+    outline: 0;
+  }
 }
 .main__window__middle__bottom {
   padding: 1.2rem;
