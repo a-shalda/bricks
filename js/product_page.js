@@ -610,7 +610,12 @@ function checkWishlist () {
 
   wishlist.forEach(item => {
     if (item.id === wish.id) {
-      buttonWish.innerHTML = `Unsave`;  
+      buttonWish.innerHTML = `
+        <div class="main__window__middle__top__buy__button_wish__cont">
+          <i class="fa-regular fa-heart main__window__middle__top__buy__button_wish__cont__heart">&nbsp;</i>
+          <p class="main__window__middle__top__buy__button_wish__cont__text">Unsave</p>
+        </div>
+      `;    
     }
   })
 }
@@ -636,12 +641,22 @@ function ModifyWishlist () {
   if (mathingIndex === undefined) {
     wishlist.push(wish);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    buttonWish.innerHTML = "Unsave";  
+    buttonWish.innerHTML = `
+      <div class="main__window__middle__top__buy__button_wish__cont">
+        <i class="fa-regular fa-heart main__window__middle__top__buy__button_wish__cont__heart">&nbsp;</i>
+        <p class="main__window__middle__top__buy__button_wish__cont__text">Unsave</p>
+      </div>
+    `;   
   }
   else {
     wishlist.splice([mathingIndex], 1);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    buttonWish.innerHTML = "Save";  
+    buttonWish.innerHTML = `
+      <div class="main__window__middle__top__buy__button_wish__cont">
+        <i class="fa-regular fa-heart main__window__middle__top__buy__button_wish__cont__heart">&nbsp;</i>
+        <p class="main__window__middle__top__buy__button_wish__cont__text">Save</p>
+      </div>
+    `;   
   }
 
   updateCounters();

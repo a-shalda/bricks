@@ -462,10 +462,31 @@
             min-height: 2.875rem; //Height of the price box
             background-color: rgb(95, 95, 95);
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             &:hover {
               cursor: pointer;
               background-color: gray;
               border: none;
+            }
+
+            &__cont {
+              position: relative;
+
+              &__heart {
+                color: var(--light-light-gray-color);
+                width: 1.875rem;
+                position: absolute;
+                left: -1rem;
+                top: 0.2rem;
+                font-size: 1.1rem;
+              }
+
+              &__text {
+                padding-left: 1rem;
+              }
             }
           }
 

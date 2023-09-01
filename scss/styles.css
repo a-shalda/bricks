@@ -1331,11 +1331,28 @@ sup {
   transition: background-color 0.3s;
   min-height: 2.875rem;
   background-color: rgb(95, 95, 95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main__window__middle__top__buy__button_wish:hover {
   cursor: pointer;
   background-color: gray;
   border: none;
+}
+.main__window__middle__top__buy__button_wish__cont {
+  position: relative;
+}
+.main__window__middle__top__buy__button_wish__cont__heart {
+  color: var(--light-light-gray-color);
+  width: 1.875rem;
+  position: absolute;
+  left: -1rem;
+  top: 0.2rem;
+  font-size: 1.1rem;
+}
+.main__window__middle__top__buy__button_wish__cont__text {
+  padding-left: 1rem;
 }
 .main__window__middle__top__buy__button_add {
   background-color: #a43434;
