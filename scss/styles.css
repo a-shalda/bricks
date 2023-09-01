@@ -1071,6 +1071,9 @@ sup {
     background-color: hsla(0, 0%, 25%, 0.713);
   }
 }
+.main__window__top__left__button--prev:active, .main__window__top__left__button--next:active {
+  background-color: hsla(0, 0%, 25%, 0.713);
+}
 .main__window__top__left__button--next {
   right: 1rem;
   border-top-left-radius: 0.4rem;
@@ -1402,6 +1405,11 @@ sup {
     outline: 0;
   }
 }
+.main__window__middle__top__buy__button_wish:active {
+  cursor: pointer;
+  background-color: gray;
+  outline: 0;
+}
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;
 }
@@ -1434,6 +1442,12 @@ sup {
     cursor: pointer;
     outline: 0;
   }
+}
+.main__window__middle__top__buy__button_add:active {
+  background-color: hsla(0, 68%, 42%, 0.885);
+  color: white;
+  cursor: pointer;
+  outline: 0;
 }
 .main__window__middle__bottom {
   padding: 1.2rem;
