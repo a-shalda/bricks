@@ -470,16 +470,13 @@
             justify-content: center;
             align-items: center;
 
-            &:visited {
-              cursor: pointer;
-              background-color: rgb(95, 95, 95);
-              outline: 0;
-            }
+            @media(hover: hover) {
 
-            &:hover, &:active {
-              cursor: pointer;
-              background-color: gray;
-              outline: 0;
+              &:hover, &:active {
+                cursor: pointer;
+                background-color: gray;
+                outline: 0;
+              }
             }
 
             &__cont {
@@ -510,16 +507,13 @@
             border-radius: 0.4rem;
             transition: background-color 0.3s;
 
-            &:visited {
-              background-color: #a43434;
-              outline: 0;
-            }
-
-            &:hover, &:active {
-              background-color: hsla(0, 68%, 42%, 0.885);
-              color: white;
-              cursor: pointer;
-              outline: 0;
+            @media(hover: hover) {
+              &:hover, &:active {
+                background-color: hsla(0, 68%, 42%, 0.885);
+                color: white;
+                cursor: pointer;
+                outline: 0;
+              }
             }
           }
         }
