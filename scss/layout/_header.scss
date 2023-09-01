@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--nav-white-color);
-    clip-path: inset(0px 0px -10px 0px);
+    // clip-path: inset(0px 0px -10px 0px);
     padding-block: 1rem;
 
     &__left, &__right {
@@ -55,6 +55,72 @@
           background-color: inherit;
           cursor: pointer;
           transition: opacity 250ms ease;
+
+          &__icon {
+
+            &--active {
+              color: #a43434;
+            }
+          }
+        }
+
+        &__dropdown {
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 50ms, visibility 50ms;
+          position: relative;
+
+          &__visible {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          &__content {
+            position: absolute;
+            top: 1.2rem;
+            left: -1rem;
+            width: 100vw;
+            height: 91vh;
+            padding-block: 0.5rem;
+            background-color: rgb(66, 65, 65);
+            border-bottom: 1px solid var(--gray-color);
+
+            @include breakpoint(small) {
+              left: 0;
+              border-bottom-right-radius: 0.5rem;
+              border-bottom-left-radius: 0.5rem;
+              max-width: 20em;
+              border-left: 1px solid var(--gray-color);
+              border-right: 1px solid var(--gray-color);
+              height: auto;
+            }
+
+            &__link {
+              display: block;
+              margin-inline: 3rem;
+              color: rgb(184, 184, 184);
+              letter-spacing: 0.05rem;
+              line-height: 3rem;
+              border-top: 1px solid var(--gray-color);
+
+              @include breakpoint(small) {
+                margin-inline: 2rem;
+              }
+
+              @include breakpoint(medium) {
+                margin-inline: 2.5rem;
+              }
+
+              &:hover {
+                color: var(--light-light-gray-color);
+                cursor: pointer;              
+              }
+
+              &:first-child {
+                border-top: none;
+              }
+            }
+          }
         }
       }
     }

@@ -9,8 +9,22 @@ const headerHTML = `
       <div class="header__upper__left">
         <div class="header__upper__left__hamburger">
           <button class="header__upper__left__hamburger__nav-toggle">
-            <i class="fa-solid fa-bars icon-style"></i>
+            <i class="fa-solid fa-bars icon-style header__upper__left__hamburger__nav-toggle__icon"></i>
           </button>
+          <div class="header__upper__left__hamburger__dropdown">
+            <div class="header__upper__left__hamburger__dropdown__content">
+              <ul class="header__upper__left__hamburger__dropdown__ul">
+                <a href="brick_slips.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Klinker brick slips</li></a>
+                <a href="bricks.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Klinker bricks</li></a>
+                <a href="thermopanels.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Brick slip thermo panels</li></a>
+                <a href="fence_caps.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Ceramic fence caps</li></a>
+                <a href="clay_pavers.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Clay pavers</li></a>
+                <a href="stair_and_floor_tile.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Stair and floor tile</li></a>
+                <a href="window_sills.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Ceramic window sills</li></a>
+                <a href="mortars.html" class="header__upper__left__hamburger__dropdown__content__link"><li>Mortars</li></a>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="header__upper__left__logo">
           <a href="index.html" class="header__upper__left__logo__link">
@@ -110,3 +124,12 @@ function updateCounters () {
 }
 
 updateCounters();
+
+
+//HAMBURGER MENU
+document.querySelector('.header__upper__left__hamburger__nav-toggle').addEventListener('click', () => {
+
+  document.querySelector('.header__upper__left__hamburger__dropdown').classList.toggle('header__upper__left__hamburger__dropdown__visible');
+  document.querySelector('.header__upper__left__hamburger__nav-toggle__icon').classList.toggle('header__upper__left__hamburger__nav-toggle__icon--active');
+  document.body.classList.toggle('body-stop');
+})
