@@ -1585,8 +1585,11 @@ sup {
      -moz-user-select: none;
           user-select: none;
 }
-.modal__image__box__close:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  .modal__image__box__close:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 
 .modal__cart {
@@ -1641,8 +1644,11 @@ sup {
     display: block;
   }
 }
-.modal__cart__box__content__close:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  .modal__cart__box__content__close:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 .modal__cart__box__content__message {
   text-align: center;
@@ -2145,8 +2151,11 @@ sup {
     display: block;
   }
 }
-.cart__modal__box__content__close:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  .cart__modal__box__content__close:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 .cart__modal__box__content__subtotal {
   padding-block: 1rem;

@@ -644,8 +644,11 @@
       transition: 0.3s;
       user-select: none;
   
-      &:hover {
-        cursor: pointer;
+      @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -703,8 +706,11 @@
           display: block;
         }
 
-        &:hover {
-          cursor: pointer;
+        @media (hover: hover) {
+          &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+          }
         }
       }
 
