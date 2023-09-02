@@ -49,6 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
 }
 
 main {
