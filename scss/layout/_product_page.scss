@@ -491,6 +491,10 @@
               }
             }
 
+            &:focus {
+              outline: 0;
+            }
+
             &__cont {
               position: relative;
 

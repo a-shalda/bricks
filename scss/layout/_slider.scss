@@ -143,6 +143,9 @@
       @include breakpoint (medium) {
         right: 1.5rem;
       }
+      @include breakpoint (xlarge) {
+        right: 2rem;
+      }
     }
 
     &--prev {

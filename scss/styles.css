@@ -888,6 +888,11 @@ sup {
     right: 1.5rem;
   }
 }
+@media (min-width: 79em) {
+  .slideshow__button--next {
+    right: 2rem;
+  }
+}
 .slideshow__button--prev {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -1426,6 +1431,9 @@ sup {
     background-color: gray;
     outline: 0;
   }
+}
+.main__window__middle__top__buy__button_wish:focus {
+  outline: 0;
 }
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;
