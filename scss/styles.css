@@ -93,24 +93,29 @@ picture {
   color: var(--gray-color);
   width: 1.875rem;
 }
-.icon-style--saved:hover {
-  color: firebrick;
-  cursor: pointer;
+@media (hover: hover) {
+  .icon-style--saved:hover {
+    color: firebrick;
+    cursor: pointer;
+  }
 }
 
 .icon-style--search {
   color: var(--gray-color);
 }
-.icon-style--search:hover {
-  color: firebrick;
-  cursor: pointer;
+@media (hover: hover) {
+  .icon-style--search:hover {
+    color: firebrick;
+    cursor: pointer;
+  }
 }
 
-.icon-style:hover {
-  color: firebrick;
-  cursor: pointer;
+@media (hover: hover) {
+  .icon-style:hover {
+    color: firebrick;
+    cursor: pointer;
+  }
 }
-
 .stock {
   color: firebrick;
 }
@@ -224,6 +229,11 @@ sup {
   cursor: pointer;
   transition: opacity 250ms ease;
 }
+.header__upper__left__hamburger__nav-toggle__icon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 .header__upper__left__hamburger__nav-toggle__icon--active {
   color: #a43434;
 }
@@ -307,6 +317,9 @@ sup {
 .header__upper__right__search, .header__upper__right__saved, .header__upper__right__seen, .header__upper__right__basket {
   display: flex;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .header__upper__right__search {
   font-size: 1.35rem;

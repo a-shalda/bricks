@@ -57,6 +57,7 @@
           transition: opacity 250ms ease;
 
           &__icon {
+            user-select: none;
 
             &--active {
               color: #a43434;
@@ -148,6 +149,7 @@
       &__search, &__saved, &__seen, &__basket {
         display: flex;
         align-items: center;
+        user-select: none;
       }
 
       &__search {

@@ -10,24 +10,30 @@
   color: var(--gray-color);
   width: 1.875rem;
 
-  &:hover {
-    color: firebrick;
-    cursor: pointer;
+  @media(hover: hover) {
+    &:hover {
+      color: firebrick;
+      cursor: pointer;
+    }
   }
 }
 
 .icon-style--search {
   color: var(--gray-color);
 
-  &:hover {
-    color: firebrick;
-    cursor: pointer;
+  @media(hover: hover) {
+    &:hover {
+      color: firebrick;
+      cursor: pointer;
+    }
   }
 }
 
-.icon-style:hover {
-  color: firebrick;
-  cursor: pointer;
+@media(hover: hover) {
+  .icon-style:hover {
+    color: firebrick;
+    cursor: pointer;
+  }
 }
 
 .stock {
