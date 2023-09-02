@@ -132,3 +132,14 @@ document.querySelector('.header__upper__left__hamburger__nav-toggle').addEventLi
   document.querySelector('.header__upper__left__hamburger__dropdown').classList.toggle('header__upper__left__hamburger__dropdown__visible');
   document.querySelector('.header__upper__left__hamburger__nav-toggle__icon').classList.toggle('header__upper__left__hamburger__nav-toggle__icon--active');
 })
+
+
+//Disabling doubletap
+let doubleTouchStartTimestamp = 0;
+document.addEventListener("touchstart", function(event){
+    let now = +(new Date());
+    if (doubleTouchStartTimestamp + 500 > now){
+        event.preventDefault();
+    };
+    doubleTouchStartTimestamp = now;
+});
