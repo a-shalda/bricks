@@ -1399,7 +1399,7 @@ sup {
   }
 }
 .main__window__middle__top__buy__button_wish {
-  border: none;
+  border: 1px solid rgb(95, 95, 95);
   cursor: pointer;
   padding-block: 0.6rem;
   padding-inline: 1rem;
@@ -1411,7 +1411,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  outline: none;
+  outline: 1px solid rgb(95, 95, 95);
   display: flex;
   justify-content: center;
   align-items: center;
