@@ -1,5 +1,6 @@
 .icon-style {
   color: var(--gray-color);
+  transition: color 200ms;
 }
 
 .icon-style--footer {
@@ -9,6 +10,7 @@
 .icon-style--saved {
   color: var(--gray-color);
   width: 1.875rem;
+  transition: color 200ms;
 
   @media(hover: hover) {
     &:hover {
@@ -20,6 +22,7 @@
 
 .icon-style--search {
   color: var(--gray-color);
+  transition: color 200ms;
 
   @media(hover: hover) {
     &:hover {
@@ -30,6 +33,7 @@
 }
 
 @media(hover: hover) {
+
   .icon-style:hover {
     color: firebrick;
     cursor: pointer;

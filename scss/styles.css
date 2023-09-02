@@ -83,6 +83,7 @@ picture {
 
 .icon-style {
   color: var(--gray-color);
+  transition: color 200ms;
 }
 
 .icon-style--footer {
@@ -92,6 +93,7 @@ picture {
 .icon-style--saved {
   color: var(--gray-color);
   width: 1.875rem;
+  transition: color 200ms;
 }
 @media (hover: hover) {
   .icon-style--saved:hover {
@@ -102,6 +104,7 @@ picture {
 
 .icon-style--search {
   color: var(--gray-color);
+  transition: color 200ms;
 }
 @media (hover: hover) {
   .icon-style--search:hover {
@@ -206,12 +209,15 @@ sup {
   font-weight: 900;
   letter-spacing: 0.04rem;
   font-size: 1.5rem;
+  transition: opacity 300ms;
 }
 .header__upper__left__logo__bricks {
   color: #a43434;
 }
-.header__upper__left__logo:hover {
-  opacity: 0.8;
+@media (hover: hover) {
+  .header__upper__left__logo:hover {
+    opacity: 0.8;
+  }
 }
 @media (min-width: 42.75em) {
   .header__upper__left__hamburger {

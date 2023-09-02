@@ -32,14 +32,18 @@
         font-weight: 900;
         letter-spacing: 0.04rem;
         font-size: 1.5rem;
+        transition: opacity 300ms;
 
         &__bricks {
           color: #a43434;
         }
 
-        &:hover {
-          opacity: 0.8;
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.8;
+          }
         }
+
       }
       &__hamburger {
         // width: 2rem;
