@@ -1416,9 +1416,6 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media (hover: hover) {
   .main__window__middle__top__buy__button_wish:hover {
