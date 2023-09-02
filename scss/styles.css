@@ -48,7 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  touch-action: manipulation;
+  touch-action: none;
 }
 
 main {
@@ -1411,6 +1411,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  touch-action: none;
   display: flex;
   justify-content: center;
   align-items: center;
