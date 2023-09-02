@@ -1403,7 +1403,6 @@ sup {
   }
 }
 .main__window__middle__top__buy__button_wish {
-  border: none;
   cursor: pointer;
   padding-block: 0.6rem;
   padding-inline: 1rem;
@@ -1416,6 +1415,9 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (hover: hover) {
   .main__window__middle__top__buy__button_wish:hover {
