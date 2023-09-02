@@ -114,11 +114,11 @@ thumbnailBox.forEach((box) => {
 
 //Image gallery
 
-document.querySelector('.main__window__top__left__button--prev').addEventListener('pointerdown', () => {
+document.querySelector('.main__window__top__left__button--prev').addEventListener('click', () => {
   minusImage();
 });
 
-document.querySelector('.main__window__top__left__button--next').addEventListener('pointerdown', () => {
+document.querySelector('.main__window__top__left__button--next').addEventListener('click', () => {
   plusImage();
 });
 
@@ -593,7 +593,7 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 
 const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
 
-buttonWish.addEventListener('pointerdown', () => {
+buttonWish.addEventListener('click', () => {
   ModifyWishlist ();
 })
 
@@ -666,7 +666,7 @@ function ModifyWishlist () {
 
 let userPacks = document.querySelector('.main__window__middle__top__stock__subtotal__value__select');
 
-document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('pointerdown', () => {
+document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
   addToCart();
 })
 
@@ -727,13 +727,13 @@ function modalToCart() {
   modalToCartWindow.style.opacity = '1';
   document.body.classList.add('stop-scroll');
 
-  document.querySelector('.modal__cart__box__content__continue').addEventListener('pointerdown',  () => {
+  document.querySelector('.modal__cart__box__content__continue').addEventListener('click',  () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
     document.body.classList.remove('stop-scroll');;
   });
 
-  document.querySelector(".modal__cart__box__content__close").addEventListener('pointerdown', () => {
+  document.querySelector(".modal__cart__box__content__close").addEventListener('click', () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
