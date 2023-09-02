@@ -1393,6 +1393,7 @@ sup {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   gap: 1rem;
+  min-height: 2.875rem;
   border-bottom: 1px solid var(--light-light-gray-color);
 }
 @media (min-width: 79em) {
@@ -1409,6 +1410,7 @@ sup {
   font-size: 1.2rem;
   border-radius: 0.4rem;
   color: white;
+  transition: background-color 0.3s;
   background-color: rgb(95, 95, 95);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1417,6 +1419,18 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (hover: hover) {
+  .main__window__middle__top__buy__button_wish:hover {
+    cursor: pointer;
+    background-color: gray;
+    outline: 0;
+  }
+  .main__window__middle__top__buy__button_wish:active {
+    cursor: pointer;
+    background-color: gray;
+    outline: 0;
+  }
 }
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;
@@ -1445,6 +1459,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  touch-action: none;
 }
 @media (hover: hover) {
   .main__window__middle__top__buy__button_add:hover {
