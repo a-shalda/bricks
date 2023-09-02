@@ -730,7 +730,7 @@ function modalToCart() {
   document.querySelector('.modal__cart__box__content__continue').addEventListener('pointerdown',  () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
-    document.body.classList.remove('stop-scroll');
+    document.body.classList.remove('stop-scroll');;
   });
 
   document.querySelector(".modal__cart__box__content__close").addEventListener('pointerdown', () => {
