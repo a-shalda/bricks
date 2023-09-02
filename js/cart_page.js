@@ -1178,7 +1178,7 @@ function updateEvents () {
 
     const id = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
   
-    item.querySelector('.cart__cont__product__quantity__delete').addEventListener('click', () => {
+    item.querySelector('.cart__cont__product__quantity__delete').addEventListener('pointerdown', () => {
 
       let updatedQuantity = cart[index].quantity;
 
@@ -1435,7 +1435,7 @@ function updateEvents () {
 
     });
   
-    item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
+    item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('pointerdown', () => {
 
       if (cart[index].quantity >= 1) {
         cart[index].quantity--;
@@ -1758,7 +1758,7 @@ function updateEvents () {
       }
     })
   
-    item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('click', () => {
+    item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('pointerdown', () => {
 
       if (totalCostCart >= totalCostCartLimit) {return;}
   
