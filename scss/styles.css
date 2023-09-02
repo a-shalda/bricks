@@ -1411,21 +1411,10 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (hover: hover) {
-  .main__window__middle__top__buy__button_wish:hover {
-    cursor: pointer;
-    background-color: gray;
-    outline: 0;
-  }
-  .main__window__middle__top__buy__button_wish:active {
-    cursor: pointer;
-    background-color: gray;
-    outline: 0;
-  }
 }
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;

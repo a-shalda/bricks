@@ -470,25 +470,26 @@
             transition: background-color 0.3s;
             background-color: rgb(95, 95, 95);
             user-select: none;
+            outline: none;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            @media(hover: hover) {
+            // @media(hover: hover) {
 
-              &:hover {
-                cursor: pointer;
-                background-color: gray;
-                outline: 0;
-              }
+            //   &:hover {
+            //     cursor: pointer;
+            //     background-color: gray;
+            //     outline: 0;
+            //   }
 
-              &:active {
-                cursor: pointer;
-                background-color: gray;
-                outline: 0;
-              }
-            }
+            //   &:active {
+            //     cursor: pointer;
+            //     background-color: gray;
+            //     outline: 0;
+            //   }
+            // }
 
             &__cont {
               position: relative;
