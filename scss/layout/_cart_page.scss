@@ -273,6 +273,10 @@
           user-select: none;
           touch-action: none;
 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
           @media(hover: hover) {
             &:hover {
               cursor: pointer;
@@ -311,6 +315,10 @@
             transition: background-color 0.1s, color 0.1s, border 0.1s;
             user-select: none;
             touch-action: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
           
             @media(hover: hover) {
               &:hover {
@@ -341,6 +349,10 @@
             transition: background-color 0.1s, color 0.1s, border 0.1s;
             user-select: none;
             touch-action: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
           
             @media(hover: hover) {
               &:hover {

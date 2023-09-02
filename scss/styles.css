@@ -1997,6 +1997,9 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (hover: hover) {
   .cart__cont__product__quantity__delete:hover {
@@ -2033,6 +2036,9 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (hover: hover) {
   .cart__cont__product__quantity__buttons__minus:hover {
@@ -2062,6 +2068,9 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (hover: hover) {
   .cart__cont__product__quantity__buttons__plus:hover {

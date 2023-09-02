@@ -763,8 +763,8 @@ cart.forEach(item => {
                   <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
 
                     <div class="cart__cont__product__quantity__buttons">
-                      <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                      <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                      <a class="cart__cont__product__quantity__buttons__minus">-</a>
+                      <a class="cart__cont__product__quantity__buttons__plus">+</a>
                     </div>
                   </div>
 
@@ -775,7 +775,7 @@ cart.forEach(item => {
 
                   <div class="cart__cont__product__quantity__sub-del">
                     <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                    <button class="cart__cont__product__quantity__delete">Delete</button>
+                    <a class="cart__cont__product__quantity__delete">Delete</a>
                   </div>
 
                 </div>
@@ -864,8 +864,8 @@ cart.forEach(item => {
                         <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
 
                         <div class="cart__cont__product__quantity__buttons">
-                          <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                          <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                          <a class="cart__cont__product__quantity__buttons__minus">-</a>
+                          <a class="cart__cont__product__quantity__buttons__plus">+</a>
                         </div>
                       </div>
             
@@ -876,7 +876,7 @@ cart.forEach(item => {
 
                       <div class="cart__cont__product__quantity__sub-del">
                         <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                        <button class="cart__cont__product__quantity__delete">Delete</button>
+                        <a class="cart__cont__product__quantity__delete">Delete</a>
                       </div>
             
                     </div>
@@ -943,8 +943,8 @@ cart.forEach(item => {
                       <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} m&sup2;</p>
 
                         <div class="cart__cont__product__quantity__buttons">
-                          <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                          <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                          <a class="cart__cont__product__quantity__buttons__minus">-</a>
+                          <a class="cart__cont__product__quantity__buttons__plus">+</a>
                         </div>
                       </div>
       
@@ -953,7 +953,7 @@ cart.forEach(item => {
                       <p class="cart__cont__product__quantity__weight">Weight (kg): ${totalWeight}</p>
                       <div class="cart__cont__product__quantity__sub-del">
                         <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                        <button class="cart__cont__product__quantity__delete">Delete</button>
+                        <a class="cart__cont__product__quantity__delete">Delete</a>
                       </div>
             
                     </div>
@@ -1041,8 +1041,8 @@ cart.forEach(item => {
                     <p class="cart__cont__product__quantity__qty">Quantity: ${totalVolume} lin.m</p>
 
                       <div class="cart__cont__product__quantity__buttons">
-                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                        <a class="cart__cont__product__quantity__buttons__minus">-</a>
+                        <a class="cart__cont__product__quantity__buttons__plus">+</a>
                       </div>
                     </div>
           
@@ -1053,7 +1053,7 @@ cart.forEach(item => {
               
                     <div class="cart__cont__product__quantity__sub-del">
                       <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                      <a class="cart__cont__product__quantity__delete">Delete</a>
                     </div>
           
                   </div>
@@ -1136,8 +1136,8 @@ cart.forEach(item => {
                       <p class="cart__cont__product__quantity__qty">Quantity: ${piecesModified}</p>
 
                       <div class="cart__cont__product__quantity__buttons">
-                        <button class="cart__cont__product__quantity__buttons__minus">-</button>
-                        <button class="cart__cont__product__quantity__buttons__plus">+</button>
+                        <a class="cart__cont__product__quantity__buttons__minus">-</a>
+                        <a class="cart__cont__product__quantity__buttons__plus">+</a>
                       </div>
                     </div>
 
@@ -1147,7 +1147,7 @@ cart.forEach(item => {
               
                     <div class="cart__cont__product__quantity__sub-del">
                       <p class="cart__cont__product__quantity__subtotal">Subtotal: €${priceModified}</p>
-                      <button class="cart__cont__product__quantity__delete">Delete</button>
+                      <a class="cart__cont__product__quantity__delete">Delete</a>
                     </div>
           
                   </div>
@@ -1437,7 +1437,7 @@ function updateEvents () {
   
     item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('pointerdown', () => {
 
-      item.querySelector('.cart__cont__product__quantity__buttons__minus').classList.add('cart__cont__product__quantity__buttons__active');
+      // item.querySelector('.cart__cont__product__quantity__buttons__minus').classList.add('cart__cont__product__quantity__buttons__active');
       
       
       if (cart[index].quantity >= 1) {
