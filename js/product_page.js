@@ -114,11 +114,11 @@ thumbnailBox.forEach((box) => {
 
 //Image gallery
 
-document.querySelector('.main__window__top__left__button--prev').addEventListener('click', () => {
+document.querySelector('.main__window__top__left__button--prev').addEventListener('pointerdown', () => {
   minusImage();
 });
 
-document.querySelector('.main__window__top__left__button--next').addEventListener('click', () => {
+document.querySelector('.main__window__top__left__button--next').addEventListener('pointerdown', () => {
   plusImage();
 });
 
@@ -169,21 +169,21 @@ document.querySelectorAll('.main__window__top__left__cont__img').forEach(image =
 
   let modalImage = document.querySelector(".modal__image");
 
-  image.addEventListener('click', () => {
+  image.addEventListener('pointerdown', () => {
 
     modalImage.style.visibility = 'visible';
     modalImage.style.opacity = '1';
     document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
     document.body.classList.add('stop-scroll');
   
-    document.querySelectorAll(".modal__image__box__close")[0].addEventListener('click', () => {
+    document.querySelectorAll(".modal__image__box__close")[0].addEventListener('pointerdown', () => {
 
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
       document.body.classList.remove('stop-scroll');
     })
 
-    modalImage.addEventListener('click',  () => {
+    modalImage.addEventListener('pointerdown',  () => {
 
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
@@ -593,7 +593,7 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 
 const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
 
-buttonWish.addEventListener('touchstart', () => {
+buttonWish.addEventListener('pointerdown', () => {
   ModifyWishlist ();
 })
 
@@ -666,7 +666,7 @@ function ModifyWishlist () {
 
 let userPacks = document.querySelector('.main__window__middle__top__stock__subtotal__value__select');
 
-document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('click', () => {
+document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('pointerdown', () => {
   addToCart();
 })
 
@@ -727,13 +727,13 @@ function modalToCart() {
   modalToCartWindow.style.opacity = '1';
   document.body.classList.add('stop-scroll');
 
-  document.querySelector('.modal__cart__box__content__continue').addEventListener('click',  () => {
+  document.querySelector('.modal__cart__box__content__continue').addEventListener('pointerdown',  () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
   });
 
-  document.querySelector(".modal__cart__box__content__close").addEventListener('click', () => {
+  document.querySelector(".modal__cart__box__content__close").addEventListener('pointerdown', () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
