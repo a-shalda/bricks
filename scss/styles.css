@@ -41,6 +41,8 @@ html:focus-within {
 
 body {
   min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
   font-family: Roboto, Tahoma;
   color: var(--gray-color);
   transition: background-color 100ms;
@@ -1392,7 +1394,7 @@ sup {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   gap: 1rem;
-  min-height: 2.875rem;
+  height: 2.875rem;
   border-bottom: 1px solid var(--light-light-gray-color);
 }
 @media (min-width: 79em) {
@@ -1402,11 +1404,12 @@ sup {
   }
 }
 .main__window__middle__top__buy__button_wish {
+  display: block;
   border: none;
   cursor: pointer;
   padding-block: 0.6rem;
   padding-inline: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 0.4rem;
   color: white;
   transition: background-color 0.3s;
@@ -1418,6 +1421,11 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 25em) {
+  .main__window__middle__top__buy__button_wish {
+    height: 2.875rem;
+  }
 }
 @media (hover: hover) {
   .main__window__middle__top__buy__button_wish:hover {
@@ -1438,27 +1446,42 @@ sup {
   color: var(--light-light-gray-color);
   width: 1.875rem;
   position: absolute;
-  left: -1rem;
-  top: 0.2rem;
-  font-size: 1.1rem;
+  left: -0.6rem;
+  top: 0.22rem;
+  font-size: 1rem;
 }
 .main__window__middle__top__buy__button_wish__cont__text {
   padding-left: 1rem;
 }
+@media (min-width: 25em) {
+  .main__window__middle__top__buy__button_wish__cont__text {
+    font-size: 1.1rem;
+  }
+}
 .main__window__middle__top__buy__button_add {
+  display: block;
   cursor: pointer;
   background-color: #a43434;
   border: none;
   color: white;
   padding-block: 0.3rem;
   padding-inline: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 0.4rem;
   transition: background-color 0.3s;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 25em) {
+  .main__window__middle__top__buy__button_add {
+    height: 2.875rem;
+    font-size: 1.1rem;
+  }
 }
 @media (hover: hover) {
   .main__window__middle__top__buy__button_add:hover {

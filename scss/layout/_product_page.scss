@@ -450,7 +450,7 @@
           grid-template-columns: 1fr 1fr;
           justify-content: space-around;
           gap: 1rem;
-          min-height: 2.875rem; //Height of the price box
+          height: 2.875rem; //Height of the price box
 
           border-bottom: 1px solid var(--light-light-gray-color);
 
@@ -460,11 +460,12 @@
           }
 
           &__button_wish {
+            display: block;
             border: none;
             cursor: pointer;
             padding-block: 0.6rem;
             padding-inline: 1rem;
-            font-size: 1.2rem;
+            font-size: 1rem;
             border-radius: 0.4rem;
             color: white;
             transition: background-color 0.3s;
@@ -475,6 +476,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include breakpoint (tiny) {
+              height: 2.875rem; //Height of the price box
+            }
 
             @media(hover: hover) {
 
@@ -498,29 +503,43 @@
                 color: var(--light-light-gray-color);
                 width: 1.875rem;
                 position: absolute;
-                left: -1rem;
-                top: 0.2rem;
-                font-size: 1.1rem;
+                left: -0.6rem;
+                top: 0.22rem;
+                font-size: 1rem;
               }
 
               &__text {
                 padding-left: 1rem;
+
+                @include breakpoint (tiny) {
+                  font-size: 1.1rem;
+                }
               }
             }
           }
 
           &__button_add {
+            display: block;
             cursor: pointer;
             background-color: #a43434;
             border: none;
             color: white;
             padding-block: 0.3rem;
             padding-inline: 1rem;
-            font-size: 1.2rem;
+            font-size: 1rem;
             border-radius: 0.4rem;
             transition: background-color 0.3s;
             user-select: none;
             touch-action: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint (tiny) {
+              height: 2.875rem; //Height of the price box
+              font-size: 1.1rem;
+            }
 
             @media(hover: hover) {
               &:hover {

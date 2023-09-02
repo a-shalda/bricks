@@ -24,8 +24,8 @@ html:focus-within {scroll-behavior: smooth;}
 
 body {
   min-height: 100vh;
-  // text-rendering: optimizeSpeed;
-  // line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
   font-family: $font;
   color: var(--gray-color);
   transition: background-color 100ms;
