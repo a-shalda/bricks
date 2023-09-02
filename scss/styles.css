@@ -1089,6 +1089,7 @@ sup {
   background-color: var(--gray-color);
   z-index: 1;
   transition: background-color 0.3s;
+  touch-action: manipulation;
 }
 @media (min-width: 29em) {
   .main__window__top__left__button--prev, .main__window__top__left__button--next {
@@ -1428,7 +1429,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  touch-action: none;
+  touch-action: manipulation;
   letter-spacing: 0.03rem;
   display: flex;
   justify-content: center;
@@ -1484,7 +1485,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  touch-action: none;
+  touch-action: manipulation;
   letter-spacing: 0.03rem;
   display: flex;
   justify-content: center;
@@ -1996,7 +1997,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  touch-action: none;
+  touch-action: manipulation;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2035,7 +2036,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  touch-action: none;
+  touch-action: manipulation;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2067,7 +2068,7 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  touch-action: none;
+  touch-action: manipulation;
   display: flex;
   justify-content: center;
   align-items: center;

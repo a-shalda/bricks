@@ -117,6 +117,7 @@
           background-color: var(--gray-color);
           z-index: 1;
           transition: background-color 0.3s;
+          touch-action: manipulation;
 
           @include breakpoint(small) {
             font-size: 2rem;
@@ -471,7 +472,7 @@
             transition: background-color 0.3s;
             background-color: rgb(95, 95, 95);
             user-select: none;
-            touch-action: none;
+            touch-action: manipulation;
             letter-spacing: 0.03rem;
 
             display: flex;
@@ -531,7 +532,7 @@
             border-radius: 0.4rem;
             transition: background-color 0.3s;
             user-select: none;
-            touch-action: none;
+            touch-action: manipulation;
             letter-spacing: 0.03rem;
 
             display: flex;
