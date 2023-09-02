@@ -2014,6 +2014,11 @@ sup {
 .cart__cont__product__quantity__buttons {
   display: flex;
 }
+.cart__cont__product__quantity__buttons__active {
+  background-color: var(--gray-color);
+  color: white;
+  border: 1px solid var(--gray-color);
+}
 .cart__cont__product__quantity__buttons__minus {
   width: 3rem;
   height: 2rem;
