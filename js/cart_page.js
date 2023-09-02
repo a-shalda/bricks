@@ -134,13 +134,13 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   form.style.visibility = 'visible';
   form.style.opacity = '1';
 
-  document.querySelector('.cart__modal__box__content__continue').addEventListener('pointerdown',  () => {
+  document.querySelector('.cart__modal__box__content__continue').addEventListener('click',  () => {
     form.style.visibility = 'hidden';
     form.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
   });
 
-  document.querySelector('.cart__modal__box__content__close').addEventListener('pointerdown',  () => {
+  document.querySelector('.cart__modal__box__content__close').addEventListener('click',  () => {
     form.style.visibility = 'hidden';
     form.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
@@ -1178,7 +1178,7 @@ function updateEvents () {
 
     const id = item.querySelector('.cart__cont__product__vendor__id').innerHTML;
   
-    item.querySelector('.cart__cont__product__quantity__delete').addEventListener('pointerdown', () => {
+    item.querySelector('.cart__cont__product__quantity__delete').addEventListener('click', () => {
 
       let updatedQuantity = cart[index].quantity;
 
@@ -1435,7 +1435,7 @@ function updateEvents () {
 
     });
   
-    item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('pointerdown', () => {
+    item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('click', () => {
 
       if (cart[index].quantity >= 1) {
         cart[index].quantity--;
@@ -1758,7 +1758,7 @@ function updateEvents () {
       }
     })
   
-    item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('pointerdown', () => {
+    item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('click', () => {
 
       if (totalCostCart >= totalCostCartLimit) {return;}
   
