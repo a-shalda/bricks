@@ -122,7 +122,7 @@ function updateOrder () {
 }
 
 //Form
-document.querySelector('.cart__checkout__proceed').addEventListener('pointerdown', () => {
+document.querySelector('.cart__checkout__proceed').addEventListener('click', () => {
   const userForm = document.querySelector('.cart__modal__box__content__form');
 
   checkoutProductsHTML = '';
