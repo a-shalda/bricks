@@ -41,7 +41,6 @@ html:focus-within {
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
   font-family: Roboto, Tahoma;
   color: var(--gray-color);
   transition: background-color 100ms;
