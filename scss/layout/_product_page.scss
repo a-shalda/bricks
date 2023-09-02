@@ -460,7 +460,7 @@
           }
 
           &__button_wish {
-            border: 1px solid rgb(95, 95, 95);
+            border: none;
             cursor: pointer;
             padding-block: 0.6rem;
             padding-inline: 1rem;
@@ -470,26 +470,26 @@
             transition: background-color 0.3s;
             background-color: rgb(95, 95, 95);
             user-select: none;
-            outline: 1px solid rgb(95, 95, 95);
+            outline: none;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            // @media(hover: hover) {
+            @media(hover: hover) {
 
-            //   &:hover {
-            //     cursor: pointer;
-            //     background-color: gray;
-            //     outline: 0;
-            //   }
+              &:hover {
+                cursor: pointer;
+                background-color: gray;
+                outline: 0;
+              }
 
-            //   &:active {
-            //     cursor: pointer;
-            //     background-color: gray;
-            //     outline: 0;
-            //   }
-            // }
+              &:active {
+                cursor: pointer;
+                background-color: gray;
+                outline: 0;
+              }
+            }
 
             &__cont {
               position: relative;
