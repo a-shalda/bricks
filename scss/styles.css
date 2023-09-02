@@ -1393,7 +1393,6 @@ sup {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   gap: 1rem;
-  min-height: 2.875rem;
   border-bottom: 1px solid var(--light-light-gray-color);
 }
 @media (min-width: 79em) {
