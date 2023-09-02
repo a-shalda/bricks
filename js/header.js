@@ -135,11 +135,11 @@ document.querySelector('.header__upper__left__hamburger__nav-toggle').addEventLi
 
 
 //Disabling doubletap
-// let doubleTouchStartTimestamp = 0;
-// document.addEventListener("touchstart", function(event){
-//     let now = +(new Date());
-//     if (doubleTouchStartTimestamp + 500 > now){
-//         event.preventDefault();
-//     };
-//     doubleTouchStartTimestamp = now;
-// });
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+  let now = (new Date()).getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+}, false);
