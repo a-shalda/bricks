@@ -41,6 +41,10 @@ main {
   flex-grow: 1;
 }
 
+i {
+  user-select: none;
+}
+
 img,
 picture {
   max-width: 100%;

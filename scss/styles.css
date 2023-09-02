@@ -58,6 +58,12 @@ main {
   flex-grow: 1;
 }
 
+i {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 img,
 picture {
   max-width: 100%;
@@ -1473,6 +1479,9 @@ sup {
   left: -0.6rem;
   top: 0.22rem;
   font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .main__window__middle__top__buy__button_wish__cont__text {
   padding-left: 1rem;
