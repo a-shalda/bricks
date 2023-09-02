@@ -593,7 +593,7 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 
 const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
 
-buttonWish.addEventListener('pointerdown', () => {
+buttonWish.addEventListener('touchstart', () => {
   ModifyWishlist ();
 })
 
