@@ -1407,7 +1407,6 @@ sup {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   gap: 1rem;
-  height: 2.875rem;
   border-bottom: 1px solid var(--light-light-gray-color);
 }
 @media (min-width: 79em) {
@@ -1431,6 +1430,7 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  letter-spacing: 0.03rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1486,6 +1486,7 @@ sup {
      -moz-user-select: none;
           user-select: none;
   touch-action: none;
+  letter-spacing: 0.03rem;
   display: flex;
   justify-content: center;
   align-items: center;
