@@ -213,15 +213,14 @@ sup {
 .header__upper__left__logo:hover {
   opacity: 0.8;
 }
-.header__upper__left__hamburger {
-  width: 2rem;
-}
 @media (min-width: 42.75em) {
   .header__upper__left__hamburger {
     width: 2.5rem;
   }
 }
 .header__upper__left__hamburger__nav-toggle {
+  text-align: left;
+  width: 2rem;
   font-size: 1.5rem;
   display: block;
   border: none;

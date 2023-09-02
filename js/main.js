@@ -46,7 +46,7 @@ document.querySelector('.slideshow__dots__cont').innerHTML = lowerButtonsHTML;
 document.querySelectorAll('.slideshow__dots__cont__dot')
 
     .forEach((button) => {
-        button.addEventListener('pointerdown', () => {
+        button.addEventListener('click', () => {
             currentSlide(button.dataset.productId);
         });
 });
@@ -60,8 +60,8 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-document.querySelector('.slideshow__button--prev').addEventListener('pointerdown', () => {plusSlides(-1);});
-document.querySelector('.slideshow__button--next').addEventListener('pointerdown', () => {plusSlides(1);});
+document.querySelector('.slideshow__button--prev').addEventListener('click', () => {plusSlides(-1);});
+document.querySelector('.slideshow__button--next').addEventListener('click', () => {plusSlides(1);});
 
 //Code for the slider
 let slideIndex = 1;

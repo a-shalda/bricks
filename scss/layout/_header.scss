@@ -42,13 +42,15 @@
         }
       }
       &__hamburger {
-        width: 2rem;
+        // width: 2rem;
 
         @include breakpoint(medium) {
           width: 2.5rem;
         }
 
         &__nav-toggle {
+          text-align: left;
+          width: 2rem;
           font-size: 1.5rem;
           display: block;
           border: none;
