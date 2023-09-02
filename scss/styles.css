@@ -1403,6 +1403,7 @@ sup {
   }
 }
 .main__window__middle__top__buy__button_wish {
+  border: none;
   cursor: pointer;
   padding-block: 0.6rem;
   padding-inline: 1rem;
