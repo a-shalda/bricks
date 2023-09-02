@@ -169,7 +169,7 @@ document.querySelectorAll('.main__window__top__left__cont__img').forEach(image =
 
   let modalImage = document.querySelector(".modal__image");
 
-  image.addEventListener('pointerdown', () => {
+  image.addEventListener('click', () => {
 
     modalImage.style.visibility = 'visible';
     modalImage.style.opacity = '1';
