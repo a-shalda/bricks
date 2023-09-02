@@ -35,6 +35,10 @@ li {
   list-style-type: none;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -59,6 +63,19 @@ picture {
   display: block;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 .search--link:hover {
   text-decoration: underline;
 }
@@ -1394,6 +1411,7 @@ sup {
      -moz-user-select: none;
           user-select: none;
   outline: none;
+  touch-action: none;
   display: flex;
   justify-content: center;
   align-items: center;
