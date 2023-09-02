@@ -32,7 +32,7 @@
         font-weight: 900;
         letter-spacing: 0.04rem;
         font-size: 1.5rem;
-        transition: opacity 300ms;
+        transition: opacity 200ms;
 
         &__bricks {
           color: #a43434;
@@ -110,6 +110,7 @@
               line-height: 3rem;
               border-top: 1px solid var(--gray-color);
               font-size: 0.9rem;
+              transition: color 100ms;
 
               @include breakpoint(small) {
                 margin-inline: 2rem;
