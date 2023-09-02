@@ -5,27 +5,31 @@ const footerHTML = `
     <div class="footer__upper">
 
       <div class="footer__upper__column upper--one">
-        <p class="footer__upper__column__title">Categories</p>
-        <a href="brick_slips.html"><p class="footer__upper__column__item">Klinker brick slips</p></a>
-        <a href="bricks.html"><p class="footer__upper__column__item">Klinker bricks</p></a>
-        <a href="thermopanels.html"><p class="footer__upper__column__item">Brick slip thermo panels</p></a>
-        <a href="fence_caps.html"><p class="footer__upper__column__item">Ceramic fence caps</p></a>
-        <a href="clay_pavers.html"><p class="footer__upper__column__item">Clay pavers</p></a>
-        <a href="stair_and_floor_tile.html"><p class="footer__upper__column__item">Stair and floor tile</p></a>
-        <a href="window_sills.html"><p class="footer__upper__column__item">Ceramic window sills</p></a>
-        <a href="mortars.html"><p class="footer__upper__column__item">Mortars</p></a>
+        <ul>
+          <li class="footer__upper__column__title">Categories</li>
+          <li class="footer__upper__column__item"><a href="brick_slips.html">Klinker brick slips</a></li>
+          <li class="footer__upper__column__item"><a href="bricks.html">Klinker bricks</a></li>
+          <li class="footer__upper__column__item"><a href="thermopanels.html">Brick slip thermo panels</a></li>
+          <li class="footer__upper__column__item"><a href="fence_caps.html">Ceramic fence caps</a></li>
+          <li class="footer__upper__column__item"><a href="clay_pavers.html">Clay pavers</a></li>
+          <li class="footer__upper__column__item"><a href="stair_and_floor_tile.html">Stair and floor tile</a></li>
+          <li class="footer__upper__column__item"><a href="window_sills.html">Ceramic window sills</a></li>
+          <li class="footer__upper__column__item"><a href="mortars.html">Mortars</a></li>
+        </ul>
       </div>
 
       <div class="footer__upper__column upper--two">
-        <p class="footer__upper__column__title">Manufacturers</p>
-        <a href="feldhaus.html"><p class="footer__upper__column__item">Feldhaus Klinker</p>
-        <a href="stroeher.html"><p class="footer__upper__column__item">Stroeher</p></a>
-        <a href="roben.html"><p class="footer__upper__column__item">Roben</p></a>
-        <a href="abc-klinkergruppe.html"><p class="footer__upper__column__item">ABC-Klinkergruppe</p></a>
-        <a href="king-klinker.html"><p class="footer__upper__column__item">King Klinker</p></a>
-        <a href="zg-clinker.html"><p class="footer__upper__column__item">ZG Clinker</p></a>
-        <a href="quick-mix.html"><p class="footer__upper__column__item">Quick Mix</p></a>
-        <a href="perel.html"><p class="footer__upper__column__item">Perel</p></a>
+        <ul>
+          <li class="footer__upper__column__title">Manufacturers</li>
+          <li class="footer__upper__column__item"><a href="feldhaus.html">Feldhaus Klinker
+          <li class="footer__upper__column__item"><a href="stroeher.html">Stroeher</a></li>
+          <li class="footer__upper__column__item"><a href="roben.html">Roben</a></li>
+          <li class="footer__upper__column__item"><a href="abc-klinkergruppe.html">ABC-Klinkergruppe</a></li>
+          <li class="footer__upper__column__item"><a href="king-klinker.html">King Klinker</a></li>
+          <li class="footer__upper__column__item"><a href="zg-clinker.html">ZG Clinker</a></li>
+          <li class="footer__upper__column__item"><a href="quick-mix.html">Quick Mix</a></li>
+          <li class="footer__upper__column__item"><a href="perel.html">Perel</a></li>
+        </ul>
       </div>
 
       <div class="footer__upper__column upper--three"></div>

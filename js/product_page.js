@@ -169,21 +169,21 @@ document.querySelectorAll('.main__window__top__left__cont__img').forEach(image =
 
   let modalImage = document.querySelector(".modal__image");
 
-  image.addEventListener('pointerdown', () => {
+  image.addEventListener('click', () => {
 
     modalImage.style.visibility = 'visible';
     modalImage.style.opacity = '1';
     document.querySelector(".modal__image__box__content").src = document.querySelector(".main_image").currentSrc;
     document.body.classList.add('stop-scroll');
   
-    document.querySelectorAll(".modal__image__box__close")[0].addEventListener('pointerdown', () => {
+    document.querySelectorAll(".modal__image__box__close")[0].addEventListener('click', () => {
 
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
       document.body.classList.remove('stop-scroll');
     })
 
-    modalImage.addEventListener('pointerdown',  () => {
+    modalImage.addEventListener('click',  () => {
 
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
