@@ -594,12 +594,19 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
 
 buttonWish.addEventListener('pointerdown', () => {
-  ModifyWishlist ();
+  ModifyWishlist();
+  buttonEffect();
 })
 
+buttonWish.addEventListener('pointerup', () => {
+  buttonEffect();
+})
+
+//Button effects 
 function buttonEffect () {
   buttonWish.classList.toggle('main__window__middle__top__buy__button_wish__active');
 }
+
 
 function checkWishlist () {
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
@@ -665,16 +672,6 @@ function ModifyWishlist () {
 
   updateCounters();
 }
-
-//Button effects 
-
-buttonWish.addEventListener('touchstart', () => {
-  buttonEffect();
-})
-
-buttonWish.addEventListener('touchend', () => {
-  buttonEffect();
-})
 
 //Adding to cart
 
