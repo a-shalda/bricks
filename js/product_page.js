@@ -595,7 +595,6 @@ const buttonWish = document.querySelector('.main__window__middle__top__buy__butt
 
 buttonWish.addEventListener('pointerdown', () => {
   ModifyWishlist ();
-  buttonEffect();
 })
 
 function buttonEffect () {
@@ -666,6 +665,16 @@ function ModifyWishlist () {
 
   updateCounters();
 }
+
+//Button effects 
+
+buttonWish.addEventListener('touchstart', () => {
+  buttonEffect();
+})
+
+buttonWish.addEventListener('touchend', () => {
+  buttonEffect();
+})
 
 //Adding to cart
 
