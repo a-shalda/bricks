@@ -1923,10 +1923,12 @@ sup {
   max-width: 23rem;
   min-width: 18rem;
   border-radius: 0.5rem;
-  transition: opacity 200ms;
+  transition: opacity 500ms, visibility 500ms;
   padding: 1rem;
   box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
   letter-spacing: 0.02rem;
+  opacity: 1;
+  visibility: visible;
 }
 .cart__cont__product__image {
   display: block;
@@ -2379,8 +2381,7 @@ sup {
 
 .hide_product {
   opacity: 0;
-  height: 0;
-  display: none;
+  visibility: hidden;
 }
 
 .button-visible {

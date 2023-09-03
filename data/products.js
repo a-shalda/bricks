@@ -385,7 +385,7 @@ const products = [
       weightOf1PieceGramm: 2500,
       weightOf1PackGramm: 2500,
       format: '5450x2200x2000',
-      manufacturer: 'Quick-mix',
+      manufacturer: 'Quick-Mix',
       countryOfOrigin: 'Germany',
     },
 

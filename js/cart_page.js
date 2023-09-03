@@ -1409,8 +1409,10 @@ function updateEvents () {
         }
       })
 
-      cart.splice(index, 1);
       item.classList.add('hide_product');
+
+      cart.splice(index, 1);
+      
       localStorage.setItem('cart', JSON.stringify(cart));
 
       //Removing all event listeners
@@ -2079,7 +2081,3 @@ function updateEvents () {
 }
 
 updateEvents();
-
-//Adding active state 
-
-document.querySelector('.')
