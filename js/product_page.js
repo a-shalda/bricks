@@ -595,22 +595,22 @@ const buttonWish = document.querySelector('.main__window__middle__top__buy__butt
 
 buttonWish.addEventListener('pointerdown', () => {
   ModifyWishlist();
-  AddButtonEffect();
+  AddButtonWishEffect();
 })
 
 buttonWish.addEventListener('pointerup', () => {
-  RemoveButtonEffect();
+  RemoveButtonWishEffect();
 })
 
 buttonWish.addEventListener('pointerout', () => {
-  RemoveButtonEffect();
+  RemoveButtonWishEffect();
 })
 
 //Button effects 
-function AddButtonEffect () {
+function AddButtonWishEffect () {
   buttonWish.classList.add('main__window__middle__top__buy__button_wish__active');
 }
-function RemoveButtonEffect () {
+function RemoveButtonWishEffect () {
   buttonWish.classList.remove('main__window__middle__top__buy__button_wish__active');
 }
 
@@ -682,8 +682,9 @@ function ModifyWishlist () {
 //Adding to cart
 
 let userPacks = document.querySelector('.main__window__middle__top__stock__subtotal__value__select');
+const buttonAdd = document.querySelector('.main__window__middle__top__buy__button_add');
 
-document.querySelector('.main__window__middle__top__buy__button_add').addEventListener('pointerdown', () => {
+buttonAdd.addEventListener('pointerdown', () => {
   addToCart();
 })
 
@@ -694,35 +695,34 @@ function addToCart() {
 
   if (userQuantity != 0) {
   
-  const order = {
-    id: root,
-    quantity: userQuantity
-  };
+    const order = {
+      id: root,
+      quantity: userQuantity
+    };
 
-  let mathingIndex;
+    let mathingIndex;
 
-  cart.forEach((item, index) => {
-    if (item.id === order.id && item.type === order.type) {
-      mathingIndex = index;
+    cart.forEach((item, index) => {
+      if (item.id === order.id && item.type === order.type) {
+        mathingIndex = index;
+      }
+    })
+
+    if (mathingIndex === undefined) {
+      cart.push(order);
     }
-  })
+    else {
 
-  if (mathingIndex === undefined) {
-    cart.push(order);
-  }
-  else {
-
-    if ((cart[mathingIndex].quantity + userQuantity) <= packsTotalLimit) {
-      cart[mathingIndex].quantity += userQuantity;
+      if ((cart[mathingIndex].quantity + userQuantity) <= packsTotalLimit) {
+        cart[mathingIndex].quantity += userQuantity;
+      }
     }
-  }
 
-  localStorage.setItem('cart', JSON.stringify(cart));
-  modalToCart();
-  userPacks.value = 0;
-  
-  updateCounters();
-
+    localStorage.setItem('cart', JSON.stringify(cart));
+    modalToCart();
+    userPacks.value = 0;
+    
+    updateCounters();
   }
   else {
     userPacks.classList.add('main__window__middle__top__stock__subtotal__value__select__focus');

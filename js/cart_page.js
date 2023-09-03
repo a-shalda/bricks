@@ -1435,10 +1435,19 @@ function updateEvents () {
 
     });
   
-    item.querySelector('.cart__cont__product__quantity__buttons__minus').addEventListener('pointerdown', () => {
 
-      // item.querySelector('.cart__cont__product__quantity__buttons__minus').classList.add('cart__cont__product__quantity__buttons__active');
-      
+    const minusButton = item.querySelector('.cart__cont__product__quantity__buttons__minus');
+    
+    //Button effects 
+    function AddButtonEffect () {
+      minusButton.classList.add('cart__cont__product__quantity__buttons__active');
+    }
+
+    function RemoveButtonEffect () {
+      minusButton.classList.remove('cart__cont__product__quantity__buttons__active');
+    }
+
+    minusButton.addEventListener('pointerdown', () => {
       
       if (cart[index].quantity >= 1) {
         cart[index].quantity--;
@@ -1470,6 +1479,7 @@ function updateEvents () {
   
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCounters();
+        AddButtonEffect();
   
         products.forEach(product => {
       
@@ -1759,6 +1769,14 @@ function updateEvents () {
           }
         })
       }
+    })
+    
+    minusButton.addEventListener('pointerup', () => {
+      RemoveButtonEffect();
+    })
+
+    minusButton.addEventListener('pointerout', () => {
+      RemoveButtonEffect();
     })
   
     item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('pointerdown', () => {

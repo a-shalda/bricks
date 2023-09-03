@@ -469,7 +469,7 @@
             font-size: 1rem;
             border-radius: 0.4rem;
             color: white;
-            transition: background-color 0.3s;
+            transition: background-color 300ms;
             background-color: rgb(95, 95, 95);
             user-select: none;
             touch-action: manipulation;
@@ -565,6 +565,13 @@
                 cursor: pointer;
                 outline: 0;
               }
+            }
+
+            &__active {
+              background-color: hsla(0, 68%, 42%, 0.885);
+              color: white;
+              cursor: pointer;
+              outline: 0;
             }
           }
         }

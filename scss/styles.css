@@ -1441,7 +1441,7 @@ sup {
   font-size: 1rem;
   border-radius: 0.4rem;
   color: white;
-  transition: background-color 0.3s;
+  transition: background-color 300ms;
   background-color: rgb(95, 95, 95);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1535,6 +1535,12 @@ sup {
     cursor: pointer;
     outline: 0;
   }
+}
+.main__window__middle__top__buy__button_add__active {
+  background-color: hsla(0, 68%, 42%, 0.885);
+  color: white;
+  cursor: pointer;
+  outline: 0;
 }
 .main__window__middle__bottom {
   padding: 1.2rem;
