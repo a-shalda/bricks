@@ -133,6 +133,10 @@
           }
         }
 
+        &__button--active {
+          background-color: hsla(0, 0%, 25%, 0.713);
+        }
+
         &__button--next {
           right: 1rem;
           border-top-left-radius: 0.4rem;

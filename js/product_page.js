@@ -114,12 +114,20 @@ thumbnailBox.forEach((box) => {
 
 //Image gallery
 
-document.querySelector('.main__window__top__left__button--prev').addEventListener('pointerdown', () => {
+const buttonPrev = document.querySelector('.main__window__top__left__button--prev');
+const buttonNext = document.querySelector('.main__window__top__left__button--next')
+
+buttonPrev.addEventListener('pointerdown', () => {
   minusImage();
+  buttonPrev.classList.add('main__window__top__left__button--active');
+  setTimeout((function () {buttonPrev.classList.remove('main__window__top__left__button--active');}), 200)
 });
 
-document.querySelector('.main__window__top__left__button--next').addEventListener('pointerdown', () => {
+buttonNext.addEventListener('pointerdown', () => {
   plusImage();
+  buttonNext.classList.add('main__window__top__left__button--active');
+  setTimeout((function () {buttonNext.classList.remove('main__window__top__left__button--active');}), 200)
+
 });
 
 let imageIndex = 1;

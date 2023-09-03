@@ -1134,6 +1134,9 @@ sup {
     background-color: hsla(0, 0%, 25%, 0.713);
   }
 }
+.main__window__top__left__button--active {
+  background-color: hsla(0, 0%, 25%, 0.713);
+}
 .main__window__top__left__button--next {
   right: 1rem;
   border-top-left-radius: 0.4rem;

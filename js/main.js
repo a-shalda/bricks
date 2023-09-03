@@ -60,6 +60,8 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+
+
 document.querySelector('.slideshow__button--prev').addEventListener('pointerdown', () => {plusSlides(-1);});
 document.querySelector('.slideshow__button--next').addEventListener('pointerdown', () => {plusSlides(1);});
 
