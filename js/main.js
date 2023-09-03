@@ -60,10 +60,20 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+const prevSlide = document.querySelector('.slideshow__button--prev');
+const nextSlide = document.querySelector('.slideshow__button--next');
 
+prevSlide.addEventListener('pointerdown', () => {
+    plusSlides(-1);
+    prevSlide.classList.add('slideshow__button--active');
+    setTimeout((function () {prevSlide.classList.remove('slideshow__button--active')}), 200)
+});
 
-document.querySelector('.slideshow__button--prev').addEventListener('pointerdown', () => {plusSlides(-1);});
-document.querySelector('.slideshow__button--next').addEventListener('pointerdown', () => {plusSlides(1);});
+nextSlide.addEventListener('pointerdown', () => {
+    plusSlides(1);
+    nextSlide.classList.add('slideshow__button--active');
+    setTimeout((function () {nextSlide.classList.remove('slideshow__button--active')}), 200)
+});
 
 //Code for the slider
 let slideIndex = 1;
