@@ -595,7 +595,12 @@ const buttonWish = document.querySelector('.main__window__middle__top__buy__butt
 
 buttonWish.addEventListener('pointerdown', () => {
   ModifyWishlist ();
+  buttonEffect();
 })
+
+function buttonEffect () {
+  buttonWish.classList.toggle('main__window__middle__top__buy__button_wish__active');
+}
 
 function checkWishlist () {
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
@@ -730,7 +735,7 @@ function modalToCart() {
   document.querySelector('.modal__cart__box__content__continue').addEventListener('click',  () => {
     modalToCartWindow.style.visibility = 'hidden';
     modalToCartWindow.style.opacity = '0';
-    document.body.classList.remove('stop-scroll');;
+    document.body.classList.remove('stop-scroll');
   });
 
   document.querySelector(".modal__cart__box__content__close").addEventListener('click', () => {

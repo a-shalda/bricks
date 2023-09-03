@@ -1469,6 +1469,11 @@ sup {
     outline: 0;
   }
 }
+.main__window__middle__top__buy__button_wish__active {
+  cursor: pointer;
+  background-color: gray;
+  outline: 0;
+}
 .main__window__middle__top__buy__button_wish__cont {
   position: relative;
 }

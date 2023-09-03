@@ -498,6 +498,12 @@
               }
             }
 
+            &__active {
+              cursor: pointer;
+              background-color: gray;
+              outline: 0;
+            }
+
             &__cont {
               position: relative;
 
