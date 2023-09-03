@@ -595,18 +595,24 @@ const buttonWish = document.querySelector('.main__window__middle__top__buy__butt
 
 buttonWish.addEventListener('pointerdown', () => {
   ModifyWishlist();
-  buttonEffect();
+  AddButtonEffect();
 })
 
 buttonWish.addEventListener('pointerup', () => {
-  buttonEffect();
+  RemoveButtonEffect();
+})
+
+buttonWish.addEventListener('pointerout', () => {
+  RemoveButtonEffect();
 })
 
 //Button effects 
-function buttonEffect () {
-  buttonWish.classList.toggle('main__window__middle__top__buy__button_wish__active');
+function AddButtonEffect () {
+  buttonWish.classList.add('main__window__middle__top__buy__button_wish__active');
 }
-
+function RemoveButtonEffect () {
+  buttonWish.classList.remove('main__window__middle__top__buy__button_wish__active');
+}
 
 function checkWishlist () {
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
