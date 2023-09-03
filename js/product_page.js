@@ -598,8 +598,13 @@ buttonWish.addEventListener('pointerdown', () => {
   AddButtonWishEffect();
 })
 
-buttonWish.addEventListener('pointerup', () => {RemoveButtonWishEffect();})
-buttonWish.addEventListener('pointerout', () => {RemoveButtonWishEffect();})
+buttonWish.addEventListener('pointerup', () => {
+  setTimeout(RemoveButtonWishEffect(), 2000);
+})
+
+buttonWish.addEventListener('pointerout', () => {
+  setTimeout(RemoveButtonWishEffect(), 2000);
+})
 
 //Button effects 
 function AddButtonWishEffect () {buttonWish.classList.add('main__window__middle__top__buy__button_wish__active');}
