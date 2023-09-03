@@ -598,21 +598,12 @@ buttonWish.addEventListener('pointerdown', () => {
   AddButtonWishEffect();
 })
 
-buttonWish.addEventListener('pointerup', () => {
-  RemoveButtonWishEffect();
-})
-
-buttonWish.addEventListener('pointerout', () => {
-  RemoveButtonWishEffect();
-})
+buttonWish.addEventListener('pointerup', () => {RemoveButtonWishEffect();})
+buttonWish.addEventListener('pointerout', () => {RemoveButtonWishEffect();})
 
 //Button effects 
-function AddButtonWishEffect () {
-  buttonWish.classList.add('main__window__middle__top__buy__button_wish__active');
-}
-function RemoveButtonWishEffect () {
-  buttonWish.classList.remove('main__window__middle__top__buy__button_wish__active');
-}
+function AddButtonWishEffect () {buttonWish.classList.add('main__window__middle__top__buy__button_wish__active');}
+function RemoveButtonWishEffect () {buttonWish.classList.remove('main__window__middle__top__buy__button_wish__active');}
 
 function checkWishlist () {
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];

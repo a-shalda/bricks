@@ -328,12 +328,6 @@
                 border: 1px solid var(--gray-color);
               }
             }
-
-            &__active {
-              background-color: var(--gray-color);
-              color: white;
-              border: 1px solid var(--gray-color);
-            }
           }
   
           &__plus{
@@ -346,7 +340,7 @@
             border-top-right-radius: 0.4rem;
             border-bottom-right-radius: 0.4rem;
             font-size: 1rem;
-            transition: background-color 0.1s, color 0.1s, border 0.1s;
+            transition: background-color 0.2s, color 0.2s, border 0.2s;
             user-select: none;
             touch-action: manipulation;
 
@@ -368,6 +362,18 @@
                 border: 1px solid var(--gray-color);
               }
             }
+
+            &__active {
+              background-color: var(--gray-color);
+              color: white;
+              border: 1px solid var(--gray-color);
+            }
+          }
+
+          &__active {
+            background-color: var(--gray-color);
+            color: white;
+            border: 1px solid var(--gray-color);
           }
         }
       }

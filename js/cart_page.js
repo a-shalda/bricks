@@ -1435,17 +1435,11 @@ function updateEvents () {
 
     });
   
-
     const minusButton = item.querySelector('.cart__cont__product__quantity__buttons__minus');
     
     //Button effects 
-    function AddButtonEffect () {
-      minusButton.classList.add('cart__cont__product__quantity__buttons__minus__active');
-    }
-
-    function RemoveButtonEffect () {
-      minusButton.classList.remove('cart__cont__product__quantity__buttons__minus__active');
-    }
+    function AddMinusButtonEffect () {minusButton.classList.add('cart__cont__product__quantity__buttons__active');}
+    function RemoveMinusButtonEffect () {minusButton.classList.remove('cart__cont__product__quantity__buttons__active');}
 
     minusButton.addEventListener('pointerdown', () => {
       
@@ -1479,7 +1473,7 @@ function updateEvents () {
   
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCounters();
-        AddButtonEffect();
+        AddMinusButtonEffect();
   
         products.forEach(product => {
       
@@ -1771,17 +1765,20 @@ function updateEvents () {
       }
     })
     
-    minusButton.addEventListener('pointerup', () => {
-      RemoveButtonEffect();
-    })
+    minusButton.addEventListener('pointerup', () => {RemoveMinusButtonEffect();})
+    minusButton.addEventListener('pointerout', () => {RemoveMinusButtonEffect();})
 
-    minusButton.addEventListener('pointerout', () => {
-      RemoveButtonEffect();
-    })
-  
-    item.querySelector('.cart__cont__product__quantity__buttons__plus').addEventListener('pointerdown', () => {
+    const plusButton = item.querySelector('.cart__cont__product__quantity__buttons__plus');
+
+    //Button effects 
+    function AddPlusButtonEffect () {plusButton.classList.add('cart__cont__product__quantity__buttons__active');}
+    function RemovePlusButtonEffect () {plusButton.classList.remove('cart__cont__product__quantity__buttons__active');}
+
+    plusButton.addEventListener('pointerdown', () => {
 
       if (totalCostCart >= totalCostCartLimit) {return;}
+
+      AddPlusButtonEffect();
   
       cart[index].quantity++;
       let updatedQuantity = cart[index].quantity;
@@ -2075,6 +2072,9 @@ function updateEvents () {
         }
       })
     })
+
+    plusButton.addEventListener('pointerup', () => {RemovePlusButtonEffect();})
+    plusButton.addEventListener('pointerout', () => {RemovePlusButtonEffect();})
   })
 }
 
