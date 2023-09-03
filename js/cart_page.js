@@ -1440,11 +1440,11 @@ function updateEvents () {
     
     //Button effects 
     function AddButtonEffect () {
-      minusButton.classList.add('cart__cont__product__quantity__buttons__active');
+      minusButton.classList.add('cart__cont__product__quantity__buttons__minus__active');
     }
 
     function RemoveButtonEffect () {
-      minusButton.classList.remove('cart__cont__product__quantity__buttons__active');
+      minusButton.classList.remove('cart__cont__product__quantity__buttons__minus__active');
     }
 
     minusButton.addEventListener('pointerdown', () => {
