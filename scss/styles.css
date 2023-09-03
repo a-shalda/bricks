@@ -221,6 +221,9 @@ sup {
 .header__upper__left__logo__bricks {
   color: #a43434;
 }
+.header__upper__left__logo__bricks--active {
+  opacity: 0.8;
+}
 @media (hover: hover) {
   .header__upper__left__logo:hover {
     opacity: 0.8;
@@ -304,6 +307,9 @@ sup {
   color: var(--light-light-gray-color);
   cursor: pointer;
 }
+.header__upper__left__hamburger__dropdown__content__link--active {
+  color: var(--light-light-gray-color);
+}
 .header__upper__left__hamburger__dropdown__content__link:first-child {
   border-top: none;
 }
@@ -333,6 +339,10 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+.header__upper__right__clicked {
+  color: firebrick;
+  cursor: pointer;
 }
 .header__upper__right__search {
   font-size: 1.35rem;
@@ -441,6 +451,9 @@ sup {
 .footer__upper__column__item:hover {
   color: var(--light-gray-color);
   cursor: pointer;
+}
+.footer__upper__column__item--active {
+  color: var(--light-gray-color);
 }
 .footer__lower {
   margin-inline: 1rem;

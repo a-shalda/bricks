@@ -58,3 +58,14 @@ const footerHTML = `
 `; 
 
 document.querySelector('.footer--background').innerHTML = footerHTML;
+
+//Changing color on click
+
+const footerLink = document.querySelectorAll('.footer__upper__column__item');
+
+footerLink.forEach(link => {
+
+  link.addEventListener('pointerdown', () => {
+    link.classList.add('footer__upper__column__item--active');
+  })
+})

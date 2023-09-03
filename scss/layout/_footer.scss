@@ -57,6 +57,10 @@
           color: var(--light-gray-color);
           cursor: pointer;
         }
+
+        &--active {
+          color: var(--light-gray-color);
+        }
       }
     }
   }

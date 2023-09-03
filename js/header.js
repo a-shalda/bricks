@@ -48,10 +48,6 @@ const headerHTML = `
           </a>
         </div>
 
-        <!-- <div class="header__upper__right__seen">
-          <i class="fa-regular fa-eye icon-style"></i>
-        </div> -->
-
         <div class="header__upper__right__cart">
           <a href="cart.html">
             <i class="fa-solid fa-basket-shopping icon-style">&nbsp;</i>
@@ -143,3 +139,33 @@ document.addEventListener('touchend', function (event) {
   }
   lastTouchEnd = now;
 }, false);
+
+//Changing color on click
+
+const searchIcon = document.querySelector('.header__upper__right__search');
+const savedIcon = document.querySelector('.header__upper__right__saved');
+const cartIcon = document.querySelector('.header__upper__right__cart');
+const logoIcon = document.querySelector('.header__upper__left__logo__bricks');
+const dropdownLink = document.querySelectorAll('.header__upper__left__hamburger__dropdown__content__link');
+
+searchIcon.addEventListener('pointerdown', () => {
+  document.querySelector('.header__upper__right__search__icon').classList.add('header__upper__right__clicked');
+})
+
+savedIcon.addEventListener('pointerdown', () => {
+  document.querySelector('.icon-style--saved').classList.add('header__upper__right__clicked');
+})
+
+cartIcon.addEventListener('pointerdown', () => {
+  document.querySelector('.fa-basket-shopping').classList.add('header__upper__right__clicked');
+})
+
+logoIcon.addEventListener('pointerdown', () => {
+  logoIcon.classList.add('header__upper__left__logo__bricks--active');
+})
+
+dropdownLink.forEach(link => {
+  link.addEventListener('pointerdown', () => {
+    link.classList.add('header__upper__left__hamburger__dropdown__content__link--active');
+  })
+})

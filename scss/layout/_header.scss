@@ -36,6 +36,10 @@
 
         &__bricks {
           color: #a43434;
+
+          &--active {
+            opacity: 0.8;
+          }
         }
 
         @media (hover: hover) {
@@ -125,6 +129,10 @@
                 cursor: pointer;              
               }
 
+              &--active {
+                color: var(--light-light-gray-color);
+              }
+
               &:first-child {
                 border-top: none;
               }
@@ -157,6 +165,11 @@
         display: flex;
         align-items: center;
         user-select: none;
+      }
+
+      &__clicked {
+        color: firebrick;
+        cursor: pointer;
       }
 
       &__search {
