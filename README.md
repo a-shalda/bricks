@@ -8,8 +8,8 @@ When shopping for fasade materials, customers usually have a volume in square me
 
 On this website, materials are presented as follows: 
 
-* 1. Price per square meter, and a piece. For bricks, brick slips, thermopanels, floor tile, clay pavers.
-* 2. Price per linear (running) meter, and a piece. For stair tile, corner brick slips, window sills.
-* 3. Price per piece. For fence caps, mortar.
+* Price per square meter, and a piece. For bricks, brick slips, thermopanels, floor tile, clay pavers.
+* Price per linear (running) meter, and a piece. For stair tile, corner brick slips, window sills.
+* Price per piece. For fence caps, mortar.
 
 Volumes in a pack like 0.59 m2, or 1.23 m2 make it very tricky to process customer's input on the website. So I decided to generate for each product a dropdown menu with pre-calculated subtotal, number of packs, pieces and pallets. Shipping playes an important role, since the order can be a thousand kilos and consist of a few pallets, and it is crucial for the customer to know this info before making the order.
