@@ -39,6 +39,9 @@ function showCategoryProducts () {
     else if (root === 'window_sills') {
         categoryOne = 'Ceramic window sill';
     }
+    else if (root === 'catalog') {
+        categoryOne = 'Catalog'
+    }
 
     if (categoryOne != '') {
         products.forEach((product, index) => {
@@ -82,6 +85,12 @@ function showCategoryProducts () {
                 productsHTML += showProducts (product, index, indicesOfProducts);
             }
         });
+    }
+
+    if (categoryOne = 'catalog') {
+        products.forEach((product, index) => {
+            productsHTML += showProducts (product, index, indicesOfProducts);
+        })
     }
 
     document.querySelector('.products').innerHTML = productsHTML;
