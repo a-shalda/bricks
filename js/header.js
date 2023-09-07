@@ -14,6 +14,7 @@ const headerHTML = `
           <div class="header__upper__left__hamburger__dropdown">
             <div class="header__upper__left__hamburger__dropdown__content">
               <ul class="header__upper__left__hamburger__dropdown__ul">
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="catalog.html">All products</a></li>
                 <li class="header__upper__left__hamburger__dropdown__content__link"><a href="brick_slips.html">Klinker brick slips</a></li>
                 <li class="header__upper__left__hamburger__dropdown__content__link"><a href="bricks.html">Klinker bricks</a></li>
                 <li class="header__upper__left__hamburger__dropdown__content__link"><a href="thermopanels.html">Brick slip thermo panels</a></li>
