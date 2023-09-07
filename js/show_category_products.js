@@ -12,6 +12,7 @@ function showCategoryProducts () {
 
     let categoryOne = '';
     let categoryTwo = '';
+    let catalogPage = '';
 
     if (root === 'brick_slips') {
         categoryOne = 'Klinker brick slip';
@@ -40,7 +41,7 @@ function showCategoryProducts () {
         categoryOne = 'Ceramic window sill';
     }
     else if (root === 'catalog') {
-        categoryOne = 'Catalog'
+        catalogPage = 'Catalog'
     }
 
     if (categoryOne != '') {
@@ -50,6 +51,12 @@ function showCategoryProducts () {
     
                 productsHTML += showProducts (product, index, indicesOfProducts);
             }
+        });
+    }
+    else if (catalogPage != '') {
+        products.forEach((product, index) => {
+
+            productsHTML += showProducts (product, index, indicesOfProducts);
         });
     }
     else {
@@ -85,12 +92,6 @@ function showCategoryProducts () {
                 productsHTML += showProducts (product, index, indicesOfProducts);
             }
         });
-    }
-
-    if (categoryOne = 'catalog') {
-        products.forEach((product, index) => {
-            productsHTML += showProducts (product, index, indicesOfProducts);
-        })
     }
 
     document.querySelector('.products').innerHTML = productsHTML;
