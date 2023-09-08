@@ -21,3 +21,11 @@ Volumes in a pack like 0.59 m2, or 1.23 m2 make it very tricky to process custom
 * data - all the data to generate products, as well as slider and categories on the main page.
 * js - all the scripts to generate header and footer, and individual pages, such as main, product, cart, search, saved, category and brand pages.
 * scss - styles.
+
+### Resources 
+
+Images from: 
+https://www.feldhaus-klinker.de/, 
+https://www.stroeher.de/, 
+https://quick-mix.de,
+https://kingklinker.com
