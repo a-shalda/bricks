@@ -48,7 +48,7 @@ const footerHTML = `
 
       <div class="footer__lower__right">
         <p class="footer__lower__right__desc">
-          Designed and developed by <a href="https://www.linkedin.com/in/a-shalda/" class="signature">Alex Shalda</a>
+          Designed and developed by <a href="https://shalda.dev" class="signature">Alex Shalda</a>
         </p>
       </div>
 
