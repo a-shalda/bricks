@@ -28,7 +28,7 @@ const headerHTML = `
           </div>
         </div>
         <div class="header__upper__left__logo">
-          <a href="../index.html" class="header__upper__left__logo__link">
+          <a href="/bricks/index.html" class="header__upper__left__logo__link">
             <p class="header__upper__left__logo__bricks">Bricks</p>
           </a>
         </div>
@@ -37,20 +37,20 @@ const headerHTML = `
       <div class="header__upper__right">
 
         <div class="header__upper__right__search">
-          <a href="../search.html">
+          <a href="/bricks/search.html">
             <i class="header__upper__right__search__icon fa-solid fa-magnifying-glass icon-style--search"></i>
           </a>
         </div>
 
         <div class="header__upper__right__saved">
-          <a href="../saved.html" class="header__upper__right__saved--link">
+          <a href="/bricks/saved.html" class="header__upper__right__saved--link">
             <i class="fa-regular fa-heart icon-style--saved">&nbsp;</i>
             <p class="header__upper__right__saved__counter"></p>
           </a>
         </div>
 
         <div class="header__upper__right__cart">
-          <a href="../cart.html">
+          <a href="/bricks/cart.html">
             <i class="fa-solid fa-basket-shopping icon-style">&nbsp;</i>
             <p class="header__upper__right__cart__counter"></p>
           </a>
