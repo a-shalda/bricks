@@ -16,13 +16,29 @@ When shopping for fasade materials, customers usually have a volume in square me
 
 Volumes in a pack like 0.59 m2, or 1.23 m2 make it very tricky to process customer's input on the website. So I decided to generate for each product a dropdown menu with pre-calculated subtotal, number of packs, pieces and pallets. Shipping plays an important role, since the order can be a thousand kilos and consist of a few pallets, and it is crucial for the customer to know this info before making the order.
 
-## Folders
+## Folders and files
 
-* data - all the data to generate products, as well as slider and categories on the main page.
-* js - all the scripts to generate header and footer, and individual pages, such as main, product, cart, search, saved, category and brand pages.
-* scss - styles.
+### data - all the data to generate products, as well as slider and categories on the main page. 
+Files include: cart.js, categories.js, products.js, slider.js, wishlist.js
 
-### Resources 
+* categories.js - info to generate Categories on the main page.
+* products.js - all info about products is stored in this file.
+* slider.js - using info in this file Slider on the main page can be customized.
+
+### js - all the scripts to generate header and footer, and individual pages, such as main, product, cart, search, saved, category and brand pages.
+Files include: cart_page.js, footer.js, header.js, main.js, product_page.js, saved.js, search.js, show_category_products.js
+
+* main.js generates info on the main page, such as Slider with buttons on the bottom and sides, Categories, Products.
+* footer.js and header.js generate Footer and Header with all the links and buttons.
+* product_page.js generates images, prices, info and calculates options on the Product page.
+* saved.js generates page with saved products.
+* search.js generates page where products can be searched.
+* cart_page.js generates Cart page with all the buttons and checkout form.
+* show_category_products.js generates the products.
+
+### scss - styles.
+
+## Resources 
 
 Images from: 
 https://www.feldhaus-klinker.de/, 
