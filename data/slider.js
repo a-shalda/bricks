@@ -4,21 +4,21 @@ const slider_items = [
     img_800: 'images/slider/medium_size/klinker_mix_800.jpg',
     title: 'Shapes and colors',
     desc: 'To clad your walls with a style',
-    path: '..bricks/categories/brick_slips.html',
+    path: '../bricks/categories/brick_slips.html',
     id: 1
   },{
     img: 'images/slider/336_06_slider.jpg',
     img_800: 'images/slider/medium_size/336_06_slider_800.jpg',
     title: 'Fasade bricks',
     desc: 'More than 100 colors and shapes',
-    path: '..bricks/categories/bricks.html',
+    path: '../bricks/categories/bricks.html',
     id: 2
   },{
     img: 'images/slider/7750_455_slider.jpg',
     img_800: 'images/slider/medium_size/7750_455_slider_800.jpg',
     title: 'Embelish your home',
     desc: 'Long format with straight-edged design',
-    path: '..bricks/categories/brick_slips.html',
+    path: '../bricks/categories/brick_slips.html',
     id: 3
   }
 ];

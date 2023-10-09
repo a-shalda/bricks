@@ -14,21 +14,21 @@ const headerHTML = `
           <div class="header__upper__left__hamburger__dropdown">
             <div class="header__upper__left__hamburger__dropdown__content">
               <ul class="header__upper__left__hamburger__dropdown__ul">
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/catalog.html">All products</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/brick_slips.html">Klinker brick slips</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/bricks.html">Klinker bricks</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/thermopanels.html">Brick slip thermo panels</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/fence_caps.html">Ceramic fence caps</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/clay_pavers.html">Clay pavers</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/stair_and_floor_tile.html">Stair and floor tile</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/window_sills.html">Ceramic window sills</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="..bricks/categories/mortars.html">Mortars</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/catalog.html">All products</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/brick_slips.html">Klinker brick slips</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/bricks.html">Klinker bricks</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/thermopanels.html">Brick slip thermo panels</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/fence_caps.html">Ceramic fence caps</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/clay_pavers.html">Clay pavers</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/stair_and_floor_tile.html">Stair and floor tile</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/window_sills.html">Ceramic window sills</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="../bricks/categories/mortars.html">Mortars</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="header__upper__left__logo">
-          <a href="..bricks/index.html" class="header__upper__left__logo__link">
+          <a href="../bricks/index.html" class="header__upper__left__logo__link">
             <p class="header__upper__left__logo__bricks">Bricks</p>
           </a>
         </div>
@@ -37,13 +37,13 @@ const headerHTML = `
       <div class="header__upper__right">
 
         <div class="header__upper__right__search">
-          <a href="..bricks/search.html">
+          <a href="../bricks/search.html">
             <i class="header__upper__right__search__icon fa-solid fa-magnifying-glass icon-style--search"></i>
           </a>
         </div>
 
         <div class="header__upper__right__saved">
-          <a href="..bricks/saved.html" class="header__upper__right__saved--link">
+          <a href="../bricks/saved.html" class="header__upper__right__saved--link">
             <i class="fa-regular fa-heart icon-style--saved">&nbsp;</i>
             <p class="header__upper__right__saved__counter"></p>
           </a>
