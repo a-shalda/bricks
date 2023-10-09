@@ -164,7 +164,7 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
       </div>
     `
     cart.length = 0;
-    localStorage.clear(); 
+    localStorage.removeItem('cart'); 
   })
 
   updateOrder();
