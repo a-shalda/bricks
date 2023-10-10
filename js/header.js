@@ -50,7 +50,7 @@ const headerHTML = `
         </div>
 
         <div class="header__upper__right__cart">
-          <a href="/bricks/cart.html">
+          <a href="/bricks/cart.html"> 
             <i class="fa-solid fa-basket-shopping icon-style">&nbsp;</i>
             <p class="header__upper__right__cart__counter"></p>
           </a>
