@@ -375,4 +375,5 @@ function addPulsingImageAnimation () {
             cont.classList.remove('cont_blurred');
         })
     })
+    
 }
