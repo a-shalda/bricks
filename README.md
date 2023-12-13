@@ -2,8 +2,6 @@
 
 https://a-shalda.github.io/bricks/
 
-Note: This is frontend only, I'm planning to add backend soon.
-
 ## A fully responsive website where customers can shop for building materials.
 
 When shopping for fasade materials, customers usually have a volume in square meters (m2). E.g. I have a fasade of 50 m2 that I want to clad with brick slips. But companies do not sell by m2, they sell by packs. There can be 0.59 m2 in a pack, or 1.23 m2, and this makes the shopping experience confusing, since for every product the customer needs to calculate the number of packs themselves. 
