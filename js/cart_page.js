@@ -72,6 +72,7 @@ function updateTotal () {
 
 let orderToBackEndTotal = '';
 let cartOrderBack = '';
+let personOrder = '';
 
 function updateOrder () {
   let total = document.querySelector('.cart__modal__box__content__subtotal');
@@ -149,8 +150,20 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   userForm.addEventListener('submit', () => {
 
     const userName = document.querySelector('input[name="name"]');
-
+    const userPhone = document.querySelector('input[name="name"]');
     const orderRandom = (Math.random() * 100).toFixed(0);
+
+    personOrder = `Order N: ${orderRandom}, name: ${userName.value}, phone: ${userPhone.value}`
+
+    const sendOrder = fetch('https://bricks-backend-d8hx.onrender.com/api/orders', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({order: personOrder + ' || ' + orderToBackEndTotal + ' || ' + orderToBackEndDetails})
+    })
+  
+    console.log(sendOrder)
 
     document.querySelector('.cart__modal__box__content').innerHTML = `
 
@@ -195,20 +208,8 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
     let itemPieces = '';
     if (item.querySelector('.cart__cont__product__quantity__pieces')) {itemPieces = item.querySelector('.cart__cont__product__quantity__pieces').innerHTML;}
 
-    orderToBackEndDetails += `
-        Position [${index + 1}]:
-        Code: ${itemCode},
-        ${itemTitle},
-        Price: ${itemPriceFirst}
-        ${itemPriceSecond},
-        ${itemQuantity},
-        ${itemPacks + ', '}
-        ${itemPieces + ', '}
-        ${itemWeight},
-        ${itemPallets},
-        ${itemSubtotal}
-      /
-    `
+    orderToBackEndDetails += `Position [${index + 1}]: ${itemTitle}, Price: ${itemPriceFirst} ${itemPriceSecond}, ${itemQuantity}, ${itemPacks + ', '} ${itemPieces + ', '} ${itemWeight}, ${itemPallets}, ${itemSubtotal}/`
+    // orderToBackEndDetails += `Position [${index + 1}]: Code: ${itemCode}, ${itemTitle}, Price: ${itemPriceFirst} ${itemPriceSecond}, ${itemQuantity}, ${itemPacks + ', '} ${itemPieces + ', '} ${itemWeight}, ${itemPallets}, ${itemSubtotal}/`
   })
 
   cart.forEach(item => {
