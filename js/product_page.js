@@ -7,6 +7,7 @@ const root = document.URL.slice((findSlash + 1), findDot);
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
+let productDescription = '';
 let productNumberInProducts;
 let supplierPriceType = '';
 let userQuantity = 0;
@@ -27,6 +28,7 @@ products.forEach((product, index) => {
     productTitle = product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format;
     productNumberInProducts = index;
     supplierPriceType = product.supplierPriceType;
+    productDescription = product.description;
 
     // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
 
@@ -75,9 +77,12 @@ products.forEach((product, index) => {
   }
 });
 
+
+document.querySelector('title').innerHTML = productTitle;
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.main__cont__title').innerHTML = productTitle;
+document.querySelector('.additional__window__body').innerHTML = productDescription;
 
 
 //Adding pulsing animation to main images
