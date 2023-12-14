@@ -151,20 +151,32 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
 
     const userName = document.querySelector('input[name="name"]');
     const userPhone = document.querySelector('input[name="name"]');
-    const orderRandom = (Math.random() * 100).toFixed(0);
+    const orderRandom = (Math.random() * 1000).toFixed(0);
 
     personOrder = `Order N: ${orderRandom}, name: ${userName.value}, phone: ${userPhone.value}`
 
-    const sendOrder = fetch('https://bricks-backend-d8hx.onrender.com/api/orders', {
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    const d = new Date();
+    const month = months[d.getMonth()];
+    const day = d.getDay();
+    const date = month + ', ' + day;
+
+    const sendOrder = fetch('https://bricks-backend-d8hx.onrender.com/api/orders/', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({order: personOrder + ' || ' + orderToBackEndTotal + ' || ' + orderToBackEndDetails})
+      body: JSON.stringify({ 
+        orderNumber: 'Order #' + orderRandom + ', ',
+        name: userName.value + ', ', 
+        total: orderToBackEndTotal + ', ',
+        date: date + ', ',
+        phone: userPhone.value + ', ',
+        order: orderToBackEndDetails
+      })
     })
   
-    console.log(sendOrder)
-
     document.querySelector('.cart__modal__box__content').innerHTML = `
 
       <div class="cart__modal__box__content__placed">
