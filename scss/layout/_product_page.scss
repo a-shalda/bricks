@@ -424,7 +424,7 @@
                 padding-left: 0.5rem;
                 padding-right: 1rem;
                 border-radius: 0.5rem;
-                color: var(--gray-color);
+                color: var(--strong-gray-color);
                 letter-spacing: 0.01rem;
                 flex-grow: 1;
                 width: 100%;
@@ -615,6 +615,44 @@
           }
         }
       }
+    }
+  }
+}
+
+.additional {
+
+  &__window {
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
+    background-color: white;
+    padding: 1.5rem;
+
+    @include breakpoint(small) {
+      padding-block: 1.5rem;
+      padding-inline: 1.8rem;
+    }
+
+    @include breakpoint(medium) {
+      padding-inline: 2.2rem;
+      padding-bottom: 2rem;
+
+      // max-width: 37em;
+    }
+
+    &__head {
+      padding-bottom: 0.5rem;
+      color: rgb(101, 101, 101);
+      font-size: 1.1rem;
+    }
+
+    &__body {
+      color: gray;
+      padding-top: 0.5rem;
+      letter-spacing: 0.03rem;
+      line-height: 1.5rem;
+      font-size: 0.85rem;
+      // max-width: 70ch;
+      border-top: 1px solid var(--light-light-gray-color);
     }
   }
 }
