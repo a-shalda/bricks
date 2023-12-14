@@ -150,7 +150,7 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   userForm.addEventListener('submit', () => {
 
     const userName = document.querySelector('input[name="name"]');
-    const userPhone = document.querySelector('input[name="name"]');
+    const userPhone = document.querySelector('input[name="phone"]');
     const orderRandom = (Math.random() * 1000).toFixed(0);
 
     personOrder = `Order N: ${orderRandom}, name: ${userName.value}, phone: ${userPhone.value}`
@@ -172,7 +172,7 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
         name: userName.value + ', ', 
         total: orderToBackEndTotal + ', ',
         date: date + ', ',
-        phone: userPhone.value + ', ',
+        phone: userPhone.value,
         order: orderToBackEndDetails
       })
     })
