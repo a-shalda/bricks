@@ -512,8 +512,8 @@
               position: relative;
 
               &__heart {
-                color: var(--light-light-gray-color);
-                width: 1.875rem;
+                filter: invert(99%) sepia(2%) saturate(869%) hue-rotate(207deg) brightness(114%) contrast(76%);
+                width: 1.1rem;
                 position: absolute;
                 left: -0.6rem;
                 top: 0.22rem;

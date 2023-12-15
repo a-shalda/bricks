@@ -26,6 +26,7 @@
     }
   
     &__left {
+      position: relative;
 
       &__logo {
         user-select: none;
@@ -36,6 +37,9 @@
 
         &__bricks {
           color: #a43434;
+          position: absolute;
+          top: -0.42rem;
+
 
           &--active {
             opacity: 0.8;
@@ -88,7 +92,7 @@
 
           &__content {
             position: absolute;
-            top: 1.23rem;
+            top: 1rem;
             left: -1rem;
             width: 100vw;
             height: 91vh;
@@ -213,7 +217,7 @@
           transition: opacity 300ms;
           position: absolute;
           top: -0.2rem;
-          right: -1.1rem;
+          right: -1.3rem;
           color: white;
           background-color: #a43434ef;
           border-radius: 0.3rem;

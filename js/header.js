@@ -9,7 +9,7 @@ const headerHTML = `
       <div class="header__upper__left">
         <div class="header__upper__left__hamburger">
           <button class="header__upper__left__hamburger__nav-toggle">
-            <i class="fa-solid fa-bars icon-style header__upper__left__hamburger__nav-toggle__icon"></i>
+            <img src="/images/icons/menu.svg" class="icon-style header__upper__left__hamburger__nav-toggle__icon"/>
           </button>
           <div class="header__upper__left__hamburger__dropdown">
             <div class="header__upper__left__hamburger__dropdown__content">
@@ -38,20 +38,20 @@ const headerHTML = `
 
         <div class="header__upper__right__search">
           <a href="/bricks/search.html">
-            <i class="header__upper__right__search__icon fa-solid fa-magnifying-glass icon-style--search"></i>
+            <img src="/images/icons/search.svg" class="icon-style--search--header"/>
           </a>
         </div>
 
         <div class="header__upper__right__saved">
           <a href="/bricks/saved.html" class="header__upper__right__saved--link">
-            <i class="fa-regular fa-heart icon-style--saved">&nbsp;</i>
+            <img src="/images/icons/heart.svg" class="icon-style"/>
             <p class="header__upper__right__saved__counter"></p>
           </a>
         </div>
 
         <div class="header__upper__right__cart">
           <a href="/bricks/cart.html"> 
-            <i class="fa-solid fa-basket-shopping icon-style">&nbsp;</i>
+            <img src="/images/icons/cart.svg" class="icon-style fa-basket-shopping"/>
             <p class="header__upper__right__cart__counter"></p>
           </a>
         </div>
@@ -143,18 +143,24 @@ document.addEventListener('touchend', function (event) {
 
 //Changing color on click
 
+const menuIcon = document.querySelector('.icon-style header__upper__left__hamburger__nav-toggle__icon');
+
 const searchIcon = document.querySelector('.header__upper__right__search');
 const savedIcon = document.querySelector('.header__upper__right__saved');
 const cartIcon = document.querySelector('.header__upper__right__cart');
 const logoIcon = document.querySelector('.header__upper__left__logo__bricks');
 const dropdownLink = document.querySelectorAll('.header__upper__left__hamburger__dropdown__content__link');
 
+// menuIcon.addEventListener('pointerdown', () => {
+//   document.querySelector('.icon-style header__upper__left__hamburger__nav-toggle__icon').classList.add('header__upper__right__clicked');
+// })
+
 searchIcon.addEventListener('pointerdown', () => {
-  document.querySelector('.header__upper__right__search__icon').classList.add('header__upper__right__clicked');
+  document.querySelector('.icon-style--search--header').classList.add('header__upper__right__clicked');
 })
 
 savedIcon.addEventListener('pointerdown', () => {
-  document.querySelector('.icon-style--saved').classList.add('header__upper__right__clicked');
+  document.querySelector('.icon-style').classList.add('header__upper__right__clicked');
 })
 
 cartIcon.addEventListener('pointerdown', () => {

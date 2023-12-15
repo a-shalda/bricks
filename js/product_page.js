@@ -633,7 +633,7 @@ function checkWishlist () {
     if (item.id === wish.id) {
       buttonWish.innerHTML = `
         <div class="main__window__middle__top__buy__button_wish__cont">
-          <i class="fa-regular fa-heart main__window__middle__top__buy__button_wish__cont__heart">&nbsp;</i>
+          <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart"/>
           <p class="main__window__middle__top__buy__button_wish__cont__text">Unsave</p>
         </div>
       `;    
@@ -664,7 +664,7 @@ function ModifyWishlist () {
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = `
       <div class="main__window__middle__top__buy__button_wish__cont">
-        <i class="fa-regular fa-heart main__window__middle__top__buy__button_wish__cont__heart">&nbsp;</i>
+        <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart"/>
         <p class="main__window__middle__top__buy__button_wish__cont__text">Unsave</p>
       </div>
     `;   
@@ -674,7 +674,7 @@ function ModifyWishlist () {
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = `
       <div class="main__window__middle__top__buy__button_wish__cont">
-        <i class="fa-regular fa-heart main__window__middle__top__buy__button_wish__cont__heart">&nbsp;</i>
+        <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart"/>
         <p class="main__window__middle__top__buy__button_wish__cont__text">Save</p>
       </div>
     `;   
