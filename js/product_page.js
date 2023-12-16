@@ -845,7 +845,7 @@ if (specs.manufacturer) {
 }
 if (specs.countryOfOrigin) {
   specsHTML += `
-    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.countryOfOrigin}</span></p>
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right" itemprop="countryOfOrigin">${specs.countryOfOrigin}</span></p>
   `
 }
 document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
