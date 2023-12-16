@@ -138,7 +138,7 @@ function showProducts (product, index, indicesOfProducts) {
                     </a>
                     
                     <div class="product__top__cont__stock">
-                        <img src="/images/icons/check.svg" class="stock"/>
+                        <img src="/bricks/images/icons/check.svg" class="stock"/>
                         <p class="product__top__cont__stock__desc">${product.availability}</p>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ function showProducts (product, index, indicesOfProducts) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/images/icons/check.svg" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" class="stock"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@ function showProducts (product, index, indicesOfProducts) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/images/icons/check.svg" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" class="stock"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -285,7 +285,7 @@ function showProducts (product, index, indicesOfProducts) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/images/icons/check.svg" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" class="stock"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>

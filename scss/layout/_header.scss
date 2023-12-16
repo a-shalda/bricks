@@ -74,7 +74,7 @@
             user-select: none;
 
             &--active {
-              color: #a43434;
+              filter: invert(17%) sepia(76%) saturate(2166%) hue-rotate(341deg) brightness(108%) contrast(100%);
             }
           }
         }

@@ -247,7 +247,7 @@ sup {
           user-select: none;
 }
 .header__upper__left__hamburger__nav-toggle__icon--active {
-  color: #a43434;
+  filter: invert(17%) sepia(76%) saturate(2166%) hue-rotate(341deg) brightness(108%) contrast(100%);
 }
 .header__upper__left__hamburger__dropdown {
   visibility: hidden;
