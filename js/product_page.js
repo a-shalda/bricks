@@ -32,7 +32,7 @@ products.forEach((product, index) => {
     productTitle = product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format;
     productNumberInProducts = index;
     supplierPriceType = product.supplierPriceType;
-    productDescription = product.description;
+    (product.description) ? productDescription = product.description : productDescription = '';
     metaDescription = 'Buy ' + productTitle + ' in Moscow';
     productName = product.name
     productManufacturer = product.specs.manufacturer
