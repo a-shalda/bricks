@@ -43,11 +43,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r700nf9-feldhaus-klinker',
+    id: 'r700nf9',
     type: 'Klinker brick slip',
     name: 'R700NF9 anthracit liso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r700nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r700nf9.html',
     priceCentsM2: 5456, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -84,11 +84,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r116nf9-feldhaus-klinker',
+    id: 'r116nf9',
     type: 'Klinker brick slip',
     name: 'R116NF9 perla mana',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r116nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r116nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -125,11 +125,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r140nf9-feldhaus-klinker',
+    id: 'r140nf9',
     type: 'Klinker brick slip',
     name: 'R140NF9 perla senso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r140nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r140nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -166,11 +166,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r788nf9-feldhaus-klinker',
+    id: 'r788nf9',
     type: 'Klinker brick slip',
     name: 'R788NF9 planto ardor venito',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r788nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r788nf9.html',
     priceCentsM2: 5289, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -207,11 +207,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r436nf9-feldhaus-klinker',
+    id: 'r436nf9',
     type: 'Klinker brick slip',
     name: 'R436NF9 ardor mana',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r436nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r436nf9.html',
     priceCentsM2: 5240, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -248,11 +248,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r487nf9-feldhaus-klinker',
+    id: 'r487nf9',
     type: 'Klinker brick slip',
     name: 'R487NF9 terreno rustico',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r487nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r487nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -289,11 +289,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r480nf9-feldhaus-klinker',
+    id: 'r480nf9',
     type: 'Klinker brick slip',
     name: 'R480NF9 terreno liso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r480nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r480nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -330,11 +330,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r800nf9-feldhaus-klinker',
+    id: 'r800nf9',
     type: 'Klinker brick slip',
     name: 'R800NF9 argo liso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r800nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r800nf9.html',
     priceCentsM2: 5456, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -371,11 +371,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r835nf9-feldhaus-klinker',
+    id: 'r835nf9',
     type: 'Klinker brick slip',
     name: 'R835NF9 argo mana',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r835nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r835nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -412,11 +412,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r840nf9-feldhaus-klinker',
+    id: 'r840nf9',
     type: 'Klinker brick slip',
     name: 'R840NF9 argo senso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r840nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r840nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -453,11 +453,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r500nf9-feldhaus-klinker',
+    id: 'r500nf9',
     type: 'Klinker brick slip',
     name: 'R500NF9 geo liso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r500nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r500nf9.html',
     priceCentsM2: 5456, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -494,11 +494,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r535nf9-feldhaus-klinker',
+    id: 'r535nf9',
     type: 'Klinker brick slip',
     name: 'R535NF9 terra mana',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r535nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r535nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -535,11 +535,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r540nf9-feldhaus-klinker',
+    id: 'r540nf9',
     type: 'Klinker brick slip',
     name: 'R540NF9 geo senso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r540nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r540nf9.html',
     priceCentsM2: 5456, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -576,11 +576,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r555nf9-feldhaus-klinker',
+    id: 'r555nf9',
     type: 'Klinker brick slip',
     name: 'R555NF9 terra antic mana',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r555nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r555nf9.html',
     priceCentsM2: 5888, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -617,11 +617,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-r286nf9-feldhaus-klinker',
+    id: 'r286nf9',
     type: 'Klinker brick slip',
     name: 'R286NF9 nolani rustico carbo',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r286nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r286nf9.html',
     priceCentsM2: 6045, 
     supplierPriceType: 'm2',
     isM2: true,
