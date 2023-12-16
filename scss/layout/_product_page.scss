@@ -118,6 +118,7 @@
           z-index: 1;
           transition: background-color 0.3s;
           touch-action: manipulation;
+          border: none;
 
           @include breakpoint(small) {
             font-size: 2rem;

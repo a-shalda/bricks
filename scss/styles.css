@@ -1119,6 +1119,7 @@ sup {
   z-index: 1;
   transition: background-color 0.3s;
   touch-action: manipulation;
+  border: none;
 }
 @media (min-width: 29em) {
   .main__window__top__left__button--prev, .main__window__top__left__button--next {

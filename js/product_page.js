@@ -38,8 +38,8 @@ products.forEach((product, index) => {
 
       if (index === 0) {
         productOriginalHTML += `
-        <a class="main__window__top__left__button--prev">❮</a>
-        <a class="main__window__top__left__button--next">❯</a>
+        <button class="main__window__top__left__button--prev">❮</button>
+        <button class="main__window__top__left__button--next">❯</button>
         <div class="main__window__top__left__cont main_box">
           <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
@@ -636,8 +636,8 @@ function checkWishlist () {
   wishlist.forEach(item => {
     if (item.id === wish.id) {
       buttonWish.innerHTML = `
-        <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
-        &nbsp;Save
+        <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+        Unsave
       `;    
     }
   })
@@ -665,16 +665,16 @@ function ModifyWishlist () {
     wishlist.push(wish);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = `
-      <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
-      &nbsp;Unsave
+      <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+      Unsave
     `;   
   }
   else {
     wishlist.splice([mathingIndex], 1);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = `
-      <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
-      &nbsp;Save
+      <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+      Save
     `;   
   }
 
