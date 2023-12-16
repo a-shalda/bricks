@@ -1802,10 +1802,6 @@ sup {
   cursor: pointer;
 }
 
-.hiddenStock {
-  display: none;
-}
-
 .active {
   outline: 3px solid gray;
   border-radius: 0.3rem;
