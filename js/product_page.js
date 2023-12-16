@@ -54,28 +54,28 @@ products.forEach((product, index) => {
     //   }
     // });
 
-    product.image_original.forEach((image, index) => {
+    // product.image_original.forEach((image, index) => {
 
-      let gridNumber;
+    //   let gridNumber;
 
-      if (index === 0) gridNumber = 'one';
-      else if (index === 1) gridNumber = 'two';
-      else if (index === 2) gridNumber = 'three';
-      else if (index === 3) gridNumber = 'four';
-      else if (index === 4) gridNumber = 'five';
-      else if (index === 5) gridNumber = 'six';
-      else if (index === 6) gridNumber = 'seven';
-      else if (index === 7) gridNumber = 'eight';
-      else if (index === 8) gridNumber = 'nine';
-      else if (index === 9) gridNumber = 'ten';
+    //   if (index === 0) gridNumber = 'one';
+    //   else if (index === 1) gridNumber = 'two';
+    //   else if (index === 2) gridNumber = 'three';
+    //   else if (index === 3) gridNumber = 'four';
+    //   else if (index === 4) gridNumber = 'five';
+    //   else if (index === 5) gridNumber = 'six';
+    //   else if (index === 6) gridNumber = 'seven';
+    //   else if (index === 7) gridNumber = 'eight';
+    //   else if (index === 8) gridNumber = 'nine';
+    //   else if (index === 9) gridNumber = 'ten';
 
 
-      productThumbnailslHTML += `
-        <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
-          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-        </div>
-      `;
-    });
+    //   productThumbnailslHTML += `
+    //     <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
+    //       <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+    //     </div>
+    //   `;
+    // });
   }
 });
 
