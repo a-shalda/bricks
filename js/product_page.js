@@ -8,11 +8,14 @@ let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
 let productDescription = '';
+let productName = ''
 let metaDescription = ''
+let productManufacturer = ''
 let productNumberInProducts;
 let supplierPriceType = '';
 let userQuantity = 0;
 let subTotal = 0;
+let priceForSnippet = ''
 const priceTotalLimit = 9000; //Used to generate options
 const packsTotalLimit = 1000;
 
@@ -31,6 +34,8 @@ products.forEach((product, index) => {
     supplierPriceType = product.supplierPriceType;
     productDescription = product.description;
     metaDescription = 'Buy ' + productTitle + ' in Moscow';
+    productName = product.name
+    productManufacturer = product.specs.manufacturer
 
     // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
 
@@ -41,7 +46,7 @@ products.forEach((product, index) => {
         <button class="main__window__top__left__button--prev">❮</button>
         <button class="main__window__top__left__button--next">❯</button>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy" itemprop="image">
         </div>
       `;
       }
@@ -240,11 +245,12 @@ let productType = product.type;
 if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
   const priceM2 = ((priceCentsM2 / 100).toFixed(2));
+  priceForSnippet = priceM2
   const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
   const indexOfDotM2 = priceM2.toString().indexOf('.');
   const indexofDotPc = pricePc.toString().indexOf('.');
 
-  let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+  let priceM2HTML = `<sup itemprop="priceCurrency" content="EUR">€</sup>${priceM2.slice(0, indexOfDotM2)}<span itemprop="price" content=${priceM2.slice(0, indexOfDotM2)}${priceM2.slice(indexOfDotM2)} class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
   let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
   
   pricesHTML = `
@@ -321,11 +327,12 @@ else if (supplierPriceType === 'pc') {
   if (isM2 === true && isLinearMeter === false) {
 
     const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+    priceForSnippet = priceM2
     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
     const indexOfDotM2 = priceM2.toString().indexOf('.');
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+    let priceM2HTML = `<sup itemprop="priceCurrency" content="EUR">€</sup>${priceM2.slice(0, indexOfDotM2)}<span itemprop="price" content=${priceM2.slice(0, indexOfDotM2)}${priceM2.slice(indexOfDotM2)} class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
     let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML = `
@@ -454,11 +461,12 @@ else if (supplierPriceType === 'pc') {
   else if (isM2 === false && isLinearMeter === true) {
 
     const priceLM = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
+    priceForSnippet = priceLM
     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
     const indexOfDotLM = priceLM.toString().indexOf('.');
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
+    let priceLMHTML = `<sup itemprop="priceCurrency" content="EUR">€</sup>${priceLM.slice(0, indexOfDotLM)}<span itemprop="price" content=${priceLM.slice(0, indexOfDotLM)}${priceLM.slice(indexOfDotLM)} class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
     let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML = `
@@ -535,9 +543,10 @@ else if (supplierPriceType === 'pc') {
     //This type of product is sold by 1 piece
 
     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+    priceForSnippet = pricePc
     const indexofDotPc = pricePc.toString().indexOf('.');
 
-    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let pricePcHTML = `<sup itemprop="priceCurrency" content="EUR">€</sup>${pricePc.slice(0, indexofDotPc)}<span itemprop="price" content=${pricePc.slice(0, indexofDotPc)}${pricePc.slice(indexofDotPc)} class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
     pricesHTML = `
       <div class="main__window__middle__top__price__left">
@@ -604,7 +613,6 @@ else if (supplierPriceType === 'pc') {
   }
 }
 document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
-
 
 //Add to wishlist
 
