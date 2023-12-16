@@ -440,7 +440,7 @@
                 }
 
                 &__focus {
-                  border: 1px solid hsla(0, 68%, 42%, 0.426);
+                  border: 3px solid hsla(0, 68%, 42%, 0.523);
                   outline: none;
                 }
               }
@@ -465,7 +465,6 @@
           }
 
           &__button_wish {
-            display: block;
             border: none;
             cursor: pointer;
             padding-block: 0.6rem;
@@ -482,6 +481,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 0.5rem;
 
             @include breakpoint (tiny) {
               height: 2.875rem; //Height of the price box
@@ -509,12 +509,12 @@
             }
 
             &__cont {
-              position: relative;
+              // position: relative;
 
               &__heart {
                 filter: invert(99%) sepia(2%) saturate(869%) hue-rotate(207deg) brightness(114%) contrast(76%);
                 width: 1.1rem;
-                position: absolute;
+                // position: absolute;
                 left: -0.6rem;
                 top: 0.22rem;
                 font-size: 1rem;
@@ -549,6 +549,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 0.5rem;
 
             @include breakpoint (tiny) {
               height: 2.875rem; //Height of the price box

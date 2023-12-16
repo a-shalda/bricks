@@ -1429,7 +1429,7 @@ sup {
   cursor: pointer;
 }
 .main__window__middle__top__stock__subtotal__value__select__focus {
-  border: 1px solid hsla(0, 68%, 42%, 0.426);
+  border: 3px solid hsla(0, 68%, 42%, 0.523);
   outline: none;
 }
 .main__window__middle__top__buy {
@@ -1448,7 +1448,6 @@ sup {
   }
 }
 .main__window__middle__top__buy__button_wish {
-  display: block;
   border: none;
   cursor: pointer;
   padding-block: 0.6rem;
@@ -1466,6 +1465,7 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 @media (min-width: 25em) {
   .main__window__middle__top__buy__button_wish {
@@ -1489,13 +1489,9 @@ sup {
   background-color: gray;
   outline: 0;
 }
-.main__window__middle__top__buy__button_wish__cont {
-  position: relative;
-}
 .main__window__middle__top__buy__button_wish__cont__heart {
   filter: invert(99%) sepia(2%) saturate(869%) hue-rotate(207deg) brightness(114%) contrast(76%);
   width: 1.1rem;
-  position: absolute;
   left: -0.6rem;
   top: 0.22rem;
   font-size: 1rem;
@@ -1530,6 +1526,7 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 @media (min-width: 25em) {
   .main__window__middle__top__buy__button_add {

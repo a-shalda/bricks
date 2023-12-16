@@ -636,10 +636,8 @@ function checkWishlist () {
   wishlist.forEach(item => {
     if (item.id === wish.id) {
       buttonWish.innerHTML = `
-        <div class="main__window__middle__top__buy__button_wish__cont">
-          <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart"/>
-          <p class="main__window__middle__top__buy__button_wish__cont__text">Unsave</p>
-        </div>
+        <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+        &nbsp;Save
       `;    
     }
   })
@@ -667,20 +665,16 @@ function ModifyWishlist () {
     wishlist.push(wish);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = `
-      <div class="main__window__middle__top__buy__button_wish__cont">
-        <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart"/>
-        <p class="main__window__middle__top__buy__button_wish__cont__text">Unsave</p>
-      </div>
+      <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+      &nbsp;Unsave
     `;   
   }
   else {
     wishlist.splice([mathingIndex], 1);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     buttonWish.innerHTML = `
-      <div class="main__window__middle__top__buy__button_wish__cont">
-        <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart"/>
-        <p class="main__window__middle__top__buy__button_wish__cont__text">Save</p>
-      </div>
+      <img src="/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+      &nbsp;Save
     `;   
   }
 
