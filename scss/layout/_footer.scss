@@ -48,10 +48,15 @@
       }
 
       &__item {
-        line-height: 1.7rem;
+        line-height: 3rem;
         color: var(--medium-gray-color);
         font-size: 0.8rem;
         transition: color 100ms;
+        margin-top: -1rem;
+
+        &__a {
+          display: block;
+        }
 
         &:hover {
           color: var(--light-gray-color);

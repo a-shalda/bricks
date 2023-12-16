@@ -120,6 +120,10 @@
               font-size: 0.9rem;
               transition: color 100ms;
 
+              &__a {
+                display: block;
+              }
+
               @include breakpoint(small) {
                 margin-inline: 2rem;
               }

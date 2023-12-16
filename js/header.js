@@ -14,15 +14,15 @@ const headerHTML = `
           <div class="header__upper__left__hamburger__dropdown">
             <div class="header__upper__left__hamburger__dropdown__content">
               <ul class="header__upper__left__hamburger__dropdown__ul">
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/catalog.html">All products</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/brick_slips.html">Klinker brick slips</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/bricks.html">Klinker bricks</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/thermopanels.html">Brick slip thermo panels</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/fence_caps.html">Ceramic fence caps</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/clay_pavers.html">Clay pavers</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/stair_and_floor_tile.html">Stair and floor tile</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/window_sills.html">Ceramic window sills</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a href="/bricks/categories/mortars.html">Mortars</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/catalog.html">All products</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/brick_slips.html">Klinker brick slips</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/bricks.html">Klinker bricks</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/thermopanels.html">Brick slip thermo panels</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/fence_caps.html">Ceramic fence caps</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/clay_pavers.html">Clay pavers</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/stair_and_floor_tile.html">Stair and floor tile</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/window_sills.html">Ceramic window sills</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/mortars.html">Mortars</a></li>
               </ul>
             </div>
           </div>

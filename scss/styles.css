@@ -289,6 +289,9 @@ sup {
   font-size: 0.9rem;
   transition: color 100ms;
 }
+.header__upper__left__hamburger__dropdown__content__link__a {
+  display: block;
+}
 @media (min-width: 29em) {
   .header__upper__left__hamburger__dropdown__content__link {
     margin-inline: 2rem;
@@ -439,10 +442,14 @@ sup {
   color: var(--light-gray-color);
 }
 .footer__upper__column__item {
-  line-height: 1.7rem;
+  line-height: 3rem;
   color: var(--medium-gray-color);
   font-size: 0.8rem;
   transition: color 100ms;
+  margin-top: -1rem;
+}
+.footer__upper__column__item__a {
+  display: block;
 }
 .footer__upper__column__item:hover {
   color: var(--light-gray-color);
