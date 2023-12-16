@@ -609,6 +609,7 @@ document.querySelector('.main__window__middle__top__price').innerHTML = pricesHT
 //Add to wishlist
 
 const buttonWish = document.querySelector('.main__window__middle__top__buy__button_wish');
+const buttonWishText = document.querySelector('.main__window__middle__top__buy__button_wish__text')
 
 buttonWish.addEventListener('pointerdown', () => {
   ModifyWishlist();
@@ -635,8 +636,7 @@ function checkWishlist () {
 
   wishlist.forEach(item => {
     if (item.id === wish.id) {
-      buttonWish.innerHTML = `
-        <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+      buttonWishText.innerHTML = `
         Unsave
       `;    
     }
@@ -664,18 +664,16 @@ function ModifyWishlist () {
   if (mathingIndex === undefined) {
     wishlist.push(wish);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    buttonWish.innerHTML = `
-      <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+    buttonWishText.innerHTML = `
       Unsave
-    `;   
+    `; 
   }
   else {
     wishlist.splice([mathingIndex], 1);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    buttonWish.innerHTML = `
-      <img src="/bricks/images/icons/heart.svg" class="main__window__middle__top__buy__button_wish__cont__heart" width="18" height="18" alt="heart"/>
+    buttonWishText.innerHTML = `
       Save
-    `;   
+    `; 
   }
 
   updateCounters();
