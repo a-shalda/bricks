@@ -1014,7 +1014,7 @@ sup {
 }
 .main__cont__title {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   font-size: 1.1rem;
   padding-inline: 0.5rem;
@@ -1613,6 +1613,9 @@ sup {
   color: rgb(101, 101, 101);
   font-size: 1.1rem;
 }
+.additional__window__head__h2 {
+  font-size: 1.2rem;
+}
 .additional__window__body {
   color: gray;
   padding-top: 0.5rem;
@@ -1845,7 +1848,7 @@ sup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 3.725rem;
+  top: 3.5rem;
   z-index: 1;
   background-color: white;
   border-bottom: 1px solid var(--light-gray-color);
@@ -2213,7 +2216,7 @@ sup {
   padding: 1rem;
 }
 .cart__modal__box__content__title {
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.09rem;
   color: var(--gray-color);
   font-size: 1.1rem;

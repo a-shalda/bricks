@@ -8,6 +8,7 @@ let productOriginalHTML = '';
 let productThumbnailslHTML = '';
 let productTitle = '';
 let productDescription = '';
+let metaDescription = ''
 let productNumberInProducts;
 let supplierPriceType = '';
 let userQuantity = 0;
@@ -29,6 +30,7 @@ products.forEach((product, index) => {
     productNumberInProducts = index;
     supplierPriceType = product.supplierPriceType;
     productDescription = product.description;
+    metaDescription = 'Buy ' + productTitle + ' in Moscow';
 
     // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
 
@@ -39,14 +41,14 @@ products.forEach((product, index) => {
         <a class="main__window__top__left__button--prev">❮</a>
         <a class="main__window__top__left__button--next">❯</a>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
       else {
         productOriginalHTML += `
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="" height="" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
         </div>
       `;
       }
@@ -81,8 +83,10 @@ products.forEach((product, index) => {
 document.querySelector('title').innerHTML = productTitle;
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
-document.querySelector('.main__cont__title').innerHTML = productTitle;
 document.querySelector('.additional__window__body').innerHTML = productDescription;
+
+document.querySelector('.main__cont__title').innerHTML = productTitle;
+document.querySelector('meta[name="description"]').setAttribute("content", metaDescription);
 
 
 //Adding pulsing animation to main images

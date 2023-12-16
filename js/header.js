@@ -3,13 +3,13 @@
 
 const headerHTML = `
 
-  <!--HEADER--start-->
+  <!--HEADER-start-->
     <div class="header__upper cont">
 
       <div class="header__upper__left">
         <div class="header__upper__left__hamburger">
           <button class="header__upper__left__hamburger__nav-toggle">
-            <img src="/bricks/images/icons/menu.svg" class="icon-style header__upper__left__hamburger__nav-toggle__icon"/>
+            <img src="/bricks/images/icons/menu.svg" class="icon-style header__upper__left__hamburger__nav-toggle__icon" width="24" height="24" alt="menu"/>
           </button>
           <div class="header__upper__left__hamburger__dropdown">
             <div class="header__upper__left__hamburger__dropdown__content">
@@ -38,20 +38,20 @@ const headerHTML = `
 
         <div class="header__upper__right__search">
           <a href="/bricks/search.html">
-            <img src="/bricks/images/icons/search.svg" class="icon-style--search--header"/>
+            <img src="/bricks/images/icons/search.svg" class="icon-style--search--header" width="22" height="16" alt="search"/>
           </a>
         </div>
 
         <div class="header__upper__right__saved">
           <a href="/bricks/saved.html" class="header__upper__right__saved--link">
-            <img src="/bricks/images/icons/heart.svg" class="icon-style"/>
+            <img src="/bricks/images/icons/heart.svg" class="icon-style" width="24" height="24" alt="heart"/>
             <p class="header__upper__right__saved__counter"></p>
           </a>
         </div>
 
         <div class="header__upper__right__cart">
           <a href="/bricks/cart.html"> 
-            <img src="/bricks/images/icons/cart.svg" class="icon-style fa-basket-shopping"/>
+            <img src="/bricks/images/icons/cart.svg" class="icon-style fa-basket-shopping" width="24" height="24" alt="cart"/>
             <p class="header__upper__right__cart__counter"></p>
           </a>
         </div>
@@ -59,7 +59,7 @@ const headerHTML = `
       </div>
     
     </div>
-  <!--HEADER--end-->
+  <!--HEADER-end-->
 `;
 
 document.querySelector('.header').innerHTML = headerHTML;

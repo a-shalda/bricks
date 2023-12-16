@@ -320,7 +320,7 @@ function updateCheckout () {
               checkoutProductsHTML += `
                 <div class="cart__cont__product">
                   <div class="cart__cont__product__image">
-                    <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    <img width="350" height="229" class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                   </div>
                   <div class="cart__cont__product__price">${pricesHTML}</div>
                   <div class="cart__cont__product__vendor">
@@ -404,7 +404,7 @@ function updateCheckout () {
                   checkoutProductsHTML += `
                     <div class="cart__cont__product">
                       <div class="cart__cont__product__image">
-                        <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                        <img width="350" height="229" class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                       </div>
                       <div class="cart__cont__product__price">${pricesHTML}</div>
                       <div class="cart__cont__product__vendor">
@@ -466,7 +466,7 @@ function updateCheckout () {
                   checkoutProductsHTML += `
                     <div class="cart__cont__product">
                       <div class="cart__cont__product__image">
-                        <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                        <img width="350" height="229" class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                       </div>
                       <div class="cart__cont__product__price">${pricesHTML}</div>
                       <div class="cart__cont__product__vendor">
@@ -547,7 +547,7 @@ function updateCheckout () {
                 checkoutProductsHTML += `
                   <div class="cart__cont__product">
                     <div class="cart__cont__product__image">
-                      <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      <img width="350" height="229" class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                     </div>
                     <div class="cart__cont__product__price">${pricesHTML}</div>
                     <div class="cart__cont__product__vendor">
@@ -626,7 +626,7 @@ function updateCheckout () {
                 checkoutProductsHTML += `
                   <div class="cart__cont__product">
                     <div class="cart__cont__product__image">
-                      <img class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      <img width="350" height="229" class="cart__cont__product__image__img-checkout" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                     </div>
                     <div class="cart__cont__product__price">${pricesHTML}</div>
                       <div class="cart__cont__product__vendor">
@@ -758,7 +758,7 @@ cart.forEach(item => {
               <div class="cart__cont__product">
                 <div class="cart__cont__product__image">
                   <a href="${product.filepath}">
-                    <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                    <img width="350" height="229" class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                   </a>
                 </div>
                 <div class="cart__cont__product__price">${pricesHTML}</div>
@@ -859,7 +859,7 @@ cart.forEach(item => {
                   <div class="cart__cont__product">
                     <div class="cart__cont__product__image">
                       <a href="${product.filepath}">
-                        <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                        <img width="350" height="229" class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                       </a>
                     </div>
                     <div class="cart__cont__product__price">${pricesHTML}</div>
@@ -937,7 +937,7 @@ cart.forEach(item => {
                   <div class="cart__cont__product">
                     <div class="cart__cont__product__image">
                       <a href="${product.filepath}">
-                        <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                        <img width="350" height="229" class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                       </a>
                     </div>
                     <div class="cart__cont__product__price">${pricesHTML}</div>
@@ -1035,7 +1035,7 @@ cart.forEach(item => {
                 <div class="cart__cont__product">
                   <div class="cart__cont__product__image">
                     <a href="${product.filepath}">
-                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      <img width="350" height="229" class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                     </a>
                   </div>
                   <div class="cart__cont__product__price">${pricesHTML}</div>
@@ -1130,7 +1130,7 @@ cart.forEach(item => {
                 <div class="cart__cont__product">
                   <div class="cart__cont__product__image">
                     <a href="${product.filepath}">
-                      <img class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
+                      <img width="350" height="229" class="cart__cont__product__image__img" src=${product.image_thumbnail[0]} alt='${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}' loading="lazy">
                     </a>
                   </div>
                   <div class="cart__cont__product__price">${pricesHTML}</div>
