@@ -1802,8 +1802,8 @@ sup {
   cursor: pointer;
 }
 
-.similar {
-  visibility: hidden;
+.hiddenStock {
+  display: none;
 }
 
 .active {
