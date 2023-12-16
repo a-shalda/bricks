@@ -1802,6 +1802,10 @@ sup {
   cursor: pointer;
 }
 
+.similar {
+  visibility: hidden;
+}
+
 .active {
   outline: 3px solid gray;
   border-radius: 0.3rem;
