@@ -72,7 +72,7 @@ products.forEach((product, index) => {
 
       productThumbnailslHTML += `
         <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
-          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="500" height="500 loading="lazy">
+          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" width="500" height="500" loading="lazy">
         </div>
       `;
     });
