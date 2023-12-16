@@ -34,55 +34,55 @@ products.forEach((product, index) => {
 
     // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
 
-    // product.image_original.forEach((image, index) => {
+    product.image_original.forEach((image, index) => {
 
-    //   if (index === 0) {
-    //     productOriginalHTML += `
-    //     <button class="main__window__top__left__button--prev">❮</button>
-    //     <button class="main__window__top__left__button--next">❯</button>
-    //     <div class="main__window__top__left__cont main_box">
-    //       <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-    //     </div>
-    //   `;
-    //   }
-    //   else {
-    //     productOriginalHTML += `
-    //     <div class="main__window__top__left__cont main_box">
-    //       <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-    //     </div>
-    //   `;
-    //   }
-    // });
+      if (index === 0) {
+        productOriginalHTML += `
+        <button class="main__window__top__left__button--prev">❮</button>
+        <button class="main__window__top__left__button--next">❯</button>
+        <div class="main__window__top__left__cont main_box">
+          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+        </div>
+      `;
+      }
+      else {
+        productOriginalHTML += `
+        <div class="main__window__top__left__cont main_box">
+          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+        </div>
+      `;
+      }
+    });
 
-    // product.image_original.forEach((image, index) => {
+    product.image_original.forEach((image, index) => {
 
-    //   let gridNumber;
+      let gridNumber;
 
-    //   if (index === 0) gridNumber = 'one';
-    //   else if (index === 1) gridNumber = 'two';
-    //   else if (index === 2) gridNumber = 'three';
-    //   else if (index === 3) gridNumber = 'four';
-    //   else if (index === 4) gridNumber = 'five';
-    //   else if (index === 5) gridNumber = 'six';
-    //   else if (index === 6) gridNumber = 'seven';
-    //   else if (index === 7) gridNumber = 'eight';
-    //   else if (index === 8) gridNumber = 'nine';
-    //   else if (index === 9) gridNumber = 'ten';
+      if (index === 0) gridNumber = 'one';
+      else if (index === 1) gridNumber = 'two';
+      else if (index === 2) gridNumber = 'three';
+      else if (index === 3) gridNumber = 'four';
+      else if (index === 4) gridNumber = 'five';
+      else if (index === 5) gridNumber = 'six';
+      else if (index === 6) gridNumber = 'seven';
+      else if (index === 7) gridNumber = 'eight';
+      else if (index === 8) gridNumber = 'nine';
+      else if (index === 9) gridNumber = 'ten';
 
 
-    //   productThumbnailslHTML += `
-    //     <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
-    //       <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-    //     </div>
-    //   `;
-    // });
+      productThumbnailslHTML += `
+        <div class="main__window__bottom__left__grid__cont active ${gridNumber}">
+          <img src="${image}" onclick="currentImage(${index + 1})" class="main__window__bottom__left__grid__cont__img" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
+        </div>
+      `;
+    });
   }
 });
 
 
 document.querySelector('title').innerHTML = productTitle;
-// document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
-// document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
+document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
+document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 document.querySelector('.additional__window__body').innerHTML = productDescription;
 
 document.querySelector('.main__cont__title').innerHTML = productTitle;
@@ -237,373 +237,373 @@ let squareMetersInPallet = product.specs.squareMetersInPallet;
 let totalPallets = 0;
 let productType = product.type;
 
-// if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
+if (isM2 === true && supplierPriceType === 'm2' && supplierPriceType !== 'pc') {
 
-//   const priceM2 = ((priceCentsM2 / 100).toFixed(2));
-//   const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
-//   const indexOfDotM2 = priceM2.toString().indexOf('.');
-//   const indexofDotPc = pricePc.toString().indexOf('.');
+  const priceM2 = ((priceCentsM2 / 100).toFixed(2));
+  const pricePc = (Math.ceil((priceCentsM2 / piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+  const indexOfDotM2 = priceM2.toString().indexOf('.');
+  const indexofDotPc = pricePc.toString().indexOf('.');
 
-//   let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-//   let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+  let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+  let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
   
-//   pricesHTML = `
-//     <div class="main__window__middle__top__price__left">
-//       <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
-//     </div>
-//     <div class="main__window__middle__top__price__right">
-//       <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
-//     </div>
-//   `;
+  pricesHTML = `
+    <div class="main__window__middle__top__price__left">
+      <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
+    </div>
+    <div class="main__window__middle__top__price__right">
+      <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+    </div>
+  `;
 
-//   //Calculating the options
+  //Calculating the options
 
-//   if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
-//   else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
+  if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+  else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
 
-//   optionsHTML += `<option value="0">select quantity...</option>`;
+  optionsHTML += `<option value="0">select quantity...</option>`;
 
-//   for (let i = 0; i < 90; i++) {
+  for (let i = 0; i < 90; i++) {
 
-//     if (totalVolume >= 90) {break;}
-//     totalVolume = totalVolume + baseVolume;
+    if (totalVolume >= 90) {break;}
+    totalVolume = totalVolume + baseVolume;
 
-//     if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+    if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
 
-//     pieces = pieces + basePieces;
-//     price = (totalVolume * priceM2).toFixed(2);
+    pieces = pieces + basePieces;
+    price = (totalVolume * priceM2).toFixed(2);
 
-//     if (price >= priceTotalLimit) {break;}
+    if (price >= priceTotalLimit) {break;}
 
-//     totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
-//     if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
-//     else {totalPallets = totalPallets + ` pallets`;}
+    totalPallets = Number((totalVolume / squareMetersInPallet).toFixed(2));
+    if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+    else {totalPallets = totalPallets + ` pallets`;}
 
-//     totalPacks++;
-//     totalWeight = Number((totalWeight + weight).toFixed(2));
+    totalPacks++;
+    totalWeight = Number((totalWeight + weight).toFixed(2));
 
-//     let priceLength = String(price).length;
-//     let priceModified = String(price);
-//     if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+    let priceLength = String(price).length;
+    let priceModified = String(price);
+    if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
 
-//     let piecesModified = '';
-//     if (pieces === 1) {piecesModified = pieces + ` pc`;}
-//     else {piecesModified = pieces + ` pcs`;}
+    let piecesModified = '';
+    if (pieces === 1) {piecesModified = pieces + ` pc`;}
+    else {piecesModified = pieces + ` pcs`;}
   
-//     let totalPacksModified = '';
-//     if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
-//     else {totalPacksModified = totalPacks + ` packs`}
+    let totalPacksModified = '';
+    if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+    else {totalPacksModified = totalPacks + ` packs`}
 
-//     if (window.innerWidth <= 350) {
-//       optionsHTML += `
-//       <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
-//     `;
-//     }
-//     else if (window.innerWidth <= 600) {
-//       optionsHTML += `
-//       <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
-//     `;
-//     }
-//     else {
-//       optionsHTML += `
-//       <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
-//     `;
-//     }
-//   }
+    if (window.innerWidth <= 350) {
+      optionsHTML += `
+      <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+    `;
+    }
+    else if (window.innerWidth <= 600) {
+      optionsHTML += `
+      <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
+    `;
+    }
+    else {
+      optionsHTML += `
+      <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+    `;
+    }
+  }
 
-//   if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
-//   else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+  if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
+  else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
 
-//   document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
-// }
-// else if (supplierPriceType === 'pc') {
+  document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
+}
+else if (supplierPriceType === 'pc') {
 
-//   if (isM2 === true && isLinearMeter === false) {
+  if (isM2 === true && isLinearMeter === false) {
 
-//     const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
-//     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-//     const indexOfDotM2 = priceM2.toString().indexOf('.');
-//     const indexofDotPc = pricePc.toString().indexOf('.');
+    const priceM2 = (Math.ceil((priceCentsPc * piecesInSquareMeter).toFixed(4)) / 100).toFixed(2);
+    const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+    const indexOfDotM2 = priceM2.toString().indexOf('.');
+    const indexofDotPc = pricePc.toString().indexOf('.');
 
-//     let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-//     let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
+    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-//     pricesHTML = `
-//       <div class="main__window__middle__top__price__left">
-//         <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
-//       </div>
-//       <div class="main__window__middle__top__price__right">
-//         <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
-//       </div>
-//     `;
+    pricesHTML = `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box">${priceM2HTML}</p>
+      </div>
+      <div class="main__window__middle__top__price__right">
+        <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+      </div>
+    `;
   
-//     //Calculating the options
+    //Calculating the options
 
-//     if (productType !== 'Klinker brick' && productType !== 'Klinker clay paver') {
-//       if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
-//       else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
+    if (productType !== 'Klinker brick' && productType !== 'Klinker clay paver') {
+      if ((piecesInPack % piecesInSquareMeter) === 0) {baseVolume = (piecesInPack / piecesInSquareMeter);}
+      else {baseVolume = Number((piecesInPack / piecesInSquareMeter).toFixed(2));}
     
-//       optionsHTML += `<option value="0">select quantity...</option>`;
+      optionsHTML += `<option value="0">select quantity...</option>`;
     
-//       for (let i = 0; i < 90; i++) {
+      for (let i = 0; i < 90; i++) {
 
-//         if (price >= priceTotalLimit) {break;}
+        if (price >= priceTotalLimit) {break;}
     
-//         if (totalVolume >= 90) {break;}
-//         totalVolume = totalVolume + baseVolume;
+        if (totalVolume >= 90) {break;}
+        totalVolume = totalVolume + baseVolume;
     
-//         if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+        if (!Number.isInteger((piecesInPack / piecesInSquareMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
     
-//         pieces = pieces + basePieces;
-//         price = (pieces * pricePc).toFixed(2);
+        pieces = pieces + basePieces;
+        price = (pieces * pricePc).toFixed(2);
   
-//         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-//         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
-//         else {totalPallets = totalPallets + ` pallets`;}
+        totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+        if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+        else {totalPallets = totalPallets + ` pallets`;}
   
-//         totalPacks++;
-//         totalWeight = Number((totalWeight + weight).toFixed(2));
+        totalPacks++;
+        totalWeight = Number((totalWeight + weight).toFixed(2));
     
-//         let priceLength = String(price).length;
-//         let priceModified = String(price);
-//         if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+        let priceLength = String(price).length;
+        let priceModified = String(price);
+        if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
     
-//         let piecesModified = '';
-//         if (pieces === 1) {piecesModified = pieces + ` pc`;}
-//         else {piecesModified = pieces + ` pcs`;}
+        let piecesModified = '';
+        if (pieces === 1) {piecesModified = pieces + ` pc`;}
+        else {piecesModified = pieces + ` pcs`;}
       
-//         let totalPacksModified = '';
-//         if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
-//         else {totalPacksModified = totalPacks + ` packs`}
+        let totalPacksModified = '';
+        if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+        else {totalPacksModified = totalPacks + ` packs`}
     
-//         if (window.innerWidth <= 350) {
-//           optionsHTML += `
-//           <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
-//         `;
-//         }
-//         else if (window.innerWidth <= 600) {
-//           optionsHTML += `
-//           <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
-//         `;
-//         }
-//         else {
-//           optionsHTML += `
-//           <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
-//         `;
-//         }
-//       }
+        if (window.innerWidth <= 350) {
+          optionsHTML += `
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+        `;
+        }
+        else if (window.innerWidth <= 600) {
+          optionsHTML += `
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPacksModified})</option>
+        `;
+        }
+        else {
+          optionsHTML += `
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+        `;
+        }
+      }
     
-//       if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
-//       else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+      if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
+      else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
     
-//       document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
-//     }
-//     else {
-//       baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
-//       basePieces = piecesInPallet;
+      document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
+    }
+    else {
+      baseVolume = Number((piecesInPallet / piecesInSquareMeter).toFixed(2));
+      basePieces = piecesInPallet;
   
-//       optionsHTML += `<option value="0">select quantity...</option>`;
+      optionsHTML += `<option value="0">select quantity...</option>`;
     
-//       for (let i = 0; i < 9; i++) {
+      for (let i = 0; i < 9; i++) {
 
-//         if (price >= priceTotalLimit) {break;}
+        if (price >= priceTotalLimit) {break;}
 
-//         totalVolume = Number((totalVolume + baseVolume).toFixed(2));
+        totalVolume = Number((totalVolume + baseVolume).toFixed(2));
         
-//         pieces = pieces + basePieces;
-//         price = (pieces * pricePc).toFixed(2);
+        pieces = pieces + basePieces;
+        price = (pieces * pricePc).toFixed(2);
 
-//         totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-//         totalPacks = totalPallets;
-//         let totalPalletsNumber = totalPallets;
-//         if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
-//         else {totalPallets = totalPallets + ` pallets`;}
+        totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+        totalPacks = totalPallets;
+        let totalPalletsNumber = totalPallets;
+        if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+        else {totalPallets = totalPallets + ` pallets`;}
     
-//         totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
+        totalWeight = Number((totalWeight + (weightOf1Piece * piecesInPallet)).toFixed(2));
     
-//         let priceLength = String(price).length;
-//         let priceModified = String(price);
-//         if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+        let priceLength = String(price).length;
+        let priceModified = String(price);
+        if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
     
-//         let piecesModified = pieces + ` pcs`;
+        let piecesModified = pieces + ` pcs`;
 
-//         if (window.innerWidth <= 350) {
-//           optionsHTML += `
-//           <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
-//         `;
-//         }
-//         else if (window.innerWidth <= 600) {
-//           optionsHTML += `
-//           <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPalletsNumber} pal)</option>
-//         `;
-//         }
-//         else {
-//           optionsHTML += `
-//           <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
-//         `;
-//         }
-//       }
+        if (window.innerWidth <= 350) {
+          optionsHTML += `
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified}</option>
+        `;
+        }
+        else if (window.innerWidth <= 600) {
+          optionsHTML += `
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp;= €${priceModified} (${totalPalletsNumber} pal)</option>
+        `;
+        }
+        else {
+          optionsHTML += `
+          <option value="${totalPacks}">${totalVolume} m&sup2;&nbsp; = &nbsp;€${priceModified} &nbsp;(${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+        `;
+        }
+      }
     
-//       if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
-//       else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
+      if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; specify in the cart</option>`;}
+      else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} m&sup2; select and specify in the cart</option>`;}
     
-//       document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
-//     }
+      document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
+    }
 
-//   }
-//   else if (isM2 === false && isLinearMeter === true) {
+  }
+  else if (isM2 === false && isLinearMeter === true) {
 
-//     const priceLM = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
-//     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-//     const indexOfDotLM = priceLM.toString().indexOf('.');
-//     const indexofDotPc = pricePc.toString().indexOf('.');
+    const priceLM = (Math.ceil((priceCentsPc * piecesInLinearMeter).toFixed(4)) / 100).toFixed(2).toString();
+    const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+    const indexOfDotLM = priceLM.toString().indexOf('.');
+    const indexofDotPc = pricePc.toString().indexOf('.');
 
-//     let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
-//     let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lin.m</span>`;
+    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-//     pricesHTML = `
-//       <div class="main__window__middle__top__price__left">
-//         <p class="main__window__middle__top__price__left__box">${priceLMHTML}</p>
-//       </div>
-//       <div class="main__window__middle__top__price__right">
-//         <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
-//       </div>
-//     `;
+    pricesHTML = `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box">${priceLMHTML}</p>
+      </div>
+      <div class="main__window__middle__top__price__right">
+        <p class="main__window__middle__top__price__right__box">${pricePcHTML}</p>
+      </div>
+    `;
 
-//     //Calculating the options
+    //Calculating the options
 
-//     if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
-//     else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
+    if ((piecesInPack % piecesInLinearMeter) === 0) {baseVolume = (piecesInPack / piecesInLinearMeter);}
+    else {baseVolume = Number((piecesInPack / piecesInLinearMeter).toFixed(2));}
   
-//     optionsHTML += `<option value="0">select quantity...</option>`;
+    optionsHTML += `<option value="0">select quantity...</option>`;
   
-//     for (let i = 0; i < 90; i++) {
+    for (let i = 0; i < 90; i++) {
   
-//       if (price >= priceTotalLimit) {break;}
+      if (price >= priceTotalLimit) {break;}
       
-//       if (totalVolume >= 90) {break;}
-//       totalVolume = totalVolume + baseVolume;
+      if (totalVolume >= 90) {break;}
+      totalVolume = totalVolume + baseVolume;
   
-//       if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
+      if (!Number.isInteger((piecesInPack / piecesInLinearMeter))) {totalVolume = Number(totalVolume.toFixed(2));}
   
-//       pieces = pieces + basePieces;
-//       price = (pieces * pricePc).toFixed(2);
+      pieces = pieces + basePieces;
+      price = (pieces * pricePc).toFixed(2);
 
-//       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-//       if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
-//       else {totalPallets = totalPallets + ` pallets`;}
+      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+      if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+      else {totalPallets = totalPallets + ` pallets`;}
 
-//       totalPacks++;
-//       totalWeight = Number((totalWeight + weight).toFixed(2));
+      totalPacks++;
+      totalWeight = Number((totalWeight + weight).toFixed(2));
   
-//       let priceLength = String(price).length;
-//       let priceModified = String(price);
-//       if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+      let priceLength = String(price).length;
+      let priceModified = String(price);
+      if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
   
-//       let piecesModified = '';
-//       if (pieces === 1) {piecesModified = pieces + ` pc`;}
-//       else {piecesModified = pieces + ` pcs`;}
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
     
-//       let totalPacksModified = '';
-//       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
-//       else {totalPacksModified = totalPacks + ` packs`}
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
   
-//       if (window.innerWidth <= 350) {
-//         optionsHTML += `
-//         <option value="${totalPacks}">${totalVolume} lin.m &nbsp;= €${priceModified}</option>
-//       `;
-//       }
-//       else if (window.innerWidth <= 640) {
-//         optionsHTML += `
-//         <option value="${totalPacks}">${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
-//       `;
-//       }
-//       else {
-//         optionsHTML += `
-//         <option value="${totalPacks}">${totalVolume} lin.m &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
-//       `;
-//       }
-//     }
+      if (window.innerWidth <= 350) {
+        optionsHTML += `
+        <option value="${totalPacks}">${totalVolume} lin.m &nbsp;= €${priceModified}</option>
+      `;
+      }
+      else if (window.innerWidth <= 640) {
+        optionsHTML += `
+        <option value="${totalPacks}">${totalVolume} lin.m &nbsp;= €${priceModified} (${totalPacksModified})</option>
+      `;
+      }
+      else {
+        optionsHTML += `
+        <option value="${totalPacks}">${totalVolume} lin.m &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${piecesModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
+    }
   
-//     if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} lin.m specify in the cart</option>`;}
-//     else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} lin.m select and specify in the cart</option>`;}
+    if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} lin.m specify in the cart</option>`;}
+    else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} lin.m select and specify in the cart</option>`;}
   
-//     document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
-//   }
-//   else if (isM2 === false && isLinearMeter === false) {
+    document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
+  }
+  else if (isM2 === false && isLinearMeter === false) {
 
-//     //This type of product is sold by 1 piece
+    //This type of product is sold by 1 piece
 
-//     const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-//     const indexofDotPc = pricePc.toString().indexOf('.');
+    const pricePc = (priceCentsPc / 100).toFixed(2).toString();
+    const indexofDotPc = pricePc.toString().indexOf('.');
 
-//     let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+    let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-//     pricesHTML = `
-//       <div class="main__window__middle__top__price__left">
-//         <p class="main__window__middle__top__price__left__box">${pricePcHTML}</p>
-//       </div>
-//     `;
+    pricesHTML = `
+      <div class="main__window__middle__top__price__left">
+        <p class="main__window__middle__top__price__left__box">${pricePcHTML}</p>
+      </div>
+    `;
   
-//     //Calculating the options
-//     baseVolume = 1;
-//     basePieces = 1;
+    //Calculating the options
+    baseVolume = 1;
+    basePieces = 1;
   
-//     optionsHTML += `<option value="0">select quantity...</option>`;
+    optionsHTML += `<option value="0">select quantity...</option>`;
   
-//     for (let i = 0; i < 90; i++) {
+    for (let i = 0; i < 90; i++) {
   
-//       if (totalVolume >= 50) {break;}
-//       totalVolume = totalVolume + baseVolume;
+      if (totalVolume >= 50) {break;}
+      totalVolume = totalVolume + baseVolume;
     
-//       pieces = pieces + basePieces;
-//       price = (pieces * pricePc).toFixed(2);
+      pieces = pieces + basePieces;
+      price = (pieces * pricePc).toFixed(2);
 
-//       if (price >= priceTotalLimit) {break;}
+      if (price >= priceTotalLimit) {break;}
 
-//       totalPallets = Number((pieces / piecesInPallet).toFixed(2));
-//       if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
-//       else {totalPallets = totalPallets + ` pallets`;}
+      totalPallets = Number((pieces / piecesInPallet).toFixed(2));
+      if (totalPallets < 2) {totalPallets = totalPallets + ` pallet`;}
+      else {totalPallets = totalPallets + ` pallets`;}
 
-//       totalPacks++;
-//       totalWeight = Number((totalWeight + weight).toFixed(2));
+      totalPacks++;
+      totalWeight = Number((totalWeight + weight).toFixed(2));
   
-//       let priceLength = String(price).length;
-//       let priceModified = String(price);
-//       if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
+      let priceLength = String(price).length;
+      let priceModified = String(price);
+      if (priceLength > 6) {priceModified = priceModified.replace(priceModified.slice(-6), ',' + priceModified.slice(-6));}
   
-//       let piecesModified = '';
-//       if (pieces === 1) {piecesModified = pieces + ` pc`;}
-//       else {piecesModified = pieces + ` pcs`;}
+      let piecesModified = '';
+      if (pieces === 1) {piecesModified = pieces + ` pc`;}
+      else {piecesModified = pieces + ` pcs`;}
     
-//       let totalPacksModified = '';
-//       if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
-//       else {totalPacksModified = totalPacks + ` packs`}
+      let totalPacksModified = '';
+      if (totalPacks === 1) {totalPacksModified = totalPacks + ` pack`}
+      else {totalPacksModified = totalPacks + ` packs`}
   
-//       if (window.innerWidth <= 350) {
-//         optionsHTML += `
-//         <option value="${totalPacks}">${piecesModified} &nbsp;= €${priceModified}</option>
-//       `;
-//       }
-//       else if (window.innerWidth <= 600) {
-//         optionsHTML += `
-//         <option value="${totalPacks}">${piecesModified} &nbsp;= €${priceModified} (${totalPacksModified})</option>
-//       `;
-//       }
-//       else {
-//         optionsHTML += `
-//         <option value="${totalPacks}">${piecesModified} &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
-//       `;
-//       }
-//     }
+      if (window.innerWidth <= 350) {
+        optionsHTML += `
+        <option value="${totalPacks}">${piecesModified} &nbsp;= €${priceModified}</option>
+      `;
+      }
+      else if (window.innerWidth <= 600) {
+        optionsHTML += `
+        <option value="${totalPacks}">${piecesModified} &nbsp;= €${priceModified} (${totalPacksModified})</option>
+      `;
+      }
+      else {
+        optionsHTML += `
+        <option value="${totalPacks}">${piecesModified} &nbsp; = &nbsp;€${priceModified} &nbsp;(${totalPacksModified}, ${totalWeight} kg, ${totalPallets})</option>
+      `;
+      }
+    }
   
-//     if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} pcs specify in the cart</option>`;}
-//     else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} pcs select and specify in the cart</option>`;}
+    if (window.innerWidth <= 600) {optionsHTML += `<option value="${totalPacks}">>${totalVolume} pcs specify in the cart</option>`;}
+    else {optionsHTML += `<option value="${totalPacks}">>${totalVolume} pcs select and specify in the cart</option>`;}
   
-//     document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
-//   }
-// }
-// document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
+    document.querySelector('.main__window__middle__top__stock__subtotal__value__select').innerHTML = optionsHTML;
+  }
+}
+document.querySelector('.main__window__middle__top__price').innerHTML = pricesHTML;
 
 
 //Add to wishlist
@@ -762,83 +762,132 @@ function modalToCart() {
 
 //GENERATING SPECS
 
-// let specs = products[productNumberInProducts].specs;
-// let specsHTML = '';
+let specs = products[productNumberInProducts].specs;
+let specsHTML = '';
 
-// if (specs.piecesInPack) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPack}</span></p>
-//   `
-// }
-// if (specs.piecesInSquareMeterCm) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${piecesInSquareMeter}</span></p>
-//   `
-// }
-// if (piecesInLinearMeter) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a linear meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${piecesInLinearMeter}</span></p>
-//   `
-// }
-// if (specs.squareMetersInPallet) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Square meters in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.squareMetersInPallet}</span></p>
-//   `
-// }
-// if (specs.piecesInPallet) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPallet}</span></p>
-//   `
-// }
-// if (specs.recommendedJointSpacing) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended joint spacing (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedJointSpacing}</span></p>
-//   `
-// }
-// if (specs.thickness) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Thickness (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.thickness}</span></p>
-//   `
-// }
-// if (specs.format) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Format (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.format}</span></p>
-//   `
-// }
-// if (specs.recommendedDryMortarVolume) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended dry mortar volume (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedDryMortarVolume}</span></p>
-//   `
-// }
-// if (weightOf1Piece) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${weightOf1Piece}</span></p>
-//   `
-// }
-// if (specs.weightOf1SquareMeter) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 square meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1SquareMeter}</span></p>
-//   `
-// }
-// if (isLinearMeter) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 linear meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${Number(weightOf1Piece * piecesInLinearMeter).toFixed(2)}</span></p>
-//   `
-// }
-// if (weight) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${weight}</span></p>
-//   `
-// }
-// if (specs.manufacturer) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Manufacturer</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.manufacturer}</span></p>
-//   `
-// }
-// if (specs.countryOfOrigin) {
-//   specsHTML += `
-//     <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.countryOfOrigin}</span></p>
-//   `
-// }
-// document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
+if (specs.piecesInPack) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pack</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPack}</span></p>
+  `
+}
+if (specs.piecesInSquareMeterCm) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a square meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${piecesInSquareMeter}</span></p>
+  `
+}
+if (piecesInLinearMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a linear meter</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${piecesInLinearMeter}</span></p>
+  `
+}
+if (specs.squareMetersInPallet) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Square meters in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.squareMetersInPallet}</span></p>
+  `
+}
+if (specs.piecesInPallet) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Pieces in a pallet</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.piecesInPallet}</span></p>
+  `
+}
+if (specs.recommendedJointSpacing) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended joint spacing (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedJointSpacing}</span></p>
+  `
+}
+if (specs.thickness) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Thickness (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.thickness}</span></p>
+  `
+}
+if (specs.format) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Format (mm)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.format}</span></p>
+  `
+}
+if (specs.recommendedDryMortarVolume) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Recommended dry mortar volume (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.recommendedDryMortarVolume}</span></p>
+  `
+}
+if (weightOf1Piece) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 piece (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${weightOf1Piece}</span></p>
+  `
+}
+if (specs.weightOf1SquareMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 square meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.weightOf1SquareMeter}</span></p>
+  `
+}
+if (isLinearMeter) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 linear meter (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${Number(weightOf1Piece * piecesInLinearMeter).toFixed(2)}</span></p>
+  `
+}
+if (weight) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Weight of 1 pack (kg)</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${weight}</span></p>
+  `
+}
+if (specs.manufacturer) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Manufacturer</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.manufacturer}</span></p>
+  `
+}
+if (specs.countryOfOrigin) {
+  specsHTML += `
+    <p class="main__window__middle__bottom__left"><span class="main__window__middle__bottom__left_left">Country of origin</span><span class="main__window__middle__bottom__left_middle"></span><span class="main__window__middle__bottom__left_right">${specs.countryOfOrigin}</span></p>
+  `
+}
+document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
 
+
+// OLD code - validating input
+
+//   //Adding to cart on Enter
+//   if (event.key === 'Enter') {
+//     addToCart();
+//     document.activeElement.blur();
+//     inputArea.classList.add('inputAreaFocus');
+//   }
+
+//   //Input validation - First digit is not 0
+//   if (inputArea.value.length === 0 && event.key === '0') {
+//     event.preventDefault();
+//   }
+
+//   //Input validation - Preventing characters other than numbers from typing
+//   if (event.key !== '0' &&  event.key !== '1' && event.key !== '2' &&  event.key !== '3' && event.key !== '4' &&  event.key !== '5' &&event.key !== '6' &&  event.key !== '7' &&event.key !== '8' &&  event.key !== '9' && event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
+//     event.preventDefault();
+//   }
+
+//   //Input validation - Max length of the quantity
+//   if (select === 'm2' && inputArea.value.length >= 3) {
+//     limitInputAreaLength(event);
+//   }
+//   else if (select === 'pc' && inputArea.value.length >= 4) {
+//     limitInputAreaLength(event);
+//   }
+//   else if (select === 'pack' && inputArea.value.length >= 3) {
+//     limitInputAreaLength(event);
+//   }
+
+// function limitInputAreaLength (event) {
+//   if (event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
+//     event.preventDefault();
+//   }
+// }
+
+
+//GENERATING STOCK INFO
+
+// let stockInfo = '';
+
+// if (products[productNumberInProducts].availability) {
+//   stockInfo += `
+//     <i class="fa-solid fa-check stock"></i>
+//     <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
+//   `
+// }
+// document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
