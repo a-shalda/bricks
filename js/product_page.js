@@ -73,6 +73,17 @@ products.forEach((product, index) => {
       else if (index === 7) gridNumber = 'eight';
       else if (index === 8) gridNumber = 'nine';
       else if (index === 9) gridNumber = 'ten';
+      else if (index === 10) gridNumber = 'eleven';
+      else if (index === 11) gridNumber = 'twelve';
+      else if (index === 12) gridNumber = 'thirteen';
+      else if (index === 13) gridNumber = 'fourteen';
+      else if (index === 14) gridNumber = 'fifteen';
+      else if (index === 15) gridNumber = 'sixteen';
+      else if (index === 16) gridNumber = 'seventeen';
+      else if (index === 17) gridNumber = 'eighteen';
+      else if (index === 18) gridNumber = 'nineteen';
+      else if (index === 19) gridNumber = 'twenty';
+      else if (index === 20) gridNumber = 'twenty_one';
 
 
       productThumbnailslHTML += `

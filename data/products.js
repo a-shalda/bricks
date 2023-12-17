@@ -75,13 +75,19 @@ const products = [
 
     image_original: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_block_front.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_block_side.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_left_side.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_corner.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_fasade.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_night.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_round.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_trees.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_windows.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_alley.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_building.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_fence.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_day.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_night.webp',
     ],
 
     image_thumbnail: [
