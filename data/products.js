@@ -1,10 +1,10 @@
 const products = [
   {
-    id: 'klinker-brick-slip-r100nf9-feldhaus-klinker',
+    id: 'r100nf9',
     type: 'Klinker brick slip',
     name: 'R100NF9 perla liso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-r100nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r100nf9.html',
     priceCentsM2: 5456, 
     supplierPriceType: 'm2',
     isM2: true,
@@ -72,16 +72,20 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf9_main.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf9_corner.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf9_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf_house_day.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf_house_night.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf_interior.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf_round.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf_trees.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/main/r700nf_windows.jpg', 
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/thumbnail/r700nf9_thumbnail_main.jpg', 
+      '/bricks/images/product_images/brick_slip/r700nf9/thumbnail/r700nf9_thumbnail_corner.jpg', 
     ]
   }, {
     id: 'r116nf9',
@@ -1521,11 +1525,11 @@ const products = [
   //   ]
   // }, 
   {
-    id: 'klinker-brick-slip-king-klinker-obsidian-shadow-lf18',
+    id: 'obsidian-shadow-lf18',
     type: 'Klinker brick slip',
     name: 'Obsidian shadow (LF18)',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-king-klinker-obsidian-shadow-lf18.html',
+    filepath: '/bricks/klinker_brick_slip/king_klinker/obsidian-shadow-lf18.html',
     priceCentsPc: 235,
     supplierPriceType: 'pc',
     isM2: true,
@@ -1556,11 +1560,11 @@ const products = [
       '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_interior.webp', 
     ]
   }, {
-    id: 'klinker-brick-k658wdf-sintra-ardor-belino-feldhaus-klinker',
+    id: 'k658wdf',
     type: 'Klinker brick',
     name: 'K658WDF sintra ardor belino',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-k658wdf-sintra-ardor-belino-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick/feldhaus_klinker/k658wdf.html',
     priceCentsPc: 264,
     supplierPriceType: 'pc',
     isM2: true,
@@ -1590,11 +1594,11 @@ const products = [
       '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
     ]
   }, {
-    id: 'klinker-brick-slip-w100nf9-feldhaus-klinker',
+    id: 'w100nf9',
     type: 'Klinker corner brick slip',
     name: 'W100NF9 perla liso',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-brick-slip-w100nf9-feldhaus-klinker.html',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/w100nf9.html',
     priceCentsPc: 470,
     supplierPriceType: 'pc',
     isM2: false,
