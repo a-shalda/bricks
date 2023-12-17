@@ -127,7 +127,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r140nf9',
@@ -168,7 +168,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r788nf9',
@@ -209,7 +209,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r436nf9',
@@ -250,7 +250,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r487nf9',
@@ -291,7 +291,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r480nf9',
@@ -332,7 +332,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r800nf9',
@@ -373,7 +373,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r835nf9',
@@ -414,7 +414,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r840nf9',
@@ -455,7 +455,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r500nf9',
@@ -496,7 +496,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r535nf9',
@@ -537,7 +537,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r540nf9',
@@ -578,7 +578,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r555nf9',
@@ -619,7 +619,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r286nf9',
@@ -660,7 +660,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r658nf14',
@@ -700,7 +700,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r736nf14',
@@ -741,7 +741,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r693nf14',
@@ -782,7 +782,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r763nf14',
@@ -823,7 +823,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r757nf14',
@@ -864,7 +864,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r694nf14',
@@ -905,7 +905,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r698nf14',
@@ -946,7 +946,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r685nf14',
@@ -987,7 +987,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r743nf14',
@@ -1028,7 +1028,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r682nf14',
@@ -1069,7 +1069,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r764nf14',
@@ -1110,7 +1110,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r773nf14',
@@ -1151,7 +1151,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r680nf14',
@@ -1192,7 +1192,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r669nf14',
@@ -1233,7 +1233,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r749nf14',
@@ -1274,7 +1274,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r692nf14',
@@ -1315,7 +1315,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r766nf14',
@@ -1356,7 +1356,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r696nf14',
@@ -1397,7 +1397,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r688nf14',
@@ -1438,7 +1438,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, {
     id: 'r665nf14',
@@ -1479,7 +1479,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
   }, 
 
@@ -1633,7 +1633,7 @@ const products = [
 
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
     ]
 
   }, {
