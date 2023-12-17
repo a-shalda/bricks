@@ -77,7 +77,6 @@ const products = [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_fasade.webp', 
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_day.webp', 
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_night.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_interior.webp', 
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_round.webp', 
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_trees.webp', 
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_windows.webp', 
