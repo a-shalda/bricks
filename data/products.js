@@ -5,7 +5,7 @@ const products = [
     name: 'R100NF9 perla liso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r100nf9.html',
-    priceCentsM2: 5456, 
+    priceCentsM2: 5456,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -24,25 +24,25 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_fasade.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_building.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_building_side.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_house_day.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_house_night.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_building.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_building_side.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_house_day.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_house_night.webp',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r700nf9',
@@ -50,7 +50,7 @@ const products = [
     name: 'R700NF9 anthracit liso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r700nf9.html',
-    priceCentsM2: 5456, 
+    priceCentsM2: 5456,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -67,26 +67,26 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_main.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_corner.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_fasade.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_day.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_night.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_round.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_trees.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_windows.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_corner.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_day.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_house_night.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_round.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_trees.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/main/r700nf9_windows.webp',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/thumbnail/r700nf9_thumbnail_main.webp', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/thumbnail/r700nf9_thumbnail_corner.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/thumbnail/r700nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r700nf9/thumbnail/r700nf9_thumbnail_corner.webp',
     ]
   }, {
     id: 'r116nf9',
@@ -94,7 +94,7 @@ const products = [
     name: 'R116NF9 perla mana',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r116nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -111,23 +111,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r140nf9',
@@ -135,7 +135,7 @@ const products = [
     name: 'R140NF9 perla senso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r140nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -152,23 +152,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r788nf9',
@@ -176,7 +176,7 @@ const products = [
     name: 'R788NF9 planto ardor venito',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r788nf9.html',
-    priceCentsM2: 5289, 
+    priceCentsM2: 5289,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -193,23 +193,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r436nf9',
@@ -217,7 +217,7 @@ const products = [
     name: 'R436NF9 ardor mana',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r436nf9.html',
-    priceCentsM2: 5240, 
+    priceCentsM2: 5240,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -234,23 +234,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r487nf9',
@@ -258,7 +258,7 @@ const products = [
     name: 'R487NF9 terreno rustico',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r487nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -275,23 +275,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r480nf9',
@@ -299,7 +299,7 @@ const products = [
     name: 'R480NF9 terreno liso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r480nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -316,23 +316,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r800nf9',
@@ -340,7 +340,7 @@ const products = [
     name: 'R800NF9 argo liso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r800nf9.html',
-    priceCentsM2: 5456, 
+    priceCentsM2: 5456,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -357,23 +357,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r835nf9',
@@ -381,7 +381,7 @@ const products = [
     name: 'R835NF9 argo mana',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r835nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -398,23 +398,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r840nf9',
@@ -422,7 +422,7 @@ const products = [
     name: 'R840NF9 argo senso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r840nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -439,23 +439,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r500nf9',
@@ -463,7 +463,7 @@ const products = [
     name: 'R500NF9 geo liso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r500nf9.html',
-    priceCentsM2: 5456, 
+    priceCentsM2: 5456,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -480,23 +480,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r535nf9',
@@ -504,7 +504,7 @@ const products = [
     name: 'R535NF9 terra mana',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r535nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -521,23 +521,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r540nf9',
@@ -545,7 +545,7 @@ const products = [
     name: 'R540NF9 geo senso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r540nf9.html',
-    priceCentsM2: 5456, 
+    priceCentsM2: 5456,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -562,23 +562,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r555nf9',
@@ -586,7 +586,7 @@ const products = [
     name: 'R555NF9 terra antic mana',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r555nf9.html',
-    priceCentsM2: 5888, 
+    priceCentsM2: 5888,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -603,23 +603,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r286nf9',
@@ -627,7 +627,7 @@ const products = [
     name: 'R286NF9 nolani rustico carbo',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r286nf9.html',
-    priceCentsM2: 6045, 
+    priceCentsM2: 6045,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -644,23 +644,23 @@ const products = [
       format: '240x71x9',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 36,
-      weightOf1SquareMeter: 17.5, 
+      weightOf1SquareMeter: 17.5,
       weightOf1PackGramm: 1750,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r658nf14',
@@ -668,7 +668,7 @@ const products = [
     name: 'R658NF14 sintra ardor belino',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r658nf14.html',
-    priceCentsM2: 7864, 
+    priceCentsM2: 7864,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -684,23 +684,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r736nf14',
@@ -708,7 +708,7 @@ const products = [
     name: 'R736NF14 vascu vulcano petino',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r736nf14.html',
-    priceCentsM2: 8365, 
+    priceCentsM2: 8365,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -725,23 +725,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r693nf14',
@@ -749,7 +749,7 @@ const products = [
     name: 'R693NF14 sintra vulcano',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r693nf14.html',
-    priceCentsM2: 8129, 
+    priceCentsM2: 8129,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -766,23 +766,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r763nf14',
@@ -790,7 +790,7 @@ const products = [
     name: 'R763NF14 vascu perla',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r763nf14.html',
-    priceCentsM2: 8365, 
+    priceCentsM2: 8365,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -807,23 +807,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r757nf14',
@@ -831,7 +831,7 @@ const products = [
     name: 'R757NF14 vascu perla linara',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r757nf14.html',
-    priceCentsM2: 8365, 
+    priceCentsM2: 8365,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -848,23 +848,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r694nf14',
@@ -872,7 +872,7 @@ const products = [
     name: 'R694NF14 sintra carmesi',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r694nf14.html',
-    priceCentsM2: 7903, 
+    priceCentsM2: 7903,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -889,23 +889,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r698nf14',
@@ -913,7 +913,7 @@ const products = [
     name: 'R698NF14 sintra terracotta bario',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r698nf14.html',
-    priceCentsM2: 8021, 
+    priceCentsM2: 8021,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -930,23 +930,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r685nf14',
@@ -954,7 +954,7 @@ const products = [
     name: 'R685NF14 sintra carmesi nelino',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r685nf14.html',
-    priceCentsM2: 7903, 
+    priceCentsM2: 7903,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -971,23 +971,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r743nf14',
@@ -995,7 +995,7 @@ const products = [
     name: 'R743NF14 vascu carmesi flores',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r743nf14.html',
-    priceCentsM2: 7648, 
+    priceCentsM2: 7648,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1012,23 +1012,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r682nf14',
@@ -1036,7 +1036,7 @@ const products = [
     name: 'R682NF14 sintra argo blanco',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r682nf14.html',
-    priceCentsM2: 8158, 
+    priceCentsM2: 8158,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1053,23 +1053,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r764nf14',
@@ -1077,7 +1077,7 @@ const products = [
     name: 'R764NF14 vascu argo rotado',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r764nf14.html',
-    priceCentsM2: 8365, 
+    priceCentsM2: 8365,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1094,23 +1094,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r773nf14',
@@ -1118,7 +1118,7 @@ const products = [
     name: 'R773NF14 vascu argo antrablanca',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r773nf14.html',
-    priceCentsM2: 8365, 
+    priceCentsM2: 8365,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1135,23 +1135,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r680nf14',
@@ -1159,7 +1159,7 @@ const products = [
     name: 'R680NF14 sintra argo',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r680nf14.html',
-    priceCentsM2: 8158, 
+    priceCentsM2: 8158,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1176,23 +1176,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r669nf14',
@@ -1200,7 +1200,7 @@ const products = [
     name: 'R669NF14 sintra geo nelino',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r669nf14.html',
-    priceCentsM2: 8158, 
+    priceCentsM2: 8158,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1217,23 +1217,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r749nf14',
@@ -1241,7 +1241,7 @@ const products = [
     name: 'R749NF14 vascu geo rotado',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r749nf14.html',
-    priceCentsM2: 8266, 
+    priceCentsM2: 8266,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1258,23 +1258,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r692nf14',
@@ -1282,7 +1282,7 @@ const products = [
     name: 'R692NF14 sintra crema',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r692nf14.html',
-    priceCentsM2: 8266, 
+    priceCentsM2: 8266,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1299,23 +1299,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r766nf14',
@@ -1323,7 +1323,7 @@ const products = [
     name: 'R766NF14 vascu sabiosa rotado',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r766nf14.html',
-    priceCentsM2: 8365, 
+    priceCentsM2: 8365,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1340,23 +1340,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r696nf14',
@@ -1364,7 +1364,7 @@ const products = [
     name: 'R696NF14 sintra crema duna',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r696nf14.html',
-    priceCentsM2: 8021, 
+    priceCentsM2: 8021,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1381,23 +1381,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r688nf14',
@@ -1405,7 +1405,7 @@ const products = [
     name: 'R688NF14 sintra sabioso',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r688nf14.html',
-    priceCentsM2: 7903, 
+    priceCentsM2: 7903,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1422,23 +1422,23 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r665nf14',
@@ -1446,7 +1446,7 @@ const products = [
     name: 'R665NF14 sintra sabioso binaro',
     availability: 'In Stock',
     filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r665nf14.html',
-    priceCentsM2: 8021, 
+    priceCentsM2: 8021,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1463,33 +1463,33 @@ const products = [
       format: '240x71x14',
       recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26, 
+      weightOf1SquareMeter: 26,
       weightOf1PackGramm: 1300,
       manufacturer: 'Feldhaus Klinker',
       countryOfOrigin: 'Germany',
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
-  }, 
+  },
 
 
 
 
-  
 
 
-  
+
+
   // { id: 'klinker-brick-slip-r303nf9-feldhaus-klinker',
   //   type: 'Klinker brick slip',
   //   name: 'R303NF9 ardor liso',
@@ -1513,7 +1513,7 @@ const products = [
   //     weightOf1PackGramm: 1750,
   //     manufacturer: 'Feldhaus Klinker',
   //     countryOfOrigin: 'Germany',
-      
+
   //   },
 
   //   image_original: [
@@ -1552,13 +1552,13 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_main.webp', 
-      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_interior.webp', 
-      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_wall.webp', 
+      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_main.webp',
+      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_interior.webp',
+      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_wall.webp',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_main.webp', 
-      '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_interior.webp', 
+      '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_interior.webp',
     ]
   }, {
     id: 'k658wdf',
@@ -1584,15 +1584,15 @@ const products = [
     },
 
     image_large: [
-      '/bricks/images/product_images/brick/k658wdf/main/k658wdf_large.jpg', 
+      '/bricks/images/product_images/brick/k658wdf/main/k658wdf_large.jpg',
     ],
 
     image_original: [
-      '/bricks/images/product_images/brick/k658wdf/main/k658wdf_main.jpg', 
+      '/bricks/images/product_images/brick/k658wdf/main/k658wdf_main.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg', 
+      '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.jpg',
+      '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.jpg',
     ]
   }, {
     id: 'w100nf9',
@@ -1624,16 +1624,16 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.jpg',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.jpg',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.jpg', 
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp', 
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
 
   }, {
@@ -1662,11 +1662,11 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/stair_tile/4817710/main/4817710_main.jpg', 
-      '/bricks/images/product_images/stair_tile/4817710/main/4817710_one.jpg',     ],
+      '/bricks/images/product_images/stair_tile/4817710/main/4817710_main.jpg',
+      '/bricks/images/product_images/stair_tile/4817710/main/4817710_one.jpg',],
     image_thumbnail: [
-      '/bricks/images/product_images/stair_tile/4817710/thumbnail/4817710_thumbnail_main.jpg', 
-      '/bricks/images/product_images/stair_tile/4817710/thumbnail/8031710_thumbnail_one.jpg', 
+      '/bricks/images/product_images/stair_tile/4817710/thumbnail/4817710_thumbnail_main.jpg',
+      '/bricks/images/product_images/stair_tile/4817710/thumbnail/8031710_thumbnail_one.jpg',
     ]
   }, {
     id: 'klinker-floor-tile-aera-710-crio-8031-stroeher',
@@ -1674,7 +1674,7 @@ const products = [
     name: 'AERA 710 crio 8031',
     availability: 'In Stock',
     filepath: '/bricks/product_pages/klinker-floor-tile-aera-710-crio-8031-stroeher.html',
-    priceCentsM2: 8217, 
+    priceCentsM2: 8217,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1695,13 +1695,13 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/stair_tile/8031710/main/8031710_floor.jpg', 
-      '/bricks/images/product_images/stair_tile/8031710/main/8031710_stairs.jpg', 
-      '/bricks/images/product_images/stair_tile/8031710/main/8031710_one.jpg', 
+      '/bricks/images/product_images/stair_tile/8031710/main/8031710_floor.jpg',
+      '/bricks/images/product_images/stair_tile/8031710/main/8031710_stairs.jpg',
+      '/bricks/images/product_images/stair_tile/8031710/main/8031710_one.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_floor.jpg', 
-      '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_one.jpg', 
+      '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_floor.jpg',
+      '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_one.jpg',
     ]
   }, {
     id: 'thermopanel-with-klinker-brick-slip-r228nf9-feldhaus-klinker',
@@ -1730,12 +1730,12 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/thermopanel/TP228NF/main/r228nf9_main.jpg', 
-      '/bricks/images/product_images/thermopanel/TP228NF/main/r228nf9_side.jpg', 
+      '/bricks/images/product_images/thermopanel/TP228NF/main/r228nf9_main.jpg',
+      '/bricks/images/product_images/thermopanel/TP228NF/main/r228nf9_side.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_main.jpg', 
-      '/bricks/images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_side.jpg', 
+      '/bricks/images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_main.jpg',
+      '/bricks/images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_side.jpg',
     ]
   }, {
     id: 'ceramic-fence-cap-king-klinker-ruby-red-01',
@@ -1758,12 +1758,12 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/fence_cap/KKFCW01/main/KKFCW01_main.webp', 
-      '/bricks/images/product_images/fence_cap/KKFCW01/main/KKFCW01_fence.webp', 
+      '/bricks/images/product_images/fence_cap/KKFCW01/main/KKFCW01_main.webp',
+      '/bricks/images/product_images/fence_cap/KKFCW01/main/KKFCW01_fence.webp',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_main.webp', 
-      '/bricks/images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_fence.webp', 
+      '/bricks/images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_main.webp',
+      '/bricks/images/product_images/fence_cap/KKFCW01/thumbnail/KKFCW01_thumbnail_fence.webp',
     ]
   }, {
     id: 'klinker-clay-paver-p408kf-gala-nero-feldhaus-klinker',
@@ -1788,12 +1788,12 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/clay_pavers/p408kf/main/p408kf_main.jpg', 
-      '/bricks/images/product_images/clay_pavers/p408kf/main/p408kf_path.jpg', 
+      '/bricks/images/product_images/clay_pavers/p408kf/main/p408kf_main.jpg',
+      '/bricks/images/product_images/clay_pavers/p408kf/main/p408kf_path.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_main.jpg', 
-      '/bricks/images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_path.jpg', 
+      '/bricks/images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_main.jpg',
+      '/bricks/images/product_images/clay_pavers/p408kf/thumbnail/p408kf_thumbnail_path.jpg',
     ]
   }, {
     id: 'ceramic-window-sill-onyx-black-17-king-klinker',
@@ -1821,11 +1821,11 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/window_sills/KKWSO17/main/KKWSO17_main.webp', 
-      '/bricks/images/product_images/window_sills/KKWSO17/main/KKWSO17_window.webp',     ],
+      '/bricks/images/product_images/window_sills/KKWSO17/main/KKWSO17_main.webp',
+      '/bricks/images/product_images/window_sills/KKWSO17/main/KKWSO17_window.webp',],
     image_thumbnail: [
-      '/bricks/images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_main.webp', 
-      '/bricks/images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_window.webp', 
+      '/bricks/images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_main.webp',
+      '/bricks/images/product_images/window_sills/KKWSO17/thumbnail/KKWSO17_thumbnail_window.webp',
     ]
   }, {
     id: 'mineral-waterproof-mortar-mds-72379-quick-mix',
@@ -1848,12 +1848,12 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/mortars/QMMDS01/main/QMMDS01_main.png', 
+      '/bricks/images/product_images/mortars/QMMDS01/main/QMMDS01_main.png',
 
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_main.png', 
-      '/bricks/images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_side.png', 
+      '/bricks/images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_main.png',
+      '/bricks/images/product_images/mortars/QMMDS01/thumbnail/QMMDS01_thumbnail_side.png',
     ]
   }
 ];
