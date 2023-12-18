@@ -501,6 +501,7 @@ const products = [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r685nf14/thumbnail/r685nf14_thumbnail_side.webp',
     ]
   }, 
+  
   // {
   //   id: 'r743nf14',
   //   type: 'Klinker brick slip',
