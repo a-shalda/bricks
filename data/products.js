@@ -750,7 +750,6 @@ const products = [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r658nf14/main/r658nf14_chairs.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r658nf14/main/r658nf14_pool.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r658nf14/main/r658nf14_path.webp',
-
     ],
 
     image_thumbnail: [
