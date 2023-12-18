@@ -9,6 +9,7 @@ let productThumbnailslHTML = '';
 let productTitle = '';
 let productDescription = '';
 let productName = ''
+let productId = ''
 let metaDescription = ''
 let productManufacturer = ''
 let productNumberInProducts;
@@ -36,6 +37,7 @@ products.forEach((product, index) => {
     metaDescription = 'Buy ' + productTitle + ' in Moscow';
     productName = product.name
     productManufacturer = product.specs.manufacturer
+    productId = product.id
 
     // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
 
@@ -100,8 +102,8 @@ document.querySelector('title').innerHTML = productTitle;
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
 
+document.querySelector('.additional__window__head__h2').innerHTML = 'About ' + productId.toUpperCase();
 document.querySelector('.additional__window__body').innerHTML = productDescription;
-document.querySelector('.additional__window__head__h2').innerHTML = product.id.toUpperCase() + ' description';
 
 document.querySelector('.main__cont__title').innerHTML = productTitle;
 document.querySelector('meta[name="description"]').setAttribute("content", metaDescription);
