@@ -1528,16 +1528,12 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_main.webp',
+
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/thumbnail/r686nf14_thumbnail_main.webp',
     ]
   }, {
     id: 'r665nf14',
@@ -1579,6 +1575,57 @@ const products = [
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
+    ]
+  },
+  {
+    id: 'r686nf14',
+    type: 'Klinker brick slip',
+    name: 'R686NF14 sintra ardor calino',
+    availability: 'In Stock',
+    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r686nf14.html',
+    priceCentsM2: 7903,
+    supplierPriceType: 'm2',
+    isM2: true,
+    isLinearMeter: false,
+    description: `Clinker tiles R686NF14 are produced at one of the best German enterprises - the Feldhaus Klinker plant. The letter “R” stands for “Riemchen”, which means “tile”. Aged surface, with torn edges, SINTRA series. The chic dark red color, with a yellow-orange patina, is the epitome of antique brickwork. The entire Feldhaus Klinker façade program is manufactured using the piecemeal method. Those. clinker tiles are not cut from the brick, but are produced as is.
+    Both ordinary and L-shaped corner elements are produced for the design of door and window openings, as well as external corners of the building. Standard European NF format, ideal imitation of clinker brick laying. With proper installation, the service life of the facade will be more than 50 years. Supplied in cardboard boxes of 24 pieces, double, i.e. On the side, two tiles are soldered. They are easily separated with a light blow in the middle of the back side.
+    To see clinker tiles R686NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
+
+    specs: {
+      piecesInSquareMeterCm: 4800,
+      piecesInPack: 24,
+      squareMetersInPallet: 45,
+      recommendedJointSpacing: '10-12',
+      thickness: 14,
+      format: '240x71x14',
+      recommendedDryMortarVolume: '4-6',
+      weightOf1PieceGramm: 54,
+      weightOf1SquareMeter: 26,
+      weightOf1PackGramm: 1300,
+      manufacturer: 'Feldhaus Klinker',
+      countryOfOrigin: 'Germany',
+    },
+
+    image_original: [
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_main_light.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_side_light.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_side_gray.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_cat.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_wall.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_chair.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_flowers.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_patio.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_horses.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_front.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_pond.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_window.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_house.webp',
+    ],
+
+    image_thumbnail: [
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/thumbnail/r686nf14_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/thumbnail/r686nf14_thumbnail_side.webp',
     ]
   },
 
