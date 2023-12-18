@@ -99,7 +99,9 @@ products.forEach((product, index) => {
 document.querySelector('title').innerHTML = productTitle;
 document.querySelector('.main__window__top__left').innerHTML = productOriginalHTML;
 document.querySelector('.main__window__bottom__left__grid').innerHTML = productThumbnailslHTML;
+
 document.querySelector('.additional__window__body').innerHTML = productDescription;
+document.querySelector('.additional__window__head__h2').innerHTML = product.id.toUpperCase() + ' description';
 
 document.querySelector('.main__cont__title').innerHTML = productTitle;
 document.querySelector('meta[name="description"]').setAttribute("content", metaDescription);
