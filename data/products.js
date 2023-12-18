@@ -624,16 +624,25 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_side.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_flowers.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_window.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_entrance.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_door.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_windows.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_wall.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_garage.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_left.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_building.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_front.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_stairs.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/main/r764nf14_building_two.webp',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/thumbnail/r764nf14_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r764nf14/thumbnail/r764nf14_thumbnail_side.webp',
     ]
   }, {
     id: 'r773nf14',
