@@ -982,12 +982,30 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/main/r686nf14_main.webp',
-
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_side.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_gray.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_side_gray.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_left.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_door.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_right.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_attic.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_car.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_wall.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_glass.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_door_two.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_window.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_fence.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_front_left.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_front.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_garages.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_street.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/main/r688nf14_playground.webp',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r686nf14/thumbnail/r686nf14_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/thumbnail/r688nf14_thumbnail_main.webp',
     ]
   }, {
     id: 'r665nf14',
