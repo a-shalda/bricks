@@ -833,16 +833,31 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_sand.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_side.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_corner_three.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_grass.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_corner.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_corner_four.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_corner_one.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_corner_entrance.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_window.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_and_r773nf14.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_sky_two.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_balconies_two.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_roof.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_balconies.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_wall.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_first.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_bicycles.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_sky.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/main/r766nf14_building.webp',
     ],
 
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/thumbnail/r766nf14_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/thumbnail/r766nf14_thumbnail_side.webp',
     ]
   }, {
     id: 'r696nf14',
