@@ -1022,12 +1022,12 @@ const products = [
       '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_one.webp',
     ]
   }, {
-    id: 'thermopanel-with-klinker-brick-slip-r228nf9-feldhaus-klinker',
+    id: 'r788nf9_thermopanel',
     type: 'Thermopanel',
-    name: 'R228NF9 ardor liso',
+    name: 'R788NF9 planto ardor venito',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/thermopanel-with-klinker-brick-slip-r228nf9-feldhaus-klinker.html',
-    priceCentsM2: 8240,
+    filepath: '/bricks/thermopanel/feldhaus_klinker/r788nf9_thermopanel.html',
+    priceCentsM2: 7240,
     supplierPriceType: 'm2',
     isM2: true,
     isLinearMeter: false,
@@ -1036,8 +1036,8 @@ const products = [
       piecesInSquareMeterCm: 200,
       piecesInPack: 10,
       squareMetersInPallet: 5,
-      recommendedJointSpacing: '10-12',
-      thickness: 9,
+      // recommendedJointSpacing: '10-12',
+      thickness: 60,
       format: '240x71x9x60',
       // recommendedDryMortarVolume: '4-6',
       weightOf1PieceGramm: 1200,
@@ -1048,12 +1048,25 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/thermopanel/TP228NF/main/r228nf9_main.webp',
-      '/bricks/images/product_images/thermopanel/TP228NF/main/r228nf9_side.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_main.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_side.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_wall.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_house.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_chairs.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_window.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_windows.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_sky.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_building.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_round.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_street.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_grass.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_side_left.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/main/r788nf9_pool_day.webp',
     ],
+
     image_thumbnail: [
-      '/bricks/images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_main.webp',
-      '/bricks/images/product_images/thermopanel/TP228NF/thumbnail/TP228NF_thumbnail_side.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/thumbnail/r788nf9_thumbnail_main.webp',
+      '/bricks/images/product_images/thermopanel/feldhaus_klinker/r788nf9/thumbnail/r788nf9_thumbnail_side.webp',
     ]
   }, {
     id: 'ceramic-fence-cap-king-klinker-ruby-red-01',
@@ -1106,7 +1119,6 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_main.webp',
       '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_light.webp',
       '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_flowers.webp',
       '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_path.webp',
