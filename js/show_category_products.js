@@ -325,9 +325,10 @@ let timeOut = ''
 let timeOutBack = ''
 
 function addOnMouseImageAnimation (indicesOfProducts) {
+
+    console.log(document.querySelectorAll('.product'))
     
-    const allProducts = document.querySelectorAll('.product')
-    console.log(allProducts)
+    document.querySelectorAll('.product')
     
         .forEach((product, index) => {
 
