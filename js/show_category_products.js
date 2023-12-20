@@ -105,7 +105,7 @@ const showCategoryProducts = () => {
     addOnMouseImageAnimation(indicesOfProducts);
 }
 
-function showProducts (product, index, indicesOfProducts) {
+function showProducts (product, index) {
 
     let productsHTML = '';
     indicesOfProducts.push(index);
