@@ -321,6 +321,9 @@ function showProducts (product, index) {
     return productsHTML;
 }
 
+let timeOut = ''
+let timeOutBack = ''
+
 function addOnMouseImageAnimation (indicesOfProducts) {
     
     document.querySelectorAll('.product')
@@ -329,6 +332,9 @@ function addOnMouseImageAnimation (indicesOfProducts) {
 
             const first = product.querySelector('.product_img_' + indicesOfProducts[index]);
             const second = product.querySelector('.product_img_second_' + indicesOfProducts[index]);
+
+            console.log(first)
+            console.log(second)
 
             second.addEventListener('load', () => {
                 
@@ -348,8 +354,8 @@ function addOnMouseImageAnimation (indicesOfProducts) {
             
                         first.classList.add('opacity');
                         second.classList.add('opacity');
-                        let timeOut = setTimeout(moveLeft, 1000);
-                        let timeOutBack = setTimeout(moveRight, 5000);
+                        timeOut = setTimeout(moveLeft, 1000);
+                        timeOutBack = setTimeout(moveRight, 5000);
                     
                     product.addEventListener('mouseleave', () => {
             

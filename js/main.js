@@ -187,19 +187,3 @@ document.querySelectorAll('.categories__box')
         
     });
 });
-
-//Generating products on the page
-
-// let productsHTML = '';
-
-// products.forEach((product, index) => {
-
-//     productsHTML += showProducts (product, index, indicesOfProducts);
-// });
-// document.querySelector('.products').innerHTML = productsHTML;
-
-//Adding pulsing image animation on load
-// addPulsingImageAnimation();
-
-//Adding onmouse image animation
-// addOnMouseImageAnimation(indicesOfProducts);
