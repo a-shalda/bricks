@@ -1,5 +1,8 @@
 //Generating products on the page
 
+
+let indicesOfProducts = [];
+
 //For eight major categories and brand pages
 function showCategoryProducts () {
 
@@ -8,7 +11,6 @@ function showCategoryProducts () {
     const root = document.URL.slice((findSlash + 1), findDot);
     
     let productsHTML = '';
-    let indicesOfProducts = [];
 
     let categoryOne = '';
     let categoryTwo = '';
