@@ -1106,20 +1106,20 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_main.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_light.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_flowers.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_path.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_house.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_grass.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_door.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_gate.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_left.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/main/p402skf_eco_fasade.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_main.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_light.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_flowers.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_path.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_house.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_grass.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_door.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_gate.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_left.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/main/p402skf_eco_fasade.webp',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/thumbnail/p402skf_eco_thumbnail_main.webp',
-      '/bricks/images/product_images/clay_paver/feldhaus_klinker/thumbnail/p402skf_eco_thumbnail_side.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/thumbnail/p402skf_eco_thumbnail_main.webp',
+      '/bricks/images/product_images/clay_paver/feldhaus_klinker/p402skf_eco/thumbnail/p402skf_eco_thumbnail_side.webp',
     ]
   }, {
     id: 'ceramic-window-sill-onyx-black-17-king-klinker',
