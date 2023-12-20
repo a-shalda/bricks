@@ -984,8 +984,8 @@ const products = [
       '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_side.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_main.jpg',
-      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_side.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_thumbnail_main.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_thumbnail_side.jpg',
     ]
   }, {
     id: '710_8031',
