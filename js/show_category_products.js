@@ -342,7 +342,7 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                 
                 first.addEventListener('load', () => {
 
-                    console.log('second yes')
+                    console.log('second yes') //nor clicking
 
                     function moveLeft() {
                         first.classList.add('moveLeft');
@@ -372,10 +372,12 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                         first.classList.remove('opacity','moveLeft','moveRight');
                         second.classList.remove('opacity','moveLeft','moveRight');
                     });
+                
                 })
 
-
+                getEventListeners(first)
             })
+
         });
     });
 }
