@@ -339,10 +339,10 @@ function addOnMouseImageAnimation (indicesOfProducts) {
             console.log(second)
 
             second.addEventListener('load', () => {
-
-                console.log('second yes')
                 
                 first.addEventListener('load', () => {
+
+                    console.log('second yes')
 
                     function moveLeft() {
                         first.classList.add('moveLeft');
