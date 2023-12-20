@@ -980,19 +980,19 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_main.webp',
-      '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_side.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_main.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_side.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_main.webp',
-      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_side.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_main.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_side.jpg',
     ]
   }, {
-    id: 'klinker-floor-tile-aera-710-crio-8031-stroeher',
+    id: '710_8031',
     type: 'Klinker floor tile',
     name: 'AERA 710 crio 8031',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-floor-tile-aera-710-crio-8031-stroeher.html',
+    filepath: '/bricks/stair_tile/stroeher/710_8031.html',
     priceCentsM2: 8217,
     supplierPriceType: 'm2',
     isM2: true,
@@ -1014,13 +1014,13 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/stair_tile/8031710/main/8031710_floor.webp',
-      '/bricks/images/product_images/stair_tile/8031710/main/8031710_stairs.webp',
-      '/bricks/images/product_images/stair_tile/8031710/main/8031710_one.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_8031/main/710_8031_floor.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_8031/main/710_8031_one.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_8031/main/710_8031_stairs.jpg',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_floor.webp',
-      '/bricks/images/product_images/stair_tile/8031710/thumbnail/8031710_one.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_8031/thumbnail/710_8031_floor.jpg',
+      '/bricks/images/product_images/stair_tile/stroeher/710_8031/thumbnail/710_8031_one.jpg',
     ]
   }, {
     id: 'r788nf9_thermopanel',
