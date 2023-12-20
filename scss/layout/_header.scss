@@ -40,7 +40,6 @@
           position: absolute;
           top: -0.42rem;
 
-
           &--active {
             opacity: 0.8;
           }
@@ -54,10 +53,10 @@
 
       }
       &__hamburger {
-        // width: 2rem;
+        width: 2.5rem;
 
         @include breakpoint(medium) {
-          width: 2.5rem;
+          width: 2.8rem;
         }
 
         &__nav-toggle {

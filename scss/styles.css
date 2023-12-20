@@ -225,9 +225,12 @@ sup {
     opacity: 0.8;
   }
 }
+.header__upper__left__hamburger {
+  width: 2.5rem;
+}
 @media (min-width: 42.75em) {
   .header__upper__left__hamburger {
-    width: 2.5rem;
+    width: 2.8rem;
   }
 }
 .header__upper__left__hamburger__nav-toggle {
