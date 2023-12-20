@@ -89,7 +89,7 @@
     &__price {
       &--m2 {
         display: flex;
-        width: 70%;
+        width: 60%;
         justify-content: center;
         align-items: center;
         padding-left: 0.5rem;
@@ -98,9 +98,9 @@
         border-bottom-right-radius: 0.5rem;
         margin-left: -1px;
 
-        // @include breakpoint(small) {
-        //   width: 70%;
-        // }
+        @include breakpoint(small) {
+          width: 50%;
+        }
 
         @include breakpoint(medium) {
           width: 60%;

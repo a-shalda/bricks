@@ -700,7 +700,7 @@ sup {
 }
 .product__middle__price--m2 {
   display: flex;
-  width: 70%;
+  width: 60%;
   justify-content: center;
   align-items: center;
   padding-left: 0.5rem;
@@ -708,6 +708,11 @@ sup {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   margin-left: -1px;
+}
+@media (min-width: 29em) {
+  .product__middle__price--m2 {
+    width: 50%;
+  }
 }
 @media (min-width: 42.75em) {
   .product__middle__price--m2 {
