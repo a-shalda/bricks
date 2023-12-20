@@ -4,7 +4,7 @@
 let indicesOfProducts = [];
 
 //For eight major categories and brand pages
-function showCategoryProducts () {
+const showCategoryProducts = () => {
 
     const findSlash = document.URL.lastIndexOf('/');
     const findDot = document.URL.indexOf('.html');
