@@ -1,6 +1,5 @@
 //Generating products on the page
 let productsHTML = '';
-let indicesOfProducts = [];
 
 wishlist.forEach(wish => {
 

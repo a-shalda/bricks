@@ -51,7 +51,6 @@ searchField.addEventListener('keydown', () => {
 
 })
 
-let indicesOfProducts = [];
 
 function generateProducts () {
 

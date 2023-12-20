@@ -191,7 +191,6 @@ document.querySelectorAll('.categories__box')
 //Generating products on the page
 
 let productsHTML = '';
-let indicesOfProducts = [];
 
 products.forEach((product, index) => {
 
