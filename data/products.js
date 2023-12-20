@@ -902,21 +902,21 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_main.webp',
-      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_interior.webp',
-      '/bricks/images/product_images/brick_slip/KKLF18O/main/KKLF18O_wall.webp',
+      '/bricks/images/product_images/brick_slip/king_klinker/obsidian_shadow_lf18/main/KKLF18O_main.webp',
+      '/bricks/images/product_images/brick_slip/king_klinker/obsidian_shadow_lf18/main/KKLF18O_interior.webp',
+      '/bricks/images/product_images/brick_slip/king_klinker/obsidian_shadow_lf18/main/KKLF18O_wall.webp',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/KKLF18O/thumbnail/KKLF18O_thumbnail_interior.webp',
+      '/bricks/images/product_images/brick_slip/king_klinker/obsidian_shadow_lf18/thumbnail/KKLF18O_thumbnail_main.webp',
+      '/bricks/images/product_images/brick_slip/king_klinker/obsidian_shadow_lf18/thumbnail/KKLF18O_thumbnail_interior.webp',
     ]
   }, {
-    id: 'k658wdf',
+    id: 'k746wdf',
     type: 'Klinker brick',
-    name: 'K658WDF sintra ardor belino',
+    name: 'K746WDF vascu cerasi rotado',
     availability: 'In Stock',
-    filepath: '/bricks/klinker_brick/feldhaus_klinker/k658wdf.html',
-    priceCentsPc: 264,
+    filepath: '/bricks/klinker_brick/feldhaus_klinker/k746wdf.html',
+    priceCentsPc: 286,
     supplierPriceType: 'pc',
     isM2: true,
     isLinearMeter: false,
@@ -933,16 +933,26 @@ const products = [
       countryOfOrigin: 'Germany',
     },
 
-    image_large: [
-      '/bricks/images/product_images/brick/k658wdf/main/k658wdf_large.webp',
-    ],
-
     image_original: [
-      '/bricks/images/product_images/brick/k658wdf/main/k658wdf_main.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_main.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_wall.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_window.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_wall_one.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_balcony_one.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_balcony_two.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_balcony.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_balcony_three.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_windows.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_left.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_right.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_left_one.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_left_two.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_right_one.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/main/k746wdf_front.webp',
     ],
     image_thumbnail: [
-      '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_main.webp',
-      '/bricks/images/product_images/brick/k658wdf/thumbnail/k658wdf_thumbnail_side.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/thumbnail/k746wdf_thumbnail_main.webp',
+      '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/thumbnail/k746wdf_thumbnail_side.webp',
     ]
   }, {
     id: 'klinker-stair-tile-loft-angle-aera-710-crio-4817-stroeher',
