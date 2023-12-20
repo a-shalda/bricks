@@ -955,11 +955,11 @@ const products = [
       '/bricks/images/product_images/brick/feldhaus_klinker/k746wdf/thumbnail/k746wdf_thumbnail_side.webp',
     ]
   }, {
-    id: 'klinker-stair-tile-loft-angle-aera-710-crio-4817-stroeher',
+    id: '710_4817',
     type: 'Klinker stair tile',
     name: 'loft angle AERA 710 crio 4817',
     availability: 'In Stock',
-    filepath: '/bricks/product_pages/klinker-stair-tile-loft-angle-aera-710-crio-4817-stroeher.html',
+    filepath: '/bricks/stair_tile/stroeher/710_4817.html',
     priceCentsPc: 2698,
     supplierPriceType: 'pc',
     isM2: false,
@@ -980,11 +980,12 @@ const products = [
     },
 
     image_original: [
-      '/bricks/images/product_images/stair_tile/4817710/main/4817710_main.webp',
-      '/bricks/images/product_images/stair_tile/4817710/main/4817710_one.webp',],
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_main.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/main/710_4817_side.webp',
+    ],
     image_thumbnail: [
-      '/bricks/images/product_images/stair_tile/4817710/thumbnail/4817710_thumbnail_main.webp',
-      '/bricks/images/product_images/stair_tile/4817710/thumbnail/8031710_thumbnail_one.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_main.webp',
+      '/bricks/images/product_images/stair_tile/stroeher/710_4817/thumbnail/710_4817_side.webp',
     ]
   }, {
     id: 'klinker-floor-tile-aera-710-crio-8031-stroeher',
