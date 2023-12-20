@@ -2,7 +2,6 @@
 
 
 let indicesOfProducts = [];
-console.log(indicesOfProducts)
 
 //For eight major categories and brand pages
 const showCategoryProducts = () => {

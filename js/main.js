@@ -199,7 +199,7 @@ products.forEach((product, index) => {
 document.querySelector('.products').innerHTML = productsHTML;
 
 //Adding pulsing image animation on load
-addPulsingImageAnimation();
+// addPulsingImageAnimation();
 
 //Adding onmouse image animation
-addOnMouseImageAnimation(indicesOfProducts);
+// addOnMouseImageAnimation(indicesOfProducts);

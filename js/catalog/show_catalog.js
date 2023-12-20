@@ -1,1 +1,3 @@
 showCategoryProducts();
+
+console.log(indicesOfProducts)
