@@ -339,6 +339,8 @@ function addOnMouseImageAnimation (indicesOfProducts) {
             console.log(second)
 
             second.addEventListener('load', () => {
+
+                console.log('second yes')
                 
                 first.addEventListener('load', () => {
 
@@ -371,6 +373,8 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                         second.classList.remove('opacity','moveLeft','moveRight');
                     });
                 })
+
+
             })
         });
     });
