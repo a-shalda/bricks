@@ -326,7 +326,8 @@ let timeOutBack = ''
 
 function addOnMouseImageAnimation (indicesOfProducts) {
     
-    document.querySelectorAll('.product')
+    const allProducts = document.querySelectorAll('.product')
+    console.log(allProducts)
     
         .forEach((product, index) => {
 
@@ -356,6 +357,8 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                         second.classList.add('opacity');
                         timeOut = setTimeout(moveLeft, 1000);
                         timeOutBack = setTimeout(moveRight, 5000);
+                        console.log(timeOut)
+                        console.log(timeOutBack)
                     
                     product.addEventListener('mouseleave', () => {
             
