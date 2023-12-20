@@ -375,7 +375,7 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                 
                 })
 
-                getEventListeners(first)
+                console.log(getEventListeners(first))
             })
 
         });
