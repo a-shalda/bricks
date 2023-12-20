@@ -325,8 +325,6 @@ let timeOut = ''
 let timeOutBack = ''
 
 function addOnMouseImageAnimation (indicesOfProducts) {
-
-    console.log(document.querySelectorAll('.product'))
     
     document.querySelectorAll('.product')
     
@@ -336,7 +334,6 @@ function addOnMouseImageAnimation (indicesOfProducts) {
             const second = product.querySelector('.product_img_second_' + indicesOfProducts[index]);
 
             second.addEventListener('load', () => {
-                console.log('added')
                 
                 function moveLeft() {
                     first.classList.add('moveLeft');
@@ -354,8 +351,6 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                     second.classList.add('opacity');
                     timeOut = setTimeout(moveLeft, 1000);
                     timeOutBack = setTimeout(moveRight, 5000);
-                    console.log(timeOut)
-                    console.log(timeOutBack)
                 
                 product.addEventListener('mouseleave', () => {
         
