@@ -20,6 +20,9 @@ const showCategoryProducts = () => {
         categoryOne = 'Klinker brick slip';
         categoryTwo = 'Klinker corner brick slip';
     }
+    else if (root === 'index') {
+        categoryOne = 'Klinker brick slip';
+    }
     else if (root === 'bricks') {
         categoryOne = 'Klinker brick';
     }
