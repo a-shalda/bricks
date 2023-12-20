@@ -376,6 +376,13 @@ function addOnMouseImageAnimation (indicesOfProducts) {
                 })
             })
 
+            if (first.getAttribute('listener') !== 'true') {
+                first.addEventListener('click', function (e) {
+                    const elementClicked = e.target;
+                    elementClicked.setAttribute('listener', 'true');
+                    console.log('event has been attached');
+                });
+            }
         });
     });
 }
