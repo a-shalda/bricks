@@ -335,85 +335,38 @@ function addOnMouseImageAnimation (indicesOfProducts) {
             const first = product.querySelector('.product_img_' + indicesOfProducts[index]);
             const second = product.querySelector('.product_img_second_' + indicesOfProducts[index]);
 
-            console.log(first)
-            console.log(second)
-
             second.addEventListener('load', () => {
+                console.log('added')
                 
-                first.addEventListener('load', () => {
-
-                    console.log('second yes') //nor clicking
-
-                    function moveLeft() {
-                        first.classList.add('moveLeft');
-                        second.classList.add('moveLeft');
-                    }
+                function moveLeft() {
+                    first.classList.add('moveLeft');
+                    second.classList.add('moveLeft');
+                }
+    
+                function moveRight() {
+                    first.classList.add('moveRight');
+                    second.classList.add('moveRight');
+                }
+    
+                product.addEventListener('mouseenter', () => {
         
-                    function moveRight() {
-                        first.classList.add('moveRight');
-                        second.classList.add('moveRight');
-                    }
-        
-                    product.addEventListener('mouseenter', () => {
-            
-                        first.classList.add('opacity');
-                        second.classList.add('opacity');
-                        timeOut = setTimeout(moveLeft, 1000);
-                        timeOutBack = setTimeout(moveRight, 5000);
-                        console.log(timeOut)
-                        console.log(timeOutBack)
-                    
-                    product.addEventListener('mouseleave', () => {
-            
-                        clearTimeout(timeOut);
-                        clearTimeout(timeOutBack);
-                        moveRight();
-            
-                        first.classList.remove('opacity','moveLeft','moveRight');
-                        second.classList.remove('opacity','moveLeft','moveRight');
-                    });
+                    first.classList.add('opacity');
+                    second.classList.add('opacity');
+                    timeOut = setTimeout(moveLeft, 1000);
+                    timeOutBack = setTimeout(moveRight, 5000);
+                    console.log(timeOut)
+                    console.log(timeOutBack)
                 
-                })
+                product.addEventListener('mouseleave', () => {
+        
+                    clearTimeout(timeOut);
+                    clearTimeout(timeOutBack);
+                    moveRight();
+        
+                    first.classList.remove('opacity','moveLeft','moveRight');
+                    second.classList.remove('opacity','moveLeft','moveRight');
+                });
             })
-
-            if (first.getAttribute('listener') !== 'true') {
-                console.log('event has not been attached');
-
-                    function moveLeft() {
-                        first.classList.add('moveLeft');
-                        second.classList.add('moveLeft');
-                    }
-        
-                    function moveRight() {
-                        first.classList.add('moveRight');
-                        second.classList.add('moveRight');
-                    }
-        
-                    product.addEventListener('mouseenter', () => {
-            
-                        first.classList.add('opacity');
-                        second.classList.add('opacity');
-                        timeOut = setTimeout(moveLeft, 1000);
-                        timeOutBack = setTimeout(moveRight, 5000);
-                        console.log(timeOut)
-                        console.log(timeOutBack)
-                    
-                    product.addEventListener('mouseleave', () => {
-            
-                        clearTimeout(timeOut);
-                        clearTimeout(timeOutBack);
-                        moveRight();
-            
-                        first.classList.remove('opacity','moveLeft','moveRight');
-                        second.classList.remove('opacity','moveLeft','moveRight');
-                    });
-                
-                })
-            }
-
-            if (first.getAttribute('listener') !== 'true') {
-                console.log('event has not been attached');
-            }
         });
     });
 }
