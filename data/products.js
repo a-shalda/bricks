@@ -763,47 +763,6 @@ const products = [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r669nf14/thumbnail/r669nf14_thumbnail_side.webp',
     ]
   }, {
-    id: 'r749nf14',
-    type: 'Klinker brick slip',
-    name: 'R749NF14 vascu geo rotado',
-    availability: 'In Stock',
-    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r749nf14.html',
-    priceCentsM2: 8266,
-    supplierPriceType: 'm2',
-    isM2: true,
-    isLinearMeter: false,
-    description: `Clinker tiles R749NF14 are produced at one of the best German enterprises - the Feldhaus Klinker plant. The letter “R” stands for “Riemchen”, which means “tile”. Aged surface, VASCU series, “water touches”. The brown color with a sandy coating attracts with its appearance, reminiscent of antique brickwork. The entire Feldhaus Klinker façade program is manufactured using the piecemeal method. Those. clinker tiles are not cut from the brick, but are produced as is.
-    Both ordinary and L-shaped corner elements are produced for the design of door and window openings, as well as external corners of the building. Standard European NF format, ideal imitation of clinker brick laying. With proper installation, the service life of the facade will be more than 50 years. Supplied in cardboard boxes of 24 pieces, double, i.e. On the side, two tiles are soldered. They are easily separated with a light blow in the middle of the back side.
-    To see clinker tiles R749NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
-
-    specs: {
-      piecesInSquareMeterCm: 4800,
-      piecesInPack: 24,
-      squareMetersInPallet: 45,
-      recommendedJointSpacing: '10-12',
-      thickness: 14,
-      format: '240x71x14',
-      recommendedDryMortarVolume: '4-6',
-      weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26,
-      weightOf1PackGramm: 1300,
-      manufacturer: 'Feldhaus Klinker',
-      countryOfOrigin: 'Germany',
-    },
-
-    image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.webp',
-    ],
-
-    image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
-    ]
-  }, {
     id: 'r766nf14',
     type: 'Klinker brick slip',
     name: 'R766NF14 vascu sabiosa rotado',
@@ -858,47 +817,6 @@ const products = [
     image_thumbnail: [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/thumbnail/r766nf14_thumbnail_main.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r766nf14/thumbnail/r766nf14_thumbnail_side.webp',
-    ]
-  }, {
-    id: 'r696nf14',
-    type: 'Klinker brick slip',
-    name: 'R696NF14 sintra crema duna',
-    availability: 'In Stock',
-    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r696nf14.html',
-    priceCentsM2: 8021,
-    supplierPriceType: 'm2',
-    isM2: true,
-    isLinearMeter: false,
-    description: `Clinker tiles R696NF14 are produced at one of the best German enterprises - the Feldhaus Klinker plant. The letter “R” stands for “Riemchen”, which means “tile”. Aged surface, with torn edges, SINTRA series. The entire Feldhaus Klinker façade program is manufactured using the piecemeal method. Those. clinker tiles are not cut from the brick, but are produced as is.
-    Both regular and L-shaped corner elements are produced for the design of door and window openings, as well as external corners of the building. Standard European NF format, ideal imitation of clinker brick laying. With proper installation, the service life of the facade will be more than 50 years. Supplied in cardboard boxes of 24 pieces, double, i.e. On the side, two tiles are soldered. They are easily separated with a light blow in the middle of the back side.
-    To see clinker tiles R696NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
-
-    specs: {
-      piecesInSquareMeterCm: 4800,
-      piecesInPack: 24,
-      squareMetersInPallet: 45,
-      recommendedJointSpacing: '10-12',
-      thickness: 14,
-      format: '240x71x14',
-      recommendedDryMortarVolume: '4-6',
-      weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26,
-      weightOf1PackGramm: 1300,
-      manufacturer: 'Feldhaus Klinker',
-      countryOfOrigin: 'Germany',
-    },
-
-    image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.webp',
-    ],
-
-    image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
     ]
   }, {
     id: 'r688nf14',
@@ -957,92 +875,6 @@ const products = [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r688nf14/thumbnail/r688nf14_thumbnail_side.webp',
     ]
   }, {
-    id: 'r665nf14',
-    type: 'Klinker brick slip',
-    name: 'R665NF14 sintra sabioso binaro',
-    availability: 'In Stock',
-    filepath: '/bricks/klinker_brick_slip/feldhaus_klinker/r665nf14.html',
-    priceCentsM2: 8021,
-    supplierPriceType: 'm2',
-    isM2: true,
-    isLinearMeter: false,
-    description: `Clinker tiles R665NF14 are produced at one of the best German enterprises - the Feldhaus Klinker plant. The letter “R” stands for “Riemchen”, which means “tile”. Aged surface, with torn edges, SINTRA series. A chic dark sand color, sometimes with soot, is the embodiment of ancient brickwork. The entire Feldhaus Klinker façade program is manufactured using the piecemeal method. Those. clinker tiles are not cut from the brick, but are produced as is.
-    Both regular and L-shaped corner elements are produced for the design of door and window openings, as well as external corners of the building. Standard European NF format, ideal imitation of clinker brick laying. With proper installation, the service life of the facade will be more than 50 years. Supplied in cardboard boxes of 24 pieces, double, i.e. On the side, two tiles are soldered. They are easily separated with a light blow in the middle of the back side.
-    To see clinker tiles R665NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
-
-    specs: {
-      piecesInSquareMeterCm: 4800,
-      piecesInPack: 24,
-      squareMetersInPallet: 45,
-      recommendedJointSpacing: '10-12',
-      thickness: 14,
-      format: '240x71x14',
-      recommendedDryMortarVolume: '4-6',
-      weightOf1PieceGramm: 54,
-      weightOf1SquareMeter: 26,
-      weightOf1PackGramm: 1300,
-      manufacturer: 'Feldhaus Klinker',
-      countryOfOrigin: 'Germany',
-    },
-
-    image_original: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf9_side.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_day.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_house_night.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/main/r100nf_fasade.webp',
-    ],
-
-    image_thumbnail: [
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_main.webp',
-      '/bricks/images/product_images/brick_slip/feldhaus_klinker/r100nf9/thumbnail/r100nf9_thumbnail_fasade.webp',
-    ]
-  },
-
-
-
-
-
-
-
-
-
-  // { id: 'klinker-brick-slip-r303nf9-feldhaus-klinker',
-  //   type: 'Klinker brick slip',
-  //   name: 'R303NF9 ardor liso',
-  //   availability: 'In Stock',
-  //   filepath: '/bricks/product_pages/klinker-brick-slip-r303nf9-feldhaus-klinker.html',
-  //   priceCentsM2: 5240,
-  //   supplierPriceType: 'm2',
-  //   isM2: true,
-  //   isLinearMeter: false,
-
-  //   specs: {
-  //     piecesInSquareMeterCm: 4800,
-  //     piecesInPack: 48,
-  //     squareMetersInPallet: 60,
-  //     recommendedJointSpacing: '10-12',
-  //     thickness: 9,
-  //     format: '240x71x9',
-  //     recommendedDryMortarVolume: '4-6',
-  //     weightOf1PieceGramm: 52,
-  //     weightOf1SquareMeter: 17.5,
-  //     weightOf1PackGramm: 1750,
-  //     manufacturer: 'Feldhaus Klinker',
-  //     countryOfOrigin: 'Germany',
-
-  //   },
-
-  //   image_original: [
-  //     '/bricks/images/product_images/brick_slip/r303nf9/main/r303nf9_main.webp', 
-  //     '/bricks/images/product_images/brick_slip/r303nf9/main/r303nf9_side.webp', 
-  //   ],
-  //   image_thumbnail: [
-  //     '/bricks/images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_main.webp', 
-  //     '/bricks/images/product_images/brick_slip/r303nf9/thumbnail/r303nf9_thumbnail_side.webp', 
-  //   ]
-  // }, 
-  {
     id: 'obsidian-shadow-lf18',
     type: 'Klinker brick slip',
     name: 'Obsidian shadow (LF18)',
