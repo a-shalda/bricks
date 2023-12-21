@@ -187,3 +187,6 @@ document.querySelectorAll('.categories__box')
         
     });
 });
+
+//Adding text 
+document.querySelector('.text').innerHTML = textMain
