@@ -200,17 +200,21 @@ picture {
 
 .price-small {
   font-size: 0.8rem;
-  letter-spacing: 0.05rem;
   font-weight: 400;
+}
+@media (min-width: 42.75em) {
+  .price-small {
+    letter-spacing: 0.05rem;
+  }
 }
 
 .price-desc {
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
 }
 @media (min-width: 42.75em) {
   .price-desc {
     font-size: 1.05rem;
+    letter-spacing: 0.05rem;
   }
 }
 

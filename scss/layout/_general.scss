@@ -40,16 +40,19 @@
 
 .price-small {
   font-size: 0.8rem;
-  letter-spacing: 0.05rem;
   font-weight: 400;
+
+  @include breakpoint(medium) {
+    letter-spacing: 0.05rem;
+  }
 }
 
 .price-desc {
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
 
   @include breakpoint(medium) {
     font-size: 1.05rem;
+    letter-spacing: 0.05rem;
   }
 }
 
