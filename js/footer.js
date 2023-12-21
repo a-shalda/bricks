@@ -39,7 +39,7 @@ const footerHTML = `
         <p class="footer__upper__column__title">Contacts</p>
         <div class="footer__upper__column__title--address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
           <p class="footer__upper__column__contact" itemprop="name">Bricks LLC</p>
-          <p class="footer__upper__column__contact" itemprop="addressLocality">Pittsburgh</p>
+          <p class="footer__upper__column__contact" itemprop="addressLocality">Pittsburgh, USA</p>
           <p class="footer__upper__column__contact" itemprop="streetAddress">5th ave, 100</p>
           <p class="footer__upper__column__contact" itemprop="telephone">+1(555)555555</p>
           <p class="footer__upper__column__contact" itemprop="email">info@bricks.com</p>
