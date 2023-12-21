@@ -121,11 +121,11 @@ picture {
   filter: invert(17%) sepia(76%) saturate(2166%) hue-rotate(341deg) brightness(108%) contrast(100%);
 }
 
-.h1, h2, h4, .p {
+.h1, .h2, .h4, .p {
   padding-bottom: 1rem;
 }
 
-.h1, h2, h4 {
+.h1, .h2, .h4 {
   padding-top: 1rem;
 }
 
