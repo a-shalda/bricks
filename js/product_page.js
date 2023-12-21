@@ -10,6 +10,7 @@ let productTitle = '';
 let productDescription = '';
 let productName = ''
 let productId = ''
+let productColor = ''
 let metaDescription = ''
 let productManufacturer = ''
 let productNumberInProducts;
@@ -38,6 +39,7 @@ products.forEach((product, index) => {
     productName = product.name
     productManufacturer = product.specs.manufacturer
     productId = product.id
+    productColor = product.specs.color
 
     // srcset="${image} 1000w, ${product.image_large[index]} 2000w" sizes="(max-width: 1900px) 2000px, 1000px"
 
@@ -873,53 +875,3 @@ if (specs.countryOfOrigin) {
   `
 }
 document.querySelector('.main__window__middle__bottom').innerHTML = specsHTML;
-
-
-// OLD code - validating input
-
-//   //Adding to cart on Enter
-//   if (event.key === 'Enter') {
-//     addToCart();
-//     document.activeElement.blur();
-//     inputArea.classList.add('inputAreaFocus');
-//   }
-
-//   //Input validation - First digit is not 0
-//   if (inputArea.value.length === 0 && event.key === '0') {
-//     event.preventDefault();
-//   }
-
-//   //Input validation - Preventing characters other than numbers from typing
-//   if (event.key !== '0' &&  event.key !== '1' && event.key !== '2' &&  event.key !== '3' && event.key !== '4' &&  event.key !== '5' &&event.key !== '6' &&  event.key !== '7' &&event.key !== '8' &&  event.key !== '9' && event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
-//     event.preventDefault();
-//   }
-
-//   //Input validation - Max length of the quantity
-//   if (select === 'm2' && inputArea.value.length >= 3) {
-//     limitInputAreaLength(event);
-//   }
-//   else if (select === 'pc' && inputArea.value.length >= 4) {
-//     limitInputAreaLength(event);
-//   }
-//   else if (select === 'pack' && inputArea.value.length >= 3) {
-//     limitInputAreaLength(event);
-//   }
-
-// function limitInputAreaLength (event) {
-//   if (event.key !== 'Backspace' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Delete' && event.key !== 'Insert' && event.key !== 'NumLock') {
-//     event.preventDefault();
-//   }
-// }
-
-
-//GENERATING STOCK INFO
-
-// let stockInfo = '';
-
-// if (products[productNumberInProducts].availability) {
-//   stockInfo += `
-//     <i class="fa-solid fa-check stock"></i>
-//     <p class="main__window__middle__top__stock__info__desc">${products[productNumberInProducts].availability}</p>
-//   `
-// }
-// document.querySelector('.main__window__middle__top__stock__info').innerHTML = stockInfo;
