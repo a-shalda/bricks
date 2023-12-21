@@ -124,12 +124,26 @@ picture {
 .icon--footer {
   transition: color 200ms;
   filter: invert(31%) sepia(17%) saturate(0%) hue-rotate(268deg) brightness(96%) contrast(89%);
-  width: 1.32rem;
+  width: 1.5rem;
   transition: color 200ms;
   cursor: pointer;
 }
 @media (hover: hover) {
   .icon--footer:hover {
+    filter: invert(76%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(84%) contrast(91%);
+    cursor: pointer;
+  }
+}
+
+.icon--footer--call {
+  transition: color 200ms;
+  filter: invert(31%) sepia(17%) saturate(0%) hue-rotate(268deg) brightness(96%) contrast(89%);
+  width: 1.8rem;
+  transition: color 200ms;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .icon--footer--call:hover {
     filter: invert(76%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(84%) contrast(91%);
     cursor: pointer;
   }
@@ -472,26 +486,24 @@ sup {
 }
 @media (min-width: 42.75em) {
   .footer__upper {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 56.625em) {
-  .footer__upper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 15% auto 1fr;
   }
 }
 @media (min-width: 79em) {
   .footer__upper {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 45% auto 1fr;
   }
 }
 .footer__upper__column__title {
   font-size: 0.9rem;
   padding-bottom: 0.5rem;
   margin-top: 1rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.197);
   color: var(--light-gray-color);
+}
+.footer__upper__column__title--address {
+  margin-top: -0.5rem;
 }
 .footer__upper__column__item {
   line-height: 3rem;
@@ -509,6 +521,19 @@ sup {
 }
 .footer__upper__column__item--active {
   color: var(--light-gray-color);
+}
+.footer__upper__column__contact {
+  line-height: 2rem;
+  color: var(--medium-gray-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+}
+.footer__upper__column__contact__phone_button {
+  display: inline-block;
+  padding-block: 0.5rem;
+  padding-right: 1rem;
+  width: 3rem;
+  height: 3rem;
 }
 .footer__lower {
   margin-inline: 1rem;

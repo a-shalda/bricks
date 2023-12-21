@@ -26,15 +26,11 @@
     }
   
     @include breakpoint(medium) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  
-    @include breakpoint(large) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 15% auto 1fr;
     }
   
     @include breakpoint(xlarge) {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 45% auto 1fr;
     }
 
     &__column {
@@ -43,9 +39,13 @@
         font-size: 0.9rem;
         padding-bottom: 0.5rem;
         margin-top: 1rem;
-        margin-bottom: 0.4rem;
+        margin-bottom: 1rem;
         border-bottom: 1px solid rgba(128, 128, 128, 0.197);
         color: var(--light-gray-color);
+
+        &--address {
+          margin-top: -0.5rem;
+        }
       }
 
       &__item {
@@ -66,6 +66,21 @@
 
         &--active {
           color: var(--light-gray-color);
+        }
+      }
+
+      &__contact {
+        line-height: 2rem;
+        color: var(--medium-gray-color);
+        font-size: 0.8rem;
+        letter-spacing: 0.02rem;
+
+        &__phone_button {
+          display: inline-block;
+          padding-block: 0.5rem;
+          padding-right: 1rem;
+          width: 3rem;
+          height: 3rem;
         }
       }
     }

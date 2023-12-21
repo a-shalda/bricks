@@ -35,10 +35,25 @@ const footerHTML = `
       <div class="footer__upper__column upper--three"></div>
       <div class="footer__upper__column upper--four"></div>
 
-      <div class="footer__upper__column upper--four">
-        <ul>
-          <li class="footer__upper__column__title">Contacts</li>
-        </ul>
+      <div class="footer__upper__column upper--four" itemscope itemtype="https://schema.org/Organization">
+        <p class="footer__upper__column__title">Contacts</p>
+        <div class="footer__upper__column__title--address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <p class="footer__upper__column__contact" itemprop="name">Bricks LLC</p>
+          <p class="footer__upper__column__contact" itemprop="addressLocality">Pittsburgh</p>
+          <p class="footer__upper__column__contact" itemprop="streetAddress">5th ave, 100</p>
+          <p class="footer__upper__column__contact" itemprop="telephone">+1(555)555555</p>
+          <p class="footer__upper__column__contact" itemprop="email">info@bricks.com</p>
+          <p class="footer__upper__column__contact">Mon-Sun 09:00-18:00</p>
+
+          <a href="https://api.whatsapp.com/send?phone=79776511237" target="_blank" class="footer__upper__column__contact__phone_button">
+            <img src="/bricks/images/icons/whatsapp.svg" class="icon--footer--call" width="24" height="24" alt="heart"/>
+          </a>
+
+          <a href="https://t.me/AlexShalda" target="_blank" class="footer__upper__column__contact__phone_button">
+            <img src="/bricks/images/icons/telegram.svg" class="icon--footer--call" width="24" height="24" alt="heart"/>
+          </a>
+
+        </div>
       </div>
 
     </div>
