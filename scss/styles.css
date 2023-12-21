@@ -756,7 +756,7 @@ sup {
 }
 @media (min-width: 29em) {
   .product__middle__price--m2 {
-    width: 50%;
+    width: 55%;
   }
 }
 @media (min-width: 42.75em) {
