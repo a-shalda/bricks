@@ -178,7 +178,6 @@ picture {
   align-items: center;
   background-color: var(--light-gray-color);
   height: 3rem;
-  margin-block: 1rem;
 }
 .divider__desc {
   font-size: 1rem;
@@ -649,6 +648,7 @@ sup {
 }
 
 .products {
+  margin-block: 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -1662,6 +1662,9 @@ sup {
   letter-spacing: 0.01rem;
 }
 
+.additional {
+  margin-bottom: 1rem;
+}
 .additional__window {
   border-radius: 0.5rem;
   box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.451);
