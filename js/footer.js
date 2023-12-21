@@ -8,7 +8,7 @@ const footerHTML = `
         <ul>
           <li class="footer__upper__column__title">Categories</li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/bricks/categories/brick_slips.html">Klinker brick slips</a></li>
-          <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/bricks/categories.html">Klinker bricks</a></li>
+          <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/bricks/categories/bricks.html">Klinker bricks</a></li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/bricks/categories/thermopanels.html">Brick slip thermo panels</a></li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/bricks/categories/fence_caps.html">Ceramic fence caps</a></li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/bricks/categories/clay_pavers.html">Clay pavers</a></li>
