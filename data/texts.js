@@ -62,8 +62,8 @@ class ="bullet--two"> Smooth - follows from the name , i.e. e . smooth , regular
 `
 
 const textFeldhaus = `
-<h2 class="h1">FELDHAUS KLINKER</h2>
-class ="p"> German plant Feldhaus Klinker ( Feldhaus Klinker ) since 1981 . produces clinker tiles for bricks of the highest level , thanks to which over the past 40 years the business has grown into a large international company with representative offices in more than 30 countries . Moreover, Russia is one of the key markets for product sales , because our climate causes significant damage to buildings , and the use of tiles as a facing material serves as good protection . In total, about 140 chic colors are produced , the permanent warehouse program in Moscow includes 68 color solutions in the NF 240 * 71 * 14 mm format , the price starts from 23.99 euros m 2, for each article there is a corner element .</p>
+<h2 class="h2">FELDHAUS KLINKER</h2>
+<p class="p"> German plant Feldhaus Klinker ( Feldhaus Klinker ) since 1981 . produces clinker tiles for bricks of the highest level , thanks to which over the past 40 years the business has grown into a large international company with representative offices in more than 30 countries . Moreover, Russia is one of the key markets for product sales , because our climate causes significant damage to buildings , and the use of tiles as a facing material serves as good protection . In total, about 140 chic colors are produced , the permanent warehouse program in Moscow includes 68 color solutions in the NF 240 * 71 * 14 mm format , the price starts from 23.99 euros m 2, for each article there is a corner element .</p>
 
 <h2 class="h2"> Review of Feldhaus Klinker facade tiles </h2>
 <p class="p"> The SINTRA series has gained particular popularity , which imitates hand molding and visually represents aged brick . Characterized by torn edges and rough surface . Looking at it, one gets the impression of the durability of the building , because no matter how many hundreds of years nature has tried to change the facade of such a building, the most it can do is leave its traces on it . Today 26 colors are produced , from light cream to dark brown and anthracite shades . There are 17 colors in stock in Moscow in NF format, 14 mm .</p>
@@ -83,7 +83,7 @@ class ="p"> German plant Feldhaus Klinker ( Feldhaus Klinker ) since 1981 . prod
 `
 
 const textAbc = `
-<h2 class="h1">ABC Klinker</h2>
+<h2 class="h2">ABC Klinker</h2>
 <p class="p"> Like most brick factories in modern Germany , ABC klinker was founded in the second half of the 19th century . Since 1887 , the products of this enterprise have won the trust of builders and finishers . After many years , responding to new requests for facade thermal insulation solutions, the plant began to produce ABC clinker tiles , and brick-like facade tiles from the German concern ABC-Klinkergruppe have been pleasing for several decades with their excellent quality , richness of colors and quite reasonable prices . Refractory clay fired at a temperature of 1200 C acquires a characteristic ringing sound and impressive physical characteristics that are not inferior , and in some ways superior to other manufacturers . The warehouse program in Moscow includes several dozen colors .</p>
 <h2 class="h2"> Review of clinker facade tiles ABC-Klinkergruppe</h2>
 <p class="p"> Compared to other brands , this plant produces relatively low-cost products , for example, the ALASKA series of facade tiles is only 7 mm thick . Having a standard brick size of NF 240*71 mm, such tiles have all the necessary qualities of a reliable facing material - they please with their discreet shades and protect the house from harmful external factors . It is presented in the three most common colors - red , white and brown , in two surfaces - flat and smooth , and also slightly rugged , with small notches on the front side . The price starts from 40 euros / m2 .</p>
@@ -94,7 +94,7 @@ const textAbc = `
 `
 
 const textRoben = `
-<h2 class="h1">Robin</h2>
+<h2 class="h2">Robin</h2>
 <p class="p"> Roben Corporation was founded in 1855 in Germany and today represents 14 production facilities located in Europe and the USA for the production of building materials from clinker and ceramics . Roben clinker tiles are produced from kilns of the German factories Querenstede and Bannbersheid, as well as the Polish factory Neumarkt. The products are famous for their strength characteristics and stunning appearance . The range includes both classic red smooth colors and vintage surfaces , with an aged front side or a glossy effect . There are always about 40 expressive color solutions in stock in Moscow that can satisfy the exacting demands of any designer and private developer ; in total, more than 50 articles of facade tiles are produced , mainly NF- format 240 * 71 mm , with provided corner elements . The price starts from 40 euros / m2 .</p>
 <h2 class="h2"> Review of Roben clinker tiles </h2>
 <p class="p">AARHUS, manufacturer Roben is a beautiful embodiment of ancient brickwork , which remains unshakable and unchanged , with a hint of eternity . Remaining itself and maintaining its appearance and shade for decades , it protects the building from external influences , leaving the impression of reliability and security of the fortress . Available in seven incomparable NF- format colors in a thickness of 14 mm and is always available in large quantities in stock in Moscow .</p>
