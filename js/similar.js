@@ -9,10 +9,13 @@ const showCategoryProducts = () => {
 
     products.forEach((product, index) => {
 
-        if (product.id !== productId & index < 5) {
+        let numberOfItems = 0
+
+        if (product.id !== productId & numberOfItems < 5) {
 
             if (product.specs.color === productColor && product.type === productType) {
                 productsHTML += showProducts(product, index, indicesOfProducts);
+                numberOfItems++
             }
         }
     });
