@@ -34,7 +34,12 @@ const footerHTML = `
 
       <div class="footer__upper__column upper--three"></div>
       <div class="footer__upper__column upper--four"></div>
-      <div class="footer__upper__column upper--four"></div>
+
+      <div class="footer__upper__column upper--four">
+        <ul>
+          <li class="footer__upper__column__title">Contacts</li>
+        </ul>
+      </div>
 
     </div>
 
