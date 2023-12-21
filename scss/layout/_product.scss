@@ -127,7 +127,10 @@
           color: $white-color;
           font-size: 1.1rem;
           font-weight: 400;
-          letter-spacing: 0.1rem;
+
+          @include breakpoint(small) {
+            letter-spacing: 0.1rem;
+          }
 
           @include breakpoint(medium) {
             font-size: 1.2rem;
