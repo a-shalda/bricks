@@ -9,7 +9,7 @@ const showCategoryProducts = () => {
 
     products.forEach((product, index) => {
 
-        if (product.id !== productId) {
+        if (product.id !== productId & index < 5) {
 
             if (product.specs.color === productColor && product.type === productType) {
                 productsHTML += showProducts(product, index, indicesOfProducts);
@@ -63,7 +63,7 @@ function showProducts(product, index) {
                     </a>
                     
                     <div class="product__top__cont__stock">
-                        <img src="/images/icons/check.svg" class="stock"/>
+                        <img src="/bricks/images/icons/check.svg" class="stock"/>
                         <p class="product__top__cont__stock__desc">${product.availability}</p>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/images/icons/check.svg" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" class="stock"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/images/icons/check.svg" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" class="stock"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -210,7 +210,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/images/icons/check.svg" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" class="stock"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
