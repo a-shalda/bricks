@@ -792,10 +792,10 @@ sup {
   color: #fff;
   font-size: 1.1rem;
   font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 @media (min-width: 42.75em) {
   .product__middle__price--m2__p {
-    letter-spacing: 0.1rem;
     font-size: 1.2rem;
   }
 }
