@@ -98,6 +98,7 @@
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
         margin-left: -1px;
+        font-size: 1.1rem;
 
         @include breakpoint(small) {
           width: 55%;
@@ -106,6 +107,7 @@
         @include breakpoint(medium) {
           width: 60%;
           padding-left: 0.5rem;
+          font-size: 1.2rem;
         }
 
         @include breakpoint(medium--products) {
@@ -123,11 +125,12 @@
         &__p {
           line-height: 2.5rem;
           color: $white-color;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: 400;
 
           @include breakpoint(medium) {
             letter-spacing: 0.1rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -136,12 +139,21 @@
         width: 50%;
         justify-content: center;
         align-items: center;
+        font-size: 1.1rem;
+
+        @include breakpoint(medium) {
+          font-size: 1.2rem;
+        }
 
         &__p {
           line-height: 2.5rem;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           color: var(--gray-color);
           font-weight: 400;
+
+          @include breakpoint(medium) {
+            font-size: 1.2rem;
+          }
         }
       }
     }
