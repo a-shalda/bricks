@@ -178,7 +178,7 @@ picture {
   align-items: center;
   background-color: var(--light-gray-color);
   height: 3rem;
-  padding-block: 1rem;
+  margin-block: 1rem;
 }
 .divider__desc {
   font-size: 1rem;
@@ -433,10 +433,10 @@ sup {
 .footer {
   color: var(--light-gray-color);
   letter-spacing: 0.02rem;
-  margin-top: 2rem;
 }
 .footer--background {
   background-color: rgb(66, 65, 65);
+  margin-top: 2rem;
 }
 .footer__upper {
   margin-inline: 1rem;
