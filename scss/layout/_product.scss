@@ -154,6 +154,10 @@
           color: var(--gray-color);
           font-weight: 400;
 
+          @include breakpoint(small) {
+            letter-spacing: 0.1rem;
+          }
+
           @include breakpoint(medium) {
             font-size: 1.2rem;
           }

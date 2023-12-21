@@ -821,6 +821,11 @@ sup {
   color: var(--gray-color);
   font-weight: 400;
 }
+@media (min-width: 29em) {
+  .product__middle__price--st__p {
+    letter-spacing: 0.1rem;
+  }
+}
 @media (min-width: 42.75em) {
   .product__middle__price--st__p {
     font-size: 1.2rem;
