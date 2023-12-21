@@ -274,7 +274,7 @@ function showProducts (product, index) {
         else if (isM2 === false && isLinearMeter === false) {
 
             const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-            const indexofDotPc = pricePc.toString().indexOf('.');
+            const indexofDotPc = pricePc.toString().indexOf('.'); 
 
             let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
