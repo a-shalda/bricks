@@ -14,6 +14,7 @@ const products = [
     To see clinker tiles R788NF9 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 48,
       squareMetersInPallet: 60,
@@ -64,6 +65,7 @@ const products = [
     To see clinker tiles R698NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -114,6 +116,7 @@ const products = [
     To see clinker tiles R685NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -164,6 +167,7 @@ const products = [
     To see clinker tiles R743NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -214,6 +218,7 @@ const products = [
     To see clinker tiles R682NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'gray',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -264,6 +269,7 @@ const products = [
     To see clinker tiles R764NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'gray',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -314,6 +320,7 @@ const products = [
     To see clinker tiles R773NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'gray',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -370,6 +377,7 @@ const products = [
     To see clinker tiles R766NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'sandy',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -426,6 +434,7 @@ const products = [
     To see clinker tiles R688NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'sandy',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -482,6 +491,7 @@ const products = [
     To see clinker tiles R700NF9 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'dark',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 48,
       squareMetersInPallet: 60,
@@ -532,6 +542,7 @@ const products = [
     To see clinker tiles R736NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'dark',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -567,7 +578,7 @@ const products = [
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r736nf14/thumbnail/r736nf14_thumbnail_main.webp',
       '/bricks/images/product_images/brick_slip/feldhaus_klinker/r736nf14/thumbnail/r736nf14_thumbnail_side.webp',
     ]
-  },  {
+  }, {
     id: 'r669nf14',
     type: 'Klinker brick slip',
     name: 'R669NF14 sintra geo nelino',
@@ -582,6 +593,7 @@ const products = [
     To see clinker tiles R669NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'dark',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -638,6 +650,7 @@ const products = [
     To see clinker tiles R686NF14 live, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -687,6 +700,7 @@ const products = [
     To see brick-like clinker tiles R658NF14 in person, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -739,6 +753,7 @@ const products = [
     To see brick-like clinker tiles R100NF9 in person, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'light',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 48,
       squareMetersInPallet: 60,
@@ -789,6 +804,7 @@ const products = [
     To see brick-like clinker tiles R116NF9 in person, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'light',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 48,
       squareMetersInPallet: 60,
@@ -839,6 +855,7 @@ const products = [
     To see brick-like clinker tiles R757NF14 in person, place a pre-order and visit one of our showrooms in Moscow.`,
 
     specs: {
+      color: 'light',
       piecesInSquareMeterCm: 4800,
       piecesInPack: 24,
       squareMetersInPallet: 45,
@@ -887,6 +904,7 @@ const products = [
     description: 'Obsidian Shadow from the King Size collection is a real favourite among architects. The tile features a mysterious, untamed charm. The silvery and graphite reflections and shadows that are naturally created on the engobe as a result of the reductive atmosphere in the ceramic kiln produce an amazing effect.',
 
     specs: {
+      color: 'dark',
       piecesInSquareMeterCm: 3100,
       piecesInPack: 16,
       piecesInPallet: 1232,
@@ -922,6 +940,7 @@ const products = [
     isLinearMeter: false,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 5700,
       piecesInPallet: 468,
       recommendedJointSpacing: '10-12',
@@ -966,6 +985,7 @@ const products = [
     isLinearMeter: true,
 
     specs: {
+      color: 'gray',
       piecesInLinearMeterCm: 330,
       piecesInPack: 6,
       piecesInPallet: 192,
@@ -999,6 +1019,7 @@ const products = [
     isLinearMeter: false,
 
     specs: {
+      color: 'gray',
       piecesInSquareMeterCm: 1100,
       piecesInPack: 11,
       squareMetersInPallet: 52,
@@ -1034,6 +1055,7 @@ const products = [
     isLinearMeter: false,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 200,
       piecesInPack: 10,
       squareMetersInPallet: 5,
@@ -1081,6 +1103,7 @@ const products = [
     isLinearMeter: false,
 
     specs: {
+      color: 'red',
       piecesInPallet: 48,
       format: '445x445x90',
       weightOf1PieceGramm: 1340,
@@ -1109,6 +1132,7 @@ const products = [
     isLinearMeter: false,
 
     specs: {
+      color: 'red',
       piecesInSquareMeterCm: 4800,
       piecesInPallet: 1380,
       recommendedJointSpacing: '3-4',
@@ -1146,6 +1170,7 @@ const products = [
     isLinearMeter: true,
 
     specs: {
+      color: 'dark',
       piecesInLinearMeterCm: 715,
       piecesInPack: 17,
       piecesInPallet: 1224,
@@ -1178,6 +1203,7 @@ const products = [
     isLinearMeter: false,
 
     specs: {
+      color: 'gray',
       piecesInPallet: 48,
       weightOf1PieceGramm: 2500,
       weightOf1PackGramm: 2500,
@@ -1196,12 +1222,3 @@ const products = [
     ]
   }
 ];
-
-{/* <picture>
-<source media="(min-width: 1200px)" srcset="${product.image_large[index]}" />
-<source media="(max-width: 500px)" srcset="${image}" />
-
-<img src='${image}' 
-class="main__window__top__left__cont__img fade" onclick="openModal();" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy">
-
-</picture> */}
