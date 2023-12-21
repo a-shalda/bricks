@@ -152,7 +152,7 @@
           line-height: 2.5rem;
           font-size: 1.1rem;
           color: var(--gray-color);
-          font-weight: 400;
+          font-weight: 400; 
 
           @include breakpoint(small) {
             letter-spacing: 0.1rem;
