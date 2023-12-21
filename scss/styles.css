@@ -205,8 +205,13 @@ picture {
 }
 
 .price-desc {
-  letter-spacing: 0.05rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
+}
+@media (min-width: 42.75em) {
+  .price-desc {
+    letter-spacing: 0.05rem;
+    font-size: 1.05rem;
+  }
 }
 
 sup {
@@ -748,7 +753,7 @@ sup {
   width: 60%;
   justify-content: center;
   align-items: center;
-  padding-left: 0.5rem;
+  padding-left: 0.1rem;
   background-color: var(--gray-color);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -762,6 +767,7 @@ sup {
 @media (min-width: 42.75em) {
   .product__middle__price--m2 {
     width: 60%;
+    padding-left: 0.5rem;
   }
 }
 @media (min-width: 46em) {
@@ -784,7 +790,11 @@ sup {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 400;
-  letter-spacing: 0.1rem;
+}
+@media (min-width: 42.75em) {
+  .product__middle__price--m2__p {
+    letter-spacing: 0.1rem;
+  }
 }
 .product__middle__price--st {
   display: flex;
