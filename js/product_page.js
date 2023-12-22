@@ -50,7 +50,7 @@ products.forEach((product, index) => {
         <button class="main__window__top__left__button--prev">❮</button>
         <button class="main__window__top__left__button--next">❯</button>
         <div class="main__window__top__left__cont main_box">
-          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" loading="lazy" itemprop="image">
+          <img src='${image}' width="1000" height="1000" class="main__window__top__left__cont__img fade" alt="${product.type + ' ' + product.specs.manufacturer + ' ' + product.name + ' ' + product.specs.format}" itemprop="image">
         </div>
       `;
       }
