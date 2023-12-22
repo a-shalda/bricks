@@ -66,7 +66,7 @@ function showProducts(product, index) {
                     </a>
                     
                     <div class="product__top__cont__stock">
-                        <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock"/>
+                        <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                         <p class="product__top__cont__stock__desc">${product.availability}</p>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -213,7 +213,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock"/>
+                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
