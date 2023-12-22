@@ -457,6 +457,10 @@
                 border-top: 1px solid var(--light-light-gray-color);
               }
 
+              &--label {
+                display: none;
+              }
+
               &__select {
                 font-size: 1rem;
                 background-color: white;

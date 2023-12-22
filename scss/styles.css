@@ -1563,6 +1563,9 @@ sup {
     border-top: 1px solid var(--light-light-gray-color);
   }
 }
+.main__window__middle__top__stock__subtotal__value--label {
+  display: none;
+}
 .main__window__middle__top__stock__subtotal__value__select {
   font-size: 1rem;
   background-color: white;
