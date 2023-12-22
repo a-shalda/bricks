@@ -30,8 +30,8 @@ const lowerButtons = slider_items.forEach((item) => {
 });
 
 const sideButtonsHTML = `
-    <a class="slideshow__button--prev">❮</a>
-    <a class="slideshow__button--next">❯</a>
+    <button class="slideshow__button--prev">❮</button>
+    <button class="slideshow__button--next">❯</button>
 
     <div class="slideshow__dots">
         <div class="slideshow__dots__cont"></div>

@@ -1032,6 +1032,8 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  border: none;
+  background-color: hsla(0, 0%, 25%, 0.713);
 }
 @media (hover: hover) {
   .slideshow__button--prev:hover, .slideshow__button--next:hover {
