@@ -11,7 +11,7 @@ const slider_items = [
     img_800: 'images/slider/medium_size/336_06_slider_800.jpg',
     title: 'Fasade bricks',
     desc: 'More than 100 colors and shapes',
-    path: 'categories.html',
+    path: 'categories/bricks.html',
     id: 2
   }, {
     img: 'images/slider/7750_455_slider.jpg',

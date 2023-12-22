@@ -896,7 +896,7 @@ const products = [
     type: 'Klinker brick slip',
     name: 'Obsidian shadow (LF18)',
     availability: 'In Stock',
-    filepath: '/bricks/klinker_brick_slip/king_klinker/obsidian-shadow-lf18.html',
+    filepath: '/bricks/king_klinker/obsidian-shadow-lf18.html',
     priceCentsPc: 328,
     supplierPriceType: 'pc',
     isM2: true,
