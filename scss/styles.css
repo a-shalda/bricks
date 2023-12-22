@@ -528,6 +528,14 @@ sup {
   font-size: 0.8rem;
   letter-spacing: 0.02rem;
 }
+.footer__upper__column__contact--name {
+  line-height: 2rem;
+  color: var(--medium-gray-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
 .footer__upper__column__contact__phone_button {
   display: inline-block;
   padding-block: 0.5rem;
