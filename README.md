@@ -1,6 +1,6 @@
 # Bricks eCommerce website with HTML, CSS, JavaScript.
 
-https://a-shalda.github.io/bricks/index.html
+https://bricks.shalda.dev
 
 ## A fully responsive website where customers can shop for building materials.
 

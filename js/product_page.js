@@ -1,10 +1,14 @@
 //GENERATING TITLE AND IMAGES
 
+const findSlash = document.URL.lastIndexOf('/');
+const findDot = document.URL.indexOf('.html');
+let root
+
 if (findDot === -1) {
-  root = document.URL.slice((findSlash + 1));
+    root = document.URL.slice((findSlash + 1));
 }
 else if (findDot >= 0) {
-  root = document.URL.slice((findSlash + 1), findDot);
+    root = document.URL.slice((findSlash + 1), findDot);
 }
 
 let productOriginalHTML = '';

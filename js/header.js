@@ -9,26 +9,26 @@ const headerHTML = `
       <div class="header__upper__left">
         <div class="header__upper__left__hamburger">
           <button class="header__upper__left__hamburger__nav-toggle">
-            <img src="/bricks/images/icons/menu.svg" class="icon-style header__upper__left__hamburger__nav-toggle__icon" width="24" height="24" alt="menu"/>
+            <img src="/images/icons/menu.svg" class="icon-style header__upper__left__hamburger__nav-toggle__icon" width="24" height="24" alt="menu"/>
           </button>
           <div class="header__upper__left__hamburger__dropdown">
             <div class="header__upper__left__hamburger__dropdown__content">
               <ul class="header__upper__left__hamburger__dropdown__ul">
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/catalog.html">All products</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/brick_slips.html">Klinker brick slips</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/bricks.html">Klinker bricks</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/thermopanels.html">Brick slip thermo panels</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/fence_caps.html">Ceramic fence caps</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/clay_pavers.html">Clay pavers</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/stair_and_floor_tile.html">Stair and floor tile</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/window_sills.html">Ceramic window sills</a></li>
-                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/bricks/categories/mortars.html">Mortars</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/catalog.html">All products</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/brick_slips.html">Klinker brick slips</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/bricks.html">Klinker bricks</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/thermopanels.html">Brick slip thermo panels</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/fence_caps.html">Ceramic fence caps</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/clay_pavers.html">Clay pavers</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/stair_and_floor_tile.html">Stair and floor tile</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/window_sills.html">Ceramic window sills</a></li>
+                <li class="header__upper__left__hamburger__dropdown__content__link"><a class="header__upper__left__hamburger__dropdown__content__link__a" href="/categories/mortars.html">Mortars</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="header__upper__left__logo">
-          <a href="/bricks/index.html" class="header__upper__left__logo__link">
+          <a href="/index.html" class="header__upper__left__logo__link">
             <p class="header__upper__left__logo__bricks">Bricks</p>
           </a>
         </div>
@@ -37,21 +37,21 @@ const headerHTML = `
       <div class="header__upper__right">
 
         <div class="header__upper__right__search">
-          <a href="/bricks/search.html">
-            <img src="/bricks/images/icons/search.svg" class="icon-style--search--header" width="22" height="16" alt="search"/>
+          <a href="/search.html">
+            <img src="/images/icons/search.svg" class="icon-style--search--header" width="22" height="16" alt="search"/>
           </a>
         </div>
 
         <div class="header__upper__right__saved">
-          <a href="/bricks/saved.html" class="header__upper__right__saved--link">
-            <img src="/bricks/images/icons/heart.svg" class="icon-style" width="24" height="24" alt="heart"/>
+          <a href="/saved.html" class="header__upper__right__saved--link">
+            <img src="/images/icons/heart.svg" class="icon-style" width="24" height="24" alt="heart"/>
             <p class="header__upper__right__saved__counter"></p>
           </a>
         </div>
 
         <div class="header__upper__right__cart">
-          <a href="/bricks/cart.html"> 
-            <img src="/bricks/images/icons/cart.svg" class="icon-style fa-basket-shopping" width="24" height="24" alt="cart"/>
+          <a href="/cart.html"> 
+            <img src="/images/icons/cart.svg" class="icon-style fa-basket-shopping" width="24" height="24" alt="cart"/>
             <p class="header__upper__right__cart__counter"></p>
           </a>
         </div>
@@ -65,7 +65,7 @@ const headerHTML = `
 document.querySelector('.header').innerHTML = headerHTML;
 
 
-function updateCounters () {
+function updateCounters() {
 
   cart = JSON.parse(localStorage.getItem('cart')) || [];
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];

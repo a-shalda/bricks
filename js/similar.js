@@ -51,8 +51,8 @@ function showProducts(product, index) {
         const indexOfDotM2 = priceM2.toString().indexOf('.');
         const indexofDotPc = pricePc.toString().indexOf('.');
 
-        let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-        let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+        let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">м<sup>2</sup></span>`;
+        let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">шт</span>`;
 
         productsHTML += `
             <div class="product">
@@ -66,7 +66,7 @@ function showProducts(product, index) {
                     </a>
                     
                     <div class="product__top__cont__stock">
-                        <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                        <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                         <p class="product__top__cont__stock__desc">${product.availability}</p>
                     </div>
                 </div>
@@ -85,9 +85,9 @@ function showProducts(product, index) {
                         <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                     </a>
                     <div class="product__bottom__desc">
-                        <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
-                        <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                        <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
+                        <p class="product__bottom__desc__p">Производитель: ${product.specs?.manufacturer}</p>
+                        <p class="product__bottom__desc__p">Страна: ${product.specs?.countryOfOrigin}</p>
+                        <p class="product__bottom__desc__p">Размер (мм): ${product.specs?.format}</p>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,8 @@ function showProducts(product, index) {
             const indexOfDotM2 = priceM2.toString().indexOf('.');
             const indexofDotPc = pricePc.toString().indexOf('.');
 
-            let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
-            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+            let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">м<sup>2</sup></span>`;
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">шт</span>`;
 
             productsHTML += `
                 <div class="product">
@@ -117,7 +117,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                            <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -136,9 +136,9 @@ function showProducts(product, index) {
                             <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
-                            <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
-                            <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                            <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
+                            <p class="product__bottom__desc__p">Производитель: ${product.specs?.manufacturer}</p>
+                            <p class="product__bottom__desc__p">Страна: ${product.specs?.countryOfOrigin}</p>
+                            <p class="product__bottom__desc__p">Размер (мм): ${product.specs?.format}</p>
                         </div>
                     </div>
                 </div>
@@ -151,8 +151,8 @@ function showProducts(product, index) {
             const indexOfDotLM = priceLM.toString().indexOf('.');
             const indexofDotPc = pricePc.toString().indexOf('.');
 
-            let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lm</span>`;
-            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+            let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">п.м.</span>`;
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">шт</span>`;
 
             productsHTML += `
                 <div class="product">
@@ -166,7 +166,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                            <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -185,9 +185,9 @@ function showProducts(product, index) {
                             <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
-                            <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
-                            <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                            <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
+                            <p class="product__bottom__desc__p">Производитель: ${product.specs?.manufacturer}</p>
+                            <p class="product__bottom__desc__p">Страна: ${product.specs?.countryOfOrigin}</p>
+                            <p class="product__bottom__desc__p">Размер (мм): ${product.specs?.format}</p>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@ function showProducts(product, index) {
             const pricePc = (priceCentsPc / 100).toFixed(2).toString();
             const indexofDotPc = pricePc.toString().indexOf('.');
 
-            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
+            let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">шт</span>`;
 
             productsHTML += `
                 <div class="product">
@@ -213,7 +213,7 @@ function showProducts(product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                            <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -232,9 +232,9 @@ function showProducts(product, index) {
                             <p class="product__bottom__title">${product.type + ' ' + product.name}</p>
                         </a>
                         <div class="product__bottom__desc">
-                            <p class="product__bottom__desc__p">Manufacturer: ${product.specs?.manufacturer}</p>
-                            <p class="product__bottom__desc__p">Country: ${product.specs?.countryOfOrigin}</p>
-                            <p class="product__bottom__desc__p">Size (mm): ${product.specs?.format}</p>
+                            <p class="product__bottom__desc__p">Производитель: ${product.specs?.manufacturer}</p>
+                            <p class="product__bottom__desc__p">Страна: ${product.specs?.countryOfOrigin}</p>
+                            <p class="product__bottom__desc__p">Размер (мм): ${product.specs?.format}</p>
                         </div>
                     </div>
                 </div>

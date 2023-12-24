@@ -16,7 +16,7 @@ const showCategoryProducts = () => {
     else if (findDot >= 0) {
         root = document.URL.slice((findSlash + 1), findDot);
     }
-    
+
     let productsHTML = '';
 
     let categoryOne = '';
@@ -60,15 +60,15 @@ const showCategoryProducts = () => {
         products.forEach((product, index) => {
 
             if (product.type === categoryOne || product.type === categoryTwo) {
-    
-                productsHTML += showProducts (product, index, indicesOfProducts);
+
+                productsHTML += showProducts(product, index, indicesOfProducts);
             }
         });
     }
     else if (catalogPage != '') {
         products.forEach((product, index) => {
 
-            productsHTML += showProducts (product, index, indicesOfProducts);
+            productsHTML += showProducts(product, index, indicesOfProducts);
         });
     }
     else {
@@ -101,21 +101,21 @@ const showCategoryProducts = () => {
         products.forEach((product, index) => {
 
             if (product.specs.manufacturer === categoryOne) {
-                productsHTML += showProducts (product, index, indicesOfProducts);
+                productsHTML += showProducts(product, index, indicesOfProducts);
             }
         });
     }
 
     document.querySelector('.products').innerHTML = productsHTML;
-    
+
     //Adding pulsing image animation on load
     addPulsingImageAnimation();
-    
+
     //Adding onmouse image animation
     addOnMouseImageAnimation(indicesOfProducts);
 }
 
-function showProducts (product, index) {
+function showProducts(product, index) {
 
     let productsHTML = '';
     indicesOfProducts.push(index);
@@ -138,7 +138,7 @@ function showProducts (product, index) {
         let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
         let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-        productsHTML +=`
+        productsHTML += `
             <div class="product">
                 <div class="product__top">
         
@@ -150,7 +150,7 @@ function showProducts (product, index) {
                     </a>
                     
                     <div class="product__top__cont__stock">
-                        <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                        <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                         <p class="product__top__cont__stock__desc">${product.availability}</p>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ function showProducts (product, index) {
             let priceM2HTML = `<sup>€</sup>${priceM2.slice(0, indexOfDotM2)}<span class="price-small">${priceM2.slice(indexOfDotM2)}</span> <span class="price-desc">m<sup>2</sup></span>`;
             let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-            productsHTML +=`
+            productsHTML += `
                 <div class="product">
                     <div class="product__top">
             
@@ -201,7 +201,7 @@ function showProducts (product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                            <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@ function showProducts (product, index) {
             let priceLMHTML = `<sup>€</sup>${priceLM.slice(0, indexOfDotLM)}<span class="price-small">${priceLM.slice(indexOfDotLM)}</span> <span class="price-desc">lm</span>`;
             let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-            productsHTML +=`
+            productsHTML += `
                 <div class="product">
                     <div class="product__top">
             
@@ -250,7 +250,7 @@ function showProducts (product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                            <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -281,11 +281,11 @@ function showProducts (product, index) {
         else if (isM2 === false && isLinearMeter === false) {
 
             const pricePc = (priceCentsPc / 100).toFixed(2).toString();
-            const indexofDotPc = pricePc.toString().indexOf('.'); 
+            const indexofDotPc = pricePc.toString().indexOf('.');
 
             let pricePcHTML = `<sup>€</sup>${pricePc.slice(0, indexofDotPc)}<span class="price-small">${pricePc.slice(indexofDotPc)}</span> <span class="price-desc">pc</span>`;
 
-            productsHTML +=`
+            productsHTML += `
                 <div class="product">
                     <div class="product__top">
             
@@ -297,7 +297,7 @@ function showProducts (product, index) {
                         </a>
                         
                         <div class="product__top__cont__stock">
-                            <img src="/bricks/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
+                            <img src="/images/icons/check.svg" alt="checkmark" class="stock" width="16" height="16"/>
                             <p class="product__top__cont__stock__desc">${product.availability}</p>
                         </div>
                     </div>
@@ -331,61 +331,61 @@ function showProducts (product, index) {
 let timeOut = ''
 let timeOutBack = ''
 
-function addOnMouseImageAnimation (indicesOfProducts) {
-    
+function addOnMouseImageAnimation(indicesOfProducts) {
+
     document.querySelectorAll('.product')
-    
+
         .forEach((product, index) => {
 
             const first = product.querySelector('.product_img_' + indicesOfProducts[index]);
             const second = product.querySelector('.product_img_second_' + indicesOfProducts[index]);
 
             second.addEventListener('load', () => {
-                
+
                 function moveLeft() {
                     first.classList.add('moveLeft');
                     second.classList.add('moveLeft');
                 }
-    
+
                 function moveRight() {
                     first.classList.add('moveRight');
                     second.classList.add('moveRight');
                 }
-    
+
                 product.addEventListener('mouseenter', () => {
-        
+
                     first.classList.add('opacity');
                     second.classList.add('opacity');
                     timeOut = setTimeout(moveLeft, 1000);
                     timeOutBack = setTimeout(moveRight, 5000);
-                
-                product.addEventListener('mouseleave', () => {
-        
-                    clearTimeout(timeOut);
-                    clearTimeout(timeOutBack);
-                    moveRight();
-        
-                    first.classList.remove('opacity','moveLeft','moveRight');
-                    second.classList.remove('opacity','moveLeft','moveRight');
-                });
-            })
+
+                    product.addEventListener('mouseleave', () => {
+
+                        clearTimeout(timeOut);
+                        clearTimeout(timeOutBack);
+                        moveRight();
+
+                        first.classList.remove('opacity', 'moveLeft', 'moveRight');
+                        second.classList.remove('opacity', 'moveLeft', 'moveRight');
+                    });
+                })
+            });
         });
-    });
 }
 
-function addPulsingImageAnimation () {
+function addPulsingImageAnimation() {
 
     document.querySelectorAll('.product__top__cont').forEach((cont) => {
         cont.classList.add('cont_blurred');
-    
+
         const image = cont.querySelector('img');
-    
+
         image.classList.add('img_unloaded');
-    
+
         image.addEventListener('load', () => {
             image.classList.remove('img_unloaded');
             cont.classList.remove('cont_blurred');
         })
     })
-    
+
 }
