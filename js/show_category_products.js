@@ -8,7 +8,14 @@ const showCategoryProducts = () => {
 
     const findSlash = document.URL.lastIndexOf('/');
     const findDot = document.URL.indexOf('.html');
-    const root = document.URL.slice((findSlash + 1), findDot);
+    let root
+
+    if (findDot === -1) {
+        root = document.URL.slice((findSlash + 1));
+    }
+    else if (findDot >= 0) {
+        root = document.URL.slice((findSlash + 1), findDot);
+    }
     
     let productsHTML = '';
 
@@ -20,7 +27,7 @@ const showCategoryProducts = () => {
         categoryOne = 'Klinker brick slip';
         categoryTwo = 'Klinker corner brick slip';
     }
-    else if (root === 'index') {
+    else if (root === 'index' || root === '') {
         categoryOne = 'Klinker brick slip';
     }
     else if (root === 'bricks') {

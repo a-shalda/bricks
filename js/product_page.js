@@ -1,8 +1,11 @@
 //GENERATING TITLE AND IMAGES
 
-const findSlash = document.URL.lastIndexOf('/');
-const findDot = document.URL.indexOf('.html');
-const root = document.URL.slice((findSlash + 1), findDot);
+if (findDot === -1) {
+  root = document.URL.slice((findSlash + 1));
+}
+else if (findDot >= 0) {
+  root = document.URL.slice((findSlash + 1), findDot);
+}
 
 let productOriginalHTML = '';
 let productThumbnailslHTML = '';
