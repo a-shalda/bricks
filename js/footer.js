@@ -49,7 +49,7 @@ const footerHTML = `
             <img src="/images/icons/whatsapp.svg" class="icon--footer--call" width="24" height="24" alt="heart"/>
           </a>
 
-          <a href="https://t.me/AlexShalda" target="_blank" class="footer__upper__column__contact__phone_button">
+          <a href="https://t.me/AlexKlinker" target="_blank" class="footer__upper__column__contact__phone_button">
             <img src="/images/icons/telegram.svg" class="icon--footer--call" width="24" height="24" alt="heart"/>
           </a>
 
