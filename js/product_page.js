@@ -233,6 +233,7 @@ document.querySelectorAll('.main__window__top__left__cont__img').forEach(image =
   
     document.querySelectorAll(".modal__image__box__close")[0].addEventListener('click', () => {
 
+      document.querySelector(".modal__image__box__content").src = '';
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
       document.body.classList.remove('stop-scroll');
@@ -240,6 +241,7 @@ document.querySelectorAll('.main__window__top__left__cont__img').forEach(image =
 
     modalImage.addEventListener('click',  () => {
 
+      document.querySelector(".modal__image__box__content").src = '';
       modalImage.style.visibility = 'hidden';
       modalImage.style.opacity = '0';
       document.body.classList.remove('stop-scroll');
