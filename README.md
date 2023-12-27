@@ -1,6 +1,12 @@
-# Bricks eCommerce website with HTML, CSS, JavaScript.
+# Bricks eCommerce website
 
 https://bricks.shalda.dev
+
+Choose from a variety of fasade brick slips, effortlessly calculate packaging, send a pre-order for the chosen items. 
+
+* Client-side, backend only to receive orders.
+* Design, development, content, SEO.
+* HTML, SCSS, JavaScript, Express, MongoDB, Mongoose
 
 ## A fully responsive website where customers can shop for building materials.
 
@@ -33,13 +39,3 @@ Files include: cart_page.js, footer.js, header.js, main.js, product_page.js, sav
 * search.js generates page where products can be searched.
 * cart_page.js generates Cart page with all the buttons and checkout form.
 * show_category_products.js generates the products.
-
-### scss - styles.
-
-## Resources 
-
-Images from: 
-https://www.feldhaus-klinker.de/, 
-https://www.stroeher.de/, 
-https://quick-mix.de,
-https://kingklinker.com
