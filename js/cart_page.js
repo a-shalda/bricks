@@ -133,16 +133,17 @@ document.querySelector('.cart__checkout__proceed').addEventListener('click', () 
   document.body.classList.add('stop-scroll');
 
   form.style.visibility = 'visible';
+  form.style.display = 'block'
   form.style.opacity = '1';
 
   document.querySelector('.cart__modal__box__content__continue').addEventListener('click',  () => {
-    form.style.visibility = 'hidden';
+    form.style.display = 'none'
     form.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
   });
 
   document.querySelector('.cart__modal__box__content__close').addEventListener('click',  () => {
-    form.style.visibility = 'hidden';
+    form.style.display = 'none'
     form.style.opacity = '0';
     document.body.classList.remove('stop-scroll');
   });
