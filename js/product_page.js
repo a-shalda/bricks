@@ -736,7 +736,7 @@ function addToCart() {
   cart = JSON.parse(localStorage.getItem('cart')) || [];
   userQuantity = Number(userPacks.value);
 
-  if (userQuantity != 0) {
+  if (userQuantity !== 0) {
   
     const order = {
       id: root,

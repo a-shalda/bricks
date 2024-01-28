@@ -155,7 +155,7 @@ function showCategories() {
         categoriesHTML += `
             <div class="categories__box ${categories[i].id}">
                 <a href="${categories[i].path}">
-                    <img class="categories__box__img cat_img${[i]}" src=${categories[i].img} alt='Категория ${categories[i].desc}' loading="lazy" width="575" height="260">
+                    <img class="categories__box__img cat_img${[i]}" src=${categories[i].img} alt='Category ${categories[i].desc}' loading="lazy" width="575" height="260">
                     <div class="categories__box__title">
                         <h2 class="categories__box__title__h2">${categories[i].title}</h2>
                     </div>

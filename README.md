@@ -1,6 +1,6 @@
 # Bricks eCommerce website
 
-https://bricks.shalda.dev
+https://bricks.shalda.xyz
 
 Choose from a variety of fasade brick slips, effortlessly calculate packaging, send a pre-order for the chosen items. 
 

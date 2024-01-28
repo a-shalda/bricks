@@ -70,7 +70,7 @@ function updateCounters() {
   cart = JSON.parse(localStorage.getItem('cart')) || [];
   wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-  if (cart.length != 0) {
+  if (cart.length !== 0) {
     document.querySelector('.header__upper__right').classList.add('header__upper__right__has-counter');
     document.querySelector('.header__upper__right__saved').classList.add('header__upper__right__saved__has-counter');
   }
@@ -92,7 +92,7 @@ function updateCounters() {
     cartCounterNumber = 99;
   }
 
-  if (savedCounterNumber != 0) {
+  if (savedCounterNumber !== 0) {
     savedCounter.innerHTML = savedCounterNumber;
 
     setTimeout(function () {
@@ -106,7 +106,7 @@ function updateCounters() {
     }, 100)
   }
 
-  if (cartCounterNumber != 0) {
+  if (cartCounterNumber !== 0) {
     cartCounter.innerHTML = cartCounterNumber;
 
     setTimeout(function () {

@@ -21,7 +21,7 @@ const footerHTML = `
       <div class="footer__upper__column upper--two">
         <ul>
           <li class="footer__upper__column__title">Manufacturers</li>
-          <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/categories/feldhaus.html">Feldhaus Klinker
+          <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/categories/feldhaus.html">Feldhaus Klinker</a></li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/categories/stroeher.html">Stroeher</a></li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/categories/roben.html">Roben</a></li>
           <li class="footer__upper__column__item"><a class="footer__upper__column__item__a" href="/categories/abc-klinkergruppe.html">ABC-Klinkergruppe</a></li>
