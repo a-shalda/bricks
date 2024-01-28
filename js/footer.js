@@ -60,22 +60,28 @@ const footerHTML = `
 
     <div class="footer__lower">
 
-      <div class="footer__lower__left">
-        <a href="https://www.youtube.com/channel/UCZPDt64PY3l6PkXKIWPiBIw" target="_blank">
-          <img src="/images/icons/youtube.svg" class="icon--footer" width="24" height="24" alt="heart"/>
-        </a>
-      </div>
 
-      <div class="footer__lower__right">
-        <p class="footer__lower__right__desc">
-          Designed and developed by <a href="https://shalda.dev" class="signature">Alex Shalda</a>
-        </p>
-      </div>
+
+
+
+    
 
     </div>
 
   </section>
 `;
+
+{/* <div class="footer__lower__left">
+<a href="https://www.youtube.com/channel/UCZPDt64PY3l6PkXKIWPiBIw" target="_blank">
+  <img src="/images/icons/youtube.svg" class="icon--footer" width="24" height="24" alt="heart"/>
+</a>
+</div>
+
+<div class="footer__lower__right">
+<p class="footer__lower__right__desc">
+  Designed and developed by <a href="https://shalda.dev" class="signature">Alex Shalda</a>
+</p>
+</div> */}
 
 document.querySelector('.footer--background').innerHTML = footerHTML;
 
